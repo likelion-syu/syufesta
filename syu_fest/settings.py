@@ -31,6 +31,10 @@ ALLOWED_HOSTS = ["*" , "ec2-18-221-163-161.us-east-2.compute.amazonaws.com"]
 
 
 INSTALLED_APPS = [
+    'account',
+    'common',
+    'competition',
+    'festival',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -54,7 +58,7 @@ ROOT_URLCONF = 'syu_fest.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'common', 'templates/common')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,22 +77,22 @@ WSGI_APPLICATION = 'syu_fest.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
 DATABASES = {
-    'default' : {
-        'ENGINE' : 'django.db.backends.mysql',
-        'OPTIONS' : {
-            'read_default_file' : os.path.join(BASE_DIR, 'aws.rds.cnf'),
-            'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'"
-        }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# DATABASES = {
+#     'default' : {
+#         'ENGINE' : 'django.db.backends.mysql',      
+#         'OPTIONS' : {
+#             'read_default_file' : os.path.join(BASE_DIR, 'aws.rds.cnf'),
+#             'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'"
+#         }
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -127,3 +131,22 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'account', 'static')
+]
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'common', 'static')
+]
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'festival', 'static')
+]
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'competition', 'static')
+]
+
