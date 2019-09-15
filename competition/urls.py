@@ -3,7 +3,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('home/', views.com_home, name='com_home'),
-    path('<int:major_id>', views.com_tl_detail, name='com_tl_detail'),
-    path('compete_timeline/', views.com_tl , name='com_tl')
+    path('event/', views.compete_event, name='event'),
+    path('timeline/', views.compete_timeline , name='compete_timeline'),
+    path('safety/', views.safety, name='safety'),
+    path('seatmap/', views.seat_map, name='seat_map'),
+    path('foodtruck', views.food_truck, name='compete_food_truck')
 ]

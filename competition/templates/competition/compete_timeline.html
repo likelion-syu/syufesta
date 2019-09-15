@@ -1,27 +1,6 @@
-
-{% extends 'compete_base.html' %}{% load staticfiles %}
+{% extends './competition_base.html' %}{% load staticfiles %}
 {% block contents %}
-<div class='col-md-9'>
-    <div class="content-detail">
-        <div class='card-columns'>
-            {% for major in majors %}
-                <div class="col-md-12">
-                    <div class='card shadow-sm'>
-                        <img src="{{ major.icon.url }}" width="100%" class='img-circle' />
-                        <span class="card-body">
-                            <p class="card-text">학과:{{ major.name }}</p>
-                            <p class="card-text">구호:{{ major.slogan}}</p>
-                            <span class="d-flex justify-content-between align-items-center">
-                                <span class="btn-group">
-                                    <a class="btn btn-sm btn-outline-secondary ml-3" href="{% url 'com_tl_detail' major.id %}">View</a>
-                                </span>
-                            </span>
-                        </span>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-</div>
-
+timeline
+<br>
+<a href="{% url 'home' %}">홈으로</a>
 {% endblock %}

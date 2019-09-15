@@ -1,2 +1,5 @@
-{% extends 'base.html' %} {% load staticfiles %}
+{% extends './competition_base.html' %}{% load staticfiles %}
 {% block contents %}
+safety
+<a href="{% url 'home' %}">홈으로</a>
+{% endblock %}

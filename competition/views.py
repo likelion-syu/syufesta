@@ -1,29 +1,21 @@
-from django.shortcuts import render, get_object_or_404
-from django.utils import timezone
-from .models import Major, Student
+from django.shortcuts import render
+
 
 # Create your views here.
 
-def com_home(request):
-    return render (request, 'competition/index.html')
 
-def com_event(request):
+
+def compete_event(request):
     return render (request, 'competition/compete_event.html')
 
-def com_ft(request):
+def food_truck(request):
     return render (request, 'competition/compete_food_truck.html')
 
-def com_tl(request):
-    majors = Major.objects.all()
-    return render (request, 'competition/compete_timeline.html', {'majors':majors})
+def compete_timeline(request):
+    return render (request, 'competition/compete_timeline.html')
 
-def com_tl_detail(request, major_id):
-    major_detail = get_object_or_404(Major, pk = major_id)
-    student = Student.objects.all()
-    return render(request, 'competition/com_tl_detail.html', {'player':major_detail, 'students':student})
-
-def com_safety(request):
+def safety(request):
     return render (request, 'competition/safety.html')
 
-def com_sm(request):
+def seat_map(request):
     return render (request, 'competition/seat_map.html')

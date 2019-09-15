@@ -1,0 +1,21 @@
+{% extends './competition_base.html' %}{% load staticfiles %}
+{% block contents %}
+<h1 id="competition">체육대회 메인화면</h1>
+<ul>
+<li>
+<a href="{% url 'event' %}">이벤트</a>
+</li>
+<li>
+<a href="{% url 'compete_timeline' %}">경기일정</a>
+</li>
+<li>
+<a href="{% url 'safety' %}">안전교육</a>
+</li>
+<li>
+<a href="{% url 'seat_map' %}">좌석배치</a>
+</li>
+<li>
+<a href="{% url 'compete_food_truck' %}">푸드트럭</a>
+</li>
+</ul>
+{% endblock %}
