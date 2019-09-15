@@ -79,12 +79,12 @@ WSGI_APPLICATION = 'syu_fest.wsgi.application'
 
 # sqlite3 DB (AWS Mysql DB접근 안될 시 사용)
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 DATABASES = {
     'default' : {
