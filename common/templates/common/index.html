@@ -1,29 +1,46 @@
-{% extends 'base.html' %} {% load staticfiles %}
+{% extends 'base.html' %}{% load staticfiles %}
+
+<!-- Mainpage head css,js -->
+{% block head %}
+
+{% endblock %}
+
+<!-- Mainpage contents -->
 {% block contents %}
 
-<div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-      <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-      </div>
-    </div>
+<div class="swiper-container">
+	<div class="swiper-wrapper">
+		<!-- 체육대회 메인 -->
+		<div class="swiper-slide">
+			<h1>체육대회 메인화면</h1>
+		</div>
+		<!-- 홈페이지메인 -->
+		<div class="swiper-slide">
+			<h1>메인화면</h1>
+			{% include f%}
+		</div>
+		<!-- 체육대회 메인 -->
+		<div class="swiper-slide">
+			<h1>축제 메인화면</h1>
+		</div>
+	</div>
+	<!-- Add Arrows -->
+	<div class="swiper-button-next"></div>
+	<div class="swiper-button-prev"></div>
+</div>
 
-    <hr>
+{% endblock %}
 
-  </div> <!-- /container -->
-
+<!-- Mainpage endbody contents -->
+{% block endbody %}
+<script>
+	var swiper = new Swiper('.swiper-container', {
+		initialSlide: 1,
+		navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+		},
+	});
+</script>
 {% endblock %}
 
