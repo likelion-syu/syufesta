@@ -5,6 +5,7 @@
 ### SECURE & CREDENTIAL ###
 *.cnf
 
+
 ### Django ###
 
 *.log
