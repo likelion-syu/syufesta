@@ -1,21 +1,16 @@
 from django.shortcuts import render
 
+def event(req):
+    return render (req, 'competition/event.html')
 
-# Create your views here.
+def foodtruck(req):
+    return render (req, 'competition/foodtruck.html')
 
+def timeline(req):
+    return render (req, 'competition/timeline.html')
 
+def notice(req):
+    return render (req, 'competition/notice.html')
 
-def compete_event(request):
-    return render (request, 'competition/compete_event.html')
-
-def food_truck(request):
-    return render (request, 'competition/compete_food_truck.html')
-
-def compete_timeline(request):
-    return render (request, 'competition/compete_timeline.html')
-
-def safety(request):
-    return render (request, 'competition/safety.html')
-
-def seat_map(request):
-    return render (request, 'competition/seat_map.html')
+def seatmap(req):
+    return render (req, 'competition/seatmap.html')
