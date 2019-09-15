@@ -86,15 +86,15 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-#     'default' : {
-#         'ENGINE' : 'django.db.backends.mysql',      
-#         'OPTIONS' : {
-#             'read_default_file' : os.path.join(BASE_DIR, 'aws.rds.cnf'),
-#             'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'"
-#         }
-#     }
-# }
+DATABASES = {
+    'default' : {
+        'ENGINE' : 'django.db.backends.mysql',      
+        'OPTIONS' : {
+            'read_default_file' : os.path.join(BASE_DIR, 'aws.rds.cnf'),
+            'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
