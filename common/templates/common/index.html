@@ -2,7 +2,8 @@
 
 <!-- Mainpage head css,js -->
 {% block head %}
-
+	<link rel="stylesheet" href="{% static 'festival/css/festival.css' %}">
+	<!-- <link rel="stylesheet" href="{% static 'competiton/css/competition.css' %}"> -->
 {% endblock %}
 
 <!-- Mainpage contents -->
@@ -16,12 +17,15 @@
 		</div>
 		<!-- 홈페이지메인 -->
 		<div class="swiper-slide">
-			<h1>메인화면</h1>
-			{% include f%}
+			<div class="container">
+				<h1>메인화면</h1>
+			</div>
 		</div>
-		<!-- 체육대회 메인 -->
+		<!-- 축제 메인 -->
 		<div class="swiper-slide">
-			<h1>축제 메인화면</h1>
+			<div class="contianer festival">
+				{% include 'festival/festival_main.html' %}
+			</div>
 		</div>
 	</div>
 	<!-- Add Arrows -->
