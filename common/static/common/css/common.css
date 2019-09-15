@@ -1,4 +1,7 @@
-.img-circle{
+html, body {
+	height: 100%;
+}
+/* .img-circle{
     width: 150px;
     border-radius: 50%;
     height: 150px;
@@ -6,9 +9,6 @@
     margin-left: 20px;
     margin : auto 0;
 }
-
-
-
 .bg {
     background:linear-gradient(to top, #FAA053 10%,#837ddc 60%, #353780 90%);;
-}
+} */
