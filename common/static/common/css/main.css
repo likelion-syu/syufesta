@@ -1,0 +1,8 @@
+.container.main {
+	background:linear-gradient(to top, #FAA053 10%,#837ddc 60%, #353780 90%);
+	height: 100%;
+	margin: 0px;
+	width: 100%;
+	max-width: 100%;
+	padding: 10%;
+}
