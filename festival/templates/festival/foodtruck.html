@@ -1,10 +1,57 @@
 {% extends './festival_base.html' %} {% load staticfiles %}
 
+{% block festival-head %}
+<link rel="stylesheet" href="../../static/festival/css/foodtruck.css">
+{% endblock %}
+
 {% block festival-content %}
 	<h1>푸드트럭</h1>
+	<div class="row">
+		<div data-ft-index onclick="openPopup1('{% url 'foodtruck1' %}','newWin', 20, 20, 300, 500)" class="col-2 food1">
+<i class="fas fa-truck"></i></div>
+		<div data-ft-index onclick="openPopup2()" class="col-2 food2">
+<i class="fas fa-truck"></i></div>
+		<div data-ft-index onclick="openPopup3()" class="col-2 food3">
+<i class="fas fa-truck"></i></div>
+		<div data-ft-index onclick="openPopup4()" class="col-2 food4">
+<i class="fas fa-truck"></i></div>
+		<div data-bt-index onclick="openPopup5()" class="col-2 booth1"><i class="fas fa-archway"></i>
+
+</div>
+
+
+
+
 	<ul>
-		<a>
-			<a href="{% url 'home' %}">메인으로</a>
+		<li>
+			<a class="tomain" href="{% url 'home' %}">메인으로</a>
 		</li>
 	</ul>
+<script>
+
+	function openPopup1(url, winName, leftPos, topPos, widthVal, heightVal) {
+
+  window.open(url, winName, "scrollbars=no, toolbar=no, menubar=no, resizable=no, status=no, location=no, left=" + leftPos + ", top=" + topPos + ", width=" + widthVal + ", height=" + heightVal);
+ }
+
+
+
+	function openPopup2(url, winName, leftPos, topPos, widthVal, heightVal) {
+
+  window.open(url, winName, "scrollbars=no, toolbar=no, menubar=no, resizable=no, status=no, location=no, left=" + leftPos + ", top=" + topPos + ", width=" + widthVal + ", height=" + heightVal);
+ }
+	function openPopup3(url, winName, leftPos, topPos, widthVal, heightVal) {
+
+  window.open(url, winName, "scrollbars=no, toolbar=no, menubar=no, resizable=no, status=no, location=no, left=" + leftPos + ", top=" + topPos + ", width=" + widthVal + ", height=" + heightVal);
+ }
+	function openPopup4(url, winName, leftPos, topPos, widthVal, heightVal) {
+
+  window.open(url, winName, "scrollbars=no, toolbar=no, menubar=no, resizable=no, status=no, location=no, left=" + leftPos + ", top=" + topPos + ", width=" + widthVal + ", height=" + heightVal);
+ }
+	function openPopup5(url, winName, leftPos, topPos, widthVal, heightVal) {
+
+  window.open(url, winName, "scrollbars=no, toolbar=no, menubar=no, resizable=no, status=no, location=no, left=" + leftPos + ", top=" + topPos + ", width=" + widthVal + ", height=" + heightVal);
+ }
+
+</script>
 {% endblock %}

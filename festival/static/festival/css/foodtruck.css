@@ -1,0 +1,61 @@
+
+html{
+
+
+    height: 100% !important;
+    width:1000px;
+}
+
+
+
+.title{
+    text-align: center;
+}
+
+.tomain{
+    font-size:1em;
+
+}
+.food{
+    display:inline;
+    color:white;
+    font-size:60px;
+    width:60px;
+    height:60px;
+    margin 2px;
+
+}
+.food1{
+        position: relative;
+    top: 400px;
+    left: 44px;
+}
+.food2{
+        position: relative;
+    top: 171px;
+    left: 48px;
+}
+.food3{
+
+    position: relative;
+    left: 97px;
+    top: 171px;
+}
+.food4{
+        position: relative;
+    top: 171px;
+    left: 90px;
+}
+.booth1
+{
+    position: relative;
+    top: 300px;
+    left: 39px;
+}
+
+.row{
+    text-align: center;
+}
+
+
+
