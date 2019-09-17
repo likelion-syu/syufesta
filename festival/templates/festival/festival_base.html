@@ -2,6 +2,10 @@
 
 {% block head %}
 <link rel="stylesheet" href="{% static 'festival/css/festival.css' %}">
+	<!-- 패스티벌에서만 쓰이는 head 정보 -->
+	{% block festival-head %}
+
+	{% endblock %}
 {% endblock %}
 
 {% block contents %}

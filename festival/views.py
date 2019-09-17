@@ -13,5 +13,9 @@ def talent (req):
 	return render(req, 'festival/talent_contest.html')
 
 def cheer(req):
-	return render(req, 'festival/cheer_contest.html')	
+	return render(req, 'festival/cheer_contest.html')
+
+
+def popup1(req):
+	return render(req, 'festival/foodtruck1.html')
 
