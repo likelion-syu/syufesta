@@ -1,0 +1,14 @@
+NAME="syu_fest"
+DJANGODIR=./
+SOCK=0.0.0.0:80
+USER=root
+NUM_WORKERS=3
+DJANGO_SETTINGS_MODULE=syu_fest.settings
+DJANGO_WSGI_MODULE=syu_fest.wsgi
+
+echo "Starting gunicorn"
+
+export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
+export PYTHONPATH=$DJANGODIR:$PYTHONPATH
+
+exec /usr/local/bin/gunicorn ${DJANGO_WSGI_MODULE}:application --name=$NAME --workers=$NUM_WORKERS --user=$USER --bind $SOCK --log-level=debug --log-file=-
