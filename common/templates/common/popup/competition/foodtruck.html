@@ -1,0 +1,12 @@
+{% extends '../popup.base.html' %}
+{% load staticfiles %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'common/css/popup/competition/foodtruck.css' %}">
+{% endblock %}
+{% block content %}
+<div class='popup-foodtruck-container'>
+    <h1>{{data.truck_id}}</h1>
+    <p>{{data.truck_des}}</p>
+</div>
+{% endblock %}

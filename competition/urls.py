@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
@@ -7,5 +7,5 @@ urlpatterns = [
     path('timeline', views.timeline , name='timeline'),
     path('notice', views.notice, name='notice'),
     path('seatmap', views.seatmap, name='seatmap'),
-    path('foodtruck', views.foodtruck, name='compete_foodtruck')
+    path('foodtruck', views.foodtruck, name='compete_foodtruck'),
 ]

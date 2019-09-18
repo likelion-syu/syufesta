@@ -1,4 +1,9 @@
 from django.shortcuts import render
+from .models import Booth
+
+
+from django.http import HttpResponse, JsonResponse
+
 
 def event(req):
     return render (req, 'competition/event.html')

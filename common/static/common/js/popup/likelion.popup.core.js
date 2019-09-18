@@ -28,30 +28,30 @@
                         return _templates.dom;
                     });
                 },
-                open : function(url , bind){
-                    if(_templates.dom === -1){
-                        _templates.load(url)
-                        .then(bind)
-                        .then(function(){
-                            if(_templates.dom.hasClass("hide")){
-                                // 왠지 synchronous하게 작동되지 않음
-                                // setTimeout으로 일단 해결해둠
-                                setTimeout(() => {
-                                    _templates.dom.removeClass("hide");
-                                    _cover.removeClass("hide");
-                                }, 0);
-                            }
-                        });
-                    }
-                    else{
-                        if(_templates.dom.hasClass("hide")){
-                            _templates.dom.removeClass("hide");
-                            _cover.removeClass("hide");
+                open : function(url){
+                    if(_templates.dom !== -1){
+                        if(!_templates.dom.hasClass('hide')){
+                            console.warn("[likelion][popup] 이미 팝업이 열려있습니다.");
+                            return;
                         }
                         else{
-                            console.warn("[likelion][popup] 팝업이 이미 열려있습니다");
+                            _templates.dom.remove();
+                            _cover.remove();
                         }
                     }
+                    
+                    _templates.load(url)
+                    .then(function(){
+                        if(_templates.dom.hasClass("hide")){
+                            // 왠지 synchronous하게 작동되지 않음
+                            // setTimeout으로 일단 해결해둠
+                            setTimeout(() => {
+                                _templates.dom.removeClass("hide");
+                                _cover.removeClass("hide");
+                            }, 0);
+                        }
+                    });
+                
                 },
                 close : function(){
                     if(!_templates.dom.hasClass("hide")){
@@ -65,8 +65,8 @@
             }
 
             return {
-                open : function(url , bind){
-                    _templates.open(url , bind);
+                open : function(url){
+                    _templates.open(url);
                 },
                 close : function(){
                     _templates.close();
