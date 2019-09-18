@@ -81,7 +81,6 @@ WSGI_APPLICATION = 'syu_fest.wsgi.application'
 # sqlite3 DB (AWS Mysql DB접근 안될 시 사용)
 
 DATABASES = {
-<<<<<<< HEAD
     'default' : {
         'ENGINE' : 'django.db.backends.mysql',
         'HOST' : 'syu-likelion-festival.cb31jhgiywrg.ap-northeast-2.rds.amazonaws.com',      
@@ -89,23 +88,8 @@ DATABASES = {
             'read_default_file' : os.path.join(BASE_DIR, 'aws.rds.cnf'),
             'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'"
         }
-=======
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
->>>>>>> 22feaea1488ff8e972b5154bf697800031d52620
     }
 }
-
-# DATABASES = {
-#     'default' : {
-#         'ENGINE' : 'django.db.backends.mysql',      
-#         'OPTIONS' : {
-#             'read_default_file' : os.path.join(BASE_DIR, 'aws.rds.cnf'),
-#             'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'"
-#         }
-#     }
-# }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
