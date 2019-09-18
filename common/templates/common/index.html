@@ -2,8 +2,9 @@
 
 <!-- Mainpage head css,js -->
 {% block head %}
+	<link rel="stylesheet" href="{% static 'common/css/main.css' %}">
 	<link rel="stylesheet" href="{% static 'festival/css/festival.css' %}">
-	<!-- <link rel="stylesheet" href="{% static 'competiton/css/competition.css' %}"> -->
+	<link rel="stylesheet" href="{% static 'competition/css/competition.css' %}">
 {% endblock %}
 
 <!-- Mainpage contents -->
@@ -13,19 +14,19 @@
 	<div class="swiper-wrapper">
 		<!-- 체육대회 메인 -->
 		<div class="swiper-slide">
-			<div class="contianer competition">
+			<div class="container competition">
 				{% include 'competition/competition_main.html' %}
 			</div>
 		</div>
 		<!-- 홈페이지메인 -->
 		<div class="swiper-slide">
-			<div class="container">
+			<div class="container main">
 				<h1>메인화면</h1>
 			</div>
 		</div>
 		<!-- 축제 메인 -->
 		<div class="swiper-slide">
-			<div class="contianer festival">
+			<div class="container festival">
 				{% include 'festival/festival_main.html' %}
 			</div>
 		</div>
@@ -42,6 +43,7 @@
 <script>
 	var swiper = new Swiper('.swiper-container', {
 		initialSlide: 1,
+
 		navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',

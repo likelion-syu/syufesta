@@ -1,11 +1,16 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from . import views
+from rest_framework.routers import DefaultRouter
+
+router = DefaultRouter()
+router.register('booth', views.BoothViewSet)
 
 urlpatterns = [
-    path('event/', views.compete_event, name='event'),
-    path('timeline/', views.compete_timeline , name='compete_timeline'),
-    path('safety/', views.safety, name='safety'),
-    path('seatmap/', views.seat_map, name='seat_map'),
-    path('foodtruck', views.food_truck, name='compete_food_truck')
+    path('event', views.event, name='event'),
+    path('timeline', views.timeline , name='timeline'),
+    path('notice', views.notice, name='notice'),
+    path('seatmap', views.seatmap, name='seatmap'),
+    path('foodtruck', views.foodtruck, name='compete_foodtruck'),
+    path('restframework/', include(router.urls)),
 ]

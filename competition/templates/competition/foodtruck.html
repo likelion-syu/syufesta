@@ -1,0 +1,16 @@
+{% extends './competition_base.html' %}{% load staticfiles %}
+
+{% block competition-content %}
+<h1>푸드트럭</h1>
+<ul>
+	<li>
+		<a href="{% url 'home' %}">메인으로</a>
+	</li>
+	{% for food in foods %}
+	<li>
+		<h1>{{ food.booth_id }}</h1>
+		<p>{{ food.name }}</p>
+	</li>
+	{% endfor %}
+</ul>
+{% endblock %}
