@@ -1,45 +1,49 @@
-body{
-    width:1000px;
+.bf-map {
+	border: 1px solid black;
+	background-color: white;
+	width: 100%;
+	min-width: 1000px;
+	/* max-width: 1500px; */
+	height: 100%;
+	margin: 0px auto;
+	top: 0;
+	left: 0;
+	text-align: center;
+	z-index: 0;
+}
+.bf-icon {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	border: 1px solid white;
+	background-color: red;
+	z-index: 10;
+	display: inline-block;
 }
 
 .booth1{
-    position: relative;
     top: 141px;
     left: 219px;
-    display: inline;
-
+    
 }
-
 .booth2{
-    position: relative;
     top: 141px;
     left: 461px;
-    display: inline;
-
 }
-
 .truck1{
-    position: relative;
-    display: inline;
     top: 380px;
     left: 15px;
 }
 .truck2{
-    display: inline;
-    position: relative;
     top: 210px;
-    left: 530px;
+    left: -330px;
 }
 .truck3{
-    position: relative;
-    display: inline;
     top: 380px;
-    left: 506px;
+    left: -506px;
 
 }
 .truck4{
-    position: relative;
     top: 162px;
     left: -50px;
-    display: inline;
 }
