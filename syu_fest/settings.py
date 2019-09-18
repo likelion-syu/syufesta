@@ -88,7 +88,8 @@ WSGI_APPLICATION = 'syu_fest.wsgi.application'
 
 DATABASES = {
     'default' : {
-        'ENGINE' : 'django.db.backends.mysql',      
+        'ENGINE' : 'django.db.backends.mysql',
+        'HOST' : 'syu-likelion-festival.cb31jhgiywrg.ap-northeast-2.rds.amazonaws.com',      
         'OPTIONS' : {
             'read_default_file' : os.path.join(BASE_DIR, 'aws.rds.cnf'),
             'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'"
