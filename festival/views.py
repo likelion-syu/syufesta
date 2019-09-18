@@ -1,12 +1,8 @@
 from django.shortcuts import render
 from django.db import connection
 from competition.models import Booth
-from competition.serializers import BoothSerializer
-
 
 from django.http import JsonResponse
-
-
 
 def my_custom_sql(self):
 	with connection.cursor() as cursor:

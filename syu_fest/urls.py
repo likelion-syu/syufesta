@@ -14,4 +14,5 @@ urlpatterns = [
     path('festival/', include('festival.urls')),
     path('competition/', include('competition.urls')),
     path('account/', include('account.urls')),
+    path('api/' , include('common.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

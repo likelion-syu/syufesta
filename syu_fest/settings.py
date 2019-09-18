@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ["*" , "ec2-18-221-163-161.us-east-2.compute.amazonaws.com"]
 
 
 INSTALLED_APPS = [
-    'rest_framework',
+    
     'account',
     'common',
     'competition',
