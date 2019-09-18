@@ -1,19 +1,26 @@
+{% extends './competition_base.html' %}
+
 {% load staticfiles %}
-	<h1 id="competition">체육대회 메인화면</h1>
-	<ul>	
-		<li>
-			<a href="{% url 'timeline' %}">경기일정</a>
-		</li>
-		<li>
-			<a href="{% url 'seatmap' %}">학과좌석배치</a>
-		</li>
-		<li>
-			<a href="{% url 'compete_foodtruck' %}">푸드트럭</a>
-		</li>
-		<li>
-			<a href="{% url 'event' %}">이벤트</a>
-		</li>
-		<li>
-			<a href="{% url 'notice' %}">주의사항</a>
-		</li>
-	</ul>
+
+{% block competition-content %}
+<link rel="stylesheet" href="{% static 'competition/css/main.css' %}">
+
+<h1 id="competition">체육대회 메인화면</h1>
+<ul>
+	<li>
+		<a href="{% url 'timeline' %}">경기일정</a>
+	</li>
+	<li>
+		<a href="{% url 'seatmap' %}">학과좌석배치</a>
+	</li>
+	<li>
+		<a href="{% url 'compete_foodtruck' %}">푸드트럭</a>
+	</li>
+	<li>
+		<a href="{% url 'event' %}">이벤트</a>
+	</li>
+	<li>
+		<a href="{% url 'notice' %}">주의사항</a>
+	</li>
+</ul>
+{% endblock %}
