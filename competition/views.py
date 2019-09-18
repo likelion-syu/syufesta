@@ -1,5 +1,8 @@
 from django.shortcuts import render
 
+def home(req):
+    return render(req , 'competition/competition_main.html')
+
 def event(req):
     return render (req, 'competition/event.html')
 
