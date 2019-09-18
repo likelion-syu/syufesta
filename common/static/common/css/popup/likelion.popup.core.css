@@ -1,0 +1,62 @@
+.likelion-popup-container{
+    height : 85%;
+    width : 100%;
+    left : 0;
+    background-color: #eee;
+    position:fixed;
+    transition : .5s;
+    bottom:0;
+    z-index : 10001;
+}
+
+.likelion-popup-container.hide{
+    transition : .5s;
+    bottom:-100%;
+    z-index : 10001;
+}
+
+.likelion-popup-cover{
+    height : 100%;
+    width : 100%;
+    top : 0;                         
+    left : 0;
+    background-color:rgba(0,0,0,0.5);
+    position : fixed;
+    transition : .3s;
+    z-index : 10000;
+    opacity: 1;
+    overflow-x : hidden;
+    overflow-y : auto;
+}
+
+.likelion-popup-cover.hide{
+    transform: .3s;
+    opacity: 0;
+    z-index:-10000;
+}
+
+.likelion-popup-container .no-btn{
+    color: #fff;
+    background-color: rgba(255,255,255,0.2);
+    border: 0;
+    border-radius: 10px;
+    font-size: 1.3em;
+    padding: 5px 10px;
+    position: absolute;
+    right: 15px;
+    top: -45px;
+    transition:.3s;
+}
+
+.likelion-popup-container .no-btn:active{
+    background-color:rgba(255,255,255,0.6);
+    transition: .3s;
+}
+
+.likelion-popup-wrapper{
+    height : 100%;
+}
+
+.likelion-popup-wrapper .popup-content-container{
+    height : 100%;
+}
