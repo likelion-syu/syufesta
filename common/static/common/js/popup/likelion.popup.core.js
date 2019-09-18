@@ -19,7 +19,6 @@
                     return $.get(url)
                     .then(function(res){                        
                         // console.log(res);
-
                         _templates.dom = $(res);
                         $('body')
                         .prepend(_templates.dom)

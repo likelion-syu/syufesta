@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
@@ -31,16 +30,24 @@ ALLOWED_HOSTS = ["*" , "ec2-18-221-163-161.us-east-2.compute.amazonaws.com"]
 
 
 INSTALLED_APPS = [
-    'account',
+    # 'account',
     'common',
     'competition',
     'festival',
+    
     'django.contrib.admin',
-    'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'django.contrib.auth',
+    'django.contrib.messages',
+    'django.contrib.sites',    
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.kakao',
 ]
 
 MIDDLEWARE = [
@@ -89,9 +96,10 @@ WSGI_APPLICATION = 'syu_fest.wsgi.application'
 DATABASES = {
     'default' : {
         'ENGINE' : 'django.db.backends.mysql',      
+        'HOST' : "syu-likelion-festival.cb31jhgiywrg.ap-northeast-2.rds.amazonaws.com",
         'OPTIONS' : {
             'read_default_file' : os.path.join(BASE_DIR, 'aws.rds.cnf'),
-            'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'"
+            # 'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'"
         }
     }
 }
@@ -146,4 +154,7 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
+
+ACCOUNT_LOGOUT_ON_GET = 'True'
+
 

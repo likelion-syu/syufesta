@@ -8,5 +8,8 @@ urlpatterns = [
 	path('stamp', views.stamp, name='stamp'),
 	path('contest/talent', views.talent, name='talent'),
 	path('contest/cheer', views.cheer, name='cheer'),
-	path('foodtruck1',views.popup1, name='foodtruck1')
+	path('foodtruck1',views.popup1, name='foodtruck1'),
+	path('signin/' , views.signin , name="signin"),
+	path('signup/' , views.signup , name="signup"),
+	path('signout/' , views.signout , name="signout"),
 ]

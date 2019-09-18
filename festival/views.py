@@ -15,7 +15,14 @@ def talent (req):
 def cheer(req):
 	return render(req, 'festival/cheer_contest.html')
 
-
 def popup1(req):
 	return render(req, 'festival/foodtruck1.html')
 
+def signin(req) :
+	return render(req , 'festival/auth/signin.html')
+
+def signup(req) :
+	return render(req , 'festival/auth/signup.html')
+
+def signout(req) : 
+	print("signout")

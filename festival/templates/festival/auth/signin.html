@@ -1,0 +1,17 @@
+{% extends '../festival_base.html' %} 
+
+{% load staticfiles %}
+{% load socialaccount %}
+
+{% block festival-content %}
+<h1>로그인</h1>
+<ul>
+	<li>
+		{% if user.is_authenticated %}
+		<p>Welcome {{ user.username }} !!!</p>
+		{% else %}
+		<a href="{% provider_login_url 'kakao' %}">Sign Up</a>
+		{% endif %}
+	</li>
+</ul>
+{% endblock %}
