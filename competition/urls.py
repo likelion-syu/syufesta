@@ -7,5 +7,6 @@ urlpatterns = [
     path('timeline', views.timeline , name='timeline'),
     path('notice', views.notice, name='notice'),
     path('seatmap', views.seatmap, name='seatmap'),
-    path('foodtruck', views.foodtruck, name='compete_foodtruck')
+    path('foodtruck', views.foodtruck, name='compete_foodtruck'),
+    path('foodtruck_detail', views.foodtruck_detail, name='compete_foodtruck_detail')
 ]

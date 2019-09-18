@@ -6,6 +6,9 @@ def event(req):
 def foodtruck(req):
     return render (req, 'competition/foodtruck.html')
 
+def foodtruck_detail(req):
+    return render (req, 'competition/foodtruck_detail.html')
+
 def timeline(req):
     return render (req, 'competition/timeline.html')
 
