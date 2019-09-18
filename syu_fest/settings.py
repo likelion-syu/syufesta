@@ -86,17 +86,10 @@ WSGI_APPLICATION = 'syu_fest.wsgi.application'
 
 # sqlite3 DB (AWS Mysql DB접근 안될 시 사용)
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
 DATABASES = {
     'default' : {
-        'ENGINE' : 'django.db.backends.mysql',      
-        'HOST' : "syu-likelion-festival.cb31jhgiywrg.ap-northeast-2.rds.amazonaws.com",
+        'ENGINE' : 'django.db.backends.mysql',
+        'HOST' : 'syu-likelion-festival.cb31jhgiywrg.ap-northeast-2.rds.amazonaws.com',      
         'OPTIONS' : {
             'read_default_file' : os.path.join(BASE_DIR, 'aws.rds.cnf'),
             # 'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'"
@@ -156,5 +149,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 ACCOUNT_LOGOUT_ON_GET = 'True'
+LOGIN_REDIRECT_URL = '/'
 
 

@@ -1,61 +1,49 @@
-
-body{
-
-
-    height: 100%;
-    width:1000px;
+.bf-map {
+	border: 1px solid black;
+	background-color: white;
+	width: 100%;
+	min-width: 1000px;
+	/* max-width: 1500px; */
+	height: 100%;
+	margin: 0px auto;
+	top: 0;
+	left: 0;
+	text-align: center;
+	z-index: 0;
+}
+.bf-icon {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	border: 1px solid white;
+	background-color: red;
+	z-index: 10;
+	display: inline-block;
 }
 
-
-
-.title{
-    text-align: center;
+.booth1{
+    top: 141px;
+    left: 219px;
+    
 }
-
-.tomain{
-    font-size:1em;
+.booth2{
+    top: 141px;
+    left: 461px;
+}
+.truck1{
+    top: 380px;
+    left: 15px;
+}
+.truck2{
+    top: 210px;
+    left: -330px;
+}
+.truck3{
+    top: 380px;
+    left: -506px;
 
 }
-.food{
-    display:inline;
-    color:white;
-    font-size:60px;
-    width:60px;
-    height:60px;
-    margin 2px;
-
+.truck4{
+    top: 162px;
+    left: -50px;
 }
-.food1{
-        position: relative;
-    top: 400px;
-    left: 44px;
-}
-.food2{
-        position: relative;
-    top: 171px;
-    left: 48px;
-}
-.food3{
-
-    position: relative;
-    left: 97px;
-    top: 171px;
-}
-.food4{
-        position: relative;
-    top: 171px;
-    left: 90px;
-}
-.booth1
-{
-    position: relative;
-    top: 300px;
-    left: 39px;
-}
-
-.row{
-    text-align: center;
-}
-
-
-

@@ -4,6 +4,8 @@
 	margin: 0px;
 	width: 100%;
 	max-width: 100%;
-	padding: 10%;
+	padding: 0px;
 	color: white;
+	overflow-y: hidden;
 }
+

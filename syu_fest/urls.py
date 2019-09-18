@@ -15,4 +15,6 @@ urlpatterns = [
     path('competition/', include('competition.urls')),
     # path('account/', include('account.urls')),
     url(r'^accounts/', include('allauth.urls')),
+    # path('account/', include('account.urls')),
+    path('api/' , include('common.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
