@@ -1,21 +1,23 @@
 {% extends './festival_base.html' %} {% load staticfiles %}
 
 {% block festival-head %}
-<link rel="stylesheet" href="../../static/festival/css/foodtruck.css">
 {% endblock %}
 
 {% block festival-content %}
+
+
+<link rel="stylesheet" href='{% static "/festival/css/foodtruck.css" %}'>
 	<h1>푸드트럭</h1>
 	<div class="row">
-		<div data-ft-index onclick="openPopup1('{% url 'foodtruck1' %}','newWin', 20, 20, 300, 500)" class="col-2 food1">
+		<div data-ft-index onclick="openPopup(this)" class="col-2 food1" data-ft-idx="0">
 <i class="fas fa-truck"></i></div>
-		<div data-ft-index onclick="openPopup2()" class="col-2 food2">
+		<div data-ft-index onclick="openPopup(this)" class="col-2 food2" data-ft-idx="1">
 <i class="fas fa-truck"></i></div>
-		<div data-ft-index onclick="openPopup3()" class="col-2 food3">
+		<div data-ft-index onclick="openPopup(this)" class="col-2 food3" data-ft-idx="2">
 <i class="fas fa-truck"></i></div>
-		<div data-ft-index onclick="openPopup4()" class="col-2 food4">
+		<div data-ft-index onclick="openPopup(this)" class="col-2 food4" data-ft-idx="3">
 <i class="fas fa-truck"></i></div>
-		<div data-bt-index onclick="openPopup5()" class="col-2 booth1"><i class="fas fa-archway"></i>
+		<div data-bt-index onclick="openPopup(this)" class="col-2 booth1" data-ft-idx="4"><i class="fas fa-archway"></i>
 
 </div>
 
@@ -29,29 +31,19 @@
 	</ul>
 <script>
 
-	function openPopup1(url, winName, leftPos, topPos, widthVal, heightVal) {
+	function openPopup(obj){
+		var __data = [
+				{ name : 'foodtruck1'},
+				{ name : 'foodtruck2'},
+				{ name : 'foodtruck3'},
+				{ name : 'foodtruck4'},
+				{ name : 'foodtruck5'}
+				];
+		var __obj = $(obj);
+		var __currentVariable = __data[Number(__obj.attr('data-ft-idx'))];
+		__likelion.popup.open(__currentVariable);
 
-  window.open(url, winName, "scrollbars=no, toolbar=no, menubar=no, resizable=no, status=no, location=no, left=" + leftPos + ", top=" + topPos + ", width=" + widthVal + ", height=" + heightVal);
- }
-
-
-
-	function openPopup2(url, winName, leftPos, topPos, widthVal, heightVal) {
-
-  window.open(url, winName, "scrollbars=no, toolbar=no, menubar=no, resizable=no, status=no, location=no, left=" + leftPos + ", top=" + topPos + ", width=" + widthVal + ", height=" + heightVal);
- }
-	function openPopup3(url, winName, leftPos, topPos, widthVal, heightVal) {
-
-  window.open(url, winName, "scrollbars=no, toolbar=no, menubar=no, resizable=no, status=no, location=no, left=" + leftPos + ", top=" + topPos + ", width=" + widthVal + ", height=" + heightVal);
- }
-	function openPopup4(url, winName, leftPos, topPos, widthVal, heightVal) {
-
-  window.open(url, winName, "scrollbars=no, toolbar=no, menubar=no, resizable=no, status=no, location=no, left=" + leftPos + ", top=" + topPos + ", width=" + widthVal + ", height=" + heightVal);
- }
-	function openPopup5(url, winName, leftPos, topPos, widthVal, heightVal) {
-
-  window.open(url, winName, "scrollbars=no, toolbar=no, menubar=no, resizable=no, status=no, location=no, left=" + leftPos + ", top=" + topPos + ", width=" + widthVal + ", height=" + heightVal);
- }
+	}
 
 </script>
 {% endblock %}
