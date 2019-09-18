@@ -4,32 +4,26 @@
 {% endblock %}
 
 {% block festival-content %}
+<link rel="stylesheet" href="{% static 'festival/css/foodtruck.css' %}">
 
+	<!-- <a href="{% url 'home' %}">메인으로</a>
 
-<link rel="stylesheet" href='{% static "/festival/css/foodtruck.css" %}'>
-	<h1>푸드트럭</h1>
-	<div class="row">
-		<div data-ft-index onclick="openPopup(this)" class="col-2 food1" data-ft-idx="0">
-<i class="fas fa-truck"></i></div>
-		<div data-ft-index onclick="openPopup(this)" class="col-2 food2" data-ft-idx="1">
-<i class="fas fa-truck"></i></div>
-		<div data-ft-index onclick="openPopup(this)" class="col-2 food3" data-ft-idx="2">
-<i class="fas fa-truck"></i></div>
-		<div data-ft-index onclick="openPopup(this)" class="col-2 food4" data-ft-idx="3">
-<i class="fas fa-truck"></i></div>
-		<div data-bt-index onclick="openPopup(this)" class="col-2 booth1" data-ft-idx="4"><i class="fas fa-archway"></i>
+	<p class ="truckbooth">푸드트럭 & 부스</p> -->
 
-</div>
+	<div class="bf-map">
 
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon booth1" data-ft-idx="1"><i class="fas fa-archway"></i></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon booth2" data-ft-idx="2"><i class="fas fa-archway"></i></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon truck1" data-ft-idx="3"><i class="fas fa-truck"></i></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon truck2" data-ft-idx="4"><i class="fas fa-truck"></i></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon truck3" data-ft-idx="5"><i class="fas fa-truck"></i></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon truck4" data-ft-idx="6"><i class="fas fa-truck"></i></div>
+	</div>
 
-
-
-	<ul>
-		<li>
-			<a class="tomain" href="{% url 'home' %}">메인으로</a>
-		</li>
-	</ul>
 <script>
+	$(document).ready(()=>{
+		$('.festival').scrollLeft(($('.bf-map').width() / 3))
+	});
 
 	function openPopup(obj){
 		var __data = [
@@ -40,10 +34,25 @@
 				{ name : 'foodtruck5'}
 				];
 		var __obj = $(obj);
-		var __currentVariable = __data[Number(__obj.attr('data-ft-idx'))];
-		__likelion.popup.open(__currentVariable);
+		var __currentVariable = __data[Number(__obj.attr('data-ft-idx'))-1];
+
+		__likelion.popup.open('/static/common/templates/popup/tmp.comp.foodtruck.html' , 
+		(obj)=>{
+			console.log(__obj.attr('data-ft-idx'));
+			$('.booth-name').text(__currentVariable.name);
+		});
 
 	}
 
 </script>
+
+
+
+
+
+
+
+
+
+
 {% endblock %}
