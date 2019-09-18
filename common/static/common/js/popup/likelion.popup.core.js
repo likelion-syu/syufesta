@@ -13,28 +13,13 @@
             let _cover = $("<div></div>");
             _cover.addClass("likelion-popup-cover").addClass("hide");
             
-            _cover.on('transitionstart' , function(){
-                if(!_cover.hasClass("hide")){
-                    _cover.css({
-                        // 'displayㅌㅈ' : 'block'
-                    });
-                }
-            });
-
-            _cover.on('transitionend webkitTransitionEnd oTransitionEnd', function () {
-                if(_cover.hasClass("hide")){
-                    _cover.css({
-                        // 'display' : 'none'
-                    });
-                }
-            });
-            
             let _templates = {
                 dom : -1,
-                load : function(){
-                    return $.get('/static/common/templates/popup/tmp.comp.foodtruck.html')
-                    .then(function(res){
-                        console.log(res);
+                load : function(url){
+                    return $.get(url)
+                    .then(function(res){                        
+                        // console.log(res);
+
                         _templates.dom = $(res);
                         $('body')
                         .prepend(_templates.dom)
@@ -43,15 +28,10 @@
                         return _templates.dom;
                     });
                 },
-                bind : function(templates){
-                    return new Promise((res , rej)=>{
-                        res();
-                    });
-                },
-                open : function(data){
+                open : function(url , bind){
                     if(_templates.dom === -1){
-                        _templates.load()
-                        .then(_templates.bind)
+                        _templates.load(url)
+                        .then(bind)
                         .then(function(){
                             if(_templates.dom.hasClass("hide")){
                                 // 왠지 synchronous하게 작동되지 않음
@@ -85,19 +65,11 @@
             }
 
             return {
-                open : function(data){
-                    _templates.open(data);
+                open : function(url , bind){
+                    _templates.open(url , bind);
                 },
                 close : function(){
                     _templates.close();
-                },
-                IDENTIFIERS : {
-                    comp : {
-                        "FOODTRUCK" : "FOODTRUCK",
-                    },
-                    fest : {
-
-                    }
                 }
             };
         });
