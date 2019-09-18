@@ -28,7 +28,7 @@ Pillow==6.1.0
 python-dateutil==2.8.0
 python3-openid==3.1.0
 pytz==2019.2
-PyYAML>=4.2b1
+PyYAML==5.1
 requests==2.20.1
 requests-oauthlib==1.2.0
 semantic-version==2.5.0
