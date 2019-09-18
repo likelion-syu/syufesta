@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 def home(req):
+    print('Hello World')
     return render(req , 'competition/competition_main.html')
 
 def event(req):
