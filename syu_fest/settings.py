@@ -24,7 +24,7 @@ SECRET_KEY = '7l!osp2q*#rrszk6*rtxjts_hib69vc9)h-*w^m$8t^#@vv8-h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*" , "ec2-18-221-163-161.us-east-2.compute.amazonaws.com"]
+ALLOWED_HOSTS = ["*" , "syufesta.7mjys373pq.us-west-2.elasticbeanstalk.com"]
 
 # Application definition
 
@@ -151,4 +151,6 @@ MEDIA_URL = '/media/'
 ACCOUNT_LOGOUT_ON_GET = 'True'
 LOGIN_REDIRECT_URL = '/'
 
-
+# production : 1
+# dev : 2
+SITE_ID = 2
