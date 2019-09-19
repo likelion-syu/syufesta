@@ -17,4 +17,3 @@ def comp_foodtruck(req , pk):
     return render(req , 'common/popup/competition/foodtruck.html' , {
         'data' : expanded_rows[0]
     })
-

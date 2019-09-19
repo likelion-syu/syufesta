@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.db import connection
-from competition.models import Booth
+from django.db import connection, transaction
+from common.models import Booth
 
 from django.http import JsonResponse
 
