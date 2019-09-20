@@ -18,3 +18,4 @@ def comp_foodtruck(req , pk):
         'data' : expanded_rows[0]
     })
 
+
