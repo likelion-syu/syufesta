@@ -55,8 +55,8 @@ def popup1(req):
 	return render(req, 'festival/foodtruck1.html')
 
 def talent_select(req):
+	
 	return render(req, 'festival/talent.html')
-
 
 def signin(req) :
 	return render(req , 'festival/auth/signin.html')
