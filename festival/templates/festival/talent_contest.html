@@ -7,4 +7,11 @@
 			<a href="{% url 'home' %}">메인으로</a>
 		</li>
 	</ul>
+<!-- 투표결과 -->
+ {% for datas in data %}
+ <h1>{{datas.name}}</h1>
+ <p>{{datas.CT}}</p>
+	{% endfor %}
 {% endblock %}
+
+

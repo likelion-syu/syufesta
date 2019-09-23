@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 
+
 urlpatterns = [
 	path('foodtruck', views.foodtruck, name='fest_foodtruck'),
 	path('booth', views.booth, name='booth'),
