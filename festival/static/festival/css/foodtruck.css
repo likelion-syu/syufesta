@@ -47,3 +47,8 @@
     top: 162px;
     left: -50px;
 }
+.container.festival{
+	overflow-y: hidden;
+	height: 100%;
+	padding: 0px;
+}
