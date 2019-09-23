@@ -1,10 +1,14 @@
 {% extends './festival_base.html' %} {% load staticfiles %}
 
 {% block festival-content %}
+ <link rel="stylesheet" href="{% static 'festival/css/cheer_contest.css' %}">
+ <div class="cheer-container">
 	<h1>치어대전</h1>
 	<ul>
 		<li>
 			<a href="{% url 'home' %}">메인으로</a>
 		</li>
 	</ul>
+ </div>
+
 {% endblock %}
