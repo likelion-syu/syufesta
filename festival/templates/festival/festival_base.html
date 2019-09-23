@@ -1,20 +1,18 @@
-{% extends 'base.html' %}{% load staticfiles %}
+{% extends 'base.html' %}
+{% load staticfiles %}
 
 {% block head %}
 <link rel="stylesheet" href="{% static 'festival/css/festival.css' %}">
+<link rel="stylesheet" href="{% static 'festival/css/navbar.css' %}">
 
+{% block festival-head %}
+{% endblock %}
 
 {% endblock %}
 
 
-{% block festival-head %}
-
-
-{% endblock%}
-
-
-
 {% block contents %}
+{% include './navbar.html' %}
 <div class="container festival">
 	{% block festival-content %}
 
