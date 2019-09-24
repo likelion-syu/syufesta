@@ -1,21 +1,39 @@
 {% extends './festival_base.html' %} {% load staticfiles %}
 
 {% block festival-head %}
+<link rel="stylesheet" href="{% static 'festival/css/foodtruck.css' %}">
 {% endblock %}
 
 {% block festival-content %}
-<link rel="stylesheet" href="{% static 'festival/css/foodtruck.css' %}">
 
 
 
+
+	
 	<div class="bf-map">
+		<h1 class="title">푸드트럭 & 부스 배치도</h1>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon booth1" data-ft-idx="1"><p class="booth">부스</p><p class="boothtitle">아트 앤 디자인 쇼</p></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon booth2" data-ft-idx="2"><p class="booth">부스</p><p class="boothtitle">조형찬</p></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon booth3" data-ft-idx="3"><p class="booth">부스</p><p class="boothtitle">총학부스</p></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon booth4" data-ft-idx="4"><p class="booth">부스</p><p class="boothtitle">다전공 제도 상담부스</p></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon booth5" data-ft-idx="5"><p class="booth">부스</p><p class="boothtitle">나를 꺼내줘</p></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon booth6" data-ft-idx="6"><p class="booth">부스</p><p class="boothtitle">리너스 하이</p></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon booth7" data-ft-idx="7"><p class="booth">부스</p><p class="boothtitle">PATIA ACC</p></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon booth8" data-ft-idx="8"><p class="booth">부스</p><p class="boothtitle">FAB5</p></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon booth9" data-ft-idx="9"><p class="booth">부스</p><p class="boothtitle">쉠방구</p></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon booth10" data-ft-idx="10"><p class="booth">부스</p><p class="boothtitle">나를 꺼내줘<br>(강의실 미정)</p></i></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon booth11" data-ft-idx="11"><p class="booth">부스</p><p class="boothtitle">농구 코트</p></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon truck1" data-ft-idx="13"><p class="foodtruck">푸드트럭</p><p class="foodtrucktitle">가게이름</p></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon truck2" data-ft-idx="14"><p class="foodtruck">푸드트럭</p><p class="foodtrucktitle">가게이름</p></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon truck3" data-ft-idx="15"><p class="foodtruck">푸드트럭</p><p class="foodtrucktitle">가게이름</p></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon truck4" data-ft-idx="16"><p class="foodtruck">푸드트럭</p><p class="foodtrucktitle">가게이름</p></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon truck4" data-ft-idx="17"><p class="foodtruck">푸드트럭</p><p class="foodtrucktitle">가게이름</p></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon truck4" data-ft-idx="18"><p class="foodtruck">푸드트럭</p><p class="foodtrucktitle">가게이름</p></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon truck4" data-ft-idx="19"><p class="foodtruck">푸드트럭</p><p class="foodtrucktitle">가게이름</p></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon truck4" data-ft-idx="20"><p class="foodtruck">푸드트럭</p><p class="foodtrucktitle">가게이름</p></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon truck4" data-ft-idx="21"><p class="foodtruck">푸드트럭</p><p class="foodtrucktitle">가게이름</p></div>
+		<div data-bt-index onclick="openPopup(this)" class="bf-icon truck4" data-ft-idx="22"><p class="foodtruck">푸드트럭</p><p class="foodtrucktitle">가게이름</p></div>
 
-		<div data-bt-index onclick="openPopup(this)" class="bf-icon booth1" data-ft-idx="1"><i class="fas fa-archway"></i></div>
-		<div data-bt-index onclick="openPopup(this)" class="bf-icon booth2" data-ft-idx="2"><i class="fas fa-archway"></i></div>
-		<div data-bt-index onclick="openPopup(this)" class="bf-icon truck1" data-ft-idx="3"><i class="fas fa-truck"></i></div>
-		<div data-bt-index onclick="openPopup(this)" class="bf-icon truck2" data-ft-idx="4"><i class="fas fa-truck"></i></div>
-		<div data-bt-index onclick="openPopup(this)" class="bf-icon truck3" data-ft-idx="5"><i class="fas fa-truck"></i></div>
-		<div data-bt-index onclick="openPopup(this)" class="bf-icon truck4" data-ft-idx="6"><i class="fas fa-truck"></i></div>
 	</div>
 
 <script>
