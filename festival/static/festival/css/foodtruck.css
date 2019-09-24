@@ -206,33 +206,11 @@
 
 }
 .truck4{
-    top: 201px;
-    left: 359px;
-    vertical-align: middle;
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
-    border-width: 10px;
-    border-color: purple;
-    background-color: rgba(0,0,0,0);
+    top: 162px;
+    left: -50px;
 }
-.title{
-    position: absolute;
-    color:rgb(190, 247, 255);
-    margin-top:20px;
-    text-align: center;
-    font-size:30px;
-    display: inline-block;
-}
-.fa-archway, .fa-truck{
-    position: absolute;
-    max-width: 80% !important;
-    max-height: 60% !important;
-    width: auto !important;
-    height: auto;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+.container.festival{
+	overflow-y: hidden;
+	height: 100%;
+	padding: 0px;
 }
