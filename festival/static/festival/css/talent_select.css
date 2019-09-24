@@ -3,6 +3,7 @@
     border-radius: 50%;
     height: 130px;
     border: 4px solid rgb(118,123,186);
+
 }
 
 .title1 {
@@ -15,7 +16,7 @@
 }
 
 .title2 {
-    font-size : 22px;
+    font-size : 19px;
     font-family : 'NanumSquareExtraBold' !important;
     text-align : center;
     font-weight: 900;
@@ -41,6 +42,19 @@
     flex-shrink: 0;
     display: block;
     margin: 20px auto;
+    
+
+}
+
+.btn-primary {
+    border: 3px solid rgba(255, 255, 255, 0.48) !important;
+    background-color: rgba(0,0,0,0.45);
+    font-family : 'NanumSquare' !important;
+    font-weight: 900;
+    color : white;
+    height: 48px;
+    width: 294px;
+    border-radius: 16px;
 }
 
 .container.talent{
@@ -53,5 +67,28 @@
     bottom: 5px;
     margin: auto;
     display: block;
-    margin-left: 20%;
+    margin-left: 3%;
+}
+
+.col-6 {
+    position:relative;
+}
+
+.thumbs {
+    position: absolute;
+    left: 100px;
+    bottom: 42px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(124,186,255);
+}
+
+.fa-thumbs-up {
+    margin-top: 5px;
+    font-size: 23px;
+}
+
+.empty {
+    padding : 36px;
 }
