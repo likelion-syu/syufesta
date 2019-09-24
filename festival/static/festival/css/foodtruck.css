@@ -9,7 +9,9 @@
 	top: 0;
 	left: 0;
 	text-align: center;
-	z-index: 0;
+    z-index: 0;
+    background-image: url(../img/boothbackground.png);
+    background-size: cover;
 }
 .bf-icon {
 	position: relative;
@@ -20,27 +22,187 @@
 	z-index: 10;
 	display: inline-block;
 }
+.booth{
+    display: inline;
+    vertical-align: sub;
+    color:rgb(199, 245, 253);
+}
+.boothtitle{
+    color:rgb(190, 247, 255);
+    font-weight: 800;
+}
+.foodtruck{
+    display: inline;
+    vertical-align: sub;
+    color:rgb(199, 245, 253);
 
+}
+.foodtrucktitle{
+    color:rgb(190, 247, 255);
+    font-weight: 800;
+}
 .booth1{
-    top: 141px;
-    left: 219px;
+    top: 286px;
+    left: 170px;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border-width: 10px;
+    border-color: rgb(45, 75, 241);
+    background-color: rgba(0,0,0,0);
     
 }
 .booth2{
-    top: 141px;
-    left: 461px;
+    top: 230px;
+    left: 210px;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border-width: 10px;
+    border-color: rgb(45, 75, 241);
+    background-color: rgba(0,0,0,0);
 }
+.booth3{
+    top: 308px;
+    left: 205px;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border-width: 10px;
+    border-color: rgb(45, 75, 241);
+    background-color: rgba(0,0,0,0);
+}
+.booth4{
+    top: 444px;
+    left: 144px;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border-width: 10px;
+    border-color: rgb(45, 75, 241);
+    background-color: rgba(0,0,0,0);
+
+}
+.booth5{
+    right: 308px;
+    top: 403px;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border-width: 10px;
+    border-color: rgb(45, 75, 241);
+    background-color: rgba(0,0,0,0);
+}
+.booth6{
+    right: 385px;
+    top: 518px;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border-width: 10px;
+    border-color: rgb(45, 75, 241);
+    background-color: rgba(0,0,0,0);
+
+}
+.booth7{
+    top: 614px;
+    right: 200px;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border-width: 10px;
+    border-color: rgb(45, 75, 241);
+    background-color: rgba(0,0,0,0);
+
+}
+.booth8{
+
+    top: 631px;
+    right: 545px;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border-width: 10px;
+    border-color: rgb(45, 75, 241);
+    background-color: rgba(0,0,0,0);
+
+}
+.booth9{
+
+    top: 672px;
+    right: 545px;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border-width: 10px;
+    border-color: rgb(45, 75, 241);
+    background-color: rgba(0,0,0,0);
+}
+.booth10{
+    top: 88px;
+    left: 415px;
+    vertical-align: middle;
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    border-width: 10px;
+    border-color: rgb(45, 75, 241);
+    background-color: rgba(0,0,0,0);
+}
+.booth11{
+
+    top: 479px;
+    left: 256px;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border-width: 10px;
+    border-color: rgb(45, 75, 241);
+    background-color: rgba(0,0,0,0);
+}
+
 .truck1{
-    top: 380px;
-    left: 15px;
+    top: 244px;
+    left: 492px;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border-width: 10px;
+    border-color: purple;
+    background-color: rgba(0,0,0,0);
 }
 .truck2{
-    top: 210px;
-    left: -330px;
+    top: 287px;
+    left: 449px;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border-width: 10px;
+    border-color: purple;
+    background-color: rgba(0,0,0,0);
 }
 .truck3{
-    top: 380px;
-    left: -506px;
+    top: 331px;
+    left: 403px;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border-width: 10px;
+    border-color: purple;
+    background-color: rgba(0,0,0,0);
 
 }
 .truck4{

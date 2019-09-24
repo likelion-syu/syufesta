@@ -1,0 +1,59 @@
+.container {
+    margin: 0px auto;
+}
+img {
+    width:60px;
+    height:75px;
+    overflow: hidden;
+}
+.title > p {
+ 
+    margin-bottom: 0;
+
+}
+.col-md-12.title {
+    background-color: red;
+    text-align: center;
+    margin: 20px 0px;
+    height: 170px;
+    padding: 60px 10px;
+
+}
+.col-md-12.result {
+    width: 80%;
+    height: 75px;
+    border: 1px solid red;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    padding:0;
+    overflow: hidden;
+}
+/* 재투표버튼 */
+.talent-revoting.button {
+    background-color: black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    color: white;
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    height:100px;
+}
+.talent-revoting > div {
+    background-color: rgba(235, 16, 16,0.3);
+    width: 50%;
+    height: 40px;
+    margin: 4px auto;
+    border-radius: 10px;
+    border: 1px solid red;
+}
+.talent-revoting p {
+    margin:0;
+    padding-top: 6px;
+}
+
+
+
+
