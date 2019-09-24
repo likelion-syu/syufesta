@@ -1,0 +1,24 @@
+.navbar{
+    height : 56px;
+    background-color : none;
+    position : fixed;
+    width : 100%;
+    background-color: #000;
+    top : 0;
+    left : 0;
+}
+
+.navbar .fa-home , .navbar .fa-bars{
+    filter: drop-shadow(0 0 3px #d86696);
+    color : #fff;
+    font-size : 1.2em;
+}
+
+.navbar p{
+    margin : 0;
+    font-size : 1.3em;
+    color : #fff;
+    text-shadow : 0 0 3px #d86696;
+    margin-top:-5px;
+}
+

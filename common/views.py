@@ -17,3 +17,17 @@ def comp_foodtruck(req , pk):
     return render(req , 'common/popup/competition/foodtruck.html' , {
         'data' : expanded_rows[0]
     })
+
+
+def fest_talent(req):
+	with connection.cursor() as cursor:
+		cursor.execute("SELECT CP.name , count(CP.name) FROM ContestParticipant as CP JOIN ContestVote as CV ON CP.cont_participant_id = CV.cont_participant_id group by CP.name")
+		rows = cursor.fetchall()
+
+	expanded_rows = []
+	expanded_rows = utils.query_expand(rows , cursor)
+
+	return JsonResponse({
+		'status' : 1,
+		'data' : expanded_rows,
+	}, safe=False)
