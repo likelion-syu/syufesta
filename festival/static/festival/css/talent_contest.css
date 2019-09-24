@@ -1,0 +1,26 @@
+.container {
+    margin: 0px auto;
+}
+img {
+    width:60px;
+    height:60px;
+}
+.title > p {
+ 
+    margin-bottom: 0;
+
+}
+.col-md-3.title {
+    background-color: red;
+    text-align: center;
+    margin:20px;
+}
+.col-md-12.result {
+    width: 80%;
+    height: 75px;
+    border: 1px solid red;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding:0;
+}
+
