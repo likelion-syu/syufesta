@@ -2,13 +2,18 @@
 {% load staticfiles %}
 
 {% block head %}
-<link rel="stylesheet" href="{% static 'festival/css/festival.css' %}">
-<link rel="stylesheet" href="{% static 'festival/css/navbar.css' %}">
+	<link rel="stylesheet" href="{% static 'festival/css/festival.css' %}">
+	<link rel="stylesheet" href="{% static 'festival/css/navbar.css' %}">
+	{% block festival-head %}
 
-{% block festival-head %}
+
+	{% endblock %}
+
 {% endblock %}
 
-{% endblock %}
+
+
+
 
 
 {% block contents %}

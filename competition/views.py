@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Booth
+from common.models import Booth
 
 
 from django.http import HttpResponse, JsonResponse
