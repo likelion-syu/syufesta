@@ -1,11 +1,9 @@
 .container.festival {
 	background-color: black;
-	height: 100%;
 	margin: 0px;
 	width: 100%;
 	max-width: 100%;
-	padding: 0px;
 	color: white;
-	overflow-y: hidden;
+	min-height: 100%;
 }
 

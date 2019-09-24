@@ -1,0 +1,57 @@
+.img-circle{
+    width: 130px;
+    border-radius: 50%;
+    height: 130px;
+    border: 4px solid rgb(118,123,186);
+}
+
+.title1 {
+    font-family : 'NanumSquare' !important;
+    text-align : center;
+    font-weight: 900;
+    color : white;
+    /* -webkit-text-stroke: 1px rgb(108,116,182); */
+    padding-top: 20px;
+}
+
+.title2 {
+    font-size : 22px;
+    font-family : 'NanumSquareExtraBold' !important;
+    text-align : center;
+    font-weight: 900;
+    color : white;
+    /* -webkit-text-stroke: 1px rgb(108,116,182); */
+}
+
+.date1 {
+    font-size : 15px;
+    font-family : 'NanumSquareExtraBold' !important;
+    text-align : center;
+    font-weight: 200;
+    color :white;
+}
+
+.row.talent {
+    text-align : center;
+    height : 100%;
+    overflow-y : auto;
+}
+
+.btn {
+    flex-shrink: 0;
+    display: block;
+    margin: 20px auto;
+}
+
+.container.talent{
+    flex: 1;
+}
+
+.col-12.talent {
+    position: fixed;
+    width: 50%;
+    bottom: 5px;
+    margin: auto;
+    display: block;
+    margin-left: 20%;
+}
