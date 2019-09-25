@@ -1,3 +1,6 @@
+html , body{
+	background-color:#000;
+}
 .container.festival {
 	background-color: black;
 	margin: 0px;
@@ -5,5 +8,9 @@
 	max-width: 100%;
 	color: white;
 	min-height: 100%;
+	/* NAVBAR HEIGHT */
+	margin-top : 56px;
 }
+
+
 

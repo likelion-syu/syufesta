@@ -21,7 +21,7 @@ def comp_foodtruck(req , pk):
 
 def fest_talent(req):
 	with connection.cursor() as cursor:
-		cursor.execute("SELECT CP.name , count(CP.name) FROM ContestParticipant as CP JOIN ContestVote as CV ON CP.cont_participant_id = CV.cont_participant_id group by CP.name")
+		cursor.execute("select cont_participant_nm as name ,count(1) as 'cnt' , total from (select * from ContestVote join (select count(1) total from ContestVote) as temp) as CV join ContestParticipant As CP on CV.cont_participant_id = CP.cont_participant_id group by CP.cont_participant_id order by 'cnt' desc;")
 		rows = cursor.fetchall()
 
 	expanded_rows = []
