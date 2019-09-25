@@ -8,49 +8,23 @@
 	<div class="talent-container">
 		<div class="talent-nav">nav</div>
 		<div class="row title">
-			<div class="col-md-12 title">
+			<div class="col-md-3 title">
 				<p>장기자랑 참가자를 투표하세요!</p>
-				<p>기간:19.10.10AM09:00~PM06:00종료까지</p>
+				<p>기간:19.10.07PM16:00~PM17:30종료까지</p>
 			</div>
 			<div class="col-md-9">
 				<div class="row result">
 					<!-- 순위 리스트 -->
+					<!-- 재투표 버튼 때문에 한칸 더 만들어야함 -->
+					{% for datas in data %}
 					<div class="col-md-12 result">
 						<img src="{% static 'festival/img/kim.jpg' %}">
+						<span>{{datas.cont_participant_nm}}</span>
 					</div>
-					<div class="col-md-12 result">
-						<img src="{% static 'festival/img/kim.jpg' %}">
-					</div>
-					<div class="col-md-12 result">
-						<img src="{% static 'festival/img/kim.jpg' %}">
-					</div>
-					<div class="col-md-12 result">
-						<img src="{% static 'festival/img/kim.jpg' %}">
-					</div>
-					<div class="col-md-12 result">
-						<img src="{% static 'festival/img/kim.jpg' %}">
-					</div>
-					<div class="col-md-12 result">
-						<img src="{% static 'festival/img/kim.jpg' %}">
-					</div>
-					<div class="col-md-12 result">
-						<img src="{% static 'festival/img/kim.jpg' %}">
-					</div>
-					<div class="col-md-12 result">
-						<img src="{% static 'festival/img/kim.jpg' %}">
-					</div>
-					<div class="col-md-12 result">
-						<img src="{% static 'festival/img/kim.jpg' %}">
-					</div>
-					<div class="col-md-12 result">
-						<img src="{% static 'festival/img/kim.jpg' %}">
-					</div>
-					<div class="col-md-12 result">
-						<img src="{% static 'festival/img/kim.jpg' %}">
-					</div>
-					<div class="col-md-12 result">
-						<img src="{% static 'festival/img/kim.jpg' %}">
-					</div>
+					{% endfor %}
+					
+					
+					
 					<!-- 재투표 버튼 -->
 					<div class = "talent-revoting button">
 						<div>

@@ -1,5 +1,7 @@
+
 .container {
     margin: 0px auto;
+    
 }
 img {
     width:60px;
@@ -11,8 +13,7 @@ img {
     margin-bottom: 0;
 
 }
-.col-md-12.title {
-    background-color: red;
+.col-md-3.title {
     text-align: center;
     margin: 20px 0px;
     height: 170px;
@@ -20,10 +21,10 @@ img {
 
 }
 .col-md-12.result {
-    width: 80%;
+    width: 100%;
     height: 75px;
     border: 1px solid red;
-    border-radius: 10px;
+    
     margin: 0 auto;
     margin-bottom: 15px;
     padding:0;
@@ -39,14 +40,12 @@ img {
     width: 100%;
     margin: 0px;
     text-align: center;
-    height:100px;
+    height:87px;
 }
 .talent-revoting > div {
     background-color: rgba(235, 16, 16,0.3);
-    width: 50%;
     height: 40px;
-    margin: 4px auto;
-    border-radius: 10px;
+    margin: 15px auto;
     border: 1px solid red;
 }
 .talent-revoting p {
@@ -54,7 +53,7 @@ img {
     padding-top: 6px;
 }
 
-.title1 {
+span {
     color : white;
     font-family : 'NanumSquare';
 }
