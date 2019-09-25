@@ -3,8 +3,7 @@
 	background-color: white;
 	width: 100%;
 	min-width: 1000px;
-	/* max-width: 1500px; */
-	height: 100%;
+	height: 1000px;
 	margin: 0px auto;
 	top: 0;
 	left: 0;
@@ -44,8 +43,8 @@
     font-size:10px;
 }
 .booth1{
-    top: 223px;
-    left: 170px;
+    top: 301px;
+    left: 212px;
     vertical-align: middle;
     height: 100px;
     width: 100px;
@@ -56,8 +55,8 @@
     
 }
 .booth2{
-    top: 183px;
-    left: 210px;
+    top: 222px;
+    left: 320px;
     vertical-align: middle;
     height: 100px;
     width: 100px;
@@ -67,8 +66,8 @@
     background-color: rgba(0,0,0,0);
 }
 .booth3{
-    top: 248px;
-    left: 205px;
+    top: 322px;
+    left: 334px;
     vertical-align: middle;
     height: 100px;
     width: 100px;
@@ -78,8 +77,8 @@
     background-color: rgba(0,0,0,0);
 }
 .booth4{
-    top: 389px;
-    left: 149px;
+    top: 513px;
+    left: 285px;
     vertical-align: middle;
     height: 100px;
     width: 100px;
@@ -90,8 +89,8 @@
 
 }
 .booth5{
-    right: 286px;
-    top: 349px;
+    right: 245px;
+    top: 451px;
     vertical-align: middle;
     height: 100px;
     width: 100px;
@@ -101,8 +100,8 @@
     background-color: rgba(0,0,0,0);
 }
 .booth6{
-    right: 360px;
-    top: 455px;
+    right: 316px;
+    top: 576px;
     vertical-align: middle;
     height: 100px;
     width: 100px;
@@ -113,8 +112,8 @@
 
 }
 .booth7{
-    top: 614px;
-    right: 200px;
+    top: 716px;
+    right: 73px;
     vertical-align: middle;
     height: 100px;
     width: 100px;
@@ -125,8 +124,8 @@
 
 }
 .booth8{
-    top: 563px;
-    right: 523px;
+    top: 696px;
+    right: 484px;
     vertical-align: middle;
     height: 100px;
     width: 100px;
@@ -138,8 +137,8 @@
 }
 .booth9{
 
-    top: 610px;
-    right: 524px;
+    top: 780px;
+    right: 462px;
     vertical-align: middle;
     height: 100px;
     width: 100px;
@@ -149,8 +148,8 @@
     background-color: rgba(0,0,0,0);
 }
 .booth10{
-    top: 32px;
-    left: 709px;
+    top: 102px;
+    left: 873px;
     vertical-align: middle;
     height: 120px;
     width: 120px;
@@ -161,8 +160,8 @@
 }
 .booth11{
 
-    top: 426px;
-    left: 426px;
+    top: 699px;
+    left: 571px;
     vertical-align: middle;
     height: 100px;
     width: 100px;
@@ -173,7 +172,7 @@
 }
 
 .truck1{
-    top: 475px;
+    top: 597px;
     left: 481px;
     vertical-align: middle;
     height: 70px;
@@ -184,7 +183,7 @@
     background-color: rgba(0,0,0,0);
 }
 .truck2{
-    top: 455px;
+    top: 607px;
     left: 476px;
     vertical-align: middle;
     height: 70px;
@@ -195,7 +194,7 @@
     background-color: rgba(0,0,0,0);
 }
 .truck3{
-    top: 442px;
+    top: 602px;
     left: 470px;
     vertical-align: middle;
     height: 70px;
@@ -207,8 +206,8 @@
 
 }
 .truck4{
-    top: 477px;
-    left: 185px;
+    top: 461px;
+    left: 376px;
     vertical-align: middle;
     height: 70px;
     width: 70px;
@@ -218,8 +217,8 @@
     background-color: rgba(0,0,0,0);
 }
 .truck5{
-    top: 372px;
-    left: 103px;
+    top: 452px;
+    left: 367px;
     vertical-align: middle;
     height: 70px;
     width: 70px;
@@ -228,9 +227,10 @@
     border-color: purple;
     background-color: rgba(0,0,0,0);
 }
+
 .truck6{
-    top: 360px;
-    left: 99px;
+    top: 528px;
+    left: 104px;
     vertical-align: middle;
     height: 70px;
     width: 70px;
@@ -241,7 +241,7 @@
 }
 .truck7{
     vertical-align: middle;
-    top: 349px;
+    top: 536px;
     height: 70px;
     left: 99px;
     width: 70px;
@@ -252,7 +252,7 @@
 }
 .truck8{
     vertical-align: middle;
-    top: 337px;
+    top: 530px;
     left: 95px;
     height: 70px;
     width: 70px;
@@ -269,7 +269,7 @@
     border-width: 10px;
     border-color: purple;
     background-color: rgba(0,0,0,0);
-    top: 320px;
+    top: 522px;
     left: 88px;
 }
 .truck10{
@@ -280,12 +280,12 @@
     border-width: 10px;
     border-color: purple;
     background-color: rgba(0,0,0,0);
-    top: 418px;
+    top: 597px;
     left: 17px;
 }
 
-.container.festival{
+/* .container.festival{
 	overflow-y: hidden;
 	height: 100%;
 	padding: 0px;
-}
+} */

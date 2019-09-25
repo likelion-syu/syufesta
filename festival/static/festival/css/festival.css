@@ -12,6 +12,9 @@ html , body{
 	margin-top : 56px;
 	padding: 0;
 }
+.food-con {
+	min-height: 800px!important;
+}
 
 
 
