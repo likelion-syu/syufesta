@@ -22,131 +22,132 @@ html, body {
    
    .wrap>.img>.btn_group{
      
-       width:180px;
-       height:180px;
-       border-radius: 60px;
-       background: none;
-       border:none;
+    width: 86px;
+    height: 80px;
+    border-radius: 50px;
+    background: none;
+    border:none;
      
    }
    
    #test_btn1{
-       position:absolute;
-       top:550px;
-       left:490px;
+    position: absolute;
+    top: 208px;
+    left: 420px;
    }
+
    #test_btn2{
-       position:absolute;
-       top:460px;
-       left:700px;
+    position: absolute;
+    top: 208px;
+    left: 524px;
    }
    #test_btn3{
-       position:absolute;
-       top:500px;
-       left:940px;
+    position: absolute;
+    top: 208px;
+    left: 625px;
    }
    #test_btn4{
-       position:absolute;
-       top:500px;
-       left:1170px;
+    position: absolute;
+    top: 560px;
+    left: 45px;
    }
    #test_btn5{
-       position:absolute;
-       top:500px;
-       left:1400px;
+    position: absolute;
+    top: 208px;
+    left: 725px;
    }
    #test_btn6{
-       position:absolute;
-       top:500px;
-       left:1600px;
+    position: absolute;
+    top: 208px;
+    left: 828px;
    }
    #test_btn7{
-       position:absolute;
-       top:500px;
-       left:1830px;
+    position: absolute;
+    top: 208px;
+    left: 930px;
    }
    #test_btn8{
-       position:absolute;
-       top:500px;
-       left:2060px;
+    position: absolute;
+    top: 235px;
+    left: 1030px;
    }
    #test_btn9{
-       position:absolute;
-       top:560px;
-       left:2280px;
+    position: absolute;
+    top: 290px;
+    left: 1115px;
    }
    #test_btn10{
-       position:absolute;
-       top:650px;
-       left:2460px;
+    position: absolute;
+    top: 360px;
+    left: 1200px;
    }
    #test_btn11{
-       position:absolute;
-       top:830px;
-       left:2660px;
+    position: absolute;
+    top: 595px;
+    left: 1250px;
    }
    #test_btn12{
-       position:absolute;
-       top:1340px;
-       left:2780px;
+    position: absolute;
+    top: 900px;
+    left: 965px;
    }
    #test_btn13{
-       position:absolute;
-       top:2000px;
-       left:2150px;
+    position: absolute;
+    top: 900px;
+    left: 860px;
    }
    #test_btn14{
-       position:absolute;
-       top:2000px;
-       left:1900px;
+    position: absolute;
+    top: 900px;
+    left: 650px;
    }
    #test_btn15{
-       position:absolute;
-       top:2000px;
-       left:1450px;
+    position: absolute;
+    top: 900px;
+    left: 546px;
    }
    #test_btn16{
-       position:absolute;
-       top:2000px;
-       left:1220px;
+    position: absolute;
+    top: 900px;
+    left: 435px;
    }
    #test_btn17{
-       position:absolute;
-       top:2000px;
-       left:1000px;
+    position: absolute;
+    top: 900px;
+    left: 330px;
    }
    #test_btn18{
-       position:absolute;
-       top:2000px;
-       left:750px;
+    position: absolute;
+    top: 860px;
+    left: 232px;
    }
    #test_btn19{
-       position:absolute;
-       top:1930px;
-       left:530px;
+    position: absolute;
+    top: 800px;
+    left: 140px;
    }
    #test_btn20{
-       position:absolute;
-       top:1800px;
-       left:330px;
+    position: absolute;
+    top: 680px;
+    left: 70px;
    }
    #test_btn21{
-       position:absolute;
-       top:1520px;
-       left:170px;
+    position: absolute;
+    top: 430px;
+    left: 65px;
    }
    #test_btn22{
-       position:absolute;
-       top:1250px;
-       left:120px;
+    position: absolute;
+    top: 330px;
+    left: 125px;
    }
    #test_btn23{
-       position:absolute;
-       top:1000px;
-       left:170px;
+    position: absolute;
+    top: 250px;
+    left: 220px;
    }
    #test_btn24{
-       position:absolute;
-       top:730px;
-       left:290px;
+    position: absolute;
+    top: 215px;
+    left: 320px;
    }
