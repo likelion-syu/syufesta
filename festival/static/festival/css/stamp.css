@@ -38,7 +38,9 @@ h3 {
 	border: 1px solid white;
 	margin: 5px auto;
 	border-radius: 100%;
+	background-image: url('../img/stamp/stamp.svg'); 
 }
+
 .stamp-product {
 	width: 100%;
 	padding-bottom: 100%;
