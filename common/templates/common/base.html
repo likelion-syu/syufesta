@@ -35,6 +35,9 @@
 	<!-- Common_css -->
 	<link rel="stylesheet" href="{% static 'common/css/common.css' %}">
 	
+	<!-- Common_js -->
+	<script src="{% static 'common/js/scroll.top.js' %}"></script>
+
 	<!-- Page Custom -->
 	{% block head %}
 
@@ -51,5 +54,7 @@
 	{% include './footer.html' %}
 
 	{% block endbody %} {% endblock %}
+	<!-- top btn -->
+	<button onclick="topFunction()" id="topBtn" title="top">TOP</button>
 	</body>
 </html>
