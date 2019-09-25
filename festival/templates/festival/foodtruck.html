@@ -6,9 +6,7 @@
 {% block festival-content %}
 <link rel="stylesheet" href="{% static 'festival/css/foodtruck.css' %}">
 
-	<!-- <a href="{% url 'home' %}">메인으로</a>
 
-	<p class ="truckbooth">푸드트럭 & 부스</p> -->
 
 	<div class="bf-map">
 
@@ -26,21 +24,14 @@
 	});
 
 	function openPopup(obj){
-		var __data = [
-				{ name : 'foodtruck1'},
-				{ name : 'foodtruck2'},
-				{ name : 'foodtruck3'},
-				{ name : 'foodtruck4'},
-				{ name : 'foodtruck5'}
-				];
 		var __obj = $(obj);
-		var __currentVariable = __data[Number(__obj.attr('data-ft-idx'))-1];
+		var __num = Number(__obj.attr('data-ft-idx'));
+		console.log(__num)
+	
+		__likelion.popup.open(
+			'/api/popup/comp/foodtruck/' + __num
+		);
 
-		__likelion.popup.open('/static/common/templates/popup/tmp.comp.foodtruck.html' , 
-		(obj)=>{
-			console.log(__obj.attr('data-ft-idx'));
-			$('.booth-name').text(__currentVariable.name);
-		});
 
 	}
 
