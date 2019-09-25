@@ -1,10 +1,116 @@
 {% extends './festival_base.html' %} {% load staticfiles %}
 
+{% block festival-head %}
+
+<link rel="stylesheet" href="{% static 'festival/css/stamp.css' %}">
+
+{% endblock %}
+
 {% block festival-content %}
-	<h1>이벤트 스탬프</h1>
-	<ul>
-		<li>
-			<a href="{% url 'home' %}">메인으로</a>
-		</li>
-	</ul>
+	<div class="stamp-page-wrapper container">
+		<a href="{% url 'home' %}">메인으로</a>
+		<h1>스탬프 찍고, 경품 받고!</h1>
+		<p>기간 : 19.10.09(수) 09:00 ~ 16:30 부스 종료시 까지</p>
+
+		<div class="container">
+			<div class="row stamp-wrapper">
+				<div class="col-12">
+					<p>보유 스탬프4개 | 나의 응모번호 001</p>
+				</div>
+				<div class="col-3">
+					<div class="stamp"></div>
+				</div>
+				<div class="col-3">
+					<div class="stamp"></div>
+				</div>
+				<div class="col-3">
+					<div class="stamp"></div>
+				</div>
+				<div class="col-3">
+					<div class="stamp"></div>
+				</div>
+				<div class="col-3">
+					<div class="stamp"></div>
+				</div>
+				<div class="col-3">
+					<div class="stamp"></div>
+				</div>
+				<div class="col-3">
+					<div class="stamp"></div>
+				</div>
+				<div class="col-3">
+					<div class="stamp"></div>
+				</div>
+				<div class="col-12">
+					<p>스탬프 수가 많을 수록 당첨 확률 UP!</p>
+				</div>
+			</div>
+
+			<!-- 이벤트 경품 -->
+			<h2>이벤트 경품</h2> 
+			<div class="row event-info-wrapper">
+				<div class="col-4">
+					<div class="stamp-product" id="product1"></div>
+					<h3>에어팟</h3>
+					<p>Apple AirPods(1명)</p>
+				</div>
+				<div class="col-4">
+					<div class="stamp-product" id="product2"></div>
+					<h3>신세계 상품권</h3>
+					<p>50,000원(3명)</p>
+				</div>
+				<div class="col-4">
+					<div class="stamp-product" id="product3"></div>
+					<h3>올리브영 이용권</h3>
+					<p>10,000원(5명)</p>
+				</div>
+				<div class="col-4">
+					<h6>카페 공강</h6>
+					<p>5,000원(50명)</p>
+				</div>
+				<div class="col-4">
+					<h6>스마일하우스</h6>
+					<p>3,000원(50명)</p>
+				</div>
+				<div class="col-4">
+					<h6>엠카페</h6>
+					<p>3,000원(50명)</p>
+				</div>
+			</div>
+
+			<!-- 이벤트 응모방법 -->
+			<h2>이벤트 응보방법</h2>
+			<div class="row event-info-wrapper">
+				<div class="col-4">
+					<div class="event-method">
+						<div class="event-step">
+							<h3>STEP1</h3>
+							<p>부스방문</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="event-method">
+						<div class="event-step">
+							<h3>STEP2</h3>
+							<p>부스참여하기</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="event-method">
+						<div class="event-step">
+							<h3>STEP3</h3>
+							<p>스탬프찍기</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2>이벤트 주의사항</h2>
+			<p>1. 당첨결과는 총학생회 페이스북 페이지를 통해 공개 됩니다.</p>
+			<p>2. 당첨자는 응모번호가 표출된 해당 페이지와, 학생증을 지참하여 방문해야 합니다.</p>
+			<!-- 스탬프 찍기 버튼 -->
+			<div class="stamp-btn">스탬프 찍기</div>
+		</div>
+	</div>
 {% endblock %}
