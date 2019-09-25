@@ -16,7 +16,11 @@
 
 {% block contents %}
 {% include './navbar.html' %}
-<div class="container festival">
+	{% if request.path == '/festival/foodtruck' %}
+	<div class="container festival food-con">
+	{% else %}
+	<div class="container festival">
+	{% endif %}
 	{% block festival-content %}
 
 	{% endblock %}
