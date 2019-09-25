@@ -19,3 +19,8 @@ def comp_foodtruck(req , pk):
     })
 
 
+def comp_seatmap(req , pk):
+   
+    return render(req , 'common/popup/competition/seatmap.html')
+
+
