@@ -8,10 +8,11 @@
 
 {% block festival-content %}
 	<div class="stamp-page-wrapper container">
-		<a href="{% url 'home' %}">메인으로</a>
-		<h1>스탬프 찍고, 경품 받고!</h1>
-		<p>기간 : 19.10.07(월) 09:00 ~ 16:30 부스 종료시 까지</p>
-
+		<div class="stamp-title-wrapper">
+			<a href="{% url 'home' %}">메인으로</a>
+			<h1>스탬프 찍고, 경품 받고!</h1>
+			<p>기간 : 19.10.07(월) 09:00 ~ 16:30 부스 종료시 까지</p>
+		</div>
 		<div class="container">
 			<div class="row stamp-wrapper">
 				<div class="col-12">
@@ -52,7 +53,7 @@
 				<div class="col-4">
 					<div class="stamp-product" id="product1"></div>
 					<h3>에어팟</h3>
-					<p>Apple AirPods(1명)</p>
+					<p>AirPods(1명)</p>
 				</div>
 				<div class="col-4">
 					<div class="stamp-product" id="product2"></div>

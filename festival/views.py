@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from django.db import connection, transaction
-from common.models import Booth
+from common.models import Booth, Boothstamp
 from common import utils
 from django.http import JsonResponse
+
+def main(req):
+	return render(req, 'festival/festival_main.html')
 
 def my_custom_sql(self):
 	with connection.cursor() as cursor:
