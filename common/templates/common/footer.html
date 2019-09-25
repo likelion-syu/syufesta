@@ -1,7 +1,13 @@
-{% if request.path == '/festival' %}
-<footer class="fest-footer">
-{% elif request.path == '/competition' %}
-<footer class="compet-footer">
+{% if 'festival' in request.build_absolute_uri %}
+	{% if 'stamp' in request.build_absolute_uri %}
+	<footer id="fest-footer" class="mb-5">
+	{% elif 'contest' in request.build_absolute_uri %}
+	<footer id="fest-footer" class="mb-5">
+	{% else %}
+	<footer id="fest-footer">
+	{% endif %}	
+{% elif 'competition' in request.build_absolute_uri %}
+<footer id="compet-footer">
 {% else %}
 <footer>
 {% endif %}

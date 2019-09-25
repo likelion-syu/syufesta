@@ -39,7 +39,8 @@ img {
     width: 100%;
     margin: 0px;
     text-align: center;
-    height:100px;
+	height:50px;
+	z-index: 1;
 }
 .talent-revoting > div {
     background-color: rgba(235, 16, 16,0.3);
