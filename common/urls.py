@@ -4,5 +4,6 @@ from . import views
 
 urlpatterns = [
     path('popup/comp/foodtruck/<int:pk>' , views.comp_foodtruck , name="popup_comp_foodtruck"),
+    path('popup/comp/booth/<int:pk>' , views.comp_foodtruck , name="popup_comp_booth"),
     path('fest/talent', views.fest_talent, name = "fest_talent")
 ]
