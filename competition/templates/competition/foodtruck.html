@@ -8,10 +8,10 @@
 	<li>
 		<a href="{% url 'home' %}">메인으로</a>
 	</li>
-	{% for food in foods %}
+	{% for food in foodtrucks %}
 	<li>
-		<h1>{{ food.booth_id }}</h1>
-		<p>{{ food.name }}</p>
+		<h1>{{ food.truck_name }}</h1>
+		<p>{{ food.truck_des }}</p>
 	</li>
 	{% endfor %}
 </ul>
