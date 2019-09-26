@@ -16,32 +16,26 @@
 	</div>
 	<!-- 설명 박스가 있는 부분 -->
 	<div class="content">
+		{% for food in foodtrucks %}
 		<div class="item-wrapper my-3">
 			<div class="item">
 				<div class="row">
 					<div class="col-3">
 						<!---트럭 이미지-->
-						<img src="..." class="food_main_img">
+						<img src="{{ food.truck_img_url }}" class="food_main_img">
 					</div>
 					<div class="col-9">
 						<div class="desc">
 							<!---트럭 이름-->
-							<div class="food_title">트럭이름</div>
+							<div class="food_title">{{ food.truck_name }}</div>
 							<!---트럭 한줄소개-->
-							<div class="food_desc">한줄소개</div>
+							<div class="food_desc">{{ food.truck_des }}</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		{% endfor %}
 	</div>
-	<!---반복될 for문-->
-	{% for food in foods %}
-	<div class="item-wrapper my-3">
-		<div class="item">
-
-		</div>
-	</div>
-	{% endfor %}
 </div>
 {% endblock %}
