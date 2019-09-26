@@ -2,84 +2,26 @@
 
 {% block competition-content %}
 
-<link rel="stylesheet" href="{% static 'competition/css/foodtruck.css' %}">
-<h1>푸드트럭</h1>
-<ul>
-	<li>
-		<a href="{% url 'home' %}">메인으로</a>
-	</li>
-</ul>
-
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>푸드트럭</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <link href="app.css" rel="stylesheet" type="text/css" media="screen" />
-    <style>
-        @font-face {
-            font-family: 'aJangmi';
-            src: url('aJangmi.eot');
-            src: url('aJangmi.eot?#iefix') format('embedded-opentype'),
-                url('aJangmi.woff2') format('woff2');
-            font-weight: normal;
-            font-style: normal;
-        }
-    </style>
-</head>
-
-<body>
-    <div id="detail-hder">
-        <div id="page">
-            <div id="page-bgtop">
-                <div id="page-bgbtm">
-                    <div class="post">
-                        <p class="meta"><span class="foodmaintitle2">&nbsp;&nbsp;&nbsp; <br> <br> <br> jmt 핫도그</span>
-                        </p>
-                        <img src="images/img11.jpg" alt="" width="240" class="aligncenter" />
-                        <h2 class="title2"><a href="#">쫀득쫀득한 명품 찹쌀 핫도그</a></h2>
-                        <table class="type02">
-                            <tr>
-                                <th scope="row">
-                                    <img src="images/img06.jpg" alt="" width="240" class="aligncenter" />
-                                </th>
-                                <th scope="row">
-                                    <div class="menu-detail">
-                                        <img src="images/img03.png" alt="" width="60" class="alignleft" /> 
-                                    </div>
-                                    <div class="menu-detail">
-                                        <br> 뉴욕 도그 - 5900원
-                                        <br> 베이컨 도그 - 6900원
-                                        <br> 비프 앤 칠리 도그 - 7900원
-                                    </div>
-                                </th>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
+<link rel="stylesheet" href="{% static 'competition/css/foodtruck_detail.css' %}">
+<br>
+<div class="wrap">
+        <div class="food_main_img">
+            <img src="{% static 'competition/img/chulsoo_foodtruck.png' %}">
+        </div>
+        <div class="food_main_text">
+                푸드트럭 이름
+		{% for food in foods %}
+        <p>{{ food.name }}</p>
+        {% endfor %}
         </div>
     </div>
+    <div class="food_menu" style="text-align: center;">
+            설명
+            <br>
+            설명
+        </div>
+        <br>
+    <div class="food_location">
+            <img src="{% static 'competition/img/compete_seatmap.png' %}" style="width:300px;height:250px; display: block; margin: 0px auto;">
     </div>
-    <!--------->
-    </div>
-    <script type="text/javascript">
-    </script>
-</body>
-
-</html>
 {% endblock %}

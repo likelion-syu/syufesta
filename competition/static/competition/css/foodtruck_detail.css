@@ -1,0 +1,19 @@
+
+.wrap{
+	position: relative;
+width: 350px;
+margin:0px auto;
+}
+.food_main_img{
+    width: 50%;
+    vertical-align: middle;}
+
+.food_main_text{
+    width: 350px;
+    text-align: center;
+    font-size:30px;
+			position: absolute;
+			top: 75%;
+			left: 50%;
+	transform: translate( -50%, -50% );
+}
