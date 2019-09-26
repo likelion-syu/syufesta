@@ -1,33 +1,50 @@
 
-.wrap{
-	position: relative;
-width: 350px;
-margin:0px auto;
-}
-.food_main_img{
-	width: 50%;
-vertical-align: middle;}
-
-.food_main_text1{
-			position: absolute;
-			top: 50%;
-			left: 20%;
-	transform: translate( -50%, -50% );
-}
-
-
-.food_main_text2{
-	position: absolute;
-	top: 50%;
-	left: 43%;
-transform: translate( -50%, -50% );
-}
-
-/* 여기서부터 */
-
 .foodtruck-container{
 	width : 100%;
 	height: 100%;
-	background-image: url(../img/wallpaper.png);
+	background-image: url(../img/background_notice.png);
 	background-size : cover;
 }
+
+.foodtruck-container .header{	
+	padding: 40px 0 10px 0;
+}
+
+.foodtruck-container .header .logo{
+	width : 300px;
+	height : 100px;
+	background-image : url(../img/compete_logo_main.svg);
+	background-size : contain;
+	background-repeat: no-repeat;
+	margin : 0 auto;
+    background-position: center;
+}
+
+.foodtruck-container .content .item-wrapper{
+	width: 350px;
+    height: 100px;
+    background-color: #fff;
+    margin: 0 auto;
+	padding: 5px;
+	border-radius: 7px;
+	-webkit-border-radius: 5px;
+}
+
+.foodtruck-container .content .item-wrapper .item{
+	border: 4px dotted #245770;
+	border-radius: 7px;
+	-webkit-border-radius: 5px;
+    width: 100%;
+	height: 100%;
+	padding:5px;
+}
+
+
+.foodtruck-container .content .item-wrapper .item .row .col-3 .food_main_img{
+	width: 65px;
+	height: 65px;
+	border: 3px solid #245770;
+	border-radius: 7px;
+	-webkit-border-radius: 70px;
+}
+

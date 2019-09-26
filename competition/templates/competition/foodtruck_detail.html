@@ -1,27 +1,56 @@
 {% extends './competition_base.html' %}{% load staticfiles %}
 
+{% block competition-head %}
+<link rel="stylesheet" href="{% static 'competition/css/foodtruck_detail.css' %}">
+{% endblock %}
+
 {% block competition-content %}
 
-<link rel="stylesheet" href="{% static 'competition/css/foodtruck_detail.css' %}">
-<br>
-<div class="wrap">
-        <div class="food_main_img">
-            <img src="{% static 'competition/img/chulsoo_foodtruck.png' %}">
+<div class="foodtruck-container">
+    <!-- 로고가 있는 부분 -->
+    <div class="header">
+        <div class="logo">
         </div>
-        <div class="food_main_text">
-                푸드트럭 이름
-		{% for food in foods %}
-        <p>{{ food.name }}</p>
-        {% endfor %}
+            <div class="logo_food">
+            푸드트럭 이름
+
+            {% for food in foods %}
+            <p>{{ food.name }}</p>
+            {% endfor %}
         </div>
     </div>
-    <div class="food_menu" style="text-align: center;">
-            설명
-            <br>
-            설명
+    <!---->
+    <div class="content">
+        <div class="item">
+            <!-- 트럭 설명이 있는 부분 -->
+            <div class="row">
+                <div class="col">
+                    설명 설명
+
+                    {% for food in foods %}
+                    <p>{{ ... }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- 메뉴가 있는 부분 -->
+            <div class="row">
+                <div class="col">
+                    메뉴 메뉴 메뉴
+                    {% for food in foods %}
+                    <p>{{ ... }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- 음식 사진이 있는 부분 -->
+            <div class="row">
+                <div class="col">
+						<img src="..." class="food_main_img">
+                </div>
+            </div>
         </div>
-        <br>
-    <div class="food_location">
-            <img src="{% static 'competition/img/compete_seatmap.png' %}" style="width:300px;height:250px; display: block; margin: 0px auto;">
     </div>
+
+</div>
+<!----->
+
 {% endblock %}
