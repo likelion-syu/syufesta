@@ -16,8 +16,9 @@
 
 .navbar .fa-home , .navbar .fa-bars{
     filter: drop-shadow(0 0 3px #d86696);
-    color : #fff;
-    font-size : 1.2em;
+    color : #d86696;
+    font-size : 1.4em;
+    margin-top: 3px;
 }
 
 .navbar p{
@@ -28,3 +29,11 @@
     margin-top:-5px;
 }
 
+.navbar .logo-wrapper{
+    width: 50%;
+    height: 100%;
+    background-image: url('/static/festival/img/fest_logo.svg');
+    background-size: cover;
+    padding: 0;
+    background-position: center;
+}

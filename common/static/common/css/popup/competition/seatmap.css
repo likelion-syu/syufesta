@@ -1,0 +1,23 @@
+#circle {
+    background-color:#ffffff;
+    width:700px;
+    height:700px;
+    border-radius:1000px;
+    text-align:center;
+    margin:0 auto;
+    font-size:12px;
+    vertical-align:middle;
+    line-height:150px;
+}
+#circle2{
+background-color:#215f88;
+    width:400px;
+    height:140px;
+    border-radius:1000px;
+    text-align:center;
+    margin:0 auto;
+    font-size:50px;
+    color:cornsilk;
+    vertical-align:middle;
+    line-height:150px;
+}

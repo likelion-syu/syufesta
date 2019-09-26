@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.db import connection
 from django.http import JsonResponse
+from .models import Major
 from . import utils
 
 # from models import Booth , FoodTruck
@@ -33,15 +34,10 @@ def comp_foodtruck(req , pk):
     })
 
 
-def fest_talent(req):
-	with connection.cursor() as cursor:
-		cursor.execute("select cont_participant_nm as name ,count(1) as 'cnt' , total from (select * from ContestVote join (select count(1) total from ContestVote) as temp) as CV join ContestParticipant As CP on CV.cont_participant_id = CP.cont_participant_id group by CP.cont_participant_id order by 'cnt' desc;")
-		rows = cursor.fetchall()
 
-	expanded_rows = []
-	expanded_rows = utils.query_expand(rows , cursor)
+def comp_seatmap(req , pk):
+    major_detail = get_object_or_404(Major, pk=pk)
 
-	return JsonResponse({
-		'status' : 1,
-		'data' : expanded_rows,
-	}, safe=False)
+    return render(req , 'common/popup/competition/seatmap.html', {'major': major_detail})
+
+
