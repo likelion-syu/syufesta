@@ -1,5 +1,6 @@
+/* 이미지-wrapper */
 .img-circle{
-    width: 130px;
+    /* width: 130px;
     border-radius: 50%;
     height: 130px;
     border: 3px solid #fff;
@@ -15,6 +16,8 @@
     border-bottom: 2px solid #fff;
     border-top: 2px solid #fff;
 }
+
+/* 글 font */
 
 .title1 {
     font-family : 'NanumSquare' !important;
@@ -51,11 +54,7 @@
     color :white;
 }
 
-.row.talent {
-    text-align : center;
-    height : 100%;
-    overflow-y : auto;
-}
+/* 버튼 */
 
 .btn {
     flex-shrink: 0;
@@ -91,11 +90,10 @@
 
 .col-12.talent {
     position: fixed;
-    width: 50%;
-    bottom: 5px;
+    width: 100%;
+    height: 100%;
     margin: auto;
     display: block;
-    margin-left: 3%;
 }
 
 .col-6 {
