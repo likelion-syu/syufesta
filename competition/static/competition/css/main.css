@@ -1,4 +1,4 @@
-.main-background-compete{
+/* .main-background-compete{
     background-image: url(../img/mainimage.svg);
     height:100%;
     width:100%;
@@ -30,4 +30,56 @@
     background-position: center;
     background-size: contain;
 
+} */
+
+
+.competition-main-container{
+    width : 100%;
+    min-height : 100%;
+    background-image : url(../img/mainimage.svg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.competition-main-container .logo-container .logo{
+    background-image:url(../img/compete_logo_main.svg);
+    width:300px;
+    height:100px;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    margin:0 auto;
+}
+
+.competition-main-container .poster-container .poster-wrapper {
+    background-image: url(../img/competitionimg.png);
+    width: 330px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 450px;
+    margin: 0 auto;
+}
+
+.competition-main-container .poster-container .poster-desc p{
+    color: #024557;
+    font-size: 1.3em;
+    font-weight: 900;
+    font-family: serif;
+}
+
+.competition-main-container .timetable-container .header {
+    width: 200px;
+    height: 50px;
+    background-color: #024557;
+    color: #fff;
+    margin: 0 auto;
+    border-radius: 50px;
+    text-align: center;
+    padding-top : 9px;
+}
+
+.competition-main-container .timetable-container .header p{
+    font-size : 1.3em;
 }

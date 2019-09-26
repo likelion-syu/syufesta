@@ -2,42 +2,38 @@
 
 {% load staticfiles %}
 
-{% block competition-content %}
+{% block competition-head %}
 <link rel="stylesheet" href="{% static 'competition/css/main.css' %}">
-  
-<div class="main-background-compete">
- 
-  	<div class="main-container">
-	
-		<div class="compete-logo">
-			
-		<div>
-			<div class="compete-main-poster"></div>	
-		
+{% endblock %}
 
-	
+{% block competition-content %}
 
+<!-- outer -->
+<div class="competition-main-container">
+	<div class="logo-container py-5">
+		<div class="logo">
 
-<h1 id="competition">체육대회 메인화면</h1>
-<ul>
-	<li>
-		<a href="{% url 'timeline' %}">경기일정</a>
-	</li>
-	<li>
-		<a href="{% url 'seatmap' %}">학과좌석배치</a>
-	</li>
-	<li>
-		<a href="{% url 'compete_foodtruck' %}">푸드트럭</a>
-	</li>
-	<li>
-		<a href="{% url 'event' %}">이벤트</a>
-	</li>
-	<li>
-		<a href="{% url 'notice' %}">주의사항</a>
-	</li>
-</ul>
+		</div>
+	</div>
+	<div class="poster-container">
+		<div class="poster-wrapper"></div>
+		<div class="poster-desc text-center">
+			<p class='my-3'>
+				2019-10-08 운동장
+			</p>
+		</div>
+	</div>
+	<div class="timetable-container">
+		<div class="header">
+			<p class="title">
+				타임 테이블
+			</p>
+		</div>
+		<div class="content">
+
+		</div>
+	</div>
 </div>
 
-                   
 
-{% endblock %}
+	{% endblock %}
