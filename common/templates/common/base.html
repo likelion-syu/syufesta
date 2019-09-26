@@ -55,6 +55,10 @@
 
 	{% block endbody %} {% endblock %}
 	<!-- top btn -->
+	{% if 'competition' in request.build_absolute_uri %}
+	<button onclick="topFunction()" id="topBtn" title="top" class="comp-topBtn">TOP</button>
+	{% else %}
 	<button onclick="topFunction()" id="topBtn" title="top">TOP</button>
+	{% endif %}
 	</body>
 </html>
