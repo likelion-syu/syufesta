@@ -1,3 +1,10 @@
+# This is an auto-generated Django model module.
+# You'll have to do the following manually to clean this up:
+#   * Rearrange models' order
+#   * Make sure each model has one field with primary_key=True
+#   * Make sure each ForeignKey has `on_delete` set to the desired behavior.
+#   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
+# Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
 
 
@@ -70,6 +77,17 @@ class Foodtruck(models.Model):
         db_table = 'FoodTruck'
 
 
+class FoodtruckMenu(models.Model):
+    menu_id = models.AutoField(primary_key=True)
+    menu_name = models.CharField(max_length=500, blank=True, null=True)
+    menu_price = models.CharField(max_length=45, blank=True, null=True)
+    truck = models.ForeignKey(Foodtruck, models.DO_NOTHING, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'FoodTruck_menu'
+
+
 class Major(models.Model):
     major_id = models.AutoField(primary_key=True)
     major_name = models.CharField(max_length=45, blank=True, null=True)
@@ -84,11 +102,11 @@ class Major(models.Model):
 class Matchschedule(models.Model):
     sch_id = models.AutoField(primary_key=True)
     sch_date = models.DateTimeField(blank=True, null=True)
-    sch_stage = models.CharField(max_length=500, blank=True, null=True)
     sch_major_a = models.ForeignKey(Major, models.DO_NOTHING, related_name='sch_major_a', blank=True, null=True)
     sch_major_b = models.ForeignKey(Major, models.DO_NOTHING, related_name='sch_major_b', blank=True, null=True)
     sch_kind = models.IntegerField(blank=True, null=True)
     sch_title = models.CharField(max_length=500)
+    sch_stage = models.CharField(max_length=100, blank=True, null=True)
 
     class Meta:
         managed = False

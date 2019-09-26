@@ -27,18 +27,13 @@
                     </div>
                 </div>
                 <!-- 메뉴가 있는 부분 -->
+                {% for menus in  %}
                 <div class="row">
                     <div class="col">
-                        {% for menu in }
-                        메뉴 메뉴 메뉴
+                        {{ menus.menu_name }} - {{ menus.menu_price }}
                     </div>
                 </div>
-                <!-- 음식 사진이 있는 부분 -->
-                <div class="row">
-                    <div class="col">
-                            <img src="..." class="food_main_img">
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     

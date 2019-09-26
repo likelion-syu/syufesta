@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.db import connection
 from django.http import JsonResponse
-from .models import Major
+from .models import Major, Foodtruck, FoodtruckMenu
 from . import utils
 
 
@@ -23,15 +23,10 @@ def comp_booth(req , pk):
     })
 
 def comp_foodtruck(req , pk):
-    with connection.cursor() as cursor:
-        cursor.execute("select FT.truck_id, FT.truck_name, FT.truck_des ,group_concat(FM.menu_name separator '\n') as menu , group_concat(FM.menu_price separator '\n') from FoodTruck as FT, FoodTruck_menu as FM where FT.truck_id = FM.truck_id and FT.truck_id="+ str(pk) +" group by FT.truck_id")
-        rows = cursor.fetchall()
-    
-    expanded_rows = []
-    expanded_rows = utils.query_expand(rows , cursor)
+    foodtruck_detail = get_object_or_404(Foodtruck, pk=pk)
 
     return render(req , 'common/popup/competition/foodtruck.html' , {
-        'data' : expanded_rows[0]
+        'data' : foodtruck_detail
     })
 
 
