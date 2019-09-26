@@ -1,11 +1,12 @@
 .main-background-compete{
-    background-image: url(../img/background_compete.png);
+    background-image: url(../img/mainimage.svg);
     height:100%;
     width:100%;
     background-size:cover;
 }
 .main-background-compete .main-container{
     padding: 40px 0 10px 0;
+    margin:0 auto;
 }
 
 .main-background-compete .main-container .compete-logo{
@@ -18,16 +19,15 @@
     margin:0 auto;
     
 
-<<<<<<< HEAD
-}
-.main-background-compete  .main-container .compete-logo .compete-main-poster{
-    background-image: url(../img/competitionimg.png);
-    background-size: cover;
-    width:90%;
-    height:90%;
-    background-repeat:no-repeat;
 
 }
-=======
+.main-container .compete-main-poster {
+    background-image: url(../img/competitionimg.png);
+    min-height: 700px;
+    width: 300px;
+    background-repeat: no-repeat;
+  
+    background-position: center;
+    background-size: contain;
+
 }
->>>>>>> f2aec389b6294eb8c829069ee1b16fbe434e3645
