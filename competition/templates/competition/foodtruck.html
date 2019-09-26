@@ -18,7 +18,7 @@
 	<div class="content">
 		{% for food in foodtrucks %}
 		<div class="item-wrapper my-3">
-			<div class="item">
+			<div class="item" onclick="__foodtruck.menu_open({{ food.truck_id }})">
 				<div class="row">
 					<div class="col-3">
 						<!---트럭 이미지-->
@@ -38,4 +38,12 @@
 		{% endfor %}
 	</div>
 </div>
+
+<script>
+	var __foodtruck = __foodtruck || {
+		menu_open : function(pk){
+			__likelion.popup.open('/api/popup/comp/foodtruck/' + pk);
+		}
+	}
+</script>
 {% endblock %}
