@@ -1,0 +1,288 @@
+
+.foodtruckbooth{
+
+    min-width: 1000px;
+    height: 1000px;
+}
+.bf-map {
+    height: 100%;
+    border: 1px solid black;
+    background-color: rgb(8, 9, 27);
+    background-size: cover;
+    margin: 0px auto;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 0;
+    background-image: url(../img/foodbooth.svg);
+    background-size: 290%;
+    background-position: -950px -1770px;
+
+}
+.bf-icon {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	border: 1px solid white;
+	background-color: red;
+	z-index: 10;
+	display: inline-block;
+}
+.booth{
+    display: inline;
+    vertical-align: sub;
+    color:rgb(199, 245, 253);
+}
+.boothtitle{
+    color:rgb(190, 247, 255);
+    font-weight: 800;
+}
+.foodtruck{
+    display: inline;
+    vertical-align: sub;
+    color:rgb(199, 245, 253);
+    font-size: 10px
+
+}
+.foodtrucktitle{
+    color:rgb(190, 247, 255);
+    font-weight: 800;
+    font-size:10px;
+}
+.booth1{
+    top: 4px;
+    left: -18px;
+    vertical-align: middle;
+    height: 100px;
+    width: 250px;
+    border-width: 2px;
+    border-color: rgb(248, 0, 255);
+    background-color: rgba(0,0,0,0);
+    
+}
+.booth2{
+    top: 4px;
+    left: -4px;
+    vertical-align: middle;
+    height: 100px;
+    width: 250px;
+    border-width: 2px;
+    border-color: rgb(248, 0, 255);
+    background-color: rgba(0,0,0,0);
+}
+
+.booth3{
+    top: 123px;
+    left: -107px;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    border-width: 2px;
+    border-color: rgb(248, 0, 255);
+    background-color: rgba(0,0,0,0);
+}
+.booth4{
+    top: 241px;
+    left: -212px;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    border-width: 2px;
+    border-color: rgb(248, 0, 255);
+    background-color: rgba(0,0,0,0);
+}
+.booth5{
+    right: 732px;
+    top: 124px;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    border-width: 2px;
+    border-color: rgb(248, 0, 255);
+    background-color: rgba(0,0,0,0);
+}
+
+.booth6{
+    right: 837px;
+    top: 238px;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    border-width: 2px;
+    border-color: rgb(248, 0, 255);
+    background-color: rgba(0,0,0,0);
+}
+.booth7{
+    top: 250px;
+    left: 242px;
+    vertical-align: middle;
+    height: 100px;
+    width: 270px;
+    border-width: 2px;
+    border-color: rgb(248, 0, 255);
+    background-color: rgba(0,0,0,0);
+
+}
+.booth8{
+    top: 696px;
+    right: 484px;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border-width: 2px;
+    border-color: rgb(248, 0, 255);
+    background-color: rgba(0,0,0,0);
+
+}
+.booth9{
+    top: 250px;
+    right: 264px;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    border-width: 2px;
+    border-color: rgb(248, 0, 255);
+    background-color: rgba(0,0,0,0);
+}
+.booth10{
+    top: 28px;
+    left: 150px;
+    vertical-align: middle;
+    height: 100px;
+    width: 250px;
+    border-width: 2px;
+    border-color: rgb(248, 0, 255);
+    background-color: rgba(0,0,0,0);
+}
+.booth11{
+
+    top: 800px;
+    left: 87px;
+    vertical-align: middle;
+    height: 100px;
+    width: 91px;
+    border-width: 2px;
+    border-color: rgb(248, 0, 255);
+    background-color: rgba(0,0,0,0);
+}
+.booth12{
+    top: 250px;
+    left: -846px;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    border-width: 2px;
+    border-color: rgb(248, 0, 255);
+    background-color: rgba(0,0,0,0);
+
+}
+.truck1{
+    top: 278px;
+    left: 577px;
+    vertical-align: middle;
+    height: 80px;
+    width: 80px;
+    border-width: 2px;
+    border-color: rgb(1, 207, 255);
+    background-color: rgba(0,0,0,0);
+}
+.truck2{
+    top: 278px;
+    left: 580px;
+    vertical-align: middle;
+    height: 80px;
+    width: 80px;
+    border-width: 2px;
+    border-color: rgb(1, 207, 255);
+    background-color: rgba(0,0,0,0);
+}
+.truck3{
+    top: 116px;
+    left: 670px;
+    vertical-align: middle;
+    height: 80px;
+    width: 80px;
+    border-width: 2px;
+    border-color: rgb(1, 207, 255);
+    background-color: rgba(0,0,0,0);
+
+}
+.truck4{
+    top: 116px;
+    left: 241px;
+    vertical-align: middle;
+    height: 80px;
+    width: 80px;
+    border-width: 2px;
+    border-color: rgb(1, 207, 255);
+    background-color: rgba(0,0,0,0);
+}
+.truck5{
+    top: 116px;
+    left: 241px;
+    vertical-align: middle;
+    height: 80px;
+    width: 80px;
+    border-width: 2px;
+    border-color: rgb(1, 207, 255);
+    background-color: rgba(0,0,0,0);
+}
+
+.truck6{
+    top: 278px;
+    left: 73px;
+    vertical-align: middle;
+    height: 80px;
+    width: 80px;
+    border-width: 2px;
+    border-color: rgb(1, 207, 255);
+    background-color: rgba(0,0,0,0);
+}
+
+.truck7{
+    vertical-align: middle;
+    top: 278px;
+    height: 80px;
+    left: 246px;
+    width: 80px;
+    border-width: 2px;
+    border-color: rgb(1, 207, 255);
+    background-color: rgba(0,0,0,0);
+}
+.truck8{
+    vertical-align: middle;
+    top: 278px;
+    left: 248px;
+    height: 80px;
+    width: 80px;
+    border-width: 2px;
+    border-color: rgb(1, 207, 255);
+    background-color: rgba(0,0,0,0);
+}
+.truck9{
+    vertical-align: middle;
+    height: 80px;
+    width: 80px;
+    border-width: 2px;
+    border-color: rgb(1, 207, 255);
+    background-color: rgba(0,0,0,0);
+    top: 116px;
+    left: -8px;
+}
+.truck10{
+    vertical-align: middle;
+    height: 80px;
+    width: 80px;
+    border-width: 2px;
+    border-color: rgb(1, 207, 255);
+    background-color: rgba(0,0,0,0);
+    top: 116px;
+    left: -6px;
+}
+
+/* .container.festival{
+	overflow-y: hidden;
+	height: 100%;
+	padding: 0px;
+} */
