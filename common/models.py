@@ -85,8 +85,8 @@ class Matchschedule(models.Model):
     sch_id = models.AutoField(primary_key=True)
     sch_date = models.DateTimeField(blank=True, null=True)
     sch_stage = models.CharField(max_length=500, blank=True, null=True)
-    sch_major_a = models.ForeignKey(Major, models.DO_NOTHING, db_column='sch_major_a', blank=True, null=True)
-    sch_major_b = models.ForeignKey(Major, models.DO_NOTHING, db_column='sch_major_b', blank=True, null=True)
+    sch_major_a = models.ForeignKey(Major, models.DO_NOTHING, related_name='sch_major_a', blank=True, null=True)
+    sch_major_b = models.ForeignKey(Major, models.DO_NOTHING, related_name='sch_major_b', blank=True, null=True)
     sch_kind = models.IntegerField(blank=True, null=True)
     sch_title = models.CharField(max_length=500)
 
