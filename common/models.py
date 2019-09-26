@@ -61,9 +61,9 @@ class Contestvote(models.Model):
 
 class Foodtruck(models.Model):
     truck_id = models.AutoField(primary_key=True)
-    fest_truck = models.TextField(blank=True, null=True)  # This field type is a guess.
-    truck_des = models.CharField(max_length=1000, blank=True, null=True)
     truck_img_url = models.CharField(max_length=1000, blank=True, null=True)
+    truck_des = models.CharField(max_length=1000, blank=True, null=True)
+    truck_name = models.CharField(max_length=45, blank=True, null=True)
 
     class Meta:
         managed = False
