@@ -25,7 +25,7 @@ def foodtruck_detail(req):
 
 def timeline(req):
     with connection.cursor() as cursor:
-        cursor.execute("select * from MatchSchedule")
+        cursor.execute("select MS.* ,MJ_A.major_name as 'major_a_name' ,MJ_A.major_logo_url as 'major_a_logo_url' ,MJ_B.major_name as 'major_b_name' ,MJ_B.major_logo_url as 'major_b_logo_url'from MatchSchedule as MS join Major as MJ_A join Major as MJ_B on MS.sch_major_a = MJ_A.major_id and MS.sch_major_b = MJ_B.major_id")
         rows = cursor.fetchall()
     
     expanded_rows = []
