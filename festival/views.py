@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from django.db import connection, transaction
-from common.models import Booth
+from common.models import Booth, Boothstamp
 from common import utils
 from django.http import JsonResponse
+
+def main(req):
+	return render(req, 'festival/festival_main.html')
 
 def my_custom_sql(self):
 	with connection.cursor() as cursor:
@@ -23,7 +26,7 @@ def stamp (req):
 # 투표 결과 나타내는 함수
 def talent (req):
 	with connection.cursor() as cursor:
-		cursor.execute("SELECT CP.name , count(CP.name) as CT FROM ContestParticipant as CP JOIN ContestVote as CV ON CP.cont_participant_id = CV.cont_participant_id group by CP.name")
+		cursor.execute("select count(1) as 'cnt' , cont_participant_nm as name , total from (select * , ROW_COUNT() as total from ContestVote) as CV join ContestParticipant As CP on CV.cont_participant_id = CP.cont_participant_id group by CP.cont_participant_id order by 'cnt' desc;")
 		rows = cursor.fetchall()
 
 	expanded_rows = []
