@@ -1,10 +1,34 @@
 {% extends './competition_base.html' %}{% load staticfiles %}
 
+{% block competition-head %}
+<link rel="stylesheet" href="{%  static '/competition/css/notice.css' %}">
+{% endblock %}
+
 {% block competition-content %}
-<h1>주의사항</h1>
-<ul>
-	<li>
-		<a href="{% url 'home' %}">메인으로</a>
-	</li>
-</ul>
+<div class="notice-container">
+	<div class="notice-header py-5">
+		<div class="notice-logo-text"></div>
+		<div class="notice-logo-people mt-3"></div>
+	</div>
+	<div class="notice-content">
+		<!-- 글 감싸는 그림 -->
+		<div class="notice-content-wrapper">
+			<!-- 실제 글자 -->
+			<div class="notice-content-desc">
+				<!-- <span></span> -->
+				<!-- <p></p> -->
+			</div>
+		</div>
+
+		<!-- 글 감싸는 그림 -->
+		<div class="notice-content-wrapper">
+			<!-- 실제 글자 -->
+			<div class="notice-content-desc">
+				<!-- <span></span> -->
+				<!-- <p></p> -->
+			</div>
+		</div>
+	</div>
+</div>
+
 {% endblock %}
