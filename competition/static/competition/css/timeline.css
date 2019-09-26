@@ -3,7 +3,7 @@
 }
 
 .competition-container{
-    background-image: url(../img/background.png);
+    background-image: url(../img/compete_background.svg);
     background-size: cover;
     width : 100%;
     height : 100%;
@@ -17,63 +17,34 @@ body{
     font-family: 'Binggrae-Bold';
 }
 
-.title{
-    border: 1px solid black;
-    text-align: center;
-    padding-top: 8%;
-    padding-bottom: 8%;
-    font-size: 1.7em;
-}
-
-.title-image{
+.competition-container .title-img .title-image{
     width: 60%;
     margin-left: 20%;
     margin-top: 35px;
     padding-bottom: 15px;
 }
 
-.timetable-title{
-    text-align: right;
-    padding-right: 3%;
-    display:inline-block;
-    vertical-align:middle;
-}
-
-.timetable-date{
-    display:inline-block;
-    vertical-align:middle;
-}
-
-.game{
+.competition-container .game{
     width: 50%;
-    height: 38px;
-    font-size: 1.3em;
+    height: 35px;
     background-color:#365E77;
     color: white;
     border-radius: 80px;
     padding-top: 1%;
-    padding-bottom: 3%;
 }
 
-.game-name{
-    float:left;
-    width: 40%;
-    text-align: right; 
+.competition-container .game .game-name{
+    text-align: center; 
 }
 
-.game-round{
-    width: 100%;
-    text-align: left;
-}
-
-.timetable-list-content{
+.competition-container .timetable-list-content{
     background-color: white;
     padding: 7px;
     margin-top: 10px;
     margin: 10px;
 }
 
-.timetable-list{
+.competition-container .timetable-list-content .timetable-list{
     background-color: white;
     text-align: center;
     padding-top: 15px;
@@ -82,53 +53,53 @@ body{
     border-color: #365E77;
 }
 
-.major{
+.competition-container .timetable-list-content .timetable-list .major{
    font-family: 'BBTreeGR';
    font-size: 1.2em;
 }
 
-.major-logo{
+.competition-container .timetable-list-content .timetable-list .major .major1 .major-logo{
     display:inline-block;
     vertical-align:middle;
 }
 
-.major-name{
+.competition-container .timetable-list-content .timetable-list .major .major1 .major-name{
     display:inline-block;
     vertical-align:middle;
     color: #365E77;
 }
 
-.major1{
+.competition-container .timetable-list-content .timetable-list .major1{
     display:inline;
     vertical-align:middle;
     width: 45%;
     float: left;
 }
 
-.major2{
+.competition-container .timetable-list-content .timetable-list .major2{
     display:inline;
     vertical-align:middle;
     width: 45%;
     float: left;
 }
 
-.vs{
+.competition-container .timetable-list-content .timetable-list .major .vs{
     display:inline;
     vertical-align:middle;  
     float: left;
 }
 
-.game-info{
+.competition-container .timetable-list-content .timetable-list .game-info{
     text-align: center;
     font-size: 1.1em;
 }
 
-.game-time{
-    margin-top: 7px;
+.competition-container .timetable-list-content .timetable-list .game-info .game-time{
     color:#365E77;
+    font-size: 1.15em;
 }
 
-.game-place{
+.competition-container .timetable-list-content .timetable-list .game-info .game-place{
     font-size: 1.15em;
     color: #365E77;
 }

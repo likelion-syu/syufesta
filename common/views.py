@@ -4,6 +4,7 @@ from django.http import JsonResponse
 from .models import Major
 from . import utils
 
+
 # from models import Booth , FoodTruck
 # Create your views here.
 def home(request):
