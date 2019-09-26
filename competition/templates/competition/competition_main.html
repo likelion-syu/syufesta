@@ -2,25 +2,51 @@
 
 {% load staticfiles %}
 
+{% block competition-head %}
+<link rel = "stylesheet" type = "text/css" href = "{% static 'competition/css/main.css' %}">
+{% endblock %}
+
 {% block competition-content %}
-<link rel="stylesheet" href="{% static 'competition/css/main.css' %}">
- 
-<h1 id="competition">체육대회 메인화면</h1>
-<ul>
-	<li>
-		<a href="{% url 'timeline' %}">경기일정</a>
-	</li>
-	<li>
-		<a href="{% url 'seatmap' %}">학과좌석배치</a>
-	</li>
-	<li>
-		<a href="{% url 'compete_foodtruck' %}">푸드트럭</a>
-	</li>
-	<li>
-		<a href="{% url 'event' %}">이벤트</a>
-	</li>
-	<li>
-		<a href="{% url 'notice' %}">주의사항</a>
-	</li>
-</ul>
+
+<div class="competition-container">
+		<div class="background_img1" >
+
+			</div>
+			
+			<div class="main_logo" >
+			
+			</div>
+			
+			<div class="main_poster" >
+			
+			</div>
+			
+			
+			<h1 id="competition">체육대회 메인화면</h1>
+			
+			
+			
+			<ul>
+				<li>
+					<a href="{% url 'timeline' %}">경기일정</a>
+				</li>
+				<li>
+					<a href="{% url 'timeline' %}">경기일정</a>
+				</li>
+				<li>
+					<a href="{% url 'seatmap' %}">학과좌석배치</a>
+				</li>
+				<li>
+					<a href="{% url 'compete_foodtruck' %}">푸드트럭</a>
+				</li>
+				<li>
+					<a href="{% url 'event' %}">이벤트</a>
+				</li>
+				<li>
+					<a href="{% url 'notice' %}">주의사항</a>
+				</li>
+			</ul>
+			
+</div>
+
 {% endblock %}
