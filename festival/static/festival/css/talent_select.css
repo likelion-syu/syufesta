@@ -2,8 +2,18 @@
     width: 130px;
     border-radius: 50%;
     height: 130px;
-    border: 4px solid rgb(118,123,186);
+    border: 3px solid #fff;
+    transition:.2s;
+}
 
+.talent-item.active .img-circle{
+    transition:.2s;
+    border: 3px solid #ea6f9e;
+}
+
+.talent-desc{
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
 }
 
 .title1 {
@@ -13,6 +23,7 @@
     color : white;
     /* -webkit-text-stroke: 1px rgb(108,116,182); */
     padding-top: 20px;
+    text-shadow: 0 0 10px #ea6f9e;
 }
 
 .title2 {
@@ -21,7 +32,15 @@
     text-align : center;
     font-weight: 900;
     color : white;
+    margin-top:10px;
+    margin-bottom:0;
+    text-shadow: 0 0 10px #ea6f9e;
     /* -webkit-text-stroke: 1px rgb(108,116,182); */
+}
+
+.desc{
+    margin : 0;
+    font-size : .8em;
 }
 
 .date1 {
@@ -42,20 +61,29 @@
     flex-shrink: 0;
     display: block;
     margin: 20px auto;
-    
-
-}
-
-.btn-primary {
-    border: 3px solid rgba(255, 255, 255, 0.48) !important;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    border: 0;
+    border-radius: 0;
+    text-shadow: 0 0 5px #ea6f9e;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
     background-color: rgba(0,0,0,0.45);
     font-family : 'NanumSquare' !important;
     font-weight: 900;
     color : white;
     height: 48px;
-    width: 294px;
-    border-radius: 16px;
+    transition:.2s;
 }
+
+.btn:active , .btn:hover{
+    background-color:rgba(234, 111, 158, .8);
+    transition:.2s;
+    color:#fff;
+}
+
 
 .container.talent{
     flex: 1;
@@ -76,19 +104,45 @@
 
 .thumbs {
     position: absolute;
-    left: 100px;
-    bottom: 42px;
+    left: 110px;
+    top: 95px;
     border-radius: 50%;
     width: 35px;
     height: 35px;
-    background-color: rgb(124,186,255);
+    background-color: #ea6f9e;
+    opacity: 0;
+    transition:.2s;
 }
 
 .fa-thumbs-up {
-    margin-top: 5px;
-    font-size: 23px;
+    margin-top: 8px;
+    font-size: 19px;
+    margin-left:1px;
 }
 
 .empty {
     padding : 36px;
 }
+
+
+.talent-item .talent-cover{
+    width: 124px;
+    border-radius: 50%;
+    height: 124px;
+    position: absolute;
+    top: 3px;
+    left: 24px;
+    background-color: rgba(0,0,0,.7);
+    opacity : 1;
+    transition:.2s;
+}
+
+.talent-item.active .talent-cover{
+    opacity: 0;
+    transition:.2s;
+}
+.talent-item.active .thumbs{
+    opacity: 1;
+    transition:.2s;
+}
+

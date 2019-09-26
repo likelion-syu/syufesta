@@ -6,7 +6,7 @@
 
 {% block festival-content %}
 <div class="container">
-    <div class="row">
+    <div class="row talent-desc mb-4">
         <div class = "col-12">
             <h1 class = title1>너의 청춘을 보여줘</h1>
             <h2 class = title2>장기자랑 참가자를 투표하세요!</h2>
@@ -17,68 +17,84 @@
     </div>
     <div class = "container talent">
     <div class ="row talent">
-        <div class = "col-6">
-            <div class= "thumbs"><i class="far fa-thumbs-up" aria-hidden="true"></i></div>
+        <div class = "col-6 talent-item mb-3" onclick="__talent.select(this)">
+            <div class="talent-cover"></div>
+            <div class= "thumbs">
+                <i class="far fa-thumbs-up" aria-hidden="true"></i>
+            </div>
             <img src="{% static 'festival/img/GettyImages-jv11337228.jpg' %}" class="img-circle">
             <p class = title2>황성</p>
+            <p class = desc>설명입니다</p>
         </div>
 
-        <div class = "col-6">
+        <div class = "col-6 talent-item" onclick="__talent.select(this)">
+            <div class="talent-cover"></div>
             <div class= "thumbs"><i class="far fa-thumbs-up" aria-hidden="true"></i></div>
             <img src="{% static 'festival/img/GettyImages-jv11337228.jpg' %}" class="img-circle">
             <p class = title2>임종환</p>
+            <p class = desc>설명입니다</p>
         </div>
  
 
-        <div class = "col-6">
+        <div class = "col-6 talent-item" onclick="__talent.select(this)">
+            <div class="talent-cover"></div>
             <div class= "thumbs"><i class="far fa-thumbs-up" aria-hidden="true"></i></div>
             <img src="{% static 'festival/img/GettyImages-jv11337228.jpg' %}" class="img-circle">
             <p class = title2>D.M</p>
         </div>
-        <div class = "col-6">
+        <div class = "col-6 talent-item" onclick="__talent.select(this)">
+            <div class="talent-cover"></div>
             <div class= "thumbs"><i class="far fa-thumbs-up" aria-hidden="true"></i></div>
             <img src="{% static 'festival/img/GettyImages-jv11337228.jpg' %}" class="img-circle">
             <p class = title2>ottimo</p>
         </div>
 
 
-        <div class = "col-6">
+        <div class = "col-6 talent-item" onclick="__talent.select(this)">
+            <div class="talent-cover"></div>
             <div class= "thumbs"><i class="far fa-thumbs-up" aria-hidden="true"></i></div>
             <img src="{% static 'festival/img/GettyImages-jv11337228.jpg' %}" class="img-circle">
             <p class = title2>박준서</p>
         </div>
-        <div class = "col-6">
-            <div class= "thumbs"><i class="far fa-thumbs-up" aria-hidden="true"></i></div>
+        <div class = "col-6 talent-item" onclick="__talent.select(this)">
+            <div class="talent-cover"></div>
+            <div class= "thumbs">
+                <i class="far fa-thumbs-up" aria-hidden="true"></i></div>
             <img src="{% static 'festival/img/GettyImages-jv11337228.jpg' %}" class="img-circle">
             <p class = title2>성유빈</p>
         </div>
   
 
-        <div class = "col-6">
+        <div class = "col-6 talent-item" onclick="__talent.select(this)">
+            <div class="talent-cover"></div>
             <div class= "thumbs"><i class="far fa-thumbs-up" aria-hidden="true"></i></div>
             <img src="{% static 'festival/img/GettyImages-jv11337228.jpg' %}" class="img-circle">
             <p class = title2>김정환, 김현덕</p>
         </div>
-        <div class = "col-6">
+        <div class = "col-6 talent-item" onclick="__talent.select(this)">
+            <div class="talent-cover"></div>
             <div class= "thumbs"><i class="far fa-thumbs-up" aria-hidden="true"></i></div>
             <img src="{% static 'festival/img/GettyImages-jv11337228.jpg' %}" class="img-circle">
             <p class = title2>한예서</p>
         </div>
  
 
-        <div class = "col-6">
+        <div class = "col-6 talent-item" onclick="__talent.select(this)">
+            <div class="talent-cover"></div>
             <div class= "thumbs"><i class="far fa-thumbs-up" aria-hidden="true"></i></div>
             <img src="{% static 'festival/img/GettyImages-jv11337228.jpg' %}" class="img-circle">
             <p class = title2>박인학</p>
         </div>
-        <div class = "col-6">
+        <div class = "col-6 talent-item" onclick="__talent.select(this)">
+            <div class="talent-cover"></div>
             <div class= "thumbs"><i class="far fa-thumbs-up" aria-hidden="true"></i></div>
             <img src="{% static 'festival/img/GettyImages-jv11337228.jpg' %}" class="img-circle">
             <p class = title2>플레이그</p>
         </div>
 
 
-        <div class = "col-6">
+        <div class = "col-6 talent-item" onclick="__talent.select(this)">
+            <div class="talent-cover"></div>
             <div class= "thumbs"><i class="far fa-thumbs-up" aria-hidden="true"></i></div>
             <img src="{% static 'festival/img/GettyImages-jv11337228.jpg' %}" class="img-circle">
             <p class = title2>FNO</p>
@@ -91,9 +107,27 @@
     <div class = "row empty"></div>
     <div class="row">
         <div class="col-12 talent">
-            <button class = 'btn btn-primary' value = 'submit'>투표하기</button>
+            <button class = 'btn' value = 'submit'>투표하기</button>
         </div>
     </div>
 </div>
 
+
+<script>
+    var __talent = {
+        select : function(elem){
+            let item = $(elem);
+            let selected = $('.talent-item.active');
+            if(selected.length > 0){
+                for(var i = 0 ; i < selected.length; i++){
+                    selected.eq(i).removeClass('active');
+                }
+            }
+            
+            if(!item.hasClass('active')){
+                item.addClass('active');
+            }
+        }
+    }
+</script>
 {% endblock %}
