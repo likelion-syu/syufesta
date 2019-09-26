@@ -1,12 +1,4 @@
-# This is an auto-generated Django model module.
-# You'll have to do the following manually to clean this up:
-#   * Rearrange models' order
-#   * Make sure each model has one field with primary_key=True
-#   * Make sure each ForeignKey has `on_delete` set to the desired behavior.
-#   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
-# Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
-from django.utils import timezone
 
 
 class Account(models.Model):
@@ -35,7 +27,7 @@ class Booth(models.Model):
 
 class Boothstamp(models.Model):
     bt_stamp_id = models.AutoField(primary_key=True)
-    account = models.ForeignKey(Account, models.DO_NOTHING)
+    bt_account = models.ForeignKey('AuthUser', models.DO_NOTHING)
     booth = models.ForeignKey(Booth, models.DO_NOTHING)
     created_dt = models.DateTimeField()
 
@@ -46,7 +38,10 @@ class Boothstamp(models.Model):
 
 class Contestparticipant(models.Model):
     cont_participant_id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=45)
+    cont_participant_img_url = models.CharField(max_length=500)
+    cont_participant_des = models.CharField(max_length=1000)
+    cont_participant_order = models.SmallIntegerField(blank=True, null=True)
+    cont_participant_nm = models.CharField(max_length=50, blank=True, null=True)
 
     class Meta:
         managed = False
@@ -55,8 +50,8 @@ class Contestparticipant(models.Model):
 
 class Contestvote(models.Model):
     cont_vote_id = models.AutoField(primary_key=True)
-    account = models.ForeignKey(Account, models.DO_NOTHING)
-    cont_participant = models.ForeignKey(Contestparticipant, models.DO_NOTHING)
+    cv_account_id = models.IntegerField()
+    cont_participant_id = models.IntegerField()
     created_dt = models.DateTimeField()
 
     class Meta:
@@ -67,8 +62,8 @@ class Contestvote(models.Model):
 class Foodtruck(models.Model):
     truck_id = models.AutoField(primary_key=True)
     fest_truck = models.TextField(blank=True, null=True)  # This field type is a guess.
-    truck_img_url = models.CharField(max_length=500, blank=True, null=True)
     truck_des = models.CharField(max_length=1000, blank=True, null=True)
+    truck_img_url = models.CharField(max_length=1000, blank=True, null=True)
 
     class Meta:
         managed = False
@@ -79,6 +74,7 @@ class Major(models.Model):
     major_id = models.AutoField(primary_key=True)
     major_name = models.CharField(max_length=45, blank=True, null=True)
     major_logo_url = models.CharField(max_length=500, blank=True, null=True)
+    major_desc = models.CharField(max_length=1000, blank=True, null=True)
 
     class Meta:
         managed = False
@@ -89,9 +85,10 @@ class Matchschedule(models.Model):
     sch_id = models.AutoField(primary_key=True)
     sch_date = models.DateTimeField(blank=True, null=True)
     sch_stage = models.CharField(max_length=500, blank=True, null=True)
-    sch_major_a = models.ForeignKey(Major, models.DO_NOTHING, related_name= 'sch_major_a', db_column='sch_major_a', blank=True, null=True)
-    sch_major_b = models.ForeignKey(Major, models.DO_NOTHING, related_name= 'sch_major_b', db_column='sch_major_b', blank=True, null=True)
+    sch_major_a = models.ForeignKey(Major, models.DO_NOTHING, db_column='sch_major_a', blank=True, null=True)
+    sch_major_b = models.ForeignKey(Major, models.DO_NOTHING, db_column='sch_major_b', blank=True, null=True)
     sch_kind = models.IntegerField(blank=True, null=True)
+    sch_title = models.CharField(max_length=500)
 
     class Meta:
         managed = False

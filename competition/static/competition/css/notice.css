@@ -6,6 +6,10 @@
     background-repeat: no-repeat; */
 }
 
+p {
+    margin-top: 24px;
+    margin-bottom: 1rem;
+}
 /* css 이름이 겹치면 안됨. */
 .notice-container {
     width : 100%;
@@ -31,4 +35,26 @@
     background-size: contain;
     background-repeat: no-repeat;
     margin : 0 auto;
+}
+
+
+.notice-container .notice-content .notice-content-wrapper{
+    background-image: url(../img/memo_notice.png);
+    width: 350px;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    padding: 30px;
+}
+.notice-container .notice-content .notice-content-wrapper2{
+    background-image: url(../img/memo_notice.png);
+    width: 350px;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+.notice-container .notice-content .notice-content-wrapper .notice-content-desc{
+    margin: 0 auto;
 }
