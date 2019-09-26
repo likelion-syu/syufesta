@@ -149,35 +149,37 @@
 }
 
 #participant-img2 {
-    background-image: url('../img/KakaoTalk-8.jpeg');
+    background-image: url('../img/KakaoTalk-7.jpeg');
+    background-position: 0px -64px;
 }
 
 #participant-img3 {
-    background-image: url('../img/KakaoTalk-8.jpeg');
+    background-image: url('../img/KakaoTalk-3.jpeg');
 }
 
 #participant-img4 {
-    background-image: url('../img/KakaoTalk-8.jpeg');
+    background-image: url('../img/KakaoTalk-2.jpeg');
 }
 
 #participant-img5 {
-    background-image: url('../img/KakaoTalk-8.jpeg');
+    background-image: url('../img/KakaoTalk-9.jpeg');
 }
 
 #participant-img6 {
-    background-image: url('../img/KakaoTalk-8.jpeg');
+    background-image: url('../img/KakaoTalk-5.jpeg');
+    background-position: 0px -32px;
 }
 
 #participant-img7 {
-    background-image: url('../img/KakaoTalk-8.jpeg');
+    background-image: url('../img/KakaoTalk-6.jpeg');
 }
 
 #participant-img8 {
-    background-image: url('../img/KakaoTalk-8.jpeg');
+    background-image: url('../img/KakaoTalk-4.jpeg');
 }
 
 #participant-img9 {
-    background-image: url('../img/KakaoTalk-8.jpeg');
+    background-image: url('../img/KakaoTalk-1.jpeg');
 }
 
 .talent-item.active .img-circle{
