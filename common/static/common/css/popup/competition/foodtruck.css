@@ -1,3 +1,15 @@
 .popup-foodtruck-container{
-    background-color:red;
+    background-color:purple;
+}
+
+.popup-foodtruck-title{
+
+    background-color:purple;
+    color:white;
+}
+
+.popup-foodtruck-description{
+
+    background-color:purple;
+    color:white;
 }

@@ -10,45 +10,46 @@
 <!-- Mainpage contents -->
 {% block contents %}
 
-<div class="swiper-container">
-	<div class="swiper-wrapper">
-		<!-- 체육대회 메인 -->
-		<div class="swiper-slide">
-			<div class="container competition">
-				{% include 'competition/competition_main.html' %}
-			</div>
-		</div>
-		<!-- 홈페이지메인 -->
-		<div class="swiper-slide">
-			<div class="container main">
-				<h1>메인화면</h1>
-			</div>
-		</div>
-		<!-- 축제 메인 -->
-		<div class="swiper-slide">
-			<div class="container festival">
-				{% include 'festival/festival_main.html' %}
-			</div>
-		</div>
+<div class="container main">
+	<div class="main-title-wrapper">
+		<h1>SYUFEST</h1>
 	</div>
-	<!-- Add Arrows -->
-	<div class="swiper-button-next"></div>
-	<div class="swiper-button-prev"></div>
-</div>
+	<div class="main-movie-wrapper">
+
+	</div>
+	<div class="go-btn-wrapper">
+		<a href="{% url 'fest_home' %}">
+			<div class="go-festival">
+				<h2>천보축전</h2>
+				<p>10.08 MON</p>
+			</div>
+		</a>
+		<a href="{% url 'comp_home' %}">
+			<div class="go-competition">
+				<h2>체육대회</h2>
+				<p>10.09 TUE</p>
+			</div>
+		</a>
+	</div>
+
+	<div class="main-info-wrapper">
+		<a href="https://new.syu.ac.kr/school-life/school-bus/" target="_blank">
+			<div class="go-bus">
+				<h2>셔틀버스 안내</h2>
+			</div>
+		</a>
+		<a href="https://new.syu.ac.kr/school-life/parking/" target="_blank">
+			<div class="go-parking">
+				<h2>주차 안내</h2>
+			</div>
+		</a>
+	</div>
+	
+</div>	
 
 {% endblock %}
 
 <!-- Mainpage endbody contents -->
 {% block endbody %}
-<script>
-	var swiper = new Swiper('.swiper-container', {
-		initialSlide: 1,
-
-		navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-		},
-	});
-</script>
 {% endblock %}
 
