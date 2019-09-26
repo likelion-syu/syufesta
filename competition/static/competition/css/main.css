@@ -1,3 +1,21 @@
 .main-background-compete{
-    background-image: url(../img/background)
+    background-image: url(../img/background_compete.png);
+    height:100%;
+    width:100%;
+    background-size:cover;
 }
+.main-background-compete .main-container{
+    padding: 40px 0 10px 0;
+}
+
+.main-background-compete .main-container .compete-logo{
+    background-image:url(../img/compete_logo_main.svg);
+    width:300px;
+    height:100px;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    margin:0 auto;
+    
+
+}*/
