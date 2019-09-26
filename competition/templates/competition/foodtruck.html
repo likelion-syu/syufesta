@@ -1,19 +1,47 @@
 {% extends './competition_base.html' %}{% load staticfiles %}
 
-{% block competition-content %}
+{% block competition-head %}
 <link rel="stylesheet" href="{% static 'competition/css/foodtruck.css' %}">
+{% endblock %}
 
-<h1>푸드트럭</h1>
-<ul>
-	<li>
-		<a href="{% url 'home' %}">메인으로</a>
-	</li>
+{% block competition-content %}
+<!---<div class="na" style="background-image:'competition/img/wallpaper.png'; ">--->
+
+<div class="foodtruck-container">
+	<!-- 로고가 있는 부분 -->
+	<div class="header">
+		<div class="logo">
+
+		</div>
+	</div>
+	<!-- 설명 박스가 있는 부분 -->
+	<div class="content">
+		<div class="item-wrapper my-3">
+			<div class="item">
+				<div class="row">
+					<div class="col-3">
+						<!---트럭 이미지-->
+						<img src="..." class="food_main_img">
+					</div>
+					<div class="col-9">
+						<div class="desc">
+							<!---트럭 이름-->
+							<div class="food_title">트럭이름</div>
+							<!---트럭 한줄소개-->
+							<div class="food_desc">한줄소개</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!---반복될 for문-->
 	{% for food in foods %}
-	<li>
-		<h1>{{ food.booth_id }}</h1>
-		<p>{{ food.name }}</p>
-	</li>
-	{% endfor %}
-</ul>
+	<div class="item-wrapper my-3">
+		<div class="item">
 
+		</div>
+	</div>
+	{% endfor %}
+</div>
 {% endblock %}
