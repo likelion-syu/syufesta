@@ -1,37 +1,3 @@
-/* .main-background-compete{
-    background-image: url(../img/mainimage.svg);
-    height:100%;
-    width:100%;
-    background-size:cover;
-}
-.main-background-compete .main-container{
-    padding: 40px 0 10px 0;
-    margin:0 auto;
-}
-
-.main-background-compete .main-container .compete-logo{
-    background-image:url(../img/compete_logo_main.svg);
-    width:300px;
-    height:100px;
-    background-size:contain;
-    background-repeat:no-repeat;
-    background-position:center;
-    margin:0 auto;
-    
-
-}
-
-.main-background-compete  .main-container .compete-logo .compete-main-poster{
-    background-image: url(../img/competitionimg.png);
-    min-height: 700px;
-    width: 300px;
-    background-repeat: no-repeat;
-  
-    background-position: center;
-    background-size: contain;
-
-} */
-
 
 .competition-main-container{
     width : 100%;
@@ -82,4 +48,15 @@
 
 .competition-main-container .timetable-container .header p{
     font-size : 1.3em;
+}
+.competition-main-container .timetable-container .content {
+    background-image: url(../img/memopage.svg);
+    background-image: url(../img/memopage.svg);
+    width: 400px;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    padding-top: 9px;
 }
