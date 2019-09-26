@@ -1,0 +1,19 @@
+.title-wrapper {
+	width: 100%;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center
+}
+.timetable-wrapper {
+	text-align: center;
+}
+.timetable-wrapper ol {
+	padding: 0;
+} 
+.timetable-wrapper li {
+	max-width: 140px;
+    margin: 20px auto;
+}

@@ -2,11 +2,31 @@
 
 {% load staticfiles %}
 
+{% block competition-head %}
+<link rel = "stylesheet" type = "text/css" href = "{% static 'competition/css/main.css' %}">
+{% endblock %}
+
 {% block competition-content %}
-<link rel="stylesheet" href="{% static 'competition/css/main.css' %}">
- 
+<div class="background_img1" >
+<img src="{% static 'competition/img/KakaoTalk-1.pneg' %}">
+
+<div class="main_logo" >
+
+</div>
+
+<div class="main_poster" >
+
+</div>
+
+
 <h1 id="competition">체육대회 메인화면</h1>
+<h1>helo</h1>
+
+</div>
 <ul>
+	<li>
+		<a href="{% url 'timeline' %}">경기일정</a>
+	</li>
 	<li>
 		<a href="{% url 'timeline' %}">경기일정</a>
 	</li>
@@ -23,4 +43,5 @@
 		<a href="{% url 'notice' %}">주의사항</a>
 	</li>
 </ul>
+
 {% endblock %}
