@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.db import connection
 from django.http import JsonResponse
+from .models import Major
 from . import utils
 
 # from models import Booth , FoodTruck
@@ -35,8 +36,8 @@ def comp_foodtruck(req , pk):
 
 
 def comp_seatmap(req , pk):
-    # with connection.cursor() as cursor:
-    #     cursor.execute("SELECT * FROM ")
-    return render(req , 'common/popup/competition/seatmap.html')
+    major_detail = get_object_or_404(Major, pk=pk)
+
+    return render(req , 'common/popup/competition/seatmap.html', {'major': major_detail})
 
 
