@@ -18,4 +18,12 @@
     margin:0 auto;
     
 
-}*/
+}
+.main-background-compete  .main-container .compete-logo .compete-main-poster{
+    background-image: url(../img/competitionimg.png);
+    background-size: cover;
+    width:90%;
+    height:90%;
+    background-repeat:no-repeat;
+
+}
