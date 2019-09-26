@@ -1,10 +1,42 @@
+/* 이미지-wrapper */
 .img-circle{
-    width: 130px;
+    /* width: 130px;
     border-radius: 50%;
     height: 130px;
-    border: 4px solid rgb(118,123,186);
-
+    border: 4px solid rgb(118,123,186); */
 }
+
+.img-circling{
+    width: 100%;
+    padding:50%;
+    border: 4px solid rgb(118,123,186);
+    margin: 5px auto;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+#participant-img {
+    background-image: url('../img/GettyImages-jv11337228.jpg');
+}
+
+.thumbs {
+    position: absolute;
+    left: 69%;
+    bottom: 28%;
+    border-radius: 50%;
+    width: 23%;
+    padding-bottom: 3%;
+    background-color: rgb(124,186,255);
+}
+
+
+.fa-thumbs-up {
+    margin-top: 5px;
+    font-size: 23px;
+}
+
+/* 글 font */
 
 .title1 {
     font-family : 'NanumSquare' !important;
@@ -32,63 +64,61 @@
     color :white;
 }
 
-.row.talent {
-    text-align : center;
-    height : 100%;
-    overflow-y : auto;
-}
+/* 버튼 */
 
 .btn {
     flex-shrink: 0;
     display: block;
     margin: 20px auto;
-    
-
 }
 
 .btn-primary {
-    border: 3px solid rgba(255, 255, 255, 0.48) !important;
-    background-color: rgba(0,0,0,0.45);
-    font-family : 'NanumSquare' !important;
-    font-weight: 900;
-    color : white;
-    height: 48px;
-    width: 294px;
-    border-radius: 16px;
+    background-color: rgba(0, 0, 0,0.48) !important;
+    width: 70%;
+    height: 40px;
+    margin: 4px auto;
+    border-radius: 10px;
+    border: 3px solid rgba(255,255,255, 0.48);
 }
 
-.container.talent{
+.voting-button {
+    background-color: black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    color: white;
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    height: 100px;
+}
+
+/* 글 wrapper */
+
+.row.pt-wrapper {
+    text-align : center;
+    height : 100%;
+    overflow-y : auto;
+}
+
+.container.pt-wrapper{
     flex: 1;
 }
 
 .col-12.talent {
     position: fixed;
-    width: 50%;
-    bottom: 5px;
+    width: 100%;
+    height: 100%;
     margin: auto;
     display: block;
-    margin-left: 3%;
 }
 
 .col-6 {
     position:relative;
 }
 
-.thumbs {
-    position: absolute;
-    left: 100px;
-    bottom: 42px;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    background-color: rgb(124,186,255);
-}
-
-.fa-thumbs-up {
-    margin-top: 5px;
-    font-size: 23px;
-}
-
 .empty {
-    padding : 36px;
+    padding : 15%;
 }
+
+
