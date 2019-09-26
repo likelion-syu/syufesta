@@ -97,6 +97,7 @@ body{
 .competition-container .timetable-list-content .timetable-list .game-info .game-time{
     color:#365E77;
     font-size: 1.15em;
+    display: inline-block;
 }
 
 .competition-container .timetable-list-content .timetable-list .game-info .game-place{
