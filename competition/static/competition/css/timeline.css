@@ -69,6 +69,11 @@ body{
     color: #365E77;
 }
 
+.competition-container .timetable-list-content .timetable-list .major .major2 .major-name{
+    display:inline-block;
+    vertical-align:middle;
+    color: #365E77;
+}
 .competition-container .timetable-list-content .timetable-list .major1{
     display:inline;
     vertical-align:middle;
