@@ -1,11 +1,19 @@
-{% load staticfiles %}
+{% extends './festival_base.html' %} {% load staticfiles %}
+
+{% block festival-head %}
+
+<link rel="stylesheet" href="{% static 'festival/css/main.css' %}">
+
+{% endblock %}
+
+{% block festival-content %}
 	<h1 id="festival">축제 메인화면</h1>
 	<ul>
 		<li>
-			<a href="{% url 'fest_foodtruck' %}">푸드트럭</a>
+			<a href="{% url 'fest_foodtruck' %}">푸드트럭&부스</a>
 		</li>
 		<li>
-			<a href="{% url 'booth' %}">부스</a>
+			<a href="{% url 'festmap' %}">조감도</a>
 		</li>
 		<li>
 			<a href="{% url 'stamp' %}">이벤트 스탬프</a>
@@ -17,3 +25,5 @@
 			<a href="{% url 'cheer' %}">치어대전</a>
 		</li>
 	</ul>
+
+{% endblock %}	

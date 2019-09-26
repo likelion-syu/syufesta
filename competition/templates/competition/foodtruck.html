@@ -1,149 +1,41 @@
 {% extends './competition_base.html' %}{% load staticfiles %}
 
-{% block competition-content %}
+{% block competition-head %}
 <link rel="stylesheet" href="{% static 'competition/css/foodtruck.css' %}">
+{% endblock %}
 
-<h1>푸드트럭</h1>
-<ul>
-	<li>
-		<a href="{% url 'home' %}">메인으로</a>
-	</li>
-	{% for food in foods %}
-	<li>
-		<h1>{{ food.booth_id }}</h1>
-		<p>{{ food.name }}</p>
-	</li>
-	{% endfor %}
-</ul>
+{% block competition-content %}
+<!---<div class="na" style="background-image:'competition/img/wallpaper.png'; ">--->
 
-<head>
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>푸드트럭</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<style>
-		@font-face {
-			font-family: 'aJangmi';
-			src: url('aJangmi.eot');
-			src: url('aJangmi.eot?#iefix') format('embedded-opentype'),
-				url('aJangmi.woff2') format('woff2');
-			font-weight: normal;
-			font-style: normal;
-		}
-	</style>
-</head>
+<div class="foodtruck-container pb-5">
+	<!-- 로고가 있는 부분 -->
+	<div class="header">
+		<div class="logo">
 
-<body>
-	<div id="header">
-		<div id="logo">
-			<h1><a href="#">* 체육대회 메인 * </a></h1>
-			<br><br><br><br><br><br><br><br><br><br>
-			<h2>삼육 세끼<br></h2>
-			<h2>{체육대회 푸드트럭 편}</h2>
-			<br><br>
 		</div>
 	</div>
-	<!-- end #header -->
-	<div id="page">
-		<div id="page-bgtop">
-			<div id="page-bgbtm">
+	<!-- 설명 박스가 있는 부분 -->
+	<div class="content">
+		{% for food in foodtrucks %}
+		<div class="item-wrapper my-3">
+			<div class="item">
 				<div class="row">
-					<div class="col-md-9">
-						<div class="row">
-							<div class="col-md-6">
-								<div class="post">
-									<p class="meta"><span class="foodmaintitle">&nbsp;&nbsp;&nbsp;jmt 핫도그</span></p>
-
-									<h2 class="title"><a href="#">쫀득쫀득한 명품 찹쌀 핫도그</a></h2>
-									<div class="entry"><img src="images/img06.jpg" alt="" width="340" height="240"
-											class="alignleft" />
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="post">
-									<p class="meta"><span class="foodmaintitle">&nbsp;&nbsp;&nbsp;호로록 샌드위치</span></p>
-									<h2 class="title"><a href="#"> 나를 위한 건강한 선택</a></h2>
-									<div class="entry"><img src="images/img07.jpg" alt="" width="340" height="240"
-											class="alignleft" />
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="post">
-									<p class="meta"><span class="foodmaintitle">&nbsp;&nbsp;&nbsp;와플 앤 츄러스</span></p>
-									<h2 class="title"><a href="#">세상 맛있는 꿀조합 간식</a></h2>
-									<div class="entry"><img src="images/img08.jpg" alt="" width="340" height="240"
-											class="alignleft" />
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="post">
-									<p class="meta"><span class="foodmaintitle">&nbsp;&nbsp;&nbsp;와플 앤 츄러스</span></p>
-									<h2 class="title"><a href="#">세상 맛있는 꿀조합 간식</a></h2>
-									<div class="entry"><img src="images/img08.jpg" alt="" width="340" height="240"
-											class="alignleft" />
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="post">
-									<p class="meta"><span class="foodmaintitle">&nbsp;&nbsp;&nbsp;와플 앤 츄러스</span></p>
-									<h2 class="title"><a href="#">세상 맛있는 꿀조합 간식</a></h2>
-									<div class="entry"><img src="images/img08.jpg" alt="" width="340" height="240"
-											class="alignleft" />
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="post">
-									<p class="meta"><span class="foodmaintitle">&nbsp;&nbsp;&nbsp;와플 앤 츄러스</span></p>
-									<h2 class="title"><a href="#">세상 맛있는 꿀조합 간식</a></h2>
-									<div class="entry"><img src="images/img08.jpg" alt="" width="340" height="240"
-											class="alignleft" />
-									</div>
-								</div>
-							</div>
-						</div>
+					<div class="col-3">
+						<!---트럭 이미지-->
+						<img src="{{ food.truck_img_url }}" class="food_main_img">
 					</div>
-					<div class="col-md-3">
-						<div id="sidebar">
-							<ul>
-								<li>
-									<h2>Aliquam tempus</h2>
-									<p>Mauris vitae nisl nec metus placerat perdiet est. Phasellus dapibus semper
-										consectetuer hendrerit.</p>
-								</li>
-								<li>
-									<h2>Categories</h2>
-									<ul>
-										<li><a href="#">Aliquam libero</a></li>
-										<li><a href="#">Consectetuer adipiscing elit</a></li>
-										<li><a href="#">Metus aliquam pellentesque</a></li>
-										<li><a href="#">Suspendisse iaculis mauris</a></li>
-										<li><a href="#">Urnanet non molestie semper</a></li>
-										<li><a href="#">Proin gravida orci porttitor</a></li>
-									</ul>
-								</li>
-							</ul>
+					<div class="col-9">
+						<div class="desc">
+							<!---트럭 이름-->
+							<div class="food_title">{{ food.truck_name }}</div>
+							<!---트럭 한줄소개-->
+							<div class="food_desc">{{ food.truck_des }}</div>
 						</div>
-						<!-- end #sidebar -->
 					</div>
 				</div>
-
-				<div style="clear: both;">&nbsp;</div>
 			</div>
 		</div>
+		{% endfor %}
 	</div>
-	<!-- end #page -->
-	</div>
-	<div id="footer">
-		<p> Copyright© All Rights Reserved 삼육대학교 멋쟁이 사자처럼 </p>
-	</div>
-	<!-- end #footer -->
-</body>
-
+</div>
 {% endblock %}

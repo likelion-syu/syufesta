@@ -1,10 +1,36 @@
 {% extends './competition_base.html' %}{% load staticfiles %}
 
+{% block competition-head %}
+<link rel="stylesheet" href="{%  static '/competition/css/notice.css' %}">
+{% endblock %}
+
 {% block competition-content %}
-<h1>주의사항</h1>
-<ul>
-	<li>
-		<a href="{% url 'home' %}">메인으로</a>
-	</li>
-</ul>
+<div class="notice-container">
+	<div class="notice-header py-5">
+		<div class="notice-logo-text"></div>
+		<div class="notice-logo-people mt-3"></div>
+	</div>
+	<div class="notice-content">
+		<!-- 글 감싸는 그림 -->
+		<div class="notice-content-wrapper">
+			<!-- 실제 글자 -->
+			<div class="notice-content-desc">
+				<!-- <span></span> -->
+				<p>음식 등 자신이 사용한 쓰레기를 잘 치워주세요.<br>
+					경기 중 총학생회 인솔에 따라 경기장 난입을 금해주세요.<br>
+					경기 응원 시 타학과, 심판진에게 과도한 비난, 욕설은 삼가해주세요.<br></p>
+			</div>
+		</div>
+
+		<!-- 글 감싸는 그림 -->
+		<div class="notice-content-wrapper2">
+			<!-- 실제 글자 -->
+			<div class="notice-content-desc2">
+				<!-- <span></span> -->
+				<!-- <p></p> -->
+			</div>
+		</div>
+	</div>
+</div>
+
 {% endblock %}

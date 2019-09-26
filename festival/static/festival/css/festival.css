@@ -1,11 +1,30 @@
+html , body{
+	background-color:#09081c;
+}
+/* text */
+h1 {
+	font-size: 1.8rem;
+}
+h2 {
+	font-size: 1.5rem;
+}
+h3 {
+	font-size: 1.2rem;
+}
 .container.festival {
-	background-color: black;
-	height: 100%;
+	background-color: #09081c;
 	margin: 0px;
 	width: 100%;
 	max-width: 100%;
-	padding: 0px;
 	color: white;
-	overflow-y: hidden;
+	min-height: 100%;
+	/* NAVBAR HEIGHT */
+	margin-top : 56px;
+	padding: 0;
 }
+.food-con {
+	min-height: 800px!important;
+}
+
+
 

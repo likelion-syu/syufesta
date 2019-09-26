@@ -5,8 +5,43 @@
 <link rel="stylesheet" href="{% static 'common/css/popup/competition/foodtruck.css' %}">
 {% endblock %}
 {% block content %}
-<div class='popup-foodtruck-container'>
-    <h1>{{data.truck_id}}</h1>
-    <p>{{data.truck_des}}</p>
-</div>
+
+<div class="foodtruck-container">
+        <!-- 로고가 있는 부분 -->
+        <div class="header">
+            <div class="logo">
+            </div>
+                <div class="logo_food">
+                푸드트럭 이름
+                <p>{{ data.truck_name }}</p>
+            </div>
+        </div>
+        <!---->
+        <div class="content">
+            <div class="item">
+                <!-- 트럭 설명이 있는 부분 -->
+                <div class="row">
+                    <div class="col">
+                        <p>{{ data.truck_des }}</p>
+                    </div>
+                </div>
+                <!-- 메뉴가 있는 부분 -->
+                <div class="row">
+                    <div class="col">
+                        {% for menu in }
+                        메뉴 메뉴 메뉴
+                    </div>
+                </div>
+                <!-- 음식 사진이 있는 부분 -->
+                <div class="row">
+                    <div class="col">
+                            <img src="..." class="food_main_img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <!----->
+    
 {% endblock %}

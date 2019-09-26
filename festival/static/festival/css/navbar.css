@@ -1,0 +1,39 @@
+.navbar{
+    height : 56px;
+    background-color : none;
+    position : fixed;
+    width : 100%;
+    background-color: #000;
+    top : 0;
+    left : 0;
+    z-index:1000;
+}
+
+.navbar button{
+    border : 0;
+    background:none;
+}
+
+.navbar .fa-home , .navbar .fa-bars{
+    filter: drop-shadow(0 0 3px #d86696);
+    color : #d86696;
+    font-size : 1.4em;
+    margin-top: 3px;
+}
+
+.navbar p{
+    margin : 0;
+    font-size : 1.3em;
+    color : #fff;
+    text-shadow : 0 0 3px #d86696;
+    margin-top:-5px;
+}
+
+.navbar .logo-wrapper{
+    width: 50%;
+    height: 100%;
+    background-image: url('/static/festival/img/fest_logo.svg');
+    background-size: cover;
+    padding: 0;
+    background-position: center;
+}
