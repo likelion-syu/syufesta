@@ -19,9 +19,9 @@
     margin:0 auto;
     
 
-
 }
-.main-container .compete-main-poster {
+
+.main-background-compete  .main-container .compete-logo .compete-main-poster{
     background-image: url(../img/competitionimg.png);
     min-height: 700px;
     width: 300px;
