@@ -8,8 +8,7 @@
 
 {% block competition-content %}
 <div class="background_img1" >
-
-</div>
+<img src="{% static 'competition/img/KakaoTalk-1.pneg' %}">
 
 <div class="main_logo" >
 
@@ -23,6 +22,7 @@
 <h1 id="competition">체육대회 메인화면</h1>
 <h1>helo</h1>
 
+</div>
 <ul>
 	<li>
 		<a href="{% url 'timeline' %}">경기일정</a>
@@ -43,4 +43,5 @@
 		<a href="{% url 'notice' %}">주의사항</a>
 	</li>
 </ul>
+
 {% endblock %}
