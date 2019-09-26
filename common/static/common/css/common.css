@@ -71,7 +71,7 @@ footer .container {
 #topBtn {
 	opacity: 0;
     position: fixed;
-    bottom: 20px;
+    bottom: 85px;
     right: 20px;
     z-index: 99;
     border: 2px solid white;

@@ -2,10 +2,48 @@
 
 {% block competition-content %}
 <link rel="stylesheet" href="{% static '/competition/css/timeline.css' %}">
-<h1>경기일정</h1>
-<ul>
-	<li>
-		<a href="{% url 'home' %}#competition">메인으로</a>
-	</li>
-</ul>
+<div class="competition-container">
+	<div>
+	<div class="title-img">
+		<img class="title-image" src="{% static 'competition/img/titleimg.svg' %}">
+	</div>
+		<div class="game">
+			<div class="game-name">
+				축 구
+			</div>
+			<div class="game-round">
+				(결승전)
+			</div>
+		</div>
+		<div class="timetable-list-content">
+			<div class="timetable-list">
+				<div class="major">
+					<div class="major1">
+						<div class="major-logo">
+							<img src="{% static 'competition/img/flag.png' %}" style="width:100%; height:100%;">
+						</div>
+						<div class="major-name">
+							학과
+						</div>
+					</div>
+						<div class="vs">
+							<img src="{% static 'competition/img/vs.png' %}" style="width: 30px; margin-top: 55px;">
+						</div>
+					<div class="major2">
+						<div class="major-logo">
+							<img src="{% static 'competition/img/flag.png' %}" style="width:100%; height:100%;">
+						</div>
+						<div class="major-name">
+							학과
+						</div>
+					</div>
+				</div>
+				<div class="game-info">
+					<div class="game-time">오후 3:30</div>
+					<div class="game-place">운동장</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 {% endblock %}
