@@ -1,0 +1,11 @@
+.festmap-container {
+	overflow: auto;
+}
+.festmap-wrapper {
+	background-image: url(../img/foodbooth/foodbooth.svg);
+    width: 1000px;
+    height: 1000px;
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}

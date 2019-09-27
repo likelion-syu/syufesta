@@ -1,38 +1,182 @@
 {% extends './festival_base.html' %} {% load staticfiles %}
 {% block festival-head %}
-
+<link rel="stylesheet" href="{% static 'festival/css/talent_contest.css' %}">
 {% endblock %}
 {% block festival-content %}
 <!-- head에 link넣으니까 적용이 안됨 -->
-<link rel="stylesheet" href="{% static 'festival/css/talent_contest.css' %}">
+
 	<div class="talent-container">
-		<div class="row title">
-			<div class="col-md-3 title">
-				<p class="title main">장기자랑 참가자를 투표하세요!</p>
-				<p class="title date">기간:19.10.07PM16:00~PM17:30종료까지</p>
+		<!-- <div class="talent-nav">nav</div> -->
+		<div class="row title m-0">
+			<div class="col-md-12 title">
+				<p class='title-header'>장기자랑 참가자를 투표하세요!</p>
+				<p class='title-desc'>기간 : 19.10.8 AM 09:00 ~ PM 06:00 종료까지</p>
 			</div>
-			<div class="col-md-9">
+		<!-- <div class='row m-0'> -->
+			<!-- <div class="col-md-9"> -->
+			<div class="container">	
 				<div class="row result">
 					<!-- 순위 리스트 -->
-					<!-- 재투표 버튼 때문에 한칸 더 만들어야함 -->
-					{% for datas in data %}
-						<div class="col-md-12 result">
-							<img src="{% static 'festival/img/kim.jpg' %}">
-							<span>{{datas.cont_participant_nm}}</span>
-						</div>
-					{% endfor %}
-					
-					
-					
-					<!-- 재투표 버튼 -->
-					<div class = "talent-revoting button">
-						<div>
-							<p>재투표 하기</p>
+					<div class="col-md-12 result">
+						<div class="row">
+							<div class="col-5">
+								<img src="{% static 'festival/img/KakaoTalk-8.jpeg' %}">
+							</div>
+							<div class="col-1">
+								<div class="con-num">1</div>
+							</div>
+							<div class="col-6">
+								<h2>주우송</h2>
+								<p>84.31% 1,181,432 득표</p>
+							</div>
 						</div>
 					</div>
-
+				<!-- </div>		 -->
+				<!-- <div class="row result"> -->
+					<!-- 순위 리스트 -->
+					<div class="col-md-12 result">
+						<div class="row">
+							<div class="col-5">
+								<img class="image-2" src="{% static 'festival/img/KakaoTalk-7.jpeg' %}">
+							</div>
+							<div class="col-1">
+								<div class="con-num">2</div>
+							</div>
+							<div class="col-6">
+								<h2>강상목</h2>
+								<p>2.3% 111,321 득표</p>
+							</div>
+						</div>
+					</div>
+				<!-- </div>	 -->
+				<!-- <div class="row result"> -->
+					<!-- 순위 리스트 -->
+					<div class="col-md-12 result">
+						<div class="row">
+							<div class="col-5">
+								<img class="image-3" src="{% static 'festival/img/KakaoTalk-3.jpeg' %}" >
+							</div>
+							<div class="col-1">
+								<div class="con-num">3</div>
+							</div>
+							<div class="col-6">
+								<h2>박체홍</h2>
+								<p>1.2% 50,123 득표</p>
+							</div>
+						</div>
+					</div>
+				<!-- </div>		 -->
+				<!-- <div class="row result"> -->
+					<!-- 순위 리스트 -->
+					<div class="col-md-12 result">
+						<div class="row">
+							<div class="col-5">
+								<img src="{% static 'festival/img/KakaoTalk-2.jpeg' %}">
+							</div>
+							<div class="col-1">
+								<div class="con-num">4</div>
+							</div>
+							<div class="col-6">
+								<h2>안소영</h2>
+								<p>0.3% 12,000 득표</p>
+							</div>
+						</div>
+					</div>
+				<!-- </div>	 -->
+				<!-- <div class="row result"> -->
+					<!-- 순위 리스트 -->
+					<div class="col-md-12 result">
+						<div class="row">
+							<div class="col-5">
+								<img class = "image-9" src="{% static 'festival/img/KakaoTalk-9.jpeg' %}">
+							</div>
+							<div class="col-1">
+								<div class="con-num">5</div>
+							</div>
+							<div class="col-6">
+								<h2>오하은</h2>
+								<p>0.1% 7,123 득표</p>
+							</div>
+						</div>
+					</div>
+				<!-- </div>		 -->
+				<!-- <div class="row result"> -->
+					<!-- 순위 리스트 -->
+					<div class="col-md-12 result">
+						<div class="row">
+							<div class="col-5">
+								<img src="{% static 'festival/img/KakaoTalk-5.jpeg' %}">
+							</div>
+							<div class="col-1">
+								<div class="con-num">6</div>
+							</div>
+							<div class="col-6">
+								<h2>이경민</h2>
+								<p>0.06% 3,123 득표</p>
+							</div>
+						</div>
+					</div>
+				<!-- </div>	 -->
+				<!-- <div class="row result"> -->
+					<!-- 순위 리스트 -->
+					<div class="col-md-12 result">
+						<div class="row">
+							<div class="col-5">
+								<img src="{% static 'festival/img/KakaoTalk-6.jpeg' %}">
+							</div>
+							<div class="col-1">
+								<div class="con-num">7</div>
+							</div>
+							<div class="col-6">
+								<h2>함민아</h2>
+								<p>0.03% 1,123득표</p>
+							</div>>
+						</div>
+					</div>
+				<!-- </div>		 -->
+				<!-- <div class="row result"> -->
+					<!-- 순위 리스트 -->
+					<div class="col-md-12 result">
+						<div class="row">
+							<div class="col-5">
+								<img src="{% static 'festival/img/KakaoTalk-4.jpeg' %}">
+							</div>
+							<div class="col-1">
+								<div class="con-num">8</div>
+							</div>
+							<div class="col-6">
+								<h2>곽다빈</h2>
+								<p>0.01% 532 득표</p>
+							</div>
+						</div>
+					</div>
+					<!-- </div>		 -->
+					<!-- <div class="row result"> -->
+					<!-- 순위 리스트 -->
+					<div class="col-md-12 result">
+						<div class="row">
+							<div class="col-5">
+								<img src="{% static 'festival/img/KakaoTalk-1.jpeg' %}">
+							</div>
+							<div class="col-1">
+								<div class="con-num">8</div>
+							</div>
+							<div class="col-6">
+								<h2>차원빈</h2>
+								<p>0.005% 18득표</p>
+							</div>
+						</div>
+					</div>
+					<!--</div> -->
+				</div>
+				<!-- </div> -->
+			<!-- </div> -->
+			<div class="row">
+				<div class="col-12 talent">
+					<a href="{% url 'talent_select' %}"><button class = 'btn' value = 'submit'>재투표하기</button></a>
 				</div>
 			</div>
+		</div>
 		</div>
 	</div>
 	

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from common.models import Booth
-
+from common.models import Foodtruck
 
 from django.http import HttpResponse, JsonResponse
 
@@ -13,7 +13,8 @@ def event(req):
     return render (req, 'competition/event.html')
 
 def foodtruck(req):
-    return render (req, 'competition/foodtruck.html')
+    foodtruck = Foodtruck.objects.all()
+    return render (req, 'competition/foodtruck.html', {'foodtrucks':foodtruck})
 
 def foodtruck_detail(req):
     return render (req, 'competition/foodtruck_detail.html')

@@ -1,10 +1,22 @@
 {% extends './festival_base.html' %} {% load staticfiles %}
 
+{% block festival-head %}
+<link rel="stylesheet" href="{% static 'festival/css/map.css' %}">
+{% endblock %}
+
 {% block festival-content %}
-	<h1>조감도</h1>
-	<ul>
-		<li>
-			<a href="{% url 'home' %}">메인으로</a>
-		</li>
-	</ul>
+	<div class="festmap title-container">
+		<h1>2019 삼육대학교 천보축전</h1>
+	</div>
+	<div class="festmap-container">
+		<div class="festmap-wrapper"></div>
+	</div>
+{% endblock %}
+
+{% block festival-endbody %}
+<script>
+	$(document).ready(()=>{
+		$('.festmap-container').scrollLeft(($('.festmap-wrapper').width() / 3))
+	});
+</script>
 {% endblock %}
