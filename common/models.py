@@ -25,7 +25,7 @@ class Account(models.Model):
 
 class Booth(models.Model):
     booth_id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=45)
+    booth_name = models.CharField(max_length=100, blank=True, null=True)
 
     class Meta:
         managed = False
@@ -44,7 +44,7 @@ class Boothstamp(models.Model):
 
 
 class Contestparticipant(models.Model):
-    cont_participant_id = models.AutoField(primary_key=True)
+    cp_id = models.IntegerField(primary_key=True)
     cont_participant_img_url = models.CharField(max_length=500)
     cont_participant_des = models.CharField(max_length=1000)
     cont_participant_order = models.SmallIntegerField(blank=True, null=True)
@@ -56,10 +56,10 @@ class Contestparticipant(models.Model):
 
 
 class Contestvote(models.Model):
-    cont_vote_id = models.AutoField(primary_key=True)
-    cv_account_id = models.IntegerField()
-    cont_participant_id = models.IntegerField()
-    created_dt = models.DateTimeField()
+    cv_id = models.AutoField(primary_key=True)
+    cv_account = models.ForeignKey('AuthUser', models.DO_NOTHING, blank=True, null=True)
+    cp = models.ForeignKey(Contestparticipant, models.DO_NOTHING, blank=True, null=True)
+    create_dt = models.DateTimeField(blank=True, null=True)
 
     class Meta:
         managed = False
@@ -69,7 +69,7 @@ class Contestvote(models.Model):
 class Foodtruck(models.Model):
     truck_id = models.AutoField(primary_key=True)
     truck_img_url = models.CharField(max_length=1000, blank=True, null=True)
-    truck_des = models.CharField(max_length=1000, blank=True, null=True)
+    truck_desc = models.CharField(max_length=1000, blank=True, null=True)
     truck_name = models.CharField(max_length=45, blank=True, null=True)
 
     class Meta:
@@ -81,7 +81,7 @@ class FoodtruckMenu(models.Model):
     menu_id = models.AutoField(primary_key=True)
     menu_name = models.CharField(max_length=500, blank=True, null=True)
     menu_price = models.CharField(max_length=45, blank=True, null=True)
-    truck = models.ForeignKey(Foodtruck, models.DO_NOTHING, related_name='menus', blank=True, null=True)
+    truck = models.ForeignKey(Foodtruck, models.DO_NOTHING, blank=True, null=True)
 
     class Meta:
         managed = False
