@@ -10,6 +10,13 @@ html , body{
 	color:#0064FF
 }
 
+.bg-fest-pink { background-color : #f801ff; }
+.bg-fest-blue { background-color : #0064FF; }
+.bg-fest-purple{ background-color : #aa00ff; }
+.bg-fest-green{ background-color : #00d631; }
+.font-fest-pink { background-color : #f801ff; }
+.font-fest-blue { background-color : #0064FF; }
+
 /* text */
 h1 {
 	font-size: 1.8rem;
