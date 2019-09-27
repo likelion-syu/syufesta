@@ -48,8 +48,7 @@
 .stamp-product {
 	width: 100%;
 	padding-bottom: 100%;
-	/* border: 5px solid #ff00e6; */
-	box-shadow: 0 0 0 5px #ff00e6 inset; 
+	box-shadow: 0 0 0 5px #f801ff inset; 
 	margin: 5px auto;
 	background-size: contain;
 	background-repeat: no-repeat;

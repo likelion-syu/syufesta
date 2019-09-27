@@ -1,6 +1,15 @@
 html , body{
 	background-color:#09081c;
 }
+
+/* color set */
+.color {
+	/* pink */
+	color: #f801ff;
+	/* blue */
+	color:#0064FF
+}
+
 /* text */
 h1 {
 	font-size: 1.8rem;
@@ -19,7 +28,7 @@ h3 {
 	color: white;
 	min-height: 100%;
 	/* NAVBAR HEIGHT */
-	margin-top : 56px;
+	margin-top : 70px;
 	padding: 0;
 }
 .food-con {
