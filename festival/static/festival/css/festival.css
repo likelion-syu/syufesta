@@ -36,4 +36,30 @@ h3 {
 }
 
 
+/* title */
+.title-container {
+    text-align: center;
+    border-top: 2px solid #850ce0;
+    border-bottom: 2px solid #850ce0;
+    margin: 20px 2px 0px;
+    padding: 10px 0;
+}
+
+.main-sub-title-container {
+	text-align: center;
+	border-top: 2px solid #850ce0;
+    border-bottom: 2px solid #850ce0;
+    margin: 0 2px;
+    padding: 10px 0;
+}
+.title-container h1 {
+	font-size: 1.3rem;
+	font-weight: 700;
+	margin-top: .5rem;
+}
+.title-container h2 {
+	font-size: 1rem;
+	font-weight: 300;
+}
+
 

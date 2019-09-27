@@ -1,22 +1,19 @@
 {% extends './festival_base.html' %} {% load staticfiles %}
 
 {% block festival-head %}
-
 <link rel="stylesheet" href="{% static 'festival/css/stamp.css' %}">
-
 {% endblock %}
 
 {% block festival-content %}
 	<div class="stamp-page-wrapper container">
 		<div class="stamp-title-wrapper">
-			<a href="{% url 'home' %}">메인으로</a>
 			<h1>스탬프 찍고, 경품 받고!</h1>
 			<p>기간 : 19.10.07(월) 09:00 ~ 16:30 부스 종료시 까지</p>
 		</div>
 		<div class="container">
 			<div class="row stamp-wrapper">
 				<div class="col-12">
-					<p>보유 스탬프4개 | 나의 응모번호 001</p>
+					<p>보유 스탬프 <strong>4개</strong> | 나의 응모번호 <strong>001</strong></p>
 				</div>
 				<div class="col-3">
 					<div class="stamp"></div>

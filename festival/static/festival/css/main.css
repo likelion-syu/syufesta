@@ -12,8 +12,6 @@
 /* swiper */
 .swiper-container {
 	height: 18rem;
-	background-repeat: no-repeat;
-	-webkit-mask-image: linear-gradient(to bottom, #0a081b 65%,transparent);
 }
 .s-btn-w {
 	filter: brightness(0) invert(1) drop-shadow(0px 1px 1px rgba(0,0,0,0.4));
@@ -21,9 +19,13 @@
 }
 .swiper-pagination-bullet-active {
     opacity: 1;
-    background: #fff !important;
-    filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.4));
+	background: #fff !important;
+	filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.4));
 	-webkit-filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.4));
+}
+.artist-wrapper {
+	
+	height: 100%;
 }	
 #artist1 {
 	background-image: url('../img/main/mamamoo.svg');
@@ -32,10 +34,18 @@
 }
 .main-sub-title-container {
 	text-align: center;
-	border-top: 2px solid #988abf;
-    border-bottom: 2px solid #988abf;
+	border-top: 2px solid #850ce0;
+    border-bottom: 2px solid #850ce0;
     margin: 20px 2px 0px;
     padding: 10px 0;
+}
+.main-sub-title-container h2 {
+	font-size: 1.3rem;
+    font-weight: 700;
+}
+.main-sub-title-container h3 {
+	font-size: 1rem;
+	font-weight: 300;
 }
 
 /* timetable */
@@ -47,7 +57,7 @@ table {
 }
 th {
 	font-size: 0.8rem;
-	color: #e56c9c;
+	color: #ff6ba4;
 	text-align: center;
 	font-weight: 500;
 	height: 50%;
@@ -57,10 +67,10 @@ tr {
 	width: 30%;
 	font-size: 0.8rem;
 	font-weight: 700;
-	border-bottom: 2px solid #988abf;
+	border-bottom: 2px solid #850ce0;
 }
 td {
-	padding: 5px;
+	padding: 7px;
 }
 .td1 {
 	width: 40%;
@@ -72,10 +82,10 @@ td {
 .main-map-container {
 	margin-top: 20px;
 	height: 400px;;
-	border-top: 2px solid #988abf;
-    border-bottom: 2px solid #988abf;
+	border-top: 2px solid #850ce0;
+    border-bottom: 2px solid #850ce0;
 	width: 100%;
-	background-image: url('../img/foodbooth.svg');
+	background-image: url('../img/foodbooth/foodbooth.svg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding: 20px;
