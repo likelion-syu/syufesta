@@ -3,10 +3,17 @@
     background-color : none;
     position : fixed;
     width : 100%;
-    background-color: #000;
     top : 0;
     left : 0;
     z-index:1000;
+    
+    border-bottom : 2px solid #aa00ff;
+    transition:.2s;
+}
+
+.navbar.transparent{
+    transition:.2s;
+    background-color : rgba(0,0,0,.9);
 }
 
 .navbar button{
@@ -43,5 +50,94 @@
     font-weight: 600;
     font-style: italic;
     -webkit-text-stroke: 1px #aa00ff;
-    text-shadow: 0 0 5px #aa00ff;
+    text-shadow: 0 0 5px #716776;
+}
+
+.sidemenu-container .sidemenu-cover{
+    position : fixed;
+    width : 100%;
+    height : 100%;
+    top : 0;
+    left : 0;
+    background-color : rgba(0,0,0,.3);
+
+    z-index: 10000;
+    backdrop-filter : blur(3px);
+    opacity: 1;
+
+    transition : .3s;
+}
+
+.sidemenu-container.hide .sidemenu-cover{
+    transition : .3s;
+
+    z-index: -100;
+    backdrop-filter : blur(0);
+    opacity: 0;
+}
+
+.sidemenu-container .sidemenu-content-wrapper{
+    position : fixed;
+    width : 100%;
+    height : 100%;
+    top : 0;
+    left : 0;
+    z-index: 10001;
+    opacity: 1;
+    background-image: url(../img/nav-sidemenu-bg.png);
+    transition : .2s;
+}
+
+.sidemenu-container.hide .sidemenu-content-wrapper{
+    opacity: 0;
+    z-index: -10001;
+    transition : .2s;
+}
+
+.sidemenu-container .sidemenu-content-wrapper .close-btn{
+    background-image: url(../img/close-button.svg);
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    right: 20px;
+    position: absolute;
+    top: 20px;
+}
+
+.sidemenu-container .sidemenu-content-wrapper .sidemenu-contents .sidemenu-item-wrapper {
+    background-color: #000;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    border: 1px solid #fff;
+}
+
+.sidemenu-container .sidemenu-content-wrapper .sidemenu-contents .sidemenu-item-wrapper:active {
+    background-color: #aa00ff;
+}
+
+.sidemenu-container .sidemenu-content-wrapper .sidemenu-contents .sidemenu-item-wrapper a{
+    text-decoration: none;
+    color: #fff;
+    font-size : 1.3em;
+}
+
+.sidemenu-container .sidemenu-content-wrapper .sidemenu-footer {
+    position : absolute;
+    bottom: 0;
+    left: 0;
+    width : 100%;
+    height : fit-content;
+}
+.sidemenu-container .sidemenu-content-wrapper .sidemenu-footer .sidemenu-item-wrapper {
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    border: 1px solid #fff;
+    text-align : center;
+}
+.sidemenu-container .sidemenu-content-wrapper .sidemenu-footer .sidemenu-item-wrapper a{
+    text-decoration: none;
+    color: #fff;
+    font-size : 1.3em;
 }
