@@ -1,7 +1,7 @@
 {% extends './competition_base.html' %}
 
 {% load staticfiles %}
-{% block competition-content %}
+{% block competition-head %}
 <link rel="stylesheet" href="{%  static '/competition/css/seatmap.css' %}">
 	<center>
         <div class="wrap">
@@ -15,29 +15,31 @@
                 <input class="btn_group" type="button" id="test_btn6"  onclick="showPopup1();">
                 <input class="btn_group" type="button" id="test_btn7"  onclick="showPopup1();">
                 <input class="btn_group" type="button" id="test_btn8"  onclick="showPopup1();">
-                <input class="btn_group" type="button" id="test_btn9"  onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn10" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn11" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn12" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn13" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn14" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn15" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn16" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn17" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn18" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn19" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn20" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn21" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn22" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn23" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn24" onclick="showPopup(1);"> 
+                <input class="btn_group" type="button" id="test_btn9"  onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn10" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn11" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn12" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn13" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn14" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn15" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn16" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn17" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn18" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn19" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn20" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn21" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn22" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn23" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn24" onclick="showPopup(17);"> 
             </div>
         </div>
-    </center>
+    </div>
+
+</div>
 {% endblock %}
 <script language="javascript">
-	function showPopup1() { window.open("/api/popup/comp/seatmap/17"; }
-//     function showPopup(pk){
-//         __likelion.popup.open('/api/popup/comp/seatmap/' + str(pk));
-//     }
+	// function showPopup1() { window.open("/api/popup/comp/seatmap/17"); }
+    function showPopup(pk){
+        __likelion.popup.open('/api/popup/comp/seatmap//<int:pk>');
+    }
 </script>
