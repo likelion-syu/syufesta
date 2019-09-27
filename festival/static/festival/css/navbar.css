@@ -3,10 +3,17 @@
     background-color : none;
     position : fixed;
     width : 100%;
-    background-color: #000;
     top : 0;
     left : 0;
     z-index:1000;
+    
+    border-bottom : 2px solid #aa00ff;
+    transition:.2s;
+}
+
+.navbar.transparent{
+    transition:.2s;
+    background-color : rgba(0,0,0,.9);
 }
 
 .navbar button{
