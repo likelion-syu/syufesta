@@ -1,9 +1,12 @@
 {% extends './competition_base.html' %}
 
 {% load staticfiles %}
-{% block competition-content %}
+{% block competition-head %}
 <link rel="stylesheet" href="{%  static '/competition/css/seatmap.css' %}">
-	<center>
+{% endblock %}
+{% block competition-content %}
+
+
         <div class="wrap">
             <div class="img">
                 <img src="{% static 'competition/img/compete_seatmap_logo.png' %}" style="width: 500px;height: 170px;position: absolute;top: 12px;left: 450px;z-index: 10;">
@@ -30,14 +33,13 @@
                 <input class="btn_group" type="button" id="test_btn21" onclick="showPopup(1);">
                 <input class="btn_group" type="button" id="test_btn22" onclick="showPopup(1);">
                 <input class="btn_group" type="button" id="test_btn23" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn24" onclick="showPopup(1);"> 
+                <input class="btn_group" type="button" id="test_btn24" onclick="showPopup(23);"> 
             </div>
         </div>
-    </center>
-{% endblock %}
 <script language="javascript">
-	// function showPopup1() { window.open("api/popup/comp/seatmap/1", "width=200, height=300, left=100, top=50"); }
+    // function showPopup1() { window.open("api/popup/comp/seatmap/1", "width=200, height=300, left=100, top=50"); }
     function showPopup(pk){
         __likelion.popup.open('/api/popup/comp/seatmap/' + pk);
     }
-</script>
+</script>  
+{% endblock %}
