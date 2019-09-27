@@ -51,7 +51,7 @@
 }
 .competition-main-container .timetable-container .content {
     background-image: url(../img/memopage.svg);
-    background-image: url(../img/memopage.svg);
+    
     width: 400px;
     height: 300px;
     background-size: contain;
@@ -59,4 +59,45 @@
     background-position: center;
     margin: 0 auto;
     padding-top: 9px;
+}
+
+.competition-main-container .timetable-container .content-2 {
+    background-image: url(../img/memopage.svg);
+    
+    width: 400px;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    padding-top: 9px;
+}
+.competition-main-container .timetable-container .content .timetable_data {
+    margin: 0 auto;
+    width: 405px;
+    height: 258px;
+    padding: 23px;
+    line-height: 21px;
+}
+.competition-main-container .timetable-container .content .timetable_data p{
+    font-size: 1.0em;
+    font-family: cursive;
+    margin: 0 auto;
+ 
+
+}
+
+.competition-main-container .timetable-container .content .timetable_data-1 {
+    margin: 0 auto;
+    width: 405px;
+    height: 258px;
+    padding: 22px;
+    line-height: 20px;
+}
+.competition-main-container .timetable-container .content .timetable_data-1 p{
+    font-size: 1.0em;
+    font-family: cursive;
+    margin: 0 auto;
+   
+
 }
