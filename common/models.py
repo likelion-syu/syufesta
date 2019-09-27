@@ -81,7 +81,7 @@ class FoodtruckMenu(models.Model):
     menu_id = models.AutoField(primary_key=True)
     menu_name = models.CharField(max_length=500, blank=True, null=True)
     menu_price = models.CharField(max_length=45, blank=True, null=True)
-    truck = models.ForeignKey(Foodtruck, models.DO_NOTHING, blank=True, null=True)
+    truck = models.ForeignKey(Foodtruck, models.DO_NOTHING, related_name='menus', blank=True, null=True)
 
     class Meta:
         managed = False

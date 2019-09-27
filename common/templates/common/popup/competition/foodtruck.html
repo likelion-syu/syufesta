@@ -27,10 +27,10 @@
                     </div>
                 </div>
                 <!-- 메뉴가 있는 부분 -->
-                {% for menus in  %}
+                {% for menu in menus %}
                 <div class="row">
                     <div class="col">
-                        {{ menus.menu_name }} - {{ menus.menu_price }}
+                        {{ menu.menu_name }} - {{ menu.menu_price }}
                     </div>
                 </div>
                 {% endfor %}

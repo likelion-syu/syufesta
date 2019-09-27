@@ -24,9 +24,10 @@ def comp_booth(req , pk):
 
 def comp_foodtruck(req , pk):
     foodtruck_detail = get_object_or_404(Foodtruck, pk=pk)
+    foodtruck_menu = FoodtruckMenu.objects.filter(truck = pk)
 
     return render(req , 'common/popup/competition/foodtruck.html' , {
-        'data' : foodtruck_detail
+        'data' : foodtruck_detail, 'menus': foodtruck_menu
     })
 
 
