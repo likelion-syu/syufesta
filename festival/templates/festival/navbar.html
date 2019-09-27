@@ -41,7 +41,11 @@
         </div>
         <div class="sidemenu-footer">
             <div class="sidemenu-item-wrapper bg-fest-pink">
-                <a href="#">로그인</a>
+                {% if user.is_authenticated %}
+                <a href="{% url 'account_logout' %}">로그아웃</a>
+                {% else %}
+                <a href="{% url 'account_login' %}}">로그인</a>
+                {% endif %}
             </div>
             <div class="sidemenu-item-wrapper bg-fest-green">
                 <a href="#">스탬프 찍기</a>
