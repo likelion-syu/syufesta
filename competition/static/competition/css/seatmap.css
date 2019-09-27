@@ -1,153 +1,144 @@
-html, body {
-    width : 100%;
-      height:100%;
-      margin:0;
-      padding:0;
-   }
+
    .wrap{
-       width:100%;
-       height:100%;
-       overflow-x:scroll;
-       white-space:nowrap;
+      width: 100%;
+      height: 100%;
    }
    .wrap>.img{
-     
-      height:100vh;
-      width:140vh;
-      position:relative;
+      background-image : url(../img/compete_seatmap.png);
+      width:1336px;
+      height:1000px;
       background-repeat: no-repeat;
-      background-size:cover;
+      background-size : contain;
    
    }
-   
    .wrap>.img>.btn_group{
-     
     width: 86px;
     height: 80px;
     border-radius: 50px;
-      background: none;
-       border:none;
-     
+    background:none;
+    border:none;
    }
    
    #test_btn1{
     position: absolute;
-    top: 208px;
-    left: 420px;
+    top: 199px;
+    left: 405px;
    }
 
    #test_btn2{
     position: absolute;
-    top: 208px;
-    left: 524px;
+    top: 198px;
+    left: 504px;
    }
    #test_btn3{
     position: absolute;
-    top: 208px;
-    left: 625px;
+    top: 200px;
+    left: 606px;
    }
    #test_btn4{
     position: absolute;
-    top: 560px;
+    top: 540px;
     left: 45px;
    }
    #test_btn5{
     position: absolute;
-    top: 208px;
-    left: 725px;
+    top: 200px;
+    left: 701px;
    }
    #test_btn6{
     position: absolute;
-    top: 208px;
-    left: 828px;
+    top: 198px;
+    left: 798px;
    }
    #test_btn7{
     position: absolute;
-    top: 208px;
-    left: 930px;
+    top: 202px;
+    left: 896px;
    }
    #test_btn8{
     position: absolute;
-    top: 235px;
-    left: 1030px;
+    top: 227px;
+    left: 991px;
    }
    #test_btn9{
     position: absolute;
-    top: 290px;
-    left: 1115px;
+    top: 277px;
+    left: 1074px;
    }
    #test_btn10{
     position: absolute;
-    top: 360px;
-    left: 1200px;
+    top: 346px;
+    left: 1155px;
    }
    #test_btn11{
     position: absolute;
-    top: 595px;
-    left: 1250px;
+    top: 572px;
+    left: 1207px;
    }
    #test_btn12{
     position: absolute;
-    top: 900px;
-    left: 965px;
+    top: 865px;
+    left: 933px;
    }
    #test_btn13{
     position: absolute;
-    top: 900px;
-    left: 860px;
+    top: 865px;
+    left: 830px;
    }
    #test_btn14{
     position: absolute;
-    top: 900px;
-    left: 650px;
+    top: 865px;
+    left: 625px;
+
    }
    #test_btn15{
     position: absolute;
-    top: 900px;
-    left: 546px;
+    top: 865px;
+    left: 527px;
    }
    #test_btn16{
     position: absolute;
-    top: 900px;
-    left: 435px;
+    top: 865px;
+    left: 417px;
    }
    #test_btn17{
     position: absolute;
-    top: 900px;
-    left: 330px;
+    top: 859px;
+    left: 320px;
    }
    #test_btn18{
     position: absolute;
-    top: 860px;
-    left: 232px;
+    top: 831px;
+    left: 223px;
    }
    #test_btn19{
     position: absolute;
-    top: 800px;
-    left: 140px;
+    top: 767px;
+    left: 135px;
+
    }
    #test_btn20{
     position: absolute;
-    top: 680px;
-    left: 70px;
+    top: 655px;
+    left: 67px;
    }
    #test_btn21{
     position: absolute;
-    top: 430px;
+    top: 417px;
     left: 65px;
    }
    #test_btn22{
     position: absolute;
-    top: 330px;
-    left: 125px;
-   }
+    top: 318px;
+    left: 124px;
+}
    #test_btn23{
     position: absolute;
-    top: 250px;
-    left: 220px;
+    top: 242px;
+    left: 213px;
    }
    #test_btn24{
     position: absolute;
-    top: 215px;
-    left: 320px;
+    top: 205px;
+    left: 304px;
    }
