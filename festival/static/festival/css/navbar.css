@@ -52,3 +52,26 @@
     -webkit-text-stroke: 1px #aa00ff;
     text-shadow: 0 0 5px #aa00ff;
 }
+
+.sidemenu-container .sidemenu-cover{
+    position : fixed;
+    width : 100%;
+    height : 100%;
+    top : 0;
+    left : 0;
+    background-color : rgba(0,0,0,.5);
+
+    z-index: 10000;
+    backdrop-filter : blur(5px);
+    opacity: 1;
+
+    transition : .3s;
+}
+
+.sidemenu-container.hide .sidemenu-cover{
+    transition : .3s;
+
+    z-index: -100;
+    backdrop-filter : blur(0);
+    opacity: 0;
+}
