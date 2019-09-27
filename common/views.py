@@ -51,3 +51,7 @@ def comp_seatmap(req , pk):
     # return render(req , 'common/popup/competition/seatmap.html', {'major': major_detail})
 
 
+	# return JsonResponse({
+	# 	'status' : 1,
+	# 	'data' : expanded_rows,
+	# }, safe=False)
