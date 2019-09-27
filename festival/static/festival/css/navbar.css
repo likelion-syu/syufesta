@@ -6,6 +6,12 @@
     background-color: #000;
     top : 0;
     left : 0;
+    z-index:1000;
+}
+
+.navbar button{
+    border : 0;
+    background:none;
 }
 
 .navbar .fa-home , .navbar .fa-bars{

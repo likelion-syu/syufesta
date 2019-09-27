@@ -23,7 +23,7 @@ def stamp (req):
 # 투표 결과 나타내는 함수
 def talent (req):
 	with connection.cursor() as cursor:
-		cursor.execute("SELECT CP.name , count(CP.name) as CT FROM ContestParticipant as CP JOIN ContestVote as CV ON CP.cont_participant_id = CV.cont_participant_id group by CP.name")
+		cursor.execute("select count(1) as 'cnt' , cont_participant_nm as name , total from (select * , ROW_COUNT() as total from ContestVote) as CV join ContestParticipant As CP on CV.cont_participant_id = CP.cont_participant_id group by CP.cont_participant_id order by 'cnt' desc;")
 		rows = cursor.fetchall()
 
 	expanded_rows = []

@@ -30,4 +30,8 @@ def fest_talent(req):
 	return JsonResponse({
 		'status' : 1,
 		'data' : expanded_rows,
+<<<<<<< HEAD
 	}, safe=False)
+=======
+	}, safe=False)
+>>>>>>> 8a1b57b69fb100e564da94b198f2301fbda91f7a
