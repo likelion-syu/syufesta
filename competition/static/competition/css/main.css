@@ -79,9 +79,9 @@
     padding: 23px;
     line-height: 21px;
 }
-.competition-main-container .timetable-container .content .timetable_data p{
+.competition-main-container .timetable-container .content .timetable_data ul {
     font-size: 1.0em;
-    font-family: cursive;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto;
  
 
@@ -94,9 +94,9 @@
     padding: 22px;
     line-height: 20px;
 }
-.competition-main-container .timetable-container .content .timetable_data-1 p{
+.competition-main-container .timetable-container .content .timetable_data-1 ul {
     font-size: 1.0em;
-    font-family: cursive;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto;
    
 
