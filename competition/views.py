@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from common.models import Booth
+from common.models import Foodtruck
+from common.models import Matchschedule
+from common import utils
 
+from django.db import connection
 
 from django.http import HttpResponse, JsonResponse
 
@@ -13,13 +17,23 @@ def event(req):
     return render (req, 'competition/event.html')
 
 def foodtruck(req):
-    return render (req, 'competition/foodtruck.html')
+    foodtruck = Foodtruck.objects.all()
+    return render (req, 'competition/foodtruck.html', {'foodtrucks':foodtruck})
 
 def foodtruck_detail(req):
     return render (req, 'competition/foodtruck_detail.html')
 
 def timeline(req):
-    return render (req, 'competition/timeline.html')
+    with connection.cursor() as cursor:
+        cursor.execute("select MS.* ,MJ_A.major_name as 'major_a_name' ,MJ_A.major_logo_url as 'major_a_logo_url' ,MJ_B.major_name as 'major_b_name' ,MJ_B.major_logo_url as 'major_b_logo_url'from MatchSchedule as MS join Major as MJ_A join Major as MJ_B on MS.sch_major_a = MJ_A.major_id and MS.sch_major_b = MJ_B.major_id")
+        rows = cursor.fetchall()
+    
+    expanded_rows = []
+    expanded_rows = utils.query_expand(rows, cursor)
+    
+    return render(req , 'competition/timeline.html' , {
+        'data' : expanded_rows
+    })
 
 def notice(req):
     return render (req, 'competition/notice.html')
