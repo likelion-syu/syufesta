@@ -108,3 +108,8 @@ body{
 	padding:5px;
 }
 
+
+.foodtruck-container .content .item-wrapper .item .row .col-9 .desc .food_title{
+	margin: 8px 0 2px 0;
+}
+
