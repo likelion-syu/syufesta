@@ -1,4 +1,12 @@
 
+@font-face { 
+    font-family: 'HSBombaram'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff'); font-weight: normal; font-style: normal;
+}
+
+body{
+    font-family: 'HSBombaram';
+}
+
 .foodtruck-container{
 	width : 100%;
 	height: 100%;
@@ -7,7 +15,7 @@
 }
 
 .foodtruck-container .header{	
-	padding: 40px 0 10px 0;
+	padding: 60px 0 10px 0;
 }
 
 .foodtruck-container .header .logo{
@@ -46,5 +54,62 @@
 	border: 3px solid #245770;
 	border-radius: 7px;
 	-webkit-border-radius: 70px;
+}
+
+/*popup을 위한 css*/
+.popup-foodtruck-container{
+    background-color:rgba(52, 5, 80, 0.692);
+}
+
+.popup-foodtruck-title{
+    color:white;
+}
+
+.popup-foodtruck-description{
+
+    
+    color:white;
+}
+
+
+.foodtruck-container{
+	width : 100%;
+    height: 100%;
+	margin : 20px 0 0 0;
+}
+
+.foodtruck-container_popup .header_popup .logo_popup{
+	width : 80px;
+	height : 80px;
+	
+	background-image : url(../img/chicken.svg);
+	background-repeat: no-repeat;
+	margin : 0 auto;
+	text-align:center;
+}
+
+.foodtruck-container_popup .content_popup  .item_popup .row{
+	margin : 0 auto;
+	text-align:center;
+    padding: 10px;
+}
+
+
+.foodtruck-container_popup .header_popup .logo_food_popup{
+	margin:0px auto;
+	border: 4px dotted #245770;
+	border-radius: 7px;
+	-webkit-border-radius: 50px;
+	width:320px;
+    /*width: 60%;*/
+	height: 100%;
+	text-align:center;
+	font-size:25px;
+	padding:5px;
+}
+
+
+.foodtruck-container .content .item-wrapper .item .row .col-9 .desc .food_title{
+	margin: 8px 0 2px 0;
 }
 

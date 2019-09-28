@@ -5,11 +5,18 @@
 	padding: 0;
 	margin-bottom: 50px;
 }
-.stamp-title-wrapper{
+.stamp-title-wrapper {
 	border: 2px solid transparent;
 	border-top-color: #850ce0;
 	/* border-bottom-color: #850ce0; */
 	padding: 10px;
+}
+.stamp-title-wrapper h1 {
+	font-size: 1.6rem;
+}
+.stamp-title-wrapper p {
+	font-size: 0.8rem;
+    color: #cabbe7;
 }
 .stamp-wrapper {
 	border: 2px solid transparent;
@@ -17,6 +24,10 @@
 	border-bottom-color: #850ce0;
 	padding: 20px;
 	margin-bottom: 3rem;
+}
+.stamp-wrapper p {
+	color: #cabbe7;
+    font-size: 0.9rem;
 }
 .stamp-wrapper .col-12 {
 	margin-top: 1rem;
@@ -31,7 +42,7 @@
 	font-size: 0.9rem;
 }
 .event-info-wrapper h3, h6 {
-	/* color: #ff00e6; */
+	color: #ff6ba4;
 }
 
 /* text */
@@ -48,8 +59,7 @@
 .stamp-product {
 	width: 100%;
 	padding-bottom: 100%;
-	/* border: 5px solid #ff00e6; */
-	box-shadow: 0 0 0 5px #ff00e6 inset; 
+	box-shadow: 0 0 0 5px #ff6ba4 inset; 
 	margin: 5px auto;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -86,20 +96,4 @@
 	left: 0;
 	right: 0;
     margin-top: -25px;
-}
-
-.stamp-btn {
-	width: 100%;
-    height: 50px;
-	border: 2px solid blue;
-	background-color: rgb(0,0,0,0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    bottom: 5px;
-    left: 50%;
-	margin-left: -50%;
-	font-size: 1.8rem;
-	z-index: 1;
 }

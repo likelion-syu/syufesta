@@ -2,42 +2,44 @@
 {% load staticfiles %}
 
 {% block head %}
-<link rel="stylesheet" href="{% static 'common/css/popup/competition/foodtruck.css' %}">
+<link rel="stylesheet" href="{% static 'common/css/popup/competition/foodtruck_popup.css' %}">
+
 {% endblock %}
 {% block content %}
 
-<div class="pop-foodtruck-container">
-        <!-- 로고가 있는 부분 -->
-        <div class="header">
-            <div class="logo">
-            </div>
-                <div class="logo_food">
-                푸드트럭 이름
-                <p>{{ data.truck_name }}</p>
-                <p>{{ data.menu }}</p>
-            </div>
+<div class="foodtruck-container_popup">
+    <!-- 로고가 있는 부분 -->
+    <div class="header_popup">
+        <div class="logo_popup">
         </div>
-        <!---->
-        <div class="content">
-            <div class="item">
-                <!-- 트럭 설명이 있는 부분 -->
-                <div class="row">
-                    <div class="col">
-                        <p>{{ data.truck_desc }}</p>
-                    </div>
-                </div>
-                <!-- 메뉴가 있는 부분 -->
-                {% for menu in menus %}
-                <div class="row">
-                    <div class="col">
-                        {{ menu.menu_name }} - {{ menu.menu_price }}
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
+        <div class="logo_food_popup">
+            <div>{{ data.truck_name }}</div>
+            <div>{{ data.menu }}</div>
         </div>
-    
     </div>
-    <!----->
-    
+    <!---->
+    <div class="content_popup">
+        <div class="item_popup">
+            <!-- 트럭 설명이 있는 부분 -->
+            <div class="row">
+                <div class="col">
+                    <div>{{ data.truck_desc }}</div>
+                </div>
+            </div>
+            <!-- 메뉴가 있는 부분 -->
+            <div class="row">
+                <div class="col">
+                    {% for menu in menus %}
+                    {{ menu.menu_name }} - {{ menu.menu_price }}
+                    <br>
+                    {% endfor %}
+                    <img src="{{ data.truck_img_url }}" class="food_img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!----->
+
 {% endblock %}
