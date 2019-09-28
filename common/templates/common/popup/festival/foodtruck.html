@@ -1,0 +1,21 @@
+{% extends '../popup.base.html' %}
+{% load staticfiles %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'common/css/popup/festival/foodtruck.css' %}">
+{% endblock %}
+
+{% block content %}
+{{ food.truck_name }}
+<hr>
+{% for menu in menus %}
+<div>
+{{ menu.menu_name}}
+</div>
+{% endfor %}
+<script>
+    $(document).ready(()=>{
+        $('.likelion-popup-container').removeClass('hide');
+    });
+    </script>
+{% endblock %}

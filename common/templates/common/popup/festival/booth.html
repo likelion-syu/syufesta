@@ -1,0 +1,15 @@
+{% extends '../popup.base.html' %}
+{% load staticfiles %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'common/css/popup/festival/booth.css' %}">
+{% endblock %}
+
+{% block content %}
+{{ booth.booth_nm}}
+<script>
+$(document).ready(()=>{
+    $('.likelion-popup-container').removeClass('hide');
+});
+</script>
+{% endblock %}
