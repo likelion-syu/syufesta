@@ -1,7 +1,7 @@
 @font-face { 
     font-family: 'HSBombaram'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff'); font-weight: normal; font-style: normal;
     }
-body{
+h1,h2,h3,h4,h5,h6,p,li,a,div,table {
     font-family: 'HSBombaram';
 }
 .container.competition {
@@ -10,7 +10,7 @@ body{
 	padding: 0;
 	width: 100%;
 	max-width: 100%;
-	float: left;
+	/* float: left; */
 }
 
 /* title */
