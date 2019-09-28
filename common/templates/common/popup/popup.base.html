@@ -1,47 +1,4 @@
 {% load staticfiles %} 
-<!doctype html>
-<html lang="en">
-	<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="description" content="">
-	<title>삼육대학교 축제&체육대회</title>
-
-	<!-- jQuery -->
-	<script type="text/javascript" src="{% static 'common/js/jquery.js' %}"></script>
-
-	<!-- 멋사 라이브러리 -->
-	<script type="text/javascript" src="{% static 'common/js/likelion.module.js' %}"></script>
-	
-	<!-- 멋사 팝업 라이브러리 -->
-	<link rel="stylesheet" href="{% static 'common/css/popup/likelion.popup.core.css' %}">
-	<script type="text/javascript" src="{% static 'common/js/popup/likelion.popup.core.js' %}"></script>
-
-	<!-- fontawesome -->
-	<link rel="stylesheet" href="{% static 'common/css/fontawesome/all.css' %}">
-	<script src="{% static 'common/js/fontawesome/all.js' %}"></script>
-
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="{% static 'common/css/bootstrap/bootstrap.css' %}">
-	<script src="{% static 'common/js/bootstrap/bootstrap.js' %}"></script>
-	<script src="{% static 'common/js/bootstrap/bootstrap_jquery.js' %}"></script>
-
-	<!-- Swiper CDN -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
-	<link rel="stylesheet" href="{% static 'common/css/swiper/swiper.css' %}">
-
-	<!-- Common_css -->
-	<link rel="stylesheet" href="{% static 'common/css/common.css' %}">
-	
-	<!-- Page Custom -->
-	{% block head %}
-
-	{% endblock %}
-
-	</head>
-<body>
 <div class="likelion-popup-container hide">
     <button type='button' class='no-btn' onclick="__likelion.popup.close()">
         <i class="fas fa-times"></i>
@@ -51,4 +8,4 @@
         {% block content %}
 	    {% endblock %}
     </div>
-</div></body>
+</div>
