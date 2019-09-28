@@ -11,4 +11,5 @@ urlpatterns = [
     path('foodtruck', views.foodtruck, name='compete_foodtruck'),
     path('foodtruck_detail', views.foodtruck_detail, name='compete_foodtruck_detail'),
     path('test', views.major_data, name = 'major_data'),
+    path('data', views.data_test, name = "data_test")
 ]

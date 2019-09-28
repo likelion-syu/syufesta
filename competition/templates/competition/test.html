@@ -13,6 +13,22 @@
             {{ data.major_id }}
         </div>
     </div>
+
 </div>
+
+
 {% endfor %}
+<div class = "row">
+    <div class = "data" style = "height : 100%; width : 100%;"></div>
+</div>
+<script>
+$.ajax({
+    url : "/competition/data",
+    method : "GET",
+    success : function(data){
+        data.data.map(function(index , item ){
+                console.log(index , item); });
+    }
+    });
+</script>
 {% endblock %}
