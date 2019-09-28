@@ -50,7 +50,7 @@ h3 {
     text-align: center;
     border-top: 2px solid #850ce0;
     border-bottom: 2px solid #850ce0;
-    margin: 20px 2px 0px;
+    /* margin: 20px 2px 0px; */
     padding: 10px 0;
 }
 
@@ -61,10 +61,13 @@ h3 {
     margin: 0 2px;
     padding: 10px 0;
 }
+.no-border {
+	border-color: transparent!important;
+}
 .title-container h1 {
 	font-size: 1.5rem;
 	font-weight: 700;
-	margin-top: 1rem;
+	margin-top: 0.5rem;
 	text-shadow: 0 0 7px rgb(170, 0, 255);
 	-webkit-text-stroke: 2px rgba(170, 0, 255, 0.3);
 }
@@ -76,8 +79,8 @@ h3 {
     margin-top: 10px;
 	margin-bottom: 5px;
 	font-weight: 200;
-    text-shadow: 0 0 5px rgb(186, 255, 240);
-    -webkit-text-stroke: 2px rgba(186,255,240,0.2);
+    text-shadow: 0 0 5px rgb(161, 239, 228);
+    -webkit-text-stroke: 2px rgb(158, 237, 227, 0.7);
 }
 
 /* festival common btn */

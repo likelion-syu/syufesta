@@ -125,7 +125,7 @@ td {
 	margin-top: 20px;
 	height: 400px;;
 	border-top: 2px solid #850ce0;
-    border-bottom: 2px solid #850ce0;
+    /* border-bottom: 2px solid #850ce0; */
 	width: 100%;
 	background-image: url('../img/foodbooth/foodbooth.svg');
 	background-size: cover;

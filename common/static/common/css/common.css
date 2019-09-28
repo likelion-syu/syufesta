@@ -64,6 +64,10 @@ footer .container {
 .fa-facebook-f {
 	left: 12px!important;
 }
+/* 축제 푸터 */
+#fest-footer {
+	border-top: 2px solid #850ce0;
+}
 
 /* 체육대회 푸터 */
 #compet-footer {
@@ -125,4 +129,14 @@ footer .container {
 	background-image: url('../img/up_black.svg')!important;
 	color: black!important;
 	border: 2px solid black!important;
+}
+
+/* video */
+.embed-container { 
+	position: relative; padding-bottom: 56.25%; 
+	height: 0; overflow: hidden; max-width: 100%; 
+   } 
+.embed-container iframe, .embed-container object, .embed-container embed { 
+   position: absolute; top: 0; left: 0; 
+   width: 100%; height: 100%;
 }

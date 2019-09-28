@@ -25,3 +25,66 @@ th {
 td {
 	font-size: 0.9rem
 }
+
+/* zone icon */
+.zone {
+	position: absolute;
+	width: 50px;
+    padding-bottom: 50px;
+    border-radius: 100%;
+	display: flex;
+    justify-content: center;
+	align-items: center;
+	background: rgb(0, 0, 0, 0.7);
+}
+.zone p {
+	position: absolute;
+	margin: 0;
+	top: 11px
+}
+.click {
+	width: 85px;
+    font-size: 0.8rem;
+    text-align: center;
+    top: 54px!important;
+}
+.touch {
+	color: white;
+    font-size: 0.5rem;
+}
+
+#z1 {
+	box-shadow: 0 0 0 5px #06c831 inset;
+    left: 318px;
+    top: 35px;
+}
+#z2 {
+	box-shadow: 0 0 0 5px #fff703 inset;
+    top: 357px;
+    left: 364px;
+}
+.z2 {color:#fff703;}
+#z3 {
+	box-shadow: 0 0 0 5px #d21823 inset;
+    top: 440px;
+    left: 494px;
+}
+.z3 {color:#d21823 ;}
+#z4 {
+	box-shadow: 0 0 0 5px #c404cd inset;
+    top: 623px;
+    left: 369px;
+}
+.z4 {color:#c404cd;}
+#z5 {
+	box-shadow: 0 0 0 5px #038fb7 inset;
+    top: 698px;
+    left: 569px;
+}
+.z5 {color:#038fb7}
+
+.map-desc {
+	font-size: 0.7rem!important;
+    padding-top: 15px;
+    opacity: 0.6;
+}

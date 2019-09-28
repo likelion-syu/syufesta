@@ -6,6 +6,7 @@ loop: true,
 
 pagination: {
 	el: '.swiper-pagination',
+	// type: 'fraction',
 },
 
 navigation: {
