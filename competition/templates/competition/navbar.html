@@ -1,3 +1,67 @@
-<nav>
-    
+{% load staticfiles %}
+<nav class='navbar'>
+    <button type="button">
+        
+    </button>
+    <div class="nav-logo"></div>
+    <button 
+        type="button"
+        onclick="__navbar.open()"
+        >
+        <i class="fas fa-bars" aria-hidden="true"></i>
+    </button>
 </nav>
+<div class="nav-collapse-container hide">
+    <div class="nav-collapse-cover">
+
+    </div>
+    <div class="nav-collapse-wrapper">
+        <div class="header">
+            <div class="title">
+                <div class="close-btn">
+                    <i class="fas fa-times" onclick="__navbar.close()"></i>
+                </div>
+                <div class="logo"></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="item-container mb-4 text-center">
+                <div class="title">
+                    <a href="/competition/timeline">경기일정</a>
+                </div>
+            </div>
+            <div class="item-container mb-4 text-center">
+                <div class="title">
+                    <a href="/competition/seatmap">학과 좌석배치</a>
+                </div>
+            </div>
+            <div class="item-container mb-4 text-center">
+                <div class="title">
+                    <a href="/competition/foodtruck">푸드트럭</a>
+                </div>
+            </div>
+            <div class="item-container mb-4 text-center">
+                <div class="title">
+                    <a href="/competition/event">이벤트</a>
+                </div>
+            </div>
+            <div class="item-container mb-4 text-center">
+                <div class="title">
+                    <a href="/competition/notice">주의사항</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var __navbar = __navbar || {
+        open : () => {
+            $('.nav-collapse-container').removeClass('hide');
+        },
+        close : () => {
+            $('.nav-collapse-container').addClass('hide');
+        }
+    };
+</script>

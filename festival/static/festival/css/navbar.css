@@ -6,7 +6,6 @@
     top : 0;
     left : 0;
     z-index:1000;
-    
     border-bottom : 2px solid #aa00ff;
     transition:.2s;
 }
@@ -44,9 +43,9 @@
     padding: 0;
     background-position: center;
     background-position-y: 70%;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     text-align: center;
-    line-height: 7;
+    line-height: 7.9;
     font-weight: 600;
     font-style: italic;
     -webkit-text-stroke: 1px #aa00ff;

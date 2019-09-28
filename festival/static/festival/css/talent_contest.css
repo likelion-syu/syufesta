@@ -105,6 +105,11 @@ p { font-family : 'Nanum Square'; }
     font-size: 1.2rem;
     color:  #bafff0;
 }
+.title1 {
+    color : white;
+    font-family : 'NanumSquare';
+}
+
 .result .row .col-6 > p {
 	margin-bottom: 0;
 }

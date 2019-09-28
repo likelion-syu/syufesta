@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap');
+
 html , body{
 	background-color:#09081c;
 }
@@ -60,11 +62,11 @@ h3 {
     padding: 10px 0;
 }
 .title-container h1 {
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 	font-weight: 700;
-	margin-top: .5rem;
-	-webkit-text-stroke: 3px rgba(234, 111, 158, 0.2);
-    text-shadow: 0 0 5px #ea6f9e;
+	margin-top: 1rem;
+	text-shadow: 0 0 7px rgb(170, 0, 255);
+	-webkit-text-stroke: 2px rgba(170, 0, 255, 0.3);
 }
 .title-container h2 {
 	font-size: 1rem;

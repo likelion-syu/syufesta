@@ -38,16 +38,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+	height: 100%;
+	padding: 4px;
 }
 .booth{
     /* display: inline; */
     /* vertical-align: sub; */
-	color:rgb(199, 245, 253);
+	color: white;
 	margin: 0;
+	font-size: 0.8rem;
 }
 .boothtitle{
-    color:rgb(190, 247, 255);
+    color:rgb(236, 206, 255);
 	font-weight: 800;
 	margin: 0;
 }
@@ -62,51 +64,49 @@
 .foodtrucktitle{
     color:rgb(190, 247, 255);
     font-weight: 800;
-	font-size:10px;
+	font-size: 1rem;
 	margin: 0;
 }
 .booth1{
-    top: 4px;
-    left: -18px;
+    top: 44px;
+    left: -6px;
     height: 100px;
-    width: 250px;
+    width: 247px;
 }
 .booth2{
-    top: 4px;
-    left: -4px;
+    top: 44px;
+    left: -5px;
     height: 100px;
-    width: 250px;
+    width: 246px;
     border-width: 2px;
 }
-
 .booth3{
-    top: 123px;
-    left: -107px;
+    top: 154px;
+    left: -109px;
     height: 100px;
     width: 100px;
 }
 .booth4{
-    top: 241px;
+    top: 251px;
     left: -212px;
     height: 100px;
     width: 100px;
 }
 .booth5{
-    right: 732px;
-    top: 124px;
+    right: 713px;
+    top: 153px;
     height: 100px;
     width: 100px;
 }
-
 .booth6{
-    right: 837px;
-    top: 238px;
+    right: 816px;
+    top: 263px;
     height: 100px;
     width: 100px;
 }
 .booth7{
     top: 250px;
-    left: 242px;
+    left: 230px;
     height: 100px;
     width: 270px;
 }
@@ -119,75 +119,73 @@
 }
 .booth9{
     top: 250px;
-    right: 264px;
+    right: 261px;
     height: 100px;
     width: 100px;
 }
 .booth10{
-    top: 28px;
-    left: 150px;
+	top: 21px;
+    left: 112px;
     height: 100px;
     width: 250px;
 }
 .booth11{
-    top: 800px;
-    left: 87px;
+	top: 745px;
+    left: 51px;
     height: 100px;
     width: 91px;
 }
 .booth12{
     top: 250px;
-    left: -846px;
+    left: -826px;
     height: 100px;
     width: 100px;
 }
+/* Foodtruck */
 .truck1{
-    top: 278px;
-    left: 577px;
+    top: 230px;
+    left: 576px;
     height: 80px;
     width: 80px;
 }
 .truck2{
-    top: 278px;
-    left: 580px;
+    top: 230px;
+    left: 578px;
     height: 80px;
     width: 80px;
 }
 .truck3{
-    top: 116px;
-    left: 670px;
+    top: 96px;
+    left: 666px;
     height: 80px;
     width: 80px;
-
 }
 .truck4{
-    top: 116px;
-    left: 241px;
+    top: 108px;
+    left: 238px;
     height: 80px;
     width: 80px;
 }
 .truck5{
-    top: 116px;
+    top: 108px;
     left: 241px;
     height: 80px;
     width: 80px;
 }
-
 .truck6{
-    top: 278px;
-    left: 73px;
+    top: 242px;
+    left: 70px;
     height: 80px;
     width: 80px;
 }
-
 .truck7{
-    top: 278px;
+    top: 242px;
     height: 80px;
-    left: 246px;
+    left: 245px;
     width: 80px;
 }
 .truck8{
-    top: 278px;
+    top: 242px;
     left: 248px;
     height: 80px;
     width: 80px;
@@ -195,12 +193,12 @@
 .truck9{
     height: 80px;
     width: 80px;
-    top: 116px;
+    top: 108px;
     left: -8px;
 }
 .truck10{
     height: 80px;
     width: 80px;
-    top: 116px;
+    top: 108px;
     left: -6px;
 }
