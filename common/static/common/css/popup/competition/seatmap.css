@@ -108,6 +108,7 @@ html{
     margin : auto;
     padding : 5%;
     font-size : 9vw;
+    font-family : 'HSBombaram';
 }
 
 .pop-vs-img {
@@ -129,6 +130,7 @@ html{
 .pop-name > p {
     font-size: 5vw;
     font-weight: 700;
+    font-family : 'HSBombaram';
 }
 
 .pop-logo {
