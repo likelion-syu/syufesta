@@ -9,6 +9,8 @@
     font-size : 1.5em;
 }
 
+.navbar button{ border : 0; background : none; border-radius: 0; }
+
 .nav-collapse-container.hide .nav-collapse-cover{
     transition : .3s;
     opacity: 0;
