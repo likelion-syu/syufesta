@@ -7,7 +7,7 @@
 	align-items: center;
 	text-align: center;
 
-	background-image: url('../img/cheer/cheer2.png');
+	/* background-image: url('../img/cheer/cheer2.png'); */
 	background-size: cover;
     background-position: center;
 	margin: 30px 0px;
@@ -28,7 +28,7 @@
 
 
 .cheer-container .title-logo{
-    background-image: url(../img/cheer_logo.svg);
+    background-image: url(../img/cheer_logo2.svg);
 }
 
 .cheer_hr{
