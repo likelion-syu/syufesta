@@ -152,3 +152,16 @@
 #participant-img9 {
     background-image: url('../img/KakaoTalk-1.jpeg');
 }
+<<<<<<< HEAD
+=======
+
+.talent-item.active .img-circle{
+    transition:.2s;
+    border: 3px solid #ea6f9e;
+}
+
+.talent-desc{
+    border-bottom: 1px solid rgb(200,147,255);
+    
+}
+>>>>>>> a7fde23f7174214df0096ca9436e96bd2ed05787
