@@ -25,21 +25,21 @@
                 <input class="btn_group" type="button" id="test_btn13" onclick="showPopup(1);">
                 <input class="btn_group" type="button" id="test_btn14" onclick="showPopup(1);">
                 <input class="btn_group" type="button" id="test_btn15" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn16" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn17" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn18" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn19" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn20" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn21" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn22" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn23" onclick="showPopup(1);">
+                <input class="btn_group" type="button" id="test_btn16" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn17" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn18" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn19" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn20" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn21" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn22" onclick="showPopup(21);">
+                <input class="btn_group" type="button" id="test_btn23" onclick="showPopup(22);">
                 <input class="btn_group" type="button" id="test_btn24" onclick="showPopup(23);"> 
             </div>
         </div>
 <script language="javascript">
     // function showPopup1() { window.open("api/popup/comp/seatmap/1", "width=200, height=300, left=100, top=50"); }
     function showPopup(pk){
-        __likelion.popup.open('/api/popup/comp/seatmap//<int:pk>');
+        __likelion.popup.open('/api/popup/comp/seatmap/'+ pk);
     }
 </script>  
 {% endblock %}

@@ -1,62 +1,29 @@
-
-
-
-.competition-container{
-    background-image: url(../images/competition/compete_seatmap_logo.png);
-    background-size: cover;
-    width : 100%;
-    height : 100%;
-    overflow-y: scroll;
-}
-.competition-container .title-img .title-image{
-    width: 60%;
-    margin-left: 20%;
-    margin-top: 35px;
-    padding-bottom: 15px;
-}
-
-
-#circle {
-    background-color:#ffffff;
-    width:700px;
-    height:700px;
-    border-radius:1000px;
-    text-align:center;
-    margin:0 auto;
-    font-size:12px;
-    vertical-align:middle;
-    line-height:150px;
-}
-#circle2{
-background-color:#215f88;
-    width:400px;
-    height:140px;
-    border-radius:1000px;
-    text-align:center;
-    margin:0 auto;
-    font-size:50px;
-    color:cornsilk;
-    vertical-align:middle;
-    line-height:150px;
-}
+@font-face { 
+    font-family: 'Binggrae-Bold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff'); font-weight: normal; font-style: normal;
+    }
+@font-face { 
+    font-family: 'HSBombaram'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff'); font-weight: normal; font-style: normal;
+    }
 
 .pop-image-circle {
-    width : 100%;
+    width: 50%;
+    margin: auto;
+    display: block;
 }
 
 .likelion-popup-wrapper {
     background-image: url(/static/competition/img/compete_background.svg);
     background-repeat:no-repeat;
     background-size: cover;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
-.col-6.pop-logo-wrapper {
+.col-12.pop-logo-wrapper {
     margin: auto;
 }
 
-@font-face { 
-    font-family: 'Binggrae-Bold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff'); font-weight: normal; font-style: normal;
-    }
+
 
 .col-12.pop-major-data {
     margin: auto;
@@ -117,7 +84,9 @@ background-color:#215f88;
 }
 
 .pop-logo {
-    width: 100%;
+    position: absolute;
+    height: 100%;
+    left: 0%;
 }
 
 .col-5.pop-name > p {
@@ -135,8 +104,10 @@ background-color:#215f88;
 }
 
 .pop-logo-circle {
+    position:relative;
     width : 120px;
     height : 120px;
     border-radius : 50%;
     margin-top : 5%;
 }
+
