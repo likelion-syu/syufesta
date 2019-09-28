@@ -5,44 +5,60 @@
 <link rel="stylesheet" href="{% static 'common/css/popup/competition/seatmap.css' %}">
 {% endblock %}
 {% block content %}
-<div class = "container pop-seatmap-wrapper">
-    <div class = "row pop-title">
-        <div class = "col-10 pop-title"></div>
-    </div>
-    <div class = "row pop-item-wrapper" style= "display: block;">
-        <div class = "row">
-            <div class = "col-12 pop-logo-wrapper">
-                <img class = "pop-image-circle" src = "{{ majors.major_logo_url  }}">
-            </div>
+<div class = "pop-seatmap-wrapper">
+    <div class = "double-border">
+        <div class = "row pop-title">
+            <div class = "col-10 pop-title"></div>
         </div>
-        <div class = "col-12 pop-major-data">
-            <h2>{{ majors.major_name }}</h2>
-            <div class = "row pop-dash-wrapper">
-                <p>{{ majors.major_desc }}</p>
-            </div>
-        </div>
-    </div>
-{% for datas in data %}
-    <div class = "pop-vs-wrapper">
-        <div class = "pop-dash-wrapper">
-            <div class= "row">
-                <div class = "col-5 pop-name">
-                    <div class = "pop-logo-circle">
-                        <img class = "pop-logo" src="{{ datas.major_a_logo }}">
-                    </div>
-                    <p> {{ datas.major_a_name }}</p>
+        <div class = "row pop-item-wrapper" style= "display: block;">
+            <div class = "row">
+                <div class = "col-12 pop-logo-wrapper">
+                    <img class = "pop-image-circle" src = "{{ majors.major_logo_url  }}">
                 </div>
-                <div class = "col-1 pop-vs-img"></div>
-                <div class = "col-5 pop-name">
-                    <div class = "pop-logo-circle">
-                        <img class = "pop-logo" src="{{ datas.major_b_logo }}">
+            </div>
+            <div class = "col-12 pop-major-data">
+                <div class = "pop-color-matt-radius">
+                    <div class = "name">
+                        <h2>{{ majors.major_name }}</h2>
                     </div>
-                    <p> {{ datas.major_b_name }}</p>
+                </div>
+                <div class = "pop-color-matt">
+                    <div class = "row pop-dash-wrapper">
+                        <p>{{ majors.major_desc }}</p>
+                    </div>
                 </div>
             </div>
         </div>
+    {% for datas in data %}
+        <div class = "pop-vs-wrapper">
+            <div class = "row pop-vs-data">
+                <p>{{ datas.sch_title }}</p>
+            </div>
+            <div class = "pop-color-matt">
+                <div class = "pop-dashed-wrapper">
+                    <div class= "row">
+                        <div class = "col-5 pop-name">
+                            <div class = "pop-logo-circle">
+                                <img class = "pop-logo" src="{{ datas.major_a_logo }}">
+                            </div>
+                            <p> {{ datas.major_a_name }}</p>
+                        </div>
+                        <div class = "col-2 pop-vs-img"></div>
+                        <div class = "col-5 pop-name">
+                            <div class = "pop-logo-circle">
+                                <img class = "pop-logo" src="{{ datas.major_b_logo }}">
+                            </div>
+                            <p> {{ datas.major_b_name }}</p>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <p>{{ datas.sch_date }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
     </div>
-{% endfor %}
 </div>
 <script>
     $(document).ready(()=>{
