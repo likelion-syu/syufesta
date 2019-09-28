@@ -9,27 +9,12 @@
     height : 100%;
     overflow-y: scroll;
 }
-@font-face { 
-    font-family: 'HSBombaram'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff'); font-weight: normal; font-style: normal;
-    }
-body{
-    font-family: 'HSBombaram';
-}
 
 .competition-container .title-img .title-image{
     width: 60%;
     margin-left: 20%;
     margin-top: 35px;
     padding-bottom: 15px;
-}
-
-.competition-container .game{
-    width: 50%;
-    height: 35px;
-    background-color:#365E77;
-    color: white;
-    border-radius: 80px;
-    padding-top: 1%;
 }
 
 .competition-container .game .game-name{

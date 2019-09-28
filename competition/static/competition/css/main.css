@@ -52,7 +52,7 @@
 .competition-main-container .timetable-container .content {
     background-image: url(../img/memopage.svg);
     
-    width: 400px;
+    width: 90%;
     height: 300px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -64,7 +64,7 @@
 .competition-main-container .timetable-container .content-2 {
     background-image: url(../img/memopage.svg);
     
-    width: 400px;
+    width: 100%;
     height: 300px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -74,7 +74,7 @@
 }
 .competition-main-container .timetable-container .content .timetable_data {
     margin: 0 auto;
-    width: 405px;
+    width: 100%;
     height: 258px;
     padding: 23px;
     line-height: 21px;
@@ -89,7 +89,7 @@
 
 .competition-main-container .timetable-container .content .timetable_data-1 {
     margin: 0 auto;
-    width: 405px;
+    width: 100%;
     height: 258px;
     padding: 22px;
     line-height: 20px;
