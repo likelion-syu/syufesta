@@ -14,6 +14,7 @@
                 <div class="logo_food">
                 푸드트럭 이름
                 <p>{{ data.truck_name }}</p>
+                <p>{{ data.menu }}</p>
             </div>
         </div>
         <!---->
@@ -26,18 +27,13 @@
                     </div>
                 </div>
                 <!-- 메뉴가 있는 부분 -->
+                {% for menu in menus %}
                 <div class="row">
                     <div class="col">
-                        {% for menu in }
-                        메뉴 메뉴 메뉴
+                        {{ menu.menu_name }} - {{ menu.menu_price }}
                     </div>
                 </div>
-                <!-- 음식 사진이 있는 부분 -->
-                <div class="row">
-                    <div class="col">
-                            <img src="..." class="food_main_img">
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     
