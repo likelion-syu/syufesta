@@ -5,7 +5,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	text-align: center
+	text-align: center;
 }
 .timetable-wrapper {
 	text-align: center;
@@ -16,4 +16,13 @@
 .timetable-wrapper li {
 	max-width: 140px;
     margin: 20px auto;
+}
+
+.cheer-container .title-logo{
+    background-image: url(../img/cheer_logo.svg);
+}
+
+.cheer_hr{
+color:#920ad1;
+border:solid 7px;
 }
