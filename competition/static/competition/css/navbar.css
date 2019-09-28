@@ -1,5 +1,5 @@
 .navbar {
-    position:fixed;
+    position: fixed !important;;
 	width : 100%;
 	z-index: 1;
 }
@@ -18,7 +18,9 @@
     transition : .3s;
     right : -80%;
 }
-
+.title {
+	font-size: 1.2rem
+}
 .nav-collapse-cover{
     width: 100%;
     height: 100%;
@@ -46,7 +48,7 @@
     height: 124px;
     background-size: cover;
     background-position: center;
-    margin: 15% auto;
+	margin: 15% auto;
 }
 .nav-collapse-wrapper .header .close-btn .fa-times{
     color: #fff;
