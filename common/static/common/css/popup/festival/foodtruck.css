@@ -1,0 +1,71 @@
+
+.popup-foodtruck-wrapper{
+    height:100%;
+    overflow:scroll !important;
+}
+.popup-foodtruck-title-topline{
+    padding-top:5px;
+    background-color: purple;
+}
+
+.popup-foodtruck-title-bottomline{
+    padding-bottom:5px;
+    background-color:purple;
+}
+.popup-foodtruck-title{
+    background-color: rgb(19, 7, 43);
+    color: rgb(255,255,254);
+    text-shadow: 0px 0px 9px purple;
+    margin-bottom:0px;
+}
+
+.popup-foodtruck-desc{
+    background-color: rgb(19, 7, 43);
+    text-shadow: 0px 0px 9px purple;
+    color: rgb(255,255,254);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.popup-booth-menuname{
+    background-color: rgb(19, 7, 43);
+    text-shadow: 0px 0px 9px purple;
+    color: rgb(255,255,254);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.popup-foodtruck-img{
+    background-color: rgb(19, 7, 43);
+    text-shadow: 0px 0px 9px purple;
+    color: rgb(255,255,254);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display:block;
+    text-align: center;
+    width: 100%;
+    margin-right: 0px;
+    height: 300px;
+}
+.popup-foodtruck-menuname{
+    background-color: rgb(19, 7, 43);
+    text-shadow: 0px 0px 9px purple;
+    color: rgb(255,255,254);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.popup-foodtruck-price{
+    background-color: rgb(19, 7, 43);
+    text-shadow: 0px 0px 9px purple;
+    color: rgb(255,255,254);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
