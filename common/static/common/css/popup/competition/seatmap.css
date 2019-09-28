@@ -1,23 +1,203 @@
-#circle {
-    background-color:#ffffff;
-    width:700px;
-    height:700px;
-    border-radius:1000px;
-    text-align:center;
-    margin:0 auto;
-    font-size:12px;
-    vertical-align:middle;
-    line-height:150px;
+@font-face { 
+    font-family: 'Binggrae-Bold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff'); font-weight: normal; font-style: normal;
+    }
+@font-face { 
+    font-family: 'HSBombaram'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff'); font-weight: normal; font-style: normal;
+    }
+
+html{
+    font-size : 1vw;
 }
-#circle2{
-background-color:#215f88;
-    width:400px;
-    height:140px;
-    border-radius:1000px;
-    text-align:center;
-    margin:0 auto;
-    font-size:50px;
-    color:cornsilk;
-    vertical-align:middle;
-    line-height:150px;
+
+.pop-seatmap-wrapper {
+    color : rgb(36, 87, 112);
+    border : 18px;
+    border-style : double hidden;
+    position : absolute;
+    border : 4vw rgb(36, 87, 112);
+    border-style : solid hidden;
+    width : 100%;
+}
+
+.double-border {
+    margin-top : 1%;
+    margin-bottom : 1%;
+    border : 2vw;
+    border-style : solid hidden;
+}
+
+.pop-image-circle {
+    width: 55%;
+    margin: auto;
+    display: block;
+    border-radius: 50%;
+    border: 2vw dotted rgb(36, 87, 112);
+}
+
+.likelion-popup-wrapper {
+    background-image: url(/static/competition/img/compete_background.svg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position : relative;
+}
+
+.col-12 .pop-logo-wrapper {
+    margin: auto;
+}
+
+.pop-major-data {
+    margin: auto;
+    text-align: center;
+    font-family : 'HSBombaram';
+    font-size : 20px;
+}
+
+.pop-dashed-wrapper {
+    background-color: white;
+    text-align: center;
+    border: 3px dashed rgb(36, 87, 112);
+    margin: auto;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.pop-dash-wrapper > p {
+    margin : auto;
+    padding: 3%
+}
+
+.row.pop-title {
+    margin: 0% auto;
+    height: 100%;
+    width: 100%;
+
+}
+
+.col-10.pop-title {
+    background-image: url(/static/common/img/major-inform.svg);
+    background-size: 100%;
+    padding: 17%;
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-top: 4%;
+}
+
+.pop-major-data > h2 {
+    margin-top : 0.5rem;
+    font-size : 20rem;
+}
+
+.pop-major-data .name {
+    border: 1vw dashed rgb(36, 87, 112);
+    border-radius: 27px;
+    background-color: white;
+}
+
+.pop-color-matt-radius {
+    border-radius: 27px;
+    padding : .7%;
+    background-color : white;
+    width : 62%;
+    margin : 4% auto;
+    margin-top : 4%;
+}
+
+.pop-major-data .name > h2 {
+    margin : auto;
+    padding : 5%;
+    font-size : 9vw;
+    font-family : 'HSBombaram';
+}
+
+.pop-vs-img {
+    background-image : url(/static/competition/img/vs.png);
+    background-size : contain;
+    background-repeat : no-repeat;
+    margin-top : 38px;
+}
+
+.pop-vs-wrapper {
+    margin-top : 4%;
+    margin-bottom : 4%
+}
+
+.pop-name {
+    font-family : 'HSBombaram';
+}
+
+.pop-name > p {
+    font-size: 5vw;
+    font-weight: 700;
+    font-family : 'HSBombaram';
+}
+
+.pop-logo {
+    position: absolute;
+    height: 100%;
+    width : 100%;
+    left: 0%;
+}
+
+.col-5 .pop-name > p {
+    margin-top : 5%;
+}
+
+.pop-dash-wrapper {
+    background-color: white;
+    text-align: center;
+    border : 1vw;
+    border-style: dashed;
+    border-color: #365E77;
+    margin: auto;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.pop-dash-wrapper > p {
+    font-family : 'HSBombaram';
+    font-weight : 800;
+    font-size : 5vw;
+}
+
+.pop-logo-circle {
+    position : relative;
+    width : 25vw;
+    height : 25vw;
+    border-radius : 50%;
+    margin : auto;
+    margin-top : 9%;
+}
+
+.pop-vs-data {
+    width: 40%;
+    padding : 4%;
+    background-color: #245770;
+    border-radius: 27px;
+    color: white;
+    margin : 5%
+}
+
+.pop-vs-data > p {
+    margin : auto;
+    font-family : 'HSBombaram';
+    font-weight : 700;
+    font-size : 5vw;
+}
+
+.pop-dashed-wrapper .row > p {
+    margin: auto;
+    padding: 4%;
+    font-family: 'HSBombaram';
+    font-weight: 700;
+    font-size: 6vw;
+}
+
+.pop-color-matt { 
+    background-color : white;
+    padding : .7%;
+    width : 90%;
+    margin : auto;
+    margin-bottom : 6%;
 }

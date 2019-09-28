@@ -7,7 +7,8 @@ html , body { top : 0; left : 0; width : 100%; height : 100%; margin : 0; paddin
 /* footer */
 footer {
 	color: white;
-	font-size: 0.9rem
+	font-size: 0.9rem;
+	font-weight: 300;
 }
 footer a {
 	color: white;
@@ -67,12 +68,16 @@ footer .container {
 /* 체육대회 푸터 */
 #compet-footer {
 	color: black;
+	background-color: #a6bfd2;
 }
 #compet-footer a {
 	color: black;
 }
 #compet-footer a:hover {
 	color: black;
+}
+#compet-footer .homelogo{
+	border: 1px solid black;
 }
 #compet-footer .footer-icon {
 	width: 40px;

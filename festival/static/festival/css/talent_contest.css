@@ -65,38 +65,13 @@ p { font-family : 'Nanum Square'; }
     margin: 0 auto;
     padding:0;
     overflow: hidden;
-    border-bottom: 1px solid rgb(200,147,255);
-    border-top: 1px solid rgb(200,147,255);
+    border-bottom: 2px solid #00d631;
+    border-top: 2px solid #00d631;
     margin-bottom: 20px;
 }
 .title1 {
     color : white;
     font-family : 'NanumSquare';
-}
-.btn {
-    flex-shrink: 0;
-    display: block;
-    margin: 20px auto;
-    position: fixed;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    border: 0;
-    border-radius: 0;
-    text-shadow: 0 0 5px #ea6f9e;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    background-color: rgba(0,0,0,0.45);
-    font-family : 'NanumSquare' !important;
-    font-weight: 900;
-    color : white;
-    height: 48px;
-    transition:.2s;
-}
-.btn:active , .btn:hover{
-    background-color:rgba(234, 111, 158, .8);
-    transition:.2s;
-    color:#fff;
 }
 .con-num {
     width: 50px;
@@ -130,6 +105,11 @@ p { font-family : 'Nanum Square'; }
     font-size: 1.2rem;
     color:  #bafff0;
 }
+.title1 {
+    color : white;
+    font-family : 'NanumSquare';
+}
+
 .result .row .col-6 > p {
 	margin-bottom: 0;
 }

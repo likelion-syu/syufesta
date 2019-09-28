@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap');
-
 .festival-main.container {
 	padding: 0;
 }
@@ -39,20 +37,21 @@
     width: 100%;
 	height: 60px;
 	text-shadow: 0 0.0625rem 0.1875rem rgba(0,0,0,0.4);
-	color: rgb(255,255,255,0.9);
-	-webkit-text-stroke: 2px rgba(125, 0, 255, 0.3);
-	
+	color: rgb(255,255,255,0.8);
+	font-style: italic;
 }
 .artist-title h1 {
 	font-size: 2rem;
 	font-weight: bold;
 	margin: 0.1rem;
 	font-family: 'Black Han Sans', sans-serif!important;
-	text-shadow: 0 0 10px #ff6ba4;
+    text-shadow: 0 0 7px rgb(255, 0, 166);
+    -webkit-text-stroke: 2px rgba(255, 0, 166, 0.3);
 }
 .artist-title p {
 	font-family: 'Black Han Sans', sans-serif!important;
-	text-shadow: 0 0 10px #950ade;
+	text-shadow: 0 0 7px rgb(170, 0, 255);
+	-webkit-text-stroke: 2px rgba(170, 0, 255, 0.3);
 }	
 #artist1 {
 	background-image: url('../img/main/mamamoo.png');

@@ -8,4 +8,20 @@
     background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	position: relative;
+}
+.map-info-wrapper {
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	top: 30px;
+	left: 30px;
+}
+th {
+	font-size: 1.5rem;
+	padding-bottom: 30px;
+	font-weight: 500;
+}
+td {
+	font-size: 0.9rem
 }

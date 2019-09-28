@@ -5,10 +5,10 @@
 {% endblock %}
 
 {% block festival-content %}
-<div class="container">
-    <div class="row talent-desc mb-4">
+<!-- <div class="container"> -->
+    <div class="row mb-4 title-container">
         <div class = "col-12">
-            <h1 class = title1>너의 청춘을 보여줘</h1>
+            <h1>너의 청춘을 보여줘</h1>
             <h2 class = title2>장기자랑 참가자를 투표하세요!</h2>
             <p class = date1>
                 기간 : 10월 9일 PM 04:00 ~ PM 06:30 종료까지
@@ -119,19 +119,17 @@
             <p class = title2>차원빈</p>
             <p class = "desc">지구인싸입니다</p>
         </div>
-
-
     </div>
-    </div>
-    <div class = "row empty"></div>
     <div class="row">
         <div class="col-12 talent">
             <a href="{% url 'talent' %}""><button class = 'fest-btn' value = 'submit'>투표하기</button></a>
         </div>
     </div>
-</div>
+<!-- </div> -->
 
+{% endblock %}
 
+{% block festival-endbody %}
 <script>
     var __talent = {
         select : function(elem){

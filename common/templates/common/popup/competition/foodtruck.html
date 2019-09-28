@@ -2,11 +2,44 @@
 {% load staticfiles %}
 
 {% block head %}
-<link rel="stylesheet" href="{% static 'common/css/popup/competition/foodtruck.css' %}">
+<link rel="stylesheet" href="{% static 'common/css/popup/competition/foodtruck_popup.css' %}">
+
 {% endblock %}
 {% block content %}
-<div class='popup-foodtruck-container'>
-    <h1 class="popup-foodtruck-title">{{data.truck_id}}</h1>
-    <p class="popup-foodtruck-description">{{data.truck_des}}</p>
+
+<div class="foodtruck-container_popup">
+    <!-- 로고가 있는 부분 -->
+    <div class="header_popup">
+        <div class="logo_popup">
+        </div>
+        <div class="logo_food_popup">
+            <div>{{ data.truck_name }}</div>
+            <div>{{ data.menu }}</div>
+        </div>
+    </div>
+    <!---->
+    <div class="content_popup mt-3">
+        <div class="item_popup">
+            <!-- 트럭 설명이 있는 부분 -->
+            <div class="row">
+                <div class="col">
+                    <div>{{ data.truck_desc }}</div>
+                </div>
+            </div>
+            <!-- 메뉴가 있는 부분 -->
+            <div class="row">
+                <div class="col">
+                    {% for menu in menus %}
+                    {{ menu.menu_name }} - {{ menu.menu_price }}
+                    <br>
+                    {% endfor %}
+                    <img src="{{ data.truck_img_url }}" class="food_img">
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
+<!----->
+
 {% endblock %}

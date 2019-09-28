@@ -1,0 +1,71 @@
+
+.popup-booth-wrapper{
+    height:100%;
+    overflow:scroll !important;
+}
+.popup-booth-title-topline{
+    padding-top:5px;
+    background-color: purple;
+}
+
+.popup-booth-title-bottomline{
+    padding-bottom:5px;
+    background-color:purple;
+}
+.popup-booth-title{
+    background-color: rgb(19, 7, 43);
+    color: rgb(255,255,254);
+    text-shadow: 0px 0px 9px purple;
+    margin-bottom:0px;
+}
+
+.popup-booth-description{
+    background-color: rgb(19, 7, 43);
+    text-shadow: 0px 0px 9px purple;
+    color: rgb(255,255,254);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.popup-booth-event{
+    background-color: rgb(19, 7, 43);
+    text-shadow: 0px 0px 9px purple;
+    color: rgb(255,255,254);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.popup-booth-img{
+    background-color: rgb(19, 7, 43);
+    text-shadow: 0px 0px 9px purple;
+    color: rgb(255,255,254);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display:block;
+    text-align: center;
+    width: 100%;
+    margin-right: 0px;
+    height: 300px;
+}
+.popup-booth-product{
+    background-color: rgb(19, 7, 43);
+    text-shadow: 0px 0px 9px purple;
+    color: rgb(255,255,254);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.popup-booth-manager{
+    background-color: rgb(19, 7, 43);
+    text-shadow: 0px 0px 9px purple;
+    color: rgb(255,255,254);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}

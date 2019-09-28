@@ -1,0 +1,36 @@
+{% extends '../popup.base.html' %}
+{% load staticfiles %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'common/css/popup/festival/booth.css' %}">
+{% endblock %}
+
+{% block content %}
+
+
+<div class='popup-booth-wrapper'>
+        
+    <div class="popup-booth-title-topline"></div>
+    <h1 class="popup-booth-title">{{ booth.booth_nm }}</h1>
+    <div class="popup-booth-title-bottomline"></div>
+    {% if booth.booth_img is not None %}
+    <img class="popup-booth-img" src="{{ booth.booth_img }}">
+    {% else %}
+    {% endif %}
+
+
+    <p class="popup-booth-description">내용<br>{{ booth.booth_desc}} </p>
+    <p class="popup-booth-event">이벤트<br>{{ booth.booth_event }}</p>
+    <p class="popup-booth-product">상품<br>{{ booth.booth_product }}</p>
+    <p class="popup-booth-manager">관리자<br>{{ booth.booth_manager }}</p>
+    
+</div>
+
+
+
+<script>
+$(document).ready(()=>{
+    $('.likelion-popup-container').removeClass('hide');
+});
+</script>
+{% endblock %}

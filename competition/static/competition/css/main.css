@@ -1,14 +1,14 @@
-.main-background-compete{
-    background-image: url(../img/background_compete.png);
-    height:100%;
-    width:100%;
-    background-size:cover;
-}
-.main-background-compete .main-container{
-    padding: 40px 0 10px 0;
+
+.competition-main-container{
+    width : 100%;
+    min-height : 100%;
+    background-image : url(../img/mainimage.svg);
+    background-size: cover;
+    background-position: center;
+
 }
 
-.main-background-compete .main-container .compete-logo{
+.competition-main-container .logo-container .logo{
     background-image:url(../img/compete_logo_main.svg);
     width:300px;
     height:100px;
@@ -16,15 +16,97 @@
     background-repeat:no-repeat;
     background-position:center;
     margin:0 auto;
-    
-
 }
 
-.main-background-compete  .main-container .compete-logo .compete-main-poster{
+.competition-main-container .poster-container .poster-wrapper {
     background-image: url(../img/competitionimg.png);
-    background-size: cover;
-    width:90%;
-    height:90%;
-    background-repeat:no-repeat;
+    width: 330px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 450px;
+    margin: 0 auto;
+}
+
+.competition-main-container .poster-container .poster-desc p{
+    color: #024557;
+    font-size: 1.3em;
+    font-weight: 900;
+    font-family: serif;
+}
+
+.competition-main-container .timetable-container .header {
+    width: 200px;
+    height: 50px;
+    background-color: #024557;
+    color: #fff;
+    margin: 0 auto;
+    border-radius: 50px;
+    text-align: center;
+    padding-top : 9px;
+}
+
+.competition-main-container .timetable-container .header p{
+    font-size : 1.3em;
+}
+.competition-main-container .timetable-container .content {
+    background-image: url(../img/memopage.svg);
+    
+    width: 90%;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    padding-top: 9px;
+}
+
+.competition-main-container .timetable-container .content-2 {
+    background-image: url(../img/memopage.svg);
+    
+    width: 100%;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    padding-top: 9px;
+}
+.competition-main-container .timetable-container .content .timetable_data {
+    margin: 0 auto;
+    width: 100%;
+    height: 258px;
+    padding: 23px;
+    line-height: 21px;
+}
+.competition-main-container .timetable-container .content .timetable_data ul {
+    font-size: 1.0em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+ 
 
 }
+
+.competition-main-container .timetable-container .content .timetable_data-1 {
+    margin: 0 auto;
+    width: 100%;
+    height: 258px;
+    padding: 22px;
+    line-height: 20px;
+}
+/*.competition-main-container .timetable-container .content .timetable_data-1 ul {
+    font-size: 1.0em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+   
+
+}
+ */
+@font-face { 
+    font-family: 'HSBombaram'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff');
+     font-weight: normal; 
+     font-style: normal;
+    }
+
+    

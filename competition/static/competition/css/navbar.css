@@ -1,0 +1,75 @@
+.navbar {
+    position:fixed;
+	width : 100%;
+	z-index: 1;
+}
+
+.navbar .fa-bars{
+    color : #29627f;
+    font-size : 1.5em;
+}
+
+.navbar button{ border : 0; background : none; border-radius: 0; }
+
+.nav-collapse-container.hide .nav-collapse-cover{
+    transition : .3s;
+    opacity: 0;
+    z-index: -10000;
+}
+.nav-collapse-container.hide .nav-collapse-wrapper{
+    transition : .3s;
+    right : -80%;
+}
+
+.nav-collapse-cover{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 10000;
+    position: fixed;
+    opacity: 1;
+    transition : .3s;
+}
+
+.nav-collapse-wrapper{
+    background-color: #29627f;
+    position: fixed;
+    right: 0;
+    width: 80%;
+    height: 100%;
+    top: 0;
+    z-index:10001;
+    transition : .3s;
+}
+
+.nav-collapse-wrapper .header .title .logo{
+    background-image : url('../img/sidemenu_logo.svg');
+    width: 200px;
+    height: 124px;
+    background-size: cover;
+    background-position: center;
+    margin: 15% auto;
+}
+.nav-collapse-wrapper .header .close-btn .fa-times{
+    color: #fff;
+    font-size: 2em;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.nav-collapse-wrapper .content{
+    width : 75%;
+    margin : 0 auto;
+}
+
+.nav-collapse-wrapper .content .item-container{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.nav-collapse-wrapper .content .item-container a{
+    text-decoration: none;
+    color:#29617e;
+}

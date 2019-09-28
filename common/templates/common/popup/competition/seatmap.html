@@ -5,29 +5,61 @@
 <link rel="stylesheet" href="{% static 'common/css/popup/competition/seatmap.css' %}">
 {% endblock %}
 {% block content %}
-<!-- <body style="overflow-x:hidden;overflow-y:scroll"></body>
-            <div class="img">
-                    <img src="{% static 'common/images/competition/background_seatmap.png' %}" style="width:100%; height:2500px; position: relative;">
-                    <img src="{% static 'common/images/competition/compete_seatmap_logo.png' %}"" style="width:800px;height:400px; position: absolute;top: 250px;left:100px;z-index: 10;">
-                    
-                    <div class="box">
-                        
-                    <img src="{% static 'common/images/competition/box.png'%}" style="width:900px; height:600px; position: absolute; top:1700px; left:40px;">
-                    <img src="{% static 'common/images/competition/vs.png'%}" style="width:260px; height:250px; position: absolute; top:1800px; left:340px;">
+<div class = "pop-seatmap-wrapper">
+    <div class = "double-border">
+        <div class = "row pop-title">
+            <div class = "col-10 pop-title"></div>
+        </div>
+        <div class = "row pop-item-wrapper" style= "display: block;">
+            <div class = "row">
+                <div class = "col-12 pop-logo-wrapper">
+                    <img class = "pop-image-circle" src = "{{ majors.major_logo_url  }}">
                 </div>
-
-                    <div id="circle2" style="position: absolute; top:1530px; left:50px;">
-                        출전경기{{Major.truck_id}}
-                    </div>
-                    <div id="circle" style="position: absolute; top:680px; left:150px;">
-                            <img src="">
+            </div>
+            <div class = "col-12 pop-major-data">
+                <div class = "pop-color-matt-radius">
+                    <div class = "name">
+                        <h2>{{ majors.major_name }}</h2>
                     </div>
                 </div>
-
-
-</body> -->
-<h1>hello world</h1>
-<h2>{{major.major_id}}</h2>
+                <div class = "pop-color-matt">
+                    <div class = "row pop-dash-wrapper">
+                        <p>{{ majors.major_desc }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% for datas in data %}
+        <div class = "pop-vs-wrapper">
+            <div class = "row pop-vs-data">
+                <p>{{ datas.sch_title }}</p>
+            </div>
+            <div class = "pop-color-matt">
+                <div class = "pop-dashed-wrapper">
+                    <div class= "row">
+                        <div class = "col-5 pop-name">
+                            <div class = "pop-logo-circle">
+                                <img class = "pop-logo" src="{{ datas.major_a_logo }}">
+                            </div>
+                            <p> {{ datas.major_a_name }}</p>
+                        </div>
+                        <div class = "col-2 pop-vs-img"></div>
+                        <div class = "col-5 pop-name">
+                            <div class = "pop-logo-circle">
+                                <img class = "pop-logo" src="{{ datas.major_b_logo }}">
+                            </div>
+                            <p> {{ datas.major_b_name }}</p>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <p>{{ datas.sch_date }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
 <script>
     $(document).ready(()=>{
         $('.likelion-popup-container').removeClass('hide');

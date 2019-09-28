@@ -1,0 +1,30 @@
+{% extends '../popup.base.html' %}
+{% load staticfiles %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'common/css/popup/festival/foodtruck.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class='popup-foodtruck-wrapper'>
+        <div class="popup-foodtruck-title-topline"></div>
+        <h1 class="popup-foodtruck-title">{{ food.truck_name }}</h1>
+        <div class="popup-foodtruck-title-bottomline"></div>
+        <img class="popup-foodtruck-img" src="{{food.truck_img_url}}">
+        <p class="popup-foodtruck-desc">{{food.truck_desc}}</p>
+
+
+{% for menu in menus %}
+
+<h2 class="popup-foodtruck-menuname">{{ menu.menu_name}}</h2>
+<h2 class="popup-foodtruck-price">{{ menu.menu_price}}</h2>
+
+{% endfor %}
+
+</div>
+<script>
+    $(document).ready(()=>{
+        $('.likelion-popup-container').removeClass('hide');
+    });
+    </script>
+{% endblock %}

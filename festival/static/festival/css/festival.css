@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap');
+
 html , body{
 	background-color:#09081c;
 }
@@ -7,7 +9,7 @@ html , body{
 	/* pink */
 	color: #f801ff;
 	/* blue */
-	color:#0064FF
+	color:#0064FF;
 }
 
 .bg-fest-pink { background-color : #f801ff; }
@@ -35,7 +37,7 @@ h3 {
 	color: white;
 	min-height: 100%;
 	/* NAVBAR HEIGHT */
-	margin-top : 70px;
+	margin-top : 68px;
 	padding: 0;
 }
 .food-con {
@@ -43,7 +45,7 @@ h3 {
 }
 
 
-/* title */
+/* festival common title */
 .title-container {
     text-align: center;
     border-top: 2px solid #850ce0;
@@ -60,16 +62,25 @@ h3 {
     padding: 10px 0;
 }
 .title-container h1 {
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 	font-weight: 700;
-	margin-top: .5rem;
+	margin-top: 1rem;
+	text-shadow: 0 0 7px rgb(170, 0, 255);
+	-webkit-text-stroke: 2px rgba(170, 0, 255, 0.3);
 }
 .title-container h2 {
 	font-size: 1rem;
-	font-weight: 300;
+    font-family: 'NanumSquareExtraBold' !important;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+	margin-bottom: 5px;
+	font-weight: 200;
+    text-shadow: 0 0 5px rgb(186, 255, 240);
+    -webkit-text-stroke: 2px rgba(186,255,240,0.2);
 }
 
-/* btn */
+/* festival common btn */
 .fest-btn {
 	width: 100%;
     height: 50px;
@@ -85,4 +96,9 @@ h3 {
 	font-size: 1.8rem;
 	z-index: 1;
 	color: white;
+}
+.fest-btn:active , .fest-btn:hover{
+    background-color:rgba(234, 111, 158, .8);
+    transition:.2s;
+    color:#fff;
 }
