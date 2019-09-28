@@ -2,12 +2,13 @@
 
 {% block competition-head %}
 <link rel="stylesheet" href="{% static 'competition/css/foodtruck.css' %}">
+
 {% endblock %}
 
 {% block competition-content %}
 <!---<div class="na" style="background-image:'competition/img/wallpaper.png'; ">--->
 
-<div class="foodtruck-container">
+<div class="foodtruck-container pb-5">
 	<!-- 로고가 있는 부분 -->
 	<div class="header">
 		<div class="logo">
@@ -18,7 +19,7 @@
 	<div class="content">
 		{% for food in foodtrucks %}
 		<div class="item-wrapper my-3">
-			<div class="item">
+			<div class="item" onclick="__foodtruck.menu_open({{ food.truck_id }})">
 				<div class="row">
 					<div class="col-3">
 						<!---트럭 이미지-->
@@ -29,7 +30,7 @@
 							<!---트럭 이름-->
 							<div class="food_title">{{ food.truck_name }}</div>
 							<!---트럭 한줄소개-->
-							<div class="food_desc">{{ food.truck_des }}</div>
+							<div class="food_desc">{{ food.truck_desc }}</div>
 						</div>
 					</div>
 				</div>
@@ -38,4 +39,12 @@
 		{% endfor %}
 	</div>
 </div>
+
+<script>
+	var __foodtruck = __foodtruck || {
+		menu_open : function(pk){
+			__likelion.popup.open('/api/popup/comp/foodtruck/' + pk);
+		}
+	}
+</script>
 {% endblock %}
