@@ -9,28 +9,12 @@
     height : 100%;
     overflow-y: scroll;
 }
-@font-face { 
-    font-family: 'Binggrae-Bold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff'); font-weight: normal; font-style: normal;
-    }
-
-body{
-    font-family: 'Binggrae-Bold';
-}
 
 .competition-container .title-img .title-image{
     width: 60%;
     margin-left: 20%;
     margin-top: 35px;
     padding-bottom: 15px;
-}
-
-.competition-container .game{
-    width: 50%;
-    height: 35px;
-    background-color:#365E77;
-    color: white;
-    border-radius: 80px;
-    padding-top: 1%;
 }
 
 .competition-container .game .game-name{
@@ -54,8 +38,7 @@ body{
 }
 
 .competition-container .timetable-list-content .timetable-list .major{
-   font-family: 'BBTreeGR';
-   font-size: 1.2em;
+     font-size: 1.2em;
 }
 
 .competition-container .timetable-list-content .timetable-list .major .major1 .major-logo{
@@ -69,6 +52,11 @@ body{
     color: #365E77;
 }
 
+.competition-container .timetable-list-content .timetable-list .major .major2 .major-name{
+    display:inline-block;
+    vertical-align:middle;
+    color: #365E77;
+}
 .competition-container .timetable-list-content .timetable-list .major1{
     display:inline;
     vertical-align:middle;
@@ -97,6 +85,7 @@ body{
 .competition-container .timetable-list-content .timetable-list .game-info .game-time{
     color:#365E77;
     font-size: 1.15em;
+    display: inline-block;
 }
 
 .competition-container .timetable-list-content .timetable-list .game-info .game-place{

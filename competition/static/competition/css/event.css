@@ -1,0 +1,70 @@
+@font-face { 
+    font-family: 'HSBombaram'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff'); font-weight: normal; font-style: normal;
+    }
+
+body{
+    font-family: 'HSBombaram';
+}
+
+.competition{
+    background-image: url(../img/compete_background.svg);
+    background-size: cover;
+    width : 100%;
+    height : 100%;
+    overflow-y: scroll;
+}
+
+.event-container .title-img .title-image{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 45px;
+}
+
+.event-container .main-img .main-image {
+    width: 55%;
+    margin-left: 22.5%;
+}
+
+.event-container .goods-memo-img .goods-memo-image {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.event-container .join {
+    width: 33%;
+    height: 32px;
+    background-color:#365E77;
+    border-radius: 80px;
+    margin-left: 33%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.event-container .join-title {
+    color: white;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.event-container .joinbox1{
+    background-color: #365E77;
+    width: 90%;
+    margin-left: 5%;
+    padding: 5px;
+}
+
+.event-container .joinbox1 .joinbox2{
+    background-color: #6792a6;
+    color: white;
+    padding: 7px;
+}
+
+.event-container .notice-memo-img {
+    margin-top: 35px;
+}
+
+.event-container .notice-memo-img .notice-memo-image{
+    width: 90%;
+    margin-left: 5%;
+}

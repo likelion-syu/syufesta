@@ -1,13 +1,16 @@
 {% extends './competition_base.html' %}
 
 {% load staticfiles %}
-{% block competition-content %}
+{% block competition-head %}
 <link rel="stylesheet" href="{%  static '/competition/css/seatmap.css' %}">
-	<center>
+{% endblock %}
+{% block competition-content %}
+
+
         <div class="wrap">
             <div class="img">
-                <img src="{% static 'competition/img/compete_seatmap_logo.png' %}" style="width: 500px;height: 170px;position: absolute;top: 12px;left: 450px;z-index: 10;">
-                <img src="{% static 'competition/img/compete_seatmap.png' %}" style="height:1000px; position: absolute; top: 0; left: 0; width: auto;">
+				<div class="compete_seatmap_logo"></div>
+                <!-- <img src="{% static 'competition/img/compete_seatmap_logo.png' %}" style="width: 500px;height: 170px;position: absolute;top: 12px;left: 450px;z-index: 0;"> -->
                 <input class="btn_group" type="button" id="test_btn1"  onclick="showPopup(1);">
                 <input class="btn_group" type="button" id="test_btn2"  onclick="showPopup(1);">
                 <input class="btn_group" type="button" id="test_btn3"  onclick="showPopup(1);">
@@ -23,22 +26,29 @@
                 <input class="btn_group" type="button" id="test_btn13" onclick="showPopup(1);">
                 <input class="btn_group" type="button" id="test_btn14" onclick="showPopup(1);">
                 <input class="btn_group" type="button" id="test_btn15" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn16" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn17" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn18" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn19" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn20" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn21" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn22" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn23" onclick="showPopup(1);">
-                <input class="btn_group" type="button" id="test_btn24" onclick="showPopup(1);"> 
+                <input class="btn_group" type="button" id="test_btn16" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn17" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn18" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn19" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn20" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn21" onclick="showPopup(17);">
+                <input class="btn_group" type="button" id="test_btn22" onclick="showPopup(21);">
+                <input class="btn_group" type="button" id="test_btn23" onclick="showPopup(22);">
+                <input class="btn_group" type="button" id="test_btn24" onclick="showPopup(23);"> 
             </div>
         </div>
-    </center>
-{% endblock %}
 <script language="javascript">
-	// function showPopup1() { window.open("api/popup/comp/seatmap/1", "width=200, height=300, left=100, top=50"); }
+    // function showPopup1() { window.open("api/popup/comp/seatmap/1", "width=200, height=300, left=100, top=50"); }
     function showPopup(pk){
-        __likelion.popup.open('/api/popup/comp/seatmap/' + pk);
+        __likelion.popup.open('/api/popup/comp/seatmap/'+ pk);
     }
+</script>  
+{% endblock %}
+
+{% block competition-endbody%}
+<script>
+	$(document).ready(()=>{
+		$('.wrap').scrollLeft(($('.img').width() / 2.8))
+	});
 </script>
+{% endblock %}
