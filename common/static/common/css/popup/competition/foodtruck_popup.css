@@ -1,0 +1,75 @@
+
+@font-face { 
+    font-family: 'HSBombaram'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff'); font-weight: normal; font-style: normal;
+}
+
+body{
+    font-family: 'HSBombaram';
+}
+
+.likelion-popup-wrapper .foodtruck-container_popup .header_popup{
+	margin-top: 15px;
+}
+
+.popup-foodtruck-container{
+    background-color:purple;
+}
+
+.popup-foodtruck-title{
+    background-color:purple;
+    color:white;
+}
+
+.popup-foodtruck-description{
+
+    background-color:purple;
+    color:white;
+}
+
+.likelion-popup-wrapper {
+    background-image: url(/static/competition/img/compete_background.svg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.foodtruck-container_popup{
+	width : 100%;
+    height: 100%;
+	margin : 20px 0 0 0;
+	text-align: center;
+}
+
+.foodtruck-container_popup .header_popup .logo_popup{
+	width : 80px;
+	height : 80px;
+	background-repeat: no-repeat;
+	margin : 0 auto;
+	text-align:center;
+}
+
+.foodtruck-container_popup .content_popup  .item_popup .row{
+	margin : 0 auto;
+	text-align:center;
+	padding: 10px;
+}
+
+.foodtruck-container_popup .content_popup  .item_popup .row .col .food_img{
+	margin-top:10px;
+	width:320px;
+}
+
+.foodtruck-container_popup .header_popup .logo_popup .logo_food_popup{
+	margin:0px auto;
+	border: 4px dotted #245770;
+	border-radius: 7px;
+	-webkit-border-radius: 50px;
+	width:320px;
+    /*width: 60%;*/
+	height: 100%;
+	text-align:center;
+	font-size:25px;
+	padding:5px;
+}
+

@@ -1,18 +1,17 @@
 {% extends './competition_base.html' %}{% load staticfiles %}
-
-{% block competition-content %}
+{% block competition-head %}
 <link rel="stylesheet" href="{% static '/competition/css/timeline.css' %}">
+{% endblock %}
+{% block competition-content %}
+
 <div class="competition-container">
-	<div>
 	<div class="title-img">
 		<img class="title-image" src="{% static 'competition/img/titleimg.svg' %}">
 	</div>
-		<div class="game">
+	{% for datas in data %}
+		<div class="comp-title-wrapper">
 			<div class="game-name">
-				축 구
-			</div>
-			<div class="game-round">
-				(결승전)
+				{{datas.sch_title}}
 			</div>
 		</div>
 		<div class="timetable-list-content">
@@ -20,10 +19,10 @@
 				<div class="major">
 					<div class="major1">
 						<div class="major-logo">
-							<img src="{% static 'competition/img/flag.png' %}" style="width:100%; height:100%;">
+							<img src="{{ datas.major_a_logo_url }}" style="width:120px; height:120px; border-radius: 50%;">
 						</div>
 						<div class="major-name">
-							학과
+							{{datas.major_a_name}}
 						</div>
 					</div>
 						<div class="vs">
@@ -31,19 +30,19 @@
 						</div>
 					<div class="major2">
 						<div class="major-logo">
-							<img src="{% static 'competition/img/flag.png' %}" style="width:100%; height:100%;">
+							<img src="{{ datas.major_b_logo_url }}" style="width:120px; height:120px; border-radius: 50%;">
 						</div>
 						<div class="major-name">
-							학과
+							{{datas.major_b_name}}
 						</div>
 					</div>
 				</div>
 				<div class="game-info">
-					<div class="game-time">오후 3:30</div>
-					<div class="game-place">운동장</div>
+					<div class="game-time">{{datas.sch_date}}</div>
+					<div class="game-place">{{datas.sch_stage}}</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	{% endfor %}
 </div>
 {% endblock %}
