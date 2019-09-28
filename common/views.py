@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.db import connection
 from django.http import JsonResponse
-from .models import Major
+from .models import Major, Foodtruck, FoodtruckMenu
 from . import utils
 
 
@@ -23,29 +23,27 @@ def comp_booth(req , pk):
     })
 
 def comp_foodtruck(req , pk):
-    with connection.cursor() as cursor:
-        cursor.execute("select FT.truck_id, FT.truck_name, FT.truck_des ,group_concat(FM.menu_name separator '\n') as menu , group_concat(FM.menu_price separator '\n') from FoodTruck as FT, FoodTruck_menu as FM where FT.truck_id = FM.truck_id and FT.truck_id="+ str(pk) +" group by FT.truck_id")
-        rows = cursor.fetchall()
-    
-    expanded_rows = []
-    expanded_rows = utils.query_expand(rows , cursor)
+    foodtruck_detail = get_object_or_404(Foodtruck, pk=pk)
+    foodtruck_menu = FoodtruckMenu.objects.filter(truck = pk)
 
     return render(req , 'common/popup/competition/foodtruck.html' , {
-        'data' : expanded_rows[0]
+        'data' : foodtruck_detail, 'menus': foodtruck_menu
     })
 
 
 
 def comp_seatmap(req , pk):
+    major = get_object_or_404(Major, pk=pk)
+
     with connection.cursor() as cursor:
-        cursor.execute("select * ,MJ_A.major_name as 'major_a_name' ,MJ_A.major_logo_url as 'major_a_logo_url' ,MJ_B.major_name as 'major_b_name' ,MJ_B.major_logo_url as 'major_b_logo_url'from MatchSchedule as MS join Major as MJ_A join Major as MJ_B on MS.sch_major_a = MJ_A.major_id and MS.sch_major_b = MJ_B.major_id WHERE truck_id = " + str(pk))
+        cursor.execute("select TEMP.* , MJ_A.major_name as 'major_a_name' , MJ_A.major_logo_url as 'major_a_logo'  , MJ_B.major_name as 'major_b_name' , MJ_B.major_logo_url as 'major_b_logo' from ( select * from MatchSchedule where sch_major_a = "+str(pk)+" or sch_major_b = "+str(pk)+" ) TEMP JOIN Major as MJ_A JOIN Major as MJ_B on TEMP.sch_major_a = MJ_A.major_id and TEMP.sch_major_b = MJ_B.major_id")
         rows = cursor.fetchall()
     
     expanded_rows = []
     expanded_rows = utils.query_expand(rows , cursor)
 
-    return render(req , 'common/popup/competition/foodtruck.html' , {
-        'data' : expanded_rows[0]
+    return render(req , 'common/popup/competition/seatmap.html' , {
+        'data' : expanded_rows , 'majors' : major 
     })
 
     # major_detail = get_object_or_404(Major, pk=pk)
@@ -53,3 +51,7 @@ def comp_seatmap(req , pk):
     # return render(req , 'common/popup/competition/seatmap.html', {'major': major_detail})
 
 
+	# return JsonResponse({
+	# 	'status' : 1,
+	# 	'data' : expanded_rows,
+	# }, safe=False)
