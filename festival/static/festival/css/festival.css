@@ -62,9 +62,9 @@ h3 {
     padding: 10px 0;
 }
 .title-container h1 {
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 	font-weight: 700;
-	margin-top: .5rem;
+	margin-top: 1rem;
 	text-shadow: 0 0 7px rgb(170, 0, 255);
 	-webkit-text-stroke: 2px rgba(170, 0, 255, 0.3);
 }
