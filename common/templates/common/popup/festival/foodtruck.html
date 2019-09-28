@@ -7,4 +7,10 @@
 
 {% block content %}
 {{ food.truck_name }}
+<hr>
+{% for menu in menus %}
+<div>
+{{ menu.menu_name}}
+</div>
+{% endfor %}
 {% endblock %}
