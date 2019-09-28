@@ -12,22 +12,35 @@
 
 <div class="container main">
 	<div class="main-title-wrapper">
-		<h1>SYUFEST</h1>
+		<video autoplay muted loop id="myVideo">
+			<source src="{% static 'common/img/bg-v.mp4' %}" type="video/mp4">
+		</video>
+		<div class="main-logo">
+			<h1>삼육대학교 천보축전 X 체육대회</h1>	
+		</div>
 	</div>
 	<div class="main-movie-wrapper">
-
+		<iframe width="100%" height="100%" src="https://www.youtube.com/embed/kOHB85vDuow?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 	<div class="go-btn-wrapper">
 		<a href="{% url 'fest_home' %}">
 			<div class="go-festival">
-				<h2>천보축전</h2>
-				<p>10.08 MON</p>
+				<div class="go-fest-bg"></div>
+				<div class="go-text">
+					<h2>천보축전</h2>
+					<p>10.07 MON</p>
+				</div>
+				<div class="arrow go-right"></div>
 			</div>
 		</a>
 		<a href="{% url 'comp_home' %}">
 			<div class="go-competition">
-				<h2>체육대회</h2>
-				<p>10.09 TUE</p>
+				<div class="go-comp-bg"></div>
+				<div class="go-text">
+					<h2>체육대회</h2>
+					<p>10.08 TUE</p>
+				</div>
+				<div class="arrow go-left"></div>
 			</div>
 		</a>
 	</div>
