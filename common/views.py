@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.db import connection
 from django.http import JsonResponse
-from .models import Major
+from .models import Major, Foodtruck, FoodtruckMenu
 from . import utils
 
 # from models import Booth , FoodTruck
@@ -40,4 +40,7 @@ def comp_seatmap(req , pk):
 
     return render(req , 'common/popup/competition/seatmap.html', {'major': major_detail})
 
+def fest_foodtruck(req, pk):
+    foodtruck_detail = get_object_or_404 (Foodtruck, pk=pk)
+    return render(req, 'common/popup/festival/foodtruck.html', {'food': foodtruck_detail})
 
