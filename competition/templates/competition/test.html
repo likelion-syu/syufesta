@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block contents %}
+{% for data in major %}
+<div class = "container">
+    <div class = "row" style= "width : 75%;">
+        <div class = "col-4" style = "margin : auto; text-align : center;">
+            {{ data.major_name }}
+        </div>
+        <div class = "col-4" style>
+            <img src='{{ data.major_logo_url }}' style= "width : 100px; height : 100px;">
+        </div>
+        <div class = "col-4" style = "margin : auto; text-align : center;">
+            {{ data.major_id }}
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
