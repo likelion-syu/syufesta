@@ -1,3 +1,13 @@
+
+@font-face { 
+    font-family: 'HSBombaram'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff'); font-weight: normal; font-style: normal;
+}
+
+body{
+    font-family: 'HSBombaram';
+}
+
+
 .popup-foodtruck-container{
     background-color:purple;
 }
@@ -15,29 +25,28 @@
 }
 
 
-.foodtruck-container{
+.foodtruck-container_popup{
 	width : 100%;
     height: 100%;
 	margin : 20px 0 0 0;
 }
 
-.foodtruck-container .header .logo{
+.foodtruck-container_popup .header_popup .logo_popup{
 	width : 80px;
 	height : 80px;
-	background-image : url(../img/chicken.svg);
 	background-repeat: no-repeat;
 	margin : 0 auto;
 	text-align:center;
 }
 
-.foodtruck-container .content  .item .row{
+.foodtruck-container_popup .content_popup  .item_popup .row{
 	margin : 0 auto;
 	text-align:center;
     padding: 10px;
 }
 
 
-.foodtruck-container .header .logo_food{
+.foodtruck-container_popup .header_popup .logo_popup .logo_food_popup{
 	margin:0px auto;
 	border: 4px dotted #245770;
 	border-radius: 7px;
