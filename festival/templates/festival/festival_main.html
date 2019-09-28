@@ -1,29 +1,112 @@
 {% extends './festival_base.html' %} {% load staticfiles %}
 
 {% block festival-head %}
-
 <link rel="stylesheet" href="{% static 'festival/css/main.css' %}">
-
 {% endblock %}
 
 {% block festival-content %}
-	<h1 id="festival">축제 메인화면</h1>
-	<ul>
-		<li>
-			<a href="{% url 'fest_foodtruck' %}">푸드트럭&부스</a>
-		</li>
-		<li>
-			<a href="{% url 'festmap' %}">조감도</a>
-		</li>
-		<li>
-			<a href="{% url 'stamp' %}">이벤트 스탬프</a>
-		</li>
-		<li>
-			<a href="{% url 'talent' %}">장기자랑</a>
-		</li>
-		<li>
-			<a href="{% url 'cheer' %}">치어대전</a>
-		</li>
-	</ul>
+	<div class="festival-main container">
+		<div class="poster-wrapper">
 
-{% endblock %}	
+		</div>
+
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="artist-wrapper" id="artist1"></div>
+					<div class="artist-title">
+						<h1>마마무</h1>
+						<p>10.07(월) 대강당</p>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="artist-wrapper" id="artist2"></div>
+					<div class="artist-title">
+						<h1>긱스</h1>
+						<p>10.07(월) 대강당</p>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="artist-wrapper" id="artist3"></div>
+					<div class="artist-title">
+						<h1>스텔라장</h1>
+						<p>10.07(월) 대강당</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="swiper-pagination"></div>
+        
+			<!-- Add Arrows -->
+			<div class="swiper-button-next s-btn-w"></div>
+			<div class="swiper-button-prev s-btn-w"></div>
+		</div>
+	</div>
+	<div class="main-sub title-container mt-4">
+		<h1>삼육대학교 천보축전</h1>
+		<h2>2019.10.07(월)</h2>
+	</div>
+	<div class="main-timetable-container">
+		<table>
+			<tr class="tabel-title">
+				<td>TIME</td>
+				<td>MAIN EVNET<br>(대강당)</td>
+				<td>SUB EVENT<br>(야외)</td>
+			</tr>
+			<tr>
+				<th>09:00 ~ 16:00</th>
+				<td class="td1"></td>
+				<td class="td2" rowspan="2">
+					부스행사(솔로몬 광장)<br>
+					포토존(도서관 앞)<br>
+					도서관 문화축제(도서관)<br>
+				</td>
+			</tr>
+			<tr>
+				<th>16:00 ~ 17:00</th>
+				<td rowspan="2">너의 청춘을 보여줘(장기자랑)</td>
+			</tr>
+			<tr>
+				<th>17:00 ~ 17:30</th>
+			</tr>
+			<tr>
+				<th>17:30 ~ 18:00</th>
+				<td>연예인 공연</td>
+			</tr>
+			<tr>
+				<th>18:00 ~ 18:30</th>
+				<td>너의 청춘을 보여줘(순위발표)</td>
+			</tr>
+			<tr>
+				<th>18:30 ~ 19:00</th>
+				<td>연예인 공연</td>
+			</tr>
+			<tr>
+				<th>19:00 ~ 19:30</th>
+				<td rowspan="2">치어대전</td>
+			</tr>
+			<tr>
+				<th>19:30 ~ 20:00</th>
+			</tr>
+			<tr>
+				<th>20:00 ~ 20:30</th>
+				<td>연예인 공연</td>
+			</tr>
+			<tr>
+				<th>20:30 ~ 21:00</th>
+				<td>치어대전(순위발표)</td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="main-map-container">
+		<h3>2019 삼육대학교 천보축전 MAP</h3>
+		<a href="{% url 'festmap' %}">
+			<div class="map-btn">자세히 보기</div>
+		</a>
+	</div>
+{% endblock %}
+
+{% block festival-endbody %}
+<script type="text/javascript" src="{% static 'festival/js/swiper.js' %}"></script>
+{% endblock %}

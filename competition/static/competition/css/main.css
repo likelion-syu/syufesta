@@ -2,7 +2,7 @@
 .competition-main-container{
     width : 100%;
     min-height : 100%;
-    background-image : url(../img/mainimage.svg);
+    /* background-image : url(../img/mainimage.svg); */
     background-size: cover;
     background-position: center;
 
@@ -32,7 +32,6 @@
     color: #024557;
     font-size: 1.3em;
     font-weight: 900;
-    font-family: serif;
 }
 
 .competition-main-container .timetable-container .header {
@@ -52,7 +51,7 @@
 .competition-main-container .timetable-container .content {
     background-image: url(../img/memopage.svg);
     
-    width: 400px;
+    width: 90%;
     height: 300px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -64,7 +63,7 @@
 .competition-main-container .timetable-container .content-2 {
     background-image: url(../img/memopage.svg);
     
-    width: 400px;
+    width: 100%;
     height: 300px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -74,11 +73,23 @@
 }
 .competition-main-container .timetable-container .content .timetable_data {
     margin: 0 auto;
-    width: 405px;
+    width: 100%;
     height: 258px;
     padding: 23px;
     line-height: 21px;
 }
+
+.timetable_data table {
+	width: 100%;
+    margin-top: 30px
+}
+.timetable_data th {
+	width: 40%;
+	text-align: center;
+	padding: 4px 0px;
+}
+
+/* 
 .competition-main-container .timetable-container .content .timetable_data ul {
     font-size: 1.0em;
     font-family: Arial, Helvetica, sans-serif;
@@ -89,11 +100,11 @@
 
 .competition-main-container .timetable-container .content .timetable_data-1 {
     margin: 0 auto;
-    width: 405px;
+    width: 100%;
     height: 258px;
     padding: 22px;
     line-height: 20px;
-}
+} */
 /*.competition-main-container .timetable-container .content .timetable_data-1 ul {
     font-size: 1.0em;
     font-family: Arial, Helvetica, sans-serif;
@@ -102,11 +113,5 @@
 
 }
  */
-@font-face { 
-    font-family: 'HSBombaram'; 
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff');
-     font-weight: normal; 
-     font-style: normal;
-    }
 
     

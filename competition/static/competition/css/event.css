@@ -1,19 +1,21 @@
-@font-face { 
+/* @font-face { 
     font-family: 'HSBombaram'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff'); font-weight: normal; font-style: normal;
     }
 
 body{
     font-family: 'HSBombaram';
-}
+} */
 
-.competition{
+/* .competition{
     background-image: url(../img/compete_background.svg);
     background-size: cover;
     width : 100%;
     height : 100%;
     overflow-y: scroll;
+} */
+.event-container {
+	padding-bottom: 50px;
 }
-
 .event-container .title-img .title-image{
     width: 60%;
     margin-left: 20%;
@@ -25,11 +27,21 @@ body{
     margin-left: 22.5%;
 }
 
-.event-container .goods-memo-img .goods-memo-image {
+.memo-img {
+	background-image: url('../img/goodsmemo.svg');
+    background-repeat: no-repeat;
+    width: 90%;
+    margin: 5%;
+    padding-bottom: 41%;
+    background-position: center;
+    background-size: cover;
+}
+
+/* .event-container .goods-memo-img .goods-memo-image {
     width: 90%;
     margin-left: 5%;
     margin-top: 5%;
-}
+} */
 
 .event-container .join {
     width: 33%;
