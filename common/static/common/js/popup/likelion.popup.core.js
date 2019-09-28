@@ -58,9 +58,9 @@
                 },
                 close : function(){
                     console.log(_templates.dom , this.dom);
-                    if(!$('.likelion-popup-container').hasClass("hide")){
-                        $('.likelion-popup-container').addClass('hide');
-                        $('.likelion-popup-cover').addClass('hide');
+                    if(!_templates.dom.hasClass("hide")){
+                        _templates.dom.addClass('hide');
+                        _cover.addClass('hide');
                     }
                     else{
                         console.warn("[likelion][popup] 열려있는 팝업이 없습니다");
