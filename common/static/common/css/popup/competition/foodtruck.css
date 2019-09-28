@@ -1,15 +1,22 @@
-.popup-foodtruck-container{
-    background-color:rgba(52, 5, 80, 0.692);
+
+.popup-foodtruck-title-topline{
+    padding-top:5px;
+    background-color: purple;
 }
 
+.popup-foodtruck-title-bottomline{
+    padding-bottom:5px;
+    background-color:purple;
+}
 .popup-foodtruck-title{
-
-    
-    color:white;
+    background-color: rgb(19, 7, 43);
+    color: rgb(255,255,254);
+    text-shadow: 0px 0px 9px purple;
+    margin-bottom:0px;
 }
 
 .popup-foodtruck-description{
-
-    
-    color:white;
+    background-color: rgb(19, 7, 43);
+    text-shadow: 0px 0px 9px purple;
+    color: rgb(255,255,254);
 }

@@ -5,8 +5,10 @@
 <link rel="stylesheet" href="{% static 'common/css/popup/competition/foodtruck.css' %}">
 {% endblock %}
 {% block content %}
-<div class='popup-foodtruck-container'>
+<div class='popup-foodtruck-container'></div>
+    <div class="popup-foodtruck-title-topline"></div>
     <h1 class="popup-foodtruck-title">{{data.truck_id}}</h1>
-    <p class="popup-foodtruck-description">{{data.truck_des}}</p>
+    <div class="popup-foodtruck-title-bottomline"></div>
+    <p class="popup-foodtruck-description">{{data.truck_des}}테스트용 텍스트</p>
 </div>
 {% endblock %}
