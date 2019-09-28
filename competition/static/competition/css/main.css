@@ -94,10 +94,19 @@
     padding: 22px;
     line-height: 20px;
 }
-.competition-main-container .timetable-container .content .timetable_data-1 ul {
+/*.competition-main-container .timetable-container .content .timetable_data-1 ul {
     font-size: 1.0em;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto;
    
 
 }
+ */
+@font-face { 
+    font-family: 'HSBombaram'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff');
+     font-weight: normal; 
+     font-style: normal;
+    }
+
+    
