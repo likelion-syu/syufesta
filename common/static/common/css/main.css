@@ -13,24 +13,42 @@
 	justify-content: center;
 	align-items: center;
 }
+#myVideo {
+	width: 100%;
+    position: relative;
+}
+.main-logo {
+	background-image: url('../img/SYYFESTA_LOGO.svg');
+	background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+	height: 100%;
+	position: absolute;
+	display: flex;
+    justify-content: center;
+}
+.main-logo h1 {
+	position: absolute;
+    top: 53%;
+	font-size: 1rem;
+	font-weight: 100;
+}
 .main-movie-wrapper {
 	width: 100%;
-	height: 300px;
-	border: 1px solid transparent;
-	border-top-color: white;
+	height: 250px;
+	border-top: 2px solid #850ce0;
 }
 .go-btn-wrapper {
 	padding: 40px 0px;
-	border: 1px solid white;
+	border-top: 2px solid #850ce0;
+    border-bottom: 2px solid #850ce0;
 }
 .go-btn-wrapper p {
 	margin: 0px;
 }
 .main-info-wrapper {
 	padding: 40px 0px;
-	border: 1px solid white;
-	border: 1px solid transparent;
-	border-bottom-color: white;
+	border-bottom: 2px solid #850ce0;
 }
 .go-festival, .go-competition, .go-bus, .go-parking  {
 	width: 100%;
@@ -43,14 +61,63 @@
     flex-direction: column;
 }
 .go-festival {
-	background-color: blueviolet;
+	background-image: url('../img/mamamoo.png');
+	position: relative;
+	background-size: 125%;
+    background-position-x: 40%;
 }
 .go-competition {
+	background-image: url('../img/comp-bg.png');
+	position: relative;
+	background-size: cover;
+}
+.go-fest-bg {
+	background-color: blueviolet;
+	width: 100%;
+    height: 100%;
+	position: absolute;
+	opacity: 0.6;
+}
+.go-comp-bg {
 	background-color: aquamarine;
+	width: 100%;
+    height: 100%;
+	position: absolute;
+	opacity: 0.6;
+}
+.go-text {
+	position: absolute;
+	text-shadow: 0 0.0625rem 0.1875rem rgba(0,0,0,0.4);
+}
+.go-text h2 {
+	font-size: 2rem;
 }
 .go-bus {
-	background-color: hotpink;
+	background-color: #f801ff;
+	height: 100px;
 }
 .go-parking {
-	background-color: cornflowerblue;
+	background-color: #0064FF;
+	height: 100px;
 }
+
+.arrow {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.4));
+    -webkit-filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.4));
+    background-repeat: no-repeat;
+    background-size: contain;
+	background-position: center;
+	opacity: 0.8;
+}
+.go-right {
+	background-image: url('../img/arrow_right.svg');
+	right: 15px;
+}
+.go-left {
+	background-image: url('../img/arrow_left.svg');
+	left: 15px;
+}
+
