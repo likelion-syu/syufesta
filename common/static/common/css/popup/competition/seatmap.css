@@ -19,20 +19,20 @@
     overflow-x: hidden;
 }
 
-.col-12.pop-logo-wrapper {
+.col-12 .pop-logo-wrapper {
     margin: auto;
 }
 
 
 
-.col-12.pop-major-data {
+.pop-major-data {
     margin: auto;
     text-align: center;
     font-family : 'Binggrae-Bold';
     font-size : 20px;
 }
 
-.row.pop-dash-wrapper {
+.pop-dash-wrapper {
     background-color: white;
     text-align: center;
     border-style: dashed;
@@ -42,7 +42,7 @@
     padding-right: 4%;
 }
 
-.row .pop-dash-wrapper > p {
+.pop-dash-wrapper > p {
     margin : auto;
     padding: 3%
 }
@@ -54,7 +54,7 @@
 
 }
 
-.col-10.pop-title {
+.row .pop-title {
     background-image: url(/static/common/img/major-inform.svg);
     background-size: 100%;
     padding: 17%;
@@ -63,11 +63,11 @@
     margin-top: 4%;
 }
 
-.col-12.pop-major-data > h2 {
+.pop-major-data > h2 {
     margin-top : 0.5rem
 }
 
-.col-1.pop-vs-img {
+.pop-vs-img {
     background-image: url(/static/competition/img/vs.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -76,11 +76,17 @@
 
 .pop-vs-wrapper {
     margin-top : 4%;
+    margin-bottom : 4%
 }
 
-.col-5.pop-name {
-    font-family : 'Binggrae-Bold';
+.pop-name {
+    font-family : 'HSBombaram';
     font-size : 15px ;
+}
+
+.pop-name > p {
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .pop-logo {
@@ -89,7 +95,7 @@
     left: 0%;
 }
 
-.col-5.pop-name > p {
+.col-5 .pop-name > p {
     margin-top : 5%;
 }
 
