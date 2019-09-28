@@ -144,18 +144,18 @@
 /* Foodtruck */
 .truck1{
     top: 230px;
-    left: 577px;
+    left: 576px;
     height: 80px;
     width: 80px;
 }
 .truck2{
-    top: 278px;
-    left: 580px;
+    top: 230px;
+    left: 578px;
     height: 80px;
     width: 80px;
 }
 .truck3{
-    top: 230px;
+    top: 96px;
     left: 666px;
     height: 80px;
     width: 80px;
@@ -172,18 +172,16 @@
     height: 80px;
     width: 80px;
 }
-
 .truck6{
     top: 242px;
     left: 70px;
     height: 80px;
     width: 80px;
 }
-
 .truck7{
     top: 242px;
     height: 80px;
-    left: 246px;
+    left: 245px;
     width: 80px;
 }
 .truck8{
