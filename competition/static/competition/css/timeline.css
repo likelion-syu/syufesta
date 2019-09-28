@@ -10,11 +10,10 @@
     overflow-y: scroll;
 }
 @font-face { 
-    font-family: 'Binggrae-Bold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff'); font-weight: normal; font-style: normal;
+    font-family: 'HSBombaram'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff'); font-weight: normal; font-style: normal;
     }
-
 body{
-    font-family: 'Binggrae-Bold';
+    font-family: 'HSBombaram';
 }
 
 .competition-container .title-img .title-image{
@@ -54,8 +53,7 @@ body{
 }
 
 .competition-container .timetable-list-content .timetable-list .major{
-   font-family: 'BBTreeGR';
-   font-size: 1.2em;
+     font-size: 1.2em;
 }
 
 .competition-container .timetable-list-content .timetable-list .major .major1 .major-logo{
