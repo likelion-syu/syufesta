@@ -43,8 +43,8 @@ def popup1(req):
 	return render(req, 'festival/foodtruck1.html')
 
 def talent_select(req):
-	
-	return render(req, 'festival/talent.html')
+	contestparticipant=Contestparticipant.objects.all()
+	return render(req, 'festival/talent.html', {'cp':contestparticipant})
 
 def signin(req) :
 	return render(req , 'festival/auth/signin.html')
