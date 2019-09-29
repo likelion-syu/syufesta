@@ -1,0 +1,76 @@
+.likelion-popup-container {
+	background-color: rgb(19, 7, 43)!important;
+	border-top: 3px solid #aa05ff;
+
+}
+.likelion-popup-container .no-btn {
+	color: white;
+    font-size: 1.3em;
+    padding: 5px 10px;
+    position: absolute;
+    right: 5px;
+    top: -50px;
+    transition: .3s;
+    width: 50px;
+    height: 50px;
+	border: 3px solid #aa05ff;
+	border-radius: 0;
+    background-color: rgb(19, 7, 43, 0.7);
+}
+.popup-wrapper {
+	height: 100%;
+    overflow: auto;
+}
+
+/* title */
+.title-container {
+	margin-top: 20px;
+}
+.title-container h1 {
+	color: white;
+}
+
+/* content */
+.popup-content-wrapper {
+	/* padding: 20px; */
+	text-align: center;
+}
+
+/* .popup-content-box {
+	border: 2px solid #aa05ff;
+    padding: 30px 10px 20px;
+	position: relative;
+	margin: 20px 0px;
+} */
+
+.popup-content-box h2 {
+	text-align: center;
+    border-top: 2px solid #ff6ba4;
+    border-bottom: 2px solid #ff6ba4;
+    margin: 2px 0px;
+	padding: 10px 0;
+	font-size: 1.2rem;
+    font-weight: 700;
+	margin-top: 0.5rem;
+	color: white;
+    text-shadow: 0 0 7px rgb(255, 107, 164);
+    -webkit-text-stroke: 2px rgba(255, 107, 164 0.3);
+}
+.popup-content-box p {
+	color: white;
+	margin: 1rem;
+}
+
+/* img */
+.popup-wrapper img {
+	background-color: rgb(19, 7, 43);
+    text-shadow: 0px 0px 9px purple;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: block;
+    text-align: center;
+    width: 90%;
+    /* height: 90%; */
+    margin: 20px auto;
+}
+
