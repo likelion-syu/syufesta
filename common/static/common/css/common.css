@@ -68,6 +68,19 @@ footer .container {
 #fest-footer {
 	border-top: 2px solid #850ce0;
 }
+#fest-footer .homelogo {
+    border: 1px solid #db5f90;
+	filter: drop-shadow(0 0 4px #ff6ba4);
+	background-image: url('../img/footer/fest_syufesta_logo.svg')!important;
+}
+#fest-footer p {
+	text-shadow: 0 0 7px #d3bbff;
+    -webkit-text-stroke: 2px rgba(103, 58, 183, 0.25);
+}
+#fest-footer .footer-icon {
+	box-shadow: 0 0 0 2px #00BCD4 inset;
+    filter: drop-shadow(0 0 4px #00BCD4 );
+}
 
 /* 체육대회 푸터 */
 #compet-footer {
@@ -129,6 +142,10 @@ footer .container {
 	background-image: url('../img/up_black.svg')!important;
 	color: black!important;
 	border: 2px solid black!important;
+}
+.fest-topBtn {
+	border: 2px solid #fffcfd;
+    filter: drop-shadow(0 0 4px #fff);
 }
 
 /* video */

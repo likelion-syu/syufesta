@@ -7,7 +7,10 @@
     left : 0;
     z-index:1000;
     border-bottom : 2px solid #aa00ff;
-    transition:.2s;
+	transition:.2s;
+	
+	display: flex;
+    justify-content: center;
 }
 
 .navbar.transparent{
@@ -42,14 +45,9 @@
     background-size: cover;
     padding: 0;
     background-position: center;
-    background-position-y: 70%;
     font-size: 0.5rem;
     text-align: center;
-    line-height: 7.9;
-    font-weight: 600;
-    font-style: italic;
-    -webkit-text-stroke: 1px #aa00ff;
-    text-shadow: 0 0 5px #716776;
+    filter: drop-shadow(0 0 1px #ff6ba4);
 }
 
 .sidemenu-container .sidemenu-cover{
@@ -138,4 +136,18 @@
     text-decoration: none;
     color: #fff;
     font-size : 1.3em;
+}
+
+#menu {
+	position: absolute;
+	right: 17px;
+	filter: drop-shadow(0 0 1px #ff6ba4);
+}
+
+.goHome {
+	display: block;
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    right: 10%;
 }

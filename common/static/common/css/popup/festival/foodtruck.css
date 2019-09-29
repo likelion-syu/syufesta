@@ -73,7 +73,6 @@
 .menu-table {
 	width: 80%;
 	margin: 20px auto;
-	color: white;
 	text-align: center;
 }
 .menu-table th {
@@ -81,7 +80,11 @@
 	font-size: 1.1rem;
 	padding: 10px 0px;
 	text-align: center;
+	color: #5ae7d5!important;
 }
+.menu-table td {
+	color: white;
+} 
 .menu-table tr {
 	border-bottom: 1px solid gray;
 }
