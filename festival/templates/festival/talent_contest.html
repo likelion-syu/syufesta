@@ -33,7 +33,7 @@
 							</div>
 							<div class="col-6">
 								<h2 data-name-idx="0"></h2>
-								<p data-name-idx="0"></p>
+								<p class = "rate" data-name-idx="0">1212%</p>
 							</div>
 						</div>
 					</div>
@@ -50,7 +50,7 @@
 							</div>
 							<div class="col-6">
 								<h2 data-name-idx="1"></h2>
-								<p data-name-idx="1"></p>
+								<p class = "rate" data-name-idx="1"></p>
 							</div>
 						</div>
 					</div>
@@ -239,46 +239,33 @@
 // });
 
 
-
-$(function(){
-	$.ajax({
-		url: "http://127.0.0.1:8000/api/fest/contest/result",
-		dataType:"json",
-		success:function(data) {
+setInterval(function(){
+	$(function(){
+		$.ajax({
+			url: "http://127.0.0.1:8000/api/fest/contest/result",
+			dataType:"json",
+			success:function(data) {
+				var vote = data.data
 		
-				setTimeout(function(){
-					console.log("hi");
-				}, 2000); 
-   			
-			   
-			var vote = data.data
-	
 
-			var byCount = vote.slice(0);
-			byCount.sort(function(a,b) {
-				return b.count - a.count;
-			});
-			for(var i in byCount){
-				// console.log(data.data[i].cont_participant_nm);
-				var vote_num = Number(byCount[i].rate);
-				var vote_num = vote_num.toFixed(2);
-				$('h2[data-name-idx="'+i+'"]').text(byCount[i].cont_participant_nm);
-				$('P[data-name-idx="'+i+'"]').text(vote_num +"%" +" / " + byCount[i].count+" 득표")
-				$('img[data-name-idx="'+i+'"]').attr("src", byCount[i].cont_participant_img_url);
+				var byCount = vote.slice(0);
+				byCount.sort(function(a,b) {
+					return b.count - a.count;
+				});
+				for(var i in byCount){
+					// console.log(data.data[i].cont_participant_nm);
+					var vote_num = Number(byCount[i].rate);
+					var vote_num = vote_num.toFixed(2);
+					$('h2[data-name-idx="'+i+'"]').text(byCount[i].cont_participant_nm);
+					$('p[data-name-idx="'+i+'"]').text(vote_num +"%" +" / " + byCount[i].count+" 득표")
+					$('img[data-name-idx="'+i+'"]').attr("src", byCount[i].cont_participant_img_url);
 
+
+				}
 			}
-		}
+		});
 	});
-});
-// function on_loaded( oj ){
-// 	value = decodeURIComponent( oj.responseText);
-// }
-// function timerProc(){
-// 	sendRequest(on_loaded,'','GET','talent_contest.html',true,true);
-// 	document.getElementByld('ttt').innerHTML=value;
-// 	setTimeout("timerProc();", 1000);
-// 	console.log('hi');
-// }
+}, 5000);
 
 </script>
 {% endblock %}
