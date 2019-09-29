@@ -17,13 +17,13 @@
 		<div data-bt-index onclick="openPopup(this , false)" class="bf-icon bo booth3" data-ft-idx="3"><div class="ft-info-wrapper"><p class="booth">부스</p><p class="boothtitle">총학부스</p></div></div>
 		<div data-bt-index onclick="openPopup(this , false)" class="bf-icon bo booth4" data-ft-idx="4"><div class="ft-info-wrapper"><p class="booth">부스</p><p class="boothtitle">다전공 제도 상담부스</p></div></div>
 		<div data-bt-index onclick="openPopup(this , false)" class="bf-icon bo booth5" data-ft-idx="5"><div class="ft-info-wrapper"><p class="booth">부스</p><p class="boothtitle">나를 꺼내줘</p></div></div>
-		<div data-bt-index onclick="openPopup(this , false)" class="bf-icon bo booth6" data-ft-idx="6"><div class="ft-info-wrapper"><p class="booth">부스</p><p class="boothtitle">러너스 하이</p></div></div>
+		<div data-bt-index onclick="openPopup(this , false)" class="bf-icon bo booth6" data-ft-idx="3"><div class="ft-info-wrapper"><p class="booth">부스</p><p class="boothtitle">러너스 하이</p></div></div>
 		<div data-bt-index onclick="openPopup(this , false)" class="bf-icon bo booth7" data-ft-idx="7"><div class="ft-info-wrapper"><p class="booth">부스</p><p class="boothtitle">PATIA ACC</p></div></div>
 		<div data-bt-index onclick="openPopup(this , false)" class="bf-icon bo booth8" data-ft-idx="8"><div class="ft-info-wrapper"><p class="booth">부스</p><p class="boothtitle">FAB5</p></div></div>
 		<div data-bt-index onclick="openPopup(this , false)" class="bf-icon bo booth9" data-ft-idx="9"><div class="ft-info-wrapper"><p class="booth">부스</p><p class="boothtitle">쉠방구</p></div></div>
-		<div data-bt-index onclick="openPopup(this , false)" class="bf-icon bo booth10" data-ft-idx="10"><div class="ft-info-wrapper"><p class="booth">부스</p><p class="boothtitle">나를 꺼내줘<br>(바울관 207호)</p></i></div></div>
-		<div data-bt-index onclick="openPopup(this , false)" class="bf-icon bo booth11" data-ft-idx="11"><div class="ft-info-wrapper"><p class="booth">부스</p><p class="boothtitle">FAB5배 3on3 대회</p></div></div>
-		<div data-bt-index onclick="openPopup(this , false)" class="bf-icon bo booth12" data-ft-idx="12"><div class="ft-info-wrapper"><p class="booth">부스</p><p class="boothtitle">코스트코</p></div></div>
+		<div data-bt-index onclick="openPopup(this , false)" class="bf-icon bo booth10" data-ft-idx="6"><div class="ft-info-wrapper"><p class="booth">부스</p><p class="boothtitle">나를 꺼내줘<br>(바울관 207호)</p></i></div></div>
+		<div data-bt-index onclick="openPopup(this , false)" class="bf-icon bo booth11" data-ft-idx="4"><div class="ft-info-wrapper"><p class="booth">부스</p><p class="boothtitle">FAB5배 3on3 대회</p></div></div>
+		<div data-bt-index onclick="openPopup(this , false)" class="bf-icon bo booth12" data-ft-idx="10"><div class="ft-info-wrapper"><p class="booth">부스</p><p class="boothtitle">코스트코</p></div></div>
 		<div data-bt-index onclick="openPopup(this , true)" class="bf-icon fo truck1" data-ft-idx="1"><div class="ft-info-wrapper"><p class="foodtruck">푸드트럭</p><p class="foodtrucktitle">k이지 스테이크</p></div></div>
 		<div data-bt-index onclick="openPopup(this , true)" class="bf-icon fo truck2" data-ft-idx="2"><div class="ft-info-wrapper"><p class="foodtruck">푸드트럭</p><p class="foodtrucktitle">에이셉 피자</p></div></div>
 		<div data-bt-index onclick="openPopup(this , true)" class="bf-icon fo truck3" data-ft-idx="3"><div class="ft-info-wrapper"><p class="foodtruck">푸드트럭</p><p class="foodtrucktitle">베러댄 와플</p></div></div>
@@ -51,13 +51,13 @@
 	
 		if(isFoodTruck){
 			__likelion.popup.open(
-				'/api/popup/comp/foodtruck/' + __num
+				'/api/popup/fest/foodtruck/' + __num
 			)
 		}
 		else{
 			// path('popup/comp/foodtruck/<int:pk>' , views.comp_foodtruck , name="popup_comp_foodtruck"),
 			__likelion.popup.open(
-				'/api/popup/comp/booth/' + __num
+				'/api/popup/fest/booth/' + __num
 			)
 		}
 
