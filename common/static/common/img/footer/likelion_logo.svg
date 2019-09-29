@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17.711" height="8.766" viewBox="0 0 17.711 8.766">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        opacity: 0.67;
+      }
+    </style>
+  </defs>
+  <g id="그룹_145" data-name="그룹 145" transform="translate(-35 -1455.85)">
+    <path id="패스_91" data-name="패스 91" class="cls-1" d="M5.971,7.067V0H0L5.568,3.691V8.766h6.172v-1.7Z" transform="translate(35 1455.85)"/>
+    <path id="패스_92" data-name="패스 92" class="cls-2" d="M939.3,3.958V0h5.971Z" transform="translate(-892.559 1455.85)"/>
+  </g>
+</svg>

@@ -1,8 +1,14 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+h1, h2, h3, h4, h5, h6, p, a, table, li { font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif'; }
+
 html , body { top : 0; left : 0; width : 100%; height : 100%; margin : 0; padding : 0; }
 
 /* footer */
 footer {
 	color: white;
+	font-size: 0.9rem;
+	font-weight: 300;
 }
 footer a {
 	color: white;
@@ -18,17 +24,22 @@ footer .container {
     border: 1px solid white;
 	width: 120px;
 	margin-bottom: 20px;
+	background-image: url('../img/SYYFESTA_LOGO.svg');
+	background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .footer-icon-wrapper {
 	display: inline-block;
-	padding-right: 15px;
+	padding-right: 12px;
+    padding-top: 5px;
 }
 .footer-icon {
 	width: 40px;
 	padding-bottom: 40px;
 	position: relative;
 	display: inline-block;
-    box-shadow: 0 0 0 1px white inset;
+    box-shadow: 0 0 0 2px white inset;
     margin: 5px auto;
     background-size: contain;
     background-repeat: no-repeat;
@@ -42,36 +53,51 @@ footer .container {
     left: 10px;
     margin-top: -12px;
 }
+#lion-icon {
+	background-image: url('../img/footer/likelion_logo.svg');
+	background-size: 65%;
+}
+#awoolim-icon {
+	background-image: url('../img/footer/awoolim_logo.svg');
+	background-size: 65%;
+}
+.fa-facebook-f {
+	left: 12px!important;
+}
 
 /* 체육대회 푸터 */
 #compet-footer {
-	color: black;
+	/* color: black; */
+	background-color: #a6bfd2;
 }
-#compet-footer a {
+/* #compet-footer a {
 	color: black;
 }
 #compet-footer a:hover {
 	color: black;
+}
+#compet-footer .homelogo{
+	border: 1px solid black;
 }
 #compet-footer .footer-icon {
 	width: 40px;
 	padding-bottom: 40px;
 	position: relative;
 	display: inline-block;
-    box-shadow: 0 0 0 1px black inset;
+    box-shadow: 0 0 0 2px black inset;
     margin: 5px auto;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 	border-radius: 100%;
 	font-size: 1.5rem;
-}
+} */
 
 /* scroll top btn */
 #topBtn {
 	opacity: 0;
     position: fixed;
-    bottom: 20px;
+    bottom: 85px;
     right: 20px;
     z-index: 99;
     border: 2px solid white;
@@ -92,4 +118,12 @@ footer .container {
     -webkit-transition-duration: 0.3s;
     width: 50px;
     height: 50px;
+
+    background-color : rgba(0,0,0,0.8);
+}
+.comp-topBtn {
+	/* background-image: url('../img/up_black.svg')!important; */
+	/* color: black!important; */
+	/* border: 2px solid black!important; */
+	background-color: rgb(1, 70, 87, 0.9)!important;
 }

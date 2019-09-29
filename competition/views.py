@@ -1,7 +1,5 @@
 from django.shortcuts import render
-from common.models import Booth
-from common.models import Foodtruck
-from common.models import Matchschedule
+from common.models import Booth, Foodtruck, Matchschedule, Major
 from common import utils
 
 from django.db import connection
@@ -40,3 +38,7 @@ def notice(req):
 
 def seatmap(req):
     return render (req, 'competition/seatmap.html')
+    
+def major_data(req):
+    major_data = Major.objects.all()
+    return render (req, 'competition/test.html', {'major':major_data})

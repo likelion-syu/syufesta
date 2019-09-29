@@ -13,9 +13,14 @@
 
 {% block contents %}
 {% include './navbar.html' %}
-<div class="competition">
+<div class="competition container">
 	{% block competition-content %}
 
 	{% endblock %}
 </div>
+{% endblock %}
+
+{% block endbody %}
+	{% block competition-endbody %}
+	{% endblock %}
 {% endblock %}

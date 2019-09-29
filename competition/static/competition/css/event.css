@@ -13,7 +13,9 @@ body{
     min-height : 100%;
     overflow-y: scroll;
 }
-
+.event-container {
+	padding-bottom: 50px;
+}
 .event-container .title-img .title-image{
     width: 60%;
     margin-left: 20%;
