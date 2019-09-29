@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-
+    'allauth.socialaccount.providers.kakao',
 
 ]
 
@@ -160,8 +160,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 ACCOUNT_LOGOUT_ON_GET = 'True'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/festival'
+ACCOUNT_LOGOUT_REDIRECT_URL = '/festival'
 
 # production : 1
 # dev : 2
-SITE_ID = 2
+SITE_ID = 1
