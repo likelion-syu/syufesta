@@ -22,11 +22,11 @@
 }
 /* 로고 */
 .title-logo {
-	background-image: url('../img/cheer/cheerlogo.svg');
+	background-image: url('../img/cheer/cheer_logo3.svg');
 	padding-bottom: 160px;
     background-position: center;
 	background-repeat: no-repeat;
-	width: 100%;
+	width: 60%;
 	margin-top: 20px;
 	z-index: 1;
 }
@@ -54,6 +54,6 @@
 
 
 /* title */
-.custom-title {
+/* .custom-title {
 	background-color: #282828;
-}
+} */

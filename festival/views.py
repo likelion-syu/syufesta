@@ -23,6 +23,11 @@ def festmap (req):
 def stamp (req):
 	return render(req, 'festival/stamp.html')
 
+# 투표
+def talent_select(req):
+	contestparticipant=Contestparticipant.objects.all().order_by('cont_participant_order')
+	return render(req, 'festival/talent.html', {'cp':contestparticipant})
+
 # 투표 결과 나타내는 함수
 def talent (req):
 	with connection.cursor() as cursor:
@@ -41,11 +46,6 @@ def cheer(req):
 
 def popup1(req):
 	return render(req, 'festival/foodtruck1.html')
-
-def talent_select(req):
-	contestparticipant=Contestparticipant.objects.all()
-	
-	return render(req, 'festival/talent.html', {'cp':contestparticipant})
 
 def signin(req) :
 	return render(req , 'festival/auth/signin.html')
