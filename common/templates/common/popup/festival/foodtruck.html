@@ -17,19 +17,24 @@
 		{% endif %}
 	</div>
 	<!-- 이미지 -->
-	{% if food.truck_img is not None %}
+	{% if food.truck_img_url is not None %}
 	<img class="popup-foodtruck-img" src="{{food.truck_img_url}}">
 	{% else %}
 
 	{% endif %}
 
-	<div class="popup-content-wrapper">
+	<div class="popup-content-wrapper mb-5">
 		<div class="popup-content-box">
 		<h2>메뉴</h2>	
 		{% if menus is not None %}
+		<table class="menu-table">
 			{% for menu in menus %}
-			<p class="popup-foodtruck-menuname">{{menu.menu_name}} - {{menu.menu_price}}</p>
+			<tr>
+				<th>{{menu.menu_name}}</th>
+				<td>{{menu.menu_price}}</td>
+			</tr>
 			{% endfor %}
+		</table>	
 		{% endif %}
 		</div>
 	</div>
