@@ -1,0 +1,46 @@
+
+
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta aframe-injected="" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no,user-scalable=no,minimal-ui,viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <title>삼육대학교 축제&체육대회</title>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+  
+    <!-- import events.js script -->
+    <script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/events.js"></script>
+    
+    <!-- <script>ARjs.Context.baseURL = '../../three.js/'</script> -->
+    <link rel="stylesheet" href="{% static 'festival/css/stamp.visit.css' %}">
+
+</head>
+<body >
+    <a-scene light="defaultLightsEnabled: false" embedded="" arjs="trackingMethod: best;" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+        <a-assets>
+            <a-asset-item id="stamp" src="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fstamp_carimbo_scene.gltf?v=1569239074447" crossOrigin="anonymous"></a-asset-item>
+            <a-asset-item id="stamp2" src="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2FStampMAT.gltf?v=1569271225214"></a-asset-item>
+        </a-assets>
+        <a-light id="outer" intensity="2" type="ambient"></a-light>
+        <!-- Create a anchor to attach your augmented reality -->
+        <a-anchor hit-testing-enabled="true" material="" arjs-anchor="" arjs-hit-testing="">
+            <!-- Add your augmented reality here -->
+            <a-entity id="stamp_elm" scale="1 1 1" position=".3 .5 -.5" gltf-model="#stamp2">
+            <a-animation begin="star" property="position" to=".3 .9 -.5" dur="700" easing="linear" ></a-animation>
+            </a-entity>
+        </a-anchor>
+        <a-entity position="0 1 0" light="type: ambient; color: #FFF"></a-entity>
+        <a-entity light="type: directional; color: #FFF; intensity: 1.5" position="-1 3 1"></a-entity>
+        <!-- Define a static camera -->
+        <a-camera-static material="" camera="">
+    </a-scene>  
+    <div class="festival-stamp-visit-container">
+        <div class="home">
+            <a href="{% url 'fest_home' %}">돌아가기</a>
+        </div>
+    </div> 
+</body>
+</html>

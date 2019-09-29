@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.db import connection, transaction
-from common.models import Booth, Boothstamp, Contestparticipant
+from common.models import Booth, Boothstamp, Contestparticipant, AuthUser, Contestvote
 from common import utils
 from django.http import JsonResponse
 
@@ -21,13 +21,46 @@ def festmap (req):
 	return render(req, 'festival/festmap.html')
 
 def stamp (req):
-	return render(req, 'festival/stamp.html')
+	with connection.cursor() as cursor:
+		cursor.execute("SELECT * from BoothStamp")
+	expanded_rows = []
+	expanded_rows = utils.query_expand(rows , cursor)
+
+	return render(req, 'festival/stamp.html',{
+		'data' : expanded_rows
+	})
+
+def stamp_data (req):
+    with connection.cursor() as cursor:
+        cursor.execute("select * from BoothStamp;")
+        rows = cursor.fetchall()
+    
+    expanded_rows = []
+    expanded_rows = utils.query_expand(rows , cursor)
+    
+    result_list = {'result': 1, 'data': expanded_rows}
+    return JsonResponse(result_list, json_dumps_params={'ensure_ascii': False})
+
+
+
+def stamp_visit(req):
+	return render(req , 'festival/stamp.visit.html')
+
 
 # 투표
 def talent_select(req):
+	cp_vote = Contestvote.objects.all()
 	contestparticipant=Contestparticipant.objects.all().order_by('cont_participant_order')
-	return render(req, 'festival/talent.html', {'cp':contestparticipant})
 
+	return render(req, 'festival/talent.html', {'cp':contestparticipant}, {'cp_vote':cp_vote})
+# def vote(req, pk):
+# 	cp = get_object_or_404(Contestvote, pk = pk)
+# 	if cp.cp_id.filter(username=request.user.username).exists():
+# 		cp.cp_id.remove(request.user)
+# 	else:
+# 		cp.cp_id.add(request.user)
+# 	cp.save()
+# 	return redirect('festival/talent_contest.html')
 # 투표 결과 나타내는 함수
 def talent (req):
 	with connection.cursor() as cursor:
@@ -55,3 +88,4 @@ def signup(req) :
 
 def signout(req) : 
 	print("signout")
+
