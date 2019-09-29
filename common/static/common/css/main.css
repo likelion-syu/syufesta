@@ -64,12 +64,14 @@
 	background-image: url('../img/mamamoo.png');
 	position: relative;
 	background-size: 125%;
-    background-position-x: 40%;
+	background-position-x: 40%;
+	font-family: 'Black Han Sans', sans-serif!important;
 }
 .go-competition {
 	background-image: url('../img/comp-bg.png');
 	position: relative;
 	background-size: cover;
+	font-family: 'HSBombaram'!important;
 }
 .go-fest-bg {
 	background-color: blueviolet;

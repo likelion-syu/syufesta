@@ -49,19 +49,19 @@
 .competition-container .timetable-list-content .timetable-list .major .major1 .major-name{
     display:inline-block;
     vertical-align:middle;
-    color: #365E77;
+    color: #014657;
 }
 
 .competition-container .timetable-list-content .timetable-list .major .major2 .major-name{
     display:inline-block;
     vertical-align:middle;
-    color: #365E77;
+    color: #014657;
 }
 .competition-container .timetable-list-content .timetable-list .major1{
     display:inline;
     vertical-align:middle;
     width: 45%;
-    float: left;
+	float: left;
 }
 
 .competition-container .timetable-list-content .timetable-list .major2{
@@ -85,7 +85,8 @@
 .competition-container .timetable-list-content .timetable-list .game-info .game-time{
     color:#365E77;
     font-size: 1.15em;
-    display: inline-block;
+	display: inline-block;
+	font-size: 1rem;
 }
 
 .competition-container .timetable-list-content .timetable-list .game-info .game-place{

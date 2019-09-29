@@ -66,29 +66,6 @@
 	margin: 0;
 }
 .booth1{
-<<<<<<< HEAD
-    top: 223px;
-    left: 170px;
-    vertical-align: middle;
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
-    border-width: 10px;
-    border-color: rgb(45, 75, 241);
-    background-color: rgba(0,0,0,0);
-    
-}
-.booth2{
-    top: 183px;
-    left: 210px;
-    vertical-align: middle;
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
-    border-width: 10px;
-    border-color: rgb(45, 75, 241);
-    background-color: rgba(0,0,0,0);
-=======
     top: 4px;
     left: -18px;
     height: 100px;
@@ -100,43 +77,8 @@
     height: 100px;
     width: 250px;
     border-width: 2px;
->>>>>>> fest
 }
 .booth3{
-<<<<<<< HEAD
-    top: 248px;
-    left: 205px;
-    vertical-align: middle;
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
-    border-width: 10px;
-    border-color: rgb(45, 75, 241);
-    background-color: rgba(0,0,0,0);
-}
-.booth4{
-    top: 389px;
-    left: 149px;
-    vertical-align: middle;
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
-    border-width: 10px;
-    border-color: rgb(45, 75, 241);
-    background-color: rgba(0,0,0,0);
-
-}
-.booth5{
-    right: 286px;
-    top: 349px;
-    vertical-align: middle;
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
-    border-width: 10px;
-    border-color: rgb(45, 75, 241);
-    background-color: rgba(0,0,0,0);
-=======
     top: 123px;
     left: -107px;
     height: 100px;
@@ -153,33 +95,8 @@
     top: 124px;
     height: 100px;
     width: 100px;
->>>>>>> fest
 }
 .booth6{
-<<<<<<< HEAD
-    right: 360px;
-    top: 455px;
-    vertical-align: middle;
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
-    border-width: 10px;
-    border-color: rgb(45, 75, 241);
-    background-color: rgba(0,0,0,0);
-
-}
-.booth7{
-    top: 614px;
-    right: 200px;
-    vertical-align: middle;
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
-    border-width: 10px;
-    border-color: rgb(45, 75, 241);
-    background-color: rgba(0,0,0,0);
-
-=======
     right: 837px;
     top: 238px;
     height: 100px;
@@ -190,7 +107,6 @@
     left: 242px;
     height: 100px;
     width: 270px;
->>>>>>> fest
 }
 .booth8{
     top: 563px;
@@ -198,48 +114,6 @@
     vertical-align: middle;
     height: 100px;
     width: 100px;
-<<<<<<< HEAD
-    border-radius: 100%;
-    border-width: 10px;
-    border-color: rgb(45, 75, 241);
-    background-color: rgba(0,0,0,0);
-
-}
-.booth9{
-
-    top: 610px;
-    right: 524px;
-    vertical-align: middle;
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
-    border-width: 10px;
-    border-color: rgb(45, 75, 241);
-    background-color: rgba(0,0,0,0);
-}
-.booth10{
-    top: 32px;
-    left: 709px;
-    vertical-align: middle;
-    height: 120px;
-    width: 120px;
-    border-radius: 100%;
-    border-width: 10px;
-    border-color: rgb(45, 75, 241);
-    background-color: rgba(0,0,0,0);
-}
-.booth11{
-
-    top: 426px;
-    left: 426px;
-    vertical-align: middle;
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
-    border-width: 10px;
-    border-color: rgb(45, 75, 241);
-    background-color: rgba(0,0,0,0);
-=======
 }
 .booth9{
     top: 250px;
@@ -264,66 +138,9 @@
     left: -846px;
     height: 100px;
     width: 100px;
->>>>>>> fest
 }
 
 .truck1{
-<<<<<<< HEAD
-    top: 475px;
-    left: 481px;
-    vertical-align: middle;
-    height: 70px;
-    width: 70px;
-    border-radius: 100%;
-    border-width: 10px;
-    border-color: purple;
-    background-color: rgba(0,0,0,0);
-}
-.truck2{
-    top: 455px;
-    left: 476px;
-    vertical-align: middle;
-    height: 70px;
-    width: 70px;
-    border-radius: 100%;
-    border-width: 10px;
-    border-color: purple;
-    background-color: rgba(0,0,0,0);
-}
-.truck3{
-    top: 442px;
-    left: 470px;
-    vertical-align: middle;
-    height: 70px;
-    width: 70px;
-    border-radius: 100%;
-    border-width: 10px;
-    border-color: purple;
-    background-color: rgba(0,0,0,0);
-
-}
-.truck4{
-    top: 477px;
-    left: 185px;
-    vertical-align: middle;
-    height: 70px;
-    width: 70px;
-    border-radius: 100%;
-    border-width: 10px;
-    border-color: purple;
-    background-color: rgba(0,0,0,0);
-}
-.truck5{
-    top: 372px;
-    left: 103px;
-    vertical-align: middle;
-    height: 70px;
-    width: 70px;
-    border-radius: 100%;
-    border-width: 10px;
-    border-color: purple;
-    background-color: rgba(0,0,0,0);
-=======
     top: 278px;
     left: 577px;
     height: 80px;
@@ -353,78 +170,14 @@
     left: 241px;
     height: 80px;
     width: 80px;
->>>>>>> fest
 }
 .truck6{
-<<<<<<< HEAD
-    top: 360px;
-    left: 99px;
-    vertical-align: middle;
-    height: 70px;
-    width: 70px;
-    border-radius: 100%;
-    border-width: 10px;
-    border-color: purple;
-    background-color: rgba(0,0,0,0);
-=======
     top: 278px;
     left: 73px;
     height: 80px;
     width: 80px;
->>>>>>> fest
 }
 .truck7{
-<<<<<<< HEAD
-    vertical-align: middle;
-    top: 349px;
-    height: 70px;
-    left: 99px;
-    width: 70px;
-    border-radius: 100%;
-    border-width: 10px;
-    border-color: purple;
-    background-color: rgba(0,0,0,0);
-}
-.truck8{
-    vertical-align: middle;
-    top: 337px;
-    left: 95px;
-    height: 70px;
-    width: 70px;
-    border-radius: 100%;
-    border-width: 10px;
-    border-color: purple;
-    background-color: rgba(0,0,0,0);
-}
-.truck9{
-    vertical-align: middle;
-    height: 70px;
-    width: 70px;
-    border-radius: 100%;
-    border-width: 10px;
-    border-color: purple;
-    background-color: rgba(0,0,0,0);
-    top: 320px;
-    left: 88px;
-}
-.truck10{
-    vertical-align: middle;
-    height: 70px;
-    width: 70px;
-    border-radius: 100%;
-    border-width: 10px;
-    border-color: purple;
-    background-color: rgba(0,0,0,0);
-    top: 418px;
-    left: 17px;
-}
-
-.container.festival{
-	overflow-y: hidden;
-	height: 100%;
-	padding: 0px;
-}
-=======
     top: 278px;
     height: 80px;
     left: 246px;
@@ -448,4 +201,3 @@
     top: 116px;
     left: -6px;
 }
->>>>>>> fest

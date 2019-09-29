@@ -1,4 +1,33 @@
 {% extends 'base.html' %}
+{% block head %}
+{% endblock %}
+<script>
+// $(function(){
+//     $.ajax({
+//         url: "http://127.0.0.1:8000/competition/data",
+//         dataType:"json",
+//         success:function(data) {
+//             if(data.length>0) {
+//                 var tb = $("<table/>");
+//                 for(var i in data){
+//                     var $cv_id = data[i].cv_id;
+//                     var $cp_id = data[i].cp_id;
+//                     var $create_dt = data[i].create_dt;
+
+//                     var row = $("<tr/>").append(
+//                         $("<td/>").text($cv_id),
+//                         $("<td/>").text($cp_id),
+//                         $("<td/>").load($creat_dt),
+//                     );
+
+//                     tb.append(row);
+//                 }
+//                 $(".wrap").append(tb);
+//             }
+//         }
+//     });
+// });
+</script>
 {% block contents %}
 {% for data in major %}
 <div class = "container">
@@ -13,6 +42,80 @@
             {{ data.major_id }}
         </div>
     </div>
+
 </div>
+
+
 {% endfor %}
+<div class="wrap" style="margin: auto;height : 7%;padding: 7%;border: 2vw solid;"></div>
+<script>
+
+$(function(){
+    $.ajax({
+        url: "http://127.0.0.1:8000/competition/data",
+        dataType:"json",
+        success:function(data) {
+            if(data.data.length > 0){
+                var tb = $("<table/>");
+                for(var i in data.data){
+                    var $cv_id = data.data[i].cv_id;
+                    var $cp_id = data.data[i].cp_id;
+                    var $create_dt = data.data[i].create_dt;
+
+                    var row =$("<tr/>").append(
+                        $("<td/>").text($cv_id),
+                        $("<td/>").text($cp_id),
+                        $("<td/>").text($create_dt),
+                    );
+                    tb.append(row);
+                }
+                $(".wrap").append(tb);
+            }
+        }
+    });
+});
+
+// $(function(){
+//     $.ajax({
+//         url: "http://127.0.0.1:8000/competition/data",
+//         dataType:"json",
+//         success:function(data){
+//             data.data.text()
+//             }
+//         }
+//     });
+// });
+
+$(function(){
+    $.ajax({
+        url:"http://127.0.0.1:8000/competition/data",
+        dataType:"json",
+        success : function(data){
+            console.log(data);
+        }
+    });
+});
+
+
+
+// $.ajax({
+//     url : "http://127.0.0.1:8000/competition/data",
+//     method : "GET",
+//     success : function(data){
+//         $(".row")
+//         .load(function(index, item){
+//             data(index, item);
+//         });
+//     }
+//     });
+
+$.ajax({
+    url : "/competition/data",
+    method : "GET",
+    success : function(data){
+        data.data.map(function(index , item ){
+                console.log(index , item); });
+    }
+    });
+</script>
 {% endblock %}
