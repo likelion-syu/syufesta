@@ -1,4 +1,3 @@
-
 .popup-foodtruck-wrapper{
     height:100%;
     overflow:scroll !important;
@@ -68,4 +67,21 @@
     padding-bottom: 1rem;
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+/* menu table */
+.menu-table {
+	width: 80%;
+	margin: 20px auto;
+	color: white;
+	text-align: center;
+}
+.menu-table th {
+	width: 65%;
+	font-size: 1.1rem;
+	padding: 10px 0px;
+	text-align: center;
+}
+.menu-table tr {
+	border-bottom: 1px solid gray;
 }
