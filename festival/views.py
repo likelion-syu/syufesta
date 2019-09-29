@@ -23,6 +23,9 @@ def festmap (req):
 def stamp (req):
 	return render(req, 'festival/stamp.html')
 
+def stamp_visit(req):
+	return render(req , 'festival/stamp.visit.html')
+
 # 투표
 def talent_select(req):
 	contestparticipant=Contestparticipant.objects.all().order_by('cont_participant_order')
@@ -55,3 +58,4 @@ def signup(req) :
 
 def signout(req) : 
 	print("signout")
+
