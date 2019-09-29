@@ -61,6 +61,7 @@ body{
 }
 
 .foodtruck-container_popup .header_popup .logo_popup .logo_food_popup{
+	
 	margin:0px auto;
 	border: 4px dotted #245770;
 	border-radius: 7px;
@@ -73,3 +74,6 @@ body{
 	padding:5px;
 }
 
+.foodtruck-container_popup .header_popup .logo_food_popup{
+	text-shadow: 1px 1px 2px #fff !important;
+}
