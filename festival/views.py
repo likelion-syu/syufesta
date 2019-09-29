@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.db import connection, transaction
-from common.models import Booth, Boothstamp
+from common.models import Booth, Boothstamp, Contestparticipant
 from common import utils
 from django.http import JsonResponse
 
@@ -44,6 +44,7 @@ def popup1(req):
 
 def talent_select(req):
 	contestparticipant=Contestparticipant.objects.all()
+	
 	return render(req, 'festival/talent.html', {'cp':contestparticipant})
 
 def signin(req) :
