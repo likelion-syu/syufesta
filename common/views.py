@@ -75,3 +75,9 @@ def talent_result(request):
 	# 	'status' : 1,
 	# 	'data' : expanded_rows,
 	# }, safe=False)
+def  festmap_popup1(req):
+    return render(req, 'common/popup/festival/festmap_popup1.html')
+
+def  festmap_popup2(req):
+    return render(req, 'common/popup/festival/festmap_popup2.html')
+

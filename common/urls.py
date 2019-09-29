@@ -10,4 +10,6 @@ urlpatterns = [
     path('fest/contest/result', views.talent_result, name="result"),
     path('popup/fest/foodtruck/<int:pk>', views.fest_foodtruck, name = "popup_fest_foodtruck"),
     path('popup/fest/booth/<int:pk>', views.fest_booth , name = "popup_fest_booth"),
+    path('popup/fest/festmap_popup1', views.festmap_popup1, name = "festmap_popup1"),
+    path('popup/fest/festmap_popup2', views.festmap_popup2, name = "festmap_popup2"),
 ]
