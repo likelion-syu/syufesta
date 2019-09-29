@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.db import connection
 from django.http import JsonResponse
-from .models import Major, Foodtruck, FoodtruckMenu, Booth
+from .models import Major, Foodtruck, FoodtruckMenu, Booth, Contestparticipant
 from . import utils
 
 
