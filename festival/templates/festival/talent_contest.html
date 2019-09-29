@@ -1,6 +1,10 @@
 {% extends './festival_base.html' %} {% load staticfiles %}
 {% block festival-head %}
 <link rel="stylesheet" href="{% static 'festival/css/talent_contest.css' %}">
+<scripts>
+	
+	
+</scripts>
 {% endblock %}
 {% block festival-content %}
 <!-- head에 link넣으니까 적용이 안됨 -->
@@ -9,26 +13,27 @@
 		<!-- <div class="talent-nav">nav</div> -->
 		<div class="row title m-0">
 			<div class="col-md-12 title-container">
-				<h1>장기자랑 참가자를 투표하세요!</h1>
+				<h1>너의 청춘을 보여줘</h1>
 				<h2>장기자랑 참가자를 투표하세요!</h2>
-				<p class='title-desc'>기간 : 19.10.8 AM 09:00 ~ PM 06:00 종료까지</p>
+				<p class='title-desc'>투표기간 : 10월 7일 PM 04:00 ~ PM 06:30 종료까지</p>
 			</div>
 		<!-- <div class='row m-0'> -->
 			<!-- <div class="col-md-9"> -->
 			<div class="container">	
 				<div class="row result">
+					
 					<!-- 순위 리스트 -->
 					<div class="col-md-12 result">
 						<div class="row">
-							<div class="col-5">
-								<img src="{% static 'festival/img/KakaoTalk-8.jpeg' %}">
+							<div class="col-5" data-name-idx="0">
+								<!-- <img data-name-idx="0" src=""> -->
 							</div>
 							<div class="col-1">
 								<div class="con-num">1</div>
 							</div>
 							<div class="col-6">
-								<h2>주우송</h2>
-								<p>84.31% 1,181,432 득표</p>
+								<h2 data-name-idx="0"></h2>
+								<p data-name-idx="0"></p>
 							</div>
 						</div>
 					</div>
@@ -37,15 +42,15 @@
 					<!-- 순위 리스트 -->
 					<div class="col-md-12 result">
 						<div class="row">
-							<div class="col-5">
-								<img class="image-2" src="{% static 'festival/img/KakaoTalk-7.jpeg' %}">
+							<div class="col-5" data-name-idx="1">
+								<!-- <img data-name-idx="1" src=""> -->
 							</div>
 							<div class="col-1">
 								<div class="con-num">2</div>
 							</div>
 							<div class="col-6">
-								<h2>강상목</h2>
-								<p>2.3% 111,321 득표</p>
+								<h2 data-name-idx="1"></h2>
+								<p data-name-idx="1"></p>
 							</div>
 						</div>
 					</div>
@@ -54,15 +59,15 @@
 					<!-- 순위 리스트 -->
 					<div class="col-md-12 result">
 						<div class="row">
-							<div class="col-5">
-								<img class="image-3" src="{% static 'festival/img/KakaoTalk-3.jpeg' %}" >
+							<div class="col-5" data-name-idx="2">
+								<!-- <img data-name-idx="2" src="" > -->
 							</div>
 							<div class="col-1">
 								<div class="con-num">3</div>
 							</div>
 							<div class="col-6">
-								<h2>박체홍</h2>
-								<p>1.2% 50,123 득표</p>
+								<h2 data-name-idx="2"></h2>
+								<p data-name-idx="2"></p>
 							</div>
 						</div>
 					</div>
@@ -71,15 +76,15 @@
 					<!-- 순위 리스트 -->
 					<div class="col-md-12 result">
 						<div class="row">
-							<div class="col-5">
-								<img src="{% static 'festival/img/KakaoTalk-2.jpeg' %}">
+							<div class="col-5" data-name-idx="3">
+								<!-- <img data-name-idx="3" src=""> -->
 							</div>
 							<div class="col-1">
 								<div class="con-num">4</div>
 							</div>
 							<div class="col-6">
-								<h2>안소영</h2>
-								<p>0.3% 12,000 득표</p>
+								<h2 data-name-idx="3"></h2>
+								<p data-name-idx="3" ></p>
 							</div>
 						</div>
 					</div>
@@ -88,15 +93,15 @@
 					<!-- 순위 리스트 -->
 					<div class="col-md-12 result">
 						<div class="row">
-							<div class="col-5">
-								<img class = "image-9" src="{% static 'festival/img/KakaoTalk-9.jpeg' %}">
+							<div class="col-5" data-name-idx="4">
+								<!-- <img data-name-idx="4" src=""> -->
 							</div>
 							<div class="col-1">
 								<div class="con-num">5</div>
 							</div>
 							<div class="col-6">
-								<h2>오하은</h2>
-								<p>0.1% 7,123 득표</p>
+								<h2 data-name-idx="4"></h2>
+								<p data-name-idx="4"></p>
 							</div>
 						</div>
 					</div>
@@ -105,15 +110,15 @@
 					<!-- 순위 리스트 -->
 					<div class="col-md-12 result">
 						<div class="row">
-							<div class="col-5">
-								<img src="{% static 'festival/img/KakaoTalk-5.jpeg' %}">
+							<div class="col-5" data-name-idx="5">
+								<!-- <img data-name-idx="5" src=""> -->
 							</div>
 							<div class="col-1">
 								<div class="con-num">6</div>
 							</div>
 							<div class="col-6">
-								<h2>이경민</h2>
-								<p>0.06% 3,123 득표</p>
+								<h2 data-name-idx="5"></h2>
+								<p data-name-idx="5"></p>
 							</div>
 						</div>
 					</div>
@@ -122,16 +127,16 @@
 					<!-- 순위 리스트 -->
 					<div class="col-md-12 result">
 						<div class="row">
-							<div class="col-5">
-								<img src="{% static 'festival/img/KakaoTalk-6.jpeg' %}">
+							<div class="col-5" data-name-idx="6">
+								<!-- <img data-name-idx="6" src=""> -->
 							</div>
 							<div class="col-1">
 								<div class="con-num">7</div>
 							</div>
 							<div class="col-6">
-								<h2>함민아</h2>
-								<p>0.03% 1,123득표</p>
-							</div>>
+								<h2 data-name-idx="6"></h2>
+								<p data-name-idx="6"></p>
+							</div>
 						</div>
 					</div>
 				<!-- </div>		 -->
@@ -139,15 +144,15 @@
 					<!-- 순위 리스트 -->
 					<div class="col-md-12 result">
 						<div class="row">
-							<div class="col-5">
-								<img src="{% static 'festival/img/KakaoTalk-4.jpeg' %}">
+							<div class="col-5" data-name-idx="7">
+								<!-- <img data-name-idx="7"src=""> -->
 							</div>
 							<div class="col-1">
 								<div class="con-num">8</div>
 							</div>
 							<div class="col-6">
-								<h2>곽다빈</h2>
-								<p>0.01% 532 득표</p>
+								<h2 data-name-idx="7"></h2>
+								<p data-name-idx="7"></p>
 							</div>
 						</div>
 					</div>
@@ -156,15 +161,49 @@
 					<!-- 순위 리스트 -->
 					<div class="col-md-12 result">
 						<div class="row">
-							<div class="col-5">
-								<img src="{% static 'festival/img/KakaoTalk-1.jpeg' %}">
+							<div class="col-5" data-name-idx="8">
+								<!-- <img data-name-idx="8"src=""> -->
 							</div>
 							<div class="col-1">
-								<div class="con-num">8</div>
+								<div class="con-num">9</div>
 							</div>
 							<div class="col-6">
-								<h2>차원빈</h2>
-								<p>0.005% 18득표</p>
+								<h2 data-name-idx="8"></h2>
+								<p data-name-idx="8"></p>
+							</div>
+						</div>
+					</div>
+					<!--</div> -->
+					<!-- <div class="row result"> -->
+					<!-- 순위 리스트 -->
+					<div class="col-md-12 result">
+						<div class="row">
+							<div class="col-5" data-name-idx="9">
+								<!-- <img data-name-idx="9"src=""> -->
+							</div>
+							<div class="col-1">
+								<div class="con-num">10</div>
+							</div>
+							<div class="col-6">
+								<h2 data-name-idx="9"></h2>
+								<p data-name-idx="9"></p>
+							</div>
+						</div>
+					</div>
+					<!--</div> -->
+					<!-- <div class="row result"> -->
+					<!-- 순위 리스트 -->
+					<div class="col-md-12 result">
+						<div class="row">
+							<div class="col-5" data-name-idx="10">
+								<!-- <img data-name-idx="10"src=""> -->
+							</div>
+							<div class="col-1">
+								<div class="con-num">11</div>
+							</div>
+							<div class="col-6">
+								<h2 data-name-idx="10"></h2>
+								<p data-name-idx="10"></p>
 							</div>
 						</div>
 					</div>
@@ -180,12 +219,74 @@
 		</div>
 		</div>
 	</div>
+<div class="wrap"></div>
+<script>
+$(function(){
+    $.ajax({
+        url:"http://127.0.0.1:8000/api/fest/contest/result",
+        dataType:"json",
+        success : function(data){
+			var vote = data.data
+
+			var byCount = vote.slice(0);
+			byCount.sort(function(a,b) {
+				return b.count - a.count;
+			});
+			console.log('by Count');
+			console.log(byCount);
+		}
+    });
+});
+
+// $(function(){
+// 	$.ajax({
+// 		url:"http://127.0.0.1:8000/api/fest/contest/result",
+// 		dataType:"json",
+// 		success : function(data){
+// 			if(data.data.length > 0){
+// 				var tb = $("<table/>");
+// 				for(var i in data.data){
+// 					var $cp_id = data.data[i].cp_id;
+// 					var $count = data.data[i].count;
+// 					var $cont_participant_nm = data.data[i].cont_participant_nm;
+// 					var $cont_participant_img_url = data.data[i].cont_participant_img_url;
+
+// 					var row = $("<tr/>").append(
+// 						$("<td/>").text($cp_id),
+// 						$("<td/>").text($count),
+// 						$("<td/>").text($cont_participant_nm),
+// 						$("<td/>").text($cont_participant_img_url),
+// 					);
+// 					tb.append(row);
+// 				}
+// 				$(".wrap").append(tb);
+// 			}
+// 		}
+// 	})
+// })
+
+$(function(){
+	$.ajax({
+		url: "http://127.0.0.1:8000/api/fest/contest/result",
+		dataType:"json",
+		success:function(data) {
+			var vote = data.data
 	
+
+			var byCount = vote.slice(0);
+			byCount.sort(function(a,b) {
+				return b.count - a.count;
+			});
+			for(var i in byCount){
+				// console.log(data.data[i].cont_participant_nm);
+				var vote_num = Number(byCount[i].rate);
+				var vote_num = vote_num.toFixed(2);
+				$('h2[data-name-idx="'+i+'"]').text(byCount[i].cont_participant_nm);
+				$('p[data-name-idx="'+i+'"]').text(vote_num +"%" +" / " + byCount[i].count+" 득표")
+				$('.col-5[data-name-idx="'+i+'"]').css("background-image", "url("+byCount[i].cont_participant_img_url+")");
+			}
+		}
+	});
+});
+</script>
 {% endblock %}
-<!-- 투표결과 -->
-<!-- {% for datas in data %}
- <h1>{{datas.name}}</h1>
- <p>{{datas.CT}}</p>
-	{% endfor %}
-
-

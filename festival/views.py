@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.db import connection, transaction
-from common.models import Booth, Boothstamp
+from common.models import Booth, Boothstamp, Contestparticipant
 from common import utils
 from django.http import JsonResponse
 
@@ -23,6 +23,14 @@ def festmap (req):
 def stamp (req):
 	return render(req, 'festival/stamp.html')
 
+def stamp_visit(req):
+	return render(req , 'festival/stamp.visit.html')
+
+# 투표
+def talent_select(req):
+	contestparticipant=Contestparticipant.objects.all().order_by('cont_participant_order')
+	return render(req, 'festival/talent.html', {'cp':contestparticipant})
+
 # 투표 결과 나타내는 함수
 def talent (req):
 	with connection.cursor() as cursor:
@@ -42,10 +50,6 @@ def cheer(req):
 def popup1(req):
 	return render(req, 'festival/foodtruck1.html')
 
-def talent_select(req):
-	
-	return render(req, 'festival/talent.html')
-
 def signin(req) :
 	return render(req , 'festival/auth/signin.html')
 
@@ -54,3 +58,4 @@ def signup(req) :
 
 def signout(req) : 
 	print("signout")
+

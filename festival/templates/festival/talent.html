@@ -11,121 +11,31 @@
             <h1>너의 청춘을 보여줘</h1>
             <h2 class = title2>장기자랑 참가자를 투표하세요!</h2>
             <p class = date1>
-                기간 : 10월 9일 PM 04:00 ~ PM 06:30 종료까지
+            	투표기간 : 10월 7일 PM 04:00 ~ PM 06:30 종료까지
             </p>
         </div>
     </div>
     <div class = "container talent">
     <div class ="row talent">
 
-        <div class = "col-6 talent-item mb-3" onclick="__talent.select(this)">
-            <div class="img-circle" id="participant-img1">
-                <div class="talent-cover"></div>
-                <div class= "thumbs">
-                    <i class="far fa-thumbs-up" aria-hidden="true"></i>
-                </div>
-            </div>
-            <p class = "title2">주우송</p>
-            <p class = "desc">우주 대스타입니다.</p>
-        </div>
-
-        <div class = "col-6 talent-item mb-3" onclick="__talent.select(this)">
-            <div class="img-circle" id="participant-img2">
-                <div class="talent-cover"></div>
-                <div class= "thumbs">
-                    <i class="far fa-thumbs-up" aria-hidden="true"></i>
-                </div>
-            </div>
-            <p class = title2>강상목</p>
-            <p class = "desc">우주 대스타의 <br/>오른팔입니다</p>
-        </div>
- 
-
-        <div class = "col-6 talent-item mb-3" onclick="__talent.select(this)">
-            <div class="img-circle" id="participant-img3">
-                <div class="talent-cover"></div>
-                <div class= "thumbs">
-                    <i class="far fa-thumbs-up" aria-hidden="true"></i>
-                </div>
-            </div>
-            <p class = title2>박체홍</p>
-            <p class = "desc">아디과 슈퍼스타입니다</p>
-        </div>
-
-        <div class = "col-6 talent-item mb-3" onclick="__talent.select(this)">
-            <div class="img-circle" id="participant-img4">
-                <div class="talent-cover"></div>
-                <div class= "thumbs">
-                    <i class="far fa-thumbs-up" aria-hidden="true"></i>
-                </div>
-            </div>
-            <p class = title2>안소영</p>
-            <p class = "desc">코리안 가오나시입니다</p>
-        </div>
-
-
-        <div class = "col-6 talent-item mb-3" onclick="__talent.select(this)">
-            <div class="img-circle" id="participant-img5">
-                <div class="talent-cover"></div>
-                <div class= "thumbs">
-                    <i class="far fa-thumbs-up" aria-hidden="true"></i>
-                </div>
-            </div>
-            <p class = title2>오하은</p>
-            <p class = "desc">아디과 슈퍼스타입니다</p>
-        </div>
-
-        <div class = "col-6 talent-item mb-3" onclick="__talent.select(this)">
-            <div class="img-circle" id="participant-img6">
-                <div class="talent-cover"></div>
-                <div class= "thumbs">
-                    <i class="far fa-thumbs-up" aria-hidden="true"></i>
-                </div>
-            </div>
-            <p class = title2>이경민</p>
-            <p class = "desc">왼쪽</p>
-        </div>
-  
-
-        <div class = "col-6 talent-item mb-3" onclick="__talent.select(this)">
-            <div class="img-circle" id="participant-img7">
-                <div class="talent-cover"></div>
-                <div class= "thumbs">
-                    <i class="far fa-thumbs-up" aria-hidden="true"></i>
-                </div>
-            </div>
-            <p class = title2>함민아</p>
-            <p class = "desc">오른쪽</p>
-        </div>
-
-        <div class = "col-6 talent-item mb-3" onclick="__talent.select(this)">
-            <div class="img-circle" id="participant-img8">
-                <div class="talent-cover"></div>
-                <div class= "thumbs">
-                    <i class="far fa-thumbs-up" aria-hidden="true"></i>
-                </div>
-            </div>
-            <p class = title2>곽다빈</p>
-            <p class = "desc">컴과 슈퍼스타입니다</p>
-        </div>
-
-        <div class = "col-6 talent-item mb-3" onclick="__talent.select(this)">
-            <div class="img-circle" id="participant-img9">
-                <div class="talent-cover"></div>
-                <div class= "thumbs">
-                    <i class="far fa-thumbs-up" aria-hidden="true"></i>
-                </div>
-            </div>
-            <p class = title2>차원빈</p>
-            <p class = "desc">지구인싸입니다</p>
-        </div>
-    </div>
+		{% for C_P in cp %}
+			<div class = "col-6 talent-item mb-3" onclick="__talent.select(this)">
+				<div class="img-circle" style="background-image: url('{{ C_P.cont_participant_img_url }}');">
+					<div class="talent-cover"></div>
+					<div class= "thumbs">
+						<i class="far fa-thumbs-up" aria-hidden="true"></i>
+					</div>
+				</div>
+				<p class = "title2">{{ C_P.cont_participant_nm }}</p>
+				<p class = "desc">{{ C_P.cont_participant_des }}</p>
+			</div>
+		{% endfor %}
     <div class="row">
         <div class="col-12 talent">
             <a href="{% url 'talent' %}""><button class = 'fest-btn' value = 'submit'>투표하기</button></a>
         </div>
     </div>
-<!-- </div> -->
+</div>
 
 {% endblock %}
 

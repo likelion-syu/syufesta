@@ -50,7 +50,7 @@ h3 {
     text-align: center;
     border-top: 2px solid #850ce0;
     border-bottom: 2px solid #850ce0;
-    margin: 20px 2px 0px;
+    margin: 2px 0px;
     padding: 10px 0;
 }
 
@@ -61,12 +61,15 @@ h3 {
     margin: 0 2px;
     padding: 10px 0;
 }
+.no-border {
+	border-color: transparent!important;
+}
 .title-container h1 {
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 	font-weight: 700;
-	margin-top: .5rem;
-	-webkit-text-stroke: 3px rgba(234, 111, 158, 0.2);
-    text-shadow: 0 0 5px #ea6f9e;
+	margin-top: 0.5rem;
+	text-shadow: 0 0 7px rgb(170, 0, 255);
+	-webkit-text-stroke: 2px rgba(170, 0, 255, 0.4);
 }
 .title-container h2 {
 	font-size: 1rem;
@@ -75,9 +78,30 @@ h3 {
     color: white;
     margin-top: 10px;
 	margin-bottom: 5px;
-	font-weight: 200;
-    text-shadow: 0 0 5px rgb(186, 255, 240);
-    -webkit-text-stroke: 2px rgba(186,255,240,0.2);
+	font-weight: 600;
+    text-shadow: 0 0 5px rgb(161, 239, 228);
+	-webkit-text-stroke: 2px rgb(158, 237, 227, 0.4);
+	line-height: 25px;
+}
+.title-container p {
+	font-size : 0.9rem;
+    text-align : center;
+    font-weight: 500;
+	color :rgba(224,210,255);
+	margin-bottom: 0.5rem;
+	text-shadow: 0 0 7px rgb(169, 87, 211);
+    -webkit-text-stroke: 2px rgba(169, 87, 211, 0.4);
+}
+
+/* text */
+.neonp {
+	font-size : 0.9rem;
+    text-align : center;
+    font-weight: 300;
+	color :rgba(224,210,255,0.7);
+	margin-bottom: 0.5rem;
+	text-shadow: 0 0 7px rgb(169, 87, 211);
+    -webkit-text-stroke: 2px rgba(169, 87, 211, 0.3);
 }
 
 /* festival common btn */
@@ -96,9 +120,11 @@ h3 {
 	font-size: 1.8rem;
 	z-index: 1;
 	color: white;
+	text-shadow: 0 0 7px rgb(170, 0, 255);
+    -webkit-text-stroke: 2px rgba(170, 0, 255, 0.3);
 }
 .fest-btn:active , .fest-btn:hover{
-    background-color:rgba(234, 111, 158, .8);
+    background-color:rgba(161, 239, 227, .8);
     transition:.2s;
     color:#fff;
 }

@@ -1,0 +1,42 @@
+{% extends '../popup.base.html' %}
+{% load staticfiles %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'common/css/popup/festival/fest.popup.core.css' %}">
+<link rel="stylesheet" href="{% static 'common/css/popup/festival/foodtruck.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class='popup-wrapper'>
+	<div class="title-container mb-4">
+		<h1>{{ food.truck_name }}</h1>
+		{% if food.truck_desc is not None %}
+			<h2>{{food.truck_desc}}</h2>
+			<p>카드/현금 결제</p>
+		{% endif %}
+	</div>
+	<!-- 이미지 -->
+	{% if food.truck_img_url is not None %}
+	<img class="popup-foodtruck-img" src="{{food.truck_img_url}}">
+	{% else %}
+
+	{% endif %}
+
+	<div class="popup-content-wrapper mb-5">
+		<div class="popup-content-box">
+		<h2>메뉴</h2>	
+		{% if menus is not None %}
+		<table class="menu-table">
+			{% for menu in menus %}
+			<tr>
+				<th>{{menu.menu_name}}</th>
+				<td>{{menu.menu_price}}</td>
+			</tr>
+			{% endfor %}
+		</table>	
+		{% endif %}
+		</div>
+	</div>
+</div>
+{% endblock %}

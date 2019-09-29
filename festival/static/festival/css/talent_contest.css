@@ -86,8 +86,14 @@ p { font-family : 'Nanum Square'; }
     font-size: 24px;
     font-weight: 700;
 }
+.result .row {
+	height: 100%;
+}
 .result .row .col-5 {
-    max-height: 100px;
+	max-height: 100px;
+	background-size: cover;
+    background-position: center;
+    -webkit-mask-image: linear-gradient(to right, black 60%,transparent);
 }
 .result .row .col-1 {
     padding: 0;

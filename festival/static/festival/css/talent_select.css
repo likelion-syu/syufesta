@@ -1,6 +1,6 @@
 .title2 {
 	font-size: 17px;
-    font-family: 'NanumSquareExtraBold' !important;
+    /* font-family: 'NanumSquareExtraBold' !important; */
     text-align: center;
     color: rgb(186, 255, 240);
     margin-top: 10px;
@@ -12,16 +12,17 @@
 .desc{
     margin : 0;
     font-size : .8em;
-    font-family : 'NanumSquare' !important;
+    /* font-family : 'NanumSquare' !important; */
     font-weight: 700;
 }
 
 .date1 {
     font-size : 15px;
-    font-family : 'NanumSquareR' !important;
+    /* font-family : 'NanumSquareR' !important; */
     text-align : center;
-    font-weight: 200;
-    color :rgba(224,210,255,0.7);
+    font-weight: 300;
+	color :rgba(224,210,255,0.7);
+	margin-bottom: 0.5rem;
 }
 
 .row.talent {
@@ -101,7 +102,8 @@
 	box-shadow: 0 0 0 5px #5400fe inset;
     transition:.2s;
     background-size: cover;
-    background-repeat:no-repeat;
+	background-repeat:no-repeat;
+	background-position: center;
 }
 
 /* active */
