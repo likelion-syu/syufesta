@@ -15,4 +15,34 @@
     </div>
 </div>
 {% endfor %}
+
+<div class="wrap"></div>
+<script>
+$(function(){
+    $.ajax({
+        url: "http://127.0.0.1:8000/api/fest/contest/result",
+        dataType:"json",
+        success:function(data) {
+            if(data.data.length > 0){
+                var tb = $("<table/>");
+                for(var i in data.data){
+                    var $cv_id = data.data[i].cv_id;
+                    var $count = data.data[i].count;
+                    var $cont_participant_nm = data.data[i].cont_participant_nm;
+                    var $cont_participant_img_url = data.data[i].cont_participant_img_url;
+
+                    var row =$("<tr/>").append(
+                        $("<td/>").text($cv_id),
+                        $("<td/>").text($count),
+                        $("<td/>").text($cont_participant_nm),
+                        $("<td/>").attr("src", $cont_participant_img_url),
+                    );
+                    tb.append(row);
+                }
+                $(".wrap").append(tb);
+            }
+        }
+    });
+});
+</script>
 {% endblock %}
