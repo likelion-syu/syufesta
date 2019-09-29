@@ -30,17 +30,49 @@ body{
 
 .event-container .goods-memo-wrap{
     background-image: url(../img/goodsmemo.svg);
-    width: 350px;
-    height: 160px;
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
+    width: 90%;
+    height: 41vw;
     margin: 0 auto;
-    padding: 16px;
-    margin-top: 40px;
+    margin-top : 5%;
+    position: relative;
 }
 
 .event-container .goods-memo-wrap .goods-memo-content{
     margin: 0 auto;
+    text-align : center ;
+    margin-top: 4vw;
+    font-family: 'HSBombaram';
+    color: #b83244;
+}
+
+.goods-img1 {
+    border: 0.5vw solid #365E77;
+    border-radius: 50%;
+    margin: auto;
+    width: 18vw;
+    display: block;
+    height: 18vw;
+    background-image: url(../img/chicken.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+.goods-num {
+    position: absolute;
+    background-color : #365E77;
+    width : 2vw;
+    height : 2vw;
+    
+}
+
+.goods-name {
+    text-align : center;
+    font-size : 2.8vw;
+    color : #365E77;
+    font-weight : 700;
 }
 
 .event-container .goods-memo-wrap .goods-memo-content p{

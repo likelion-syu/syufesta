@@ -53,5 +53,5 @@ def data_test(req):
 
     return JsonResponse({
         'server' : 1,
-        'data' : [expanded_rows],
+        'data' : expanded_rows,
     }, safe=False)

@@ -25,7 +25,12 @@ class Account(models.Model):
 
 class Booth(models.Model):
     booth_id = models.AutoField(primary_key=True)
-    booth_name = models.CharField(max_length=100, blank=True, null=True)
+    booth_nm = models.CharField(max_length=1000, blank=True, null=True)
+    booth_desc = models.CharField(max_length=1000, blank=True, null=True)
+    booth_event = models.CharField(max_length=1000, blank=True, null=True)
+    booth_img = models.CharField(max_length=1000, blank=True, null=True)
+    booth_product = models.CharField(max_length=1000, blank=True, null=True)
+    booth_manager = models.CharField(max_length=500, blank=True, null=True)
 
     class Meta:
         managed = False
@@ -93,6 +98,7 @@ class Major(models.Model):
     major_name = models.CharField(max_length=45, blank=True, null=True)
     major_logo_url = models.CharField(max_length=500, blank=True, null=True)
     major_desc = models.CharField(max_length=1000, blank=True, null=True)
+    major_circ_img = models.CharField(max_length=1000, blank=True, null=True)
 
     class Meta:
         managed = False
