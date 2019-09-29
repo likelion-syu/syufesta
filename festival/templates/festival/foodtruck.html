@@ -51,16 +51,14 @@
 	
 		if(isFoodTruck){
 			__likelion.popup.open(
-				'/api/popup/comp/foodtruck/' + __num
+				'/api/popup/fest/foodtruck/' + __num
 			)
 		}
 		else{
-			// path('popup/comp/foodtruck/<int:pk>' , views.comp_foodtruck , name="popup_comp_foodtruck"),
 			__likelion.popup.open(
-				'/api/popup/comp/booth/' + __num
+				'/api/popup/fest/booth/' + __num
 			)
 		}
-
 	}
 </script>
 {% endblock %}

@@ -102,7 +102,8 @@
 	box-shadow: 0 0 0 5px #5400fe inset;
     transition:.2s;
     background-size: cover;
-    background-repeat:no-repeat;
+	background-repeat:no-repeat;
+	background-position: center;
 }
 
 /* active */

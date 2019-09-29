@@ -1,4 +1,6 @@
-
+.likelion-popup-container {
+	background-color: rgb(19, 7, 43)!important;
+}
 .popup-booth-wrapper{
     height:100%;
     overflow:scroll !important;
