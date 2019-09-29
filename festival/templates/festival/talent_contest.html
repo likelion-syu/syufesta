@@ -221,55 +221,36 @@
 	</div>
 <div class="wrap"></div>
 <script>
-$(function(){
-    $.ajax({
-        url:"http://127.0.0.1:8000/api/fest/contest/result",
-        dataType:"json",
-        success : function(data){
-			var vote = data.data
-
-			var byCount = vote.slice(0);
-			byCount.sort(function(a,b) {
-				return b.count - a.count;
-			});
-			console.log('by Count');
-			console.log(byCount);
-		}
-    });
-});
-
 // $(function(){
-// 	$.ajax({
-// 		url:"http://127.0.0.1:8000/api/fest/contest/result",
-// 		dataType:"json",
-// 		success : function(data){
-// 			if(data.data.length > 0){
-// 				var tb = $("<table/>");
-// 				for(var i in data.data){
-// 					var $cp_id = data.data[i].cp_id;
-// 					var $count = data.data[i].count;
-// 					var $cont_participant_nm = data.data[i].cont_participant_nm;
-// 					var $cont_participant_img_url = data.data[i].cont_participant_img_url;
+//     $.ajax({
+//         url:"http://127.0.0.1:8000/api/fest/contest/result",
+//         dataType:"json",
+//         success : function(data){
+// 			var vote = data.data
 
-// 					var row = $("<tr/>").append(
-// 						$("<td/>").text($cp_id),
-// 						$("<td/>").text($count),
-// 						$("<td/>").text($cont_participant_nm),
-// 						$("<td/>").text($cont_participant_img_url),
-// 					);
-// 					tb.append(row);
-// 				}
-// 				$(".wrap").append(tb);
-// 			}
+// 			var byCount = vote.slice(0);
+// 			byCount.sort(function(a,b) {
+// 				return b.count - a.count;
+// 			});
+// 			console.log('by Count');
+// 			console.log(byCount);
 // 		}
-// 	})
-// })
+//     });
+// });
+
+
 
 $(function(){
 	$.ajax({
 		url: "http://127.0.0.1:8000/api/fest/contest/result",
 		dataType:"json",
 		success:function(data) {
+		
+				setTimeout(function(){
+					console.log("hi");
+				}, 2000); 
+   			
+			   
 			var vote = data.data
 	
 
@@ -289,5 +270,15 @@ $(function(){
 		}
 	});
 });
+// function on_loaded( oj ){
+// 	value = decodeURIComponent( oj.responseText);
+// }
+// function timerProc(){
+// 	sendRequest(on_loaded,'','GET','talent_contest.html',true,true);
+// 	document.getElementByld('ttt').innerHTML=value;
+// 	setTimeout("timerProc();", 1000);
+// 	console.log('hi');
+// }
+
 </script>
 {% endblock %}
