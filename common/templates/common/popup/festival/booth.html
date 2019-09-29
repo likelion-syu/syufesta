@@ -9,14 +9,18 @@
 {% block content %}
 <div class='popup-wrapper'>
     <div class="title-container mb-4">
+		<h2>부스</h2>
 		<h1>{{ booth.booth_nm }}</h1>
+		{% if booth.booth_manager is not None %}
+			<p>{{ booth.booth_manager }}</p>
+		{% endif %}
 	</div>
 	<!-- 이미지 -->
     {% if booth.booth_img is not None %}
     	<img src="{{ booth.booth_img }}">
 	{% else %}
 	{% endif %}
-	<div class="popup-content-wrapper">
+	<div class="popup-content-wrapper mb-10">
 		<div class="popup-content-box">
 			<h2>부스 설명</h2>
 			<p>{{ booth.booth_desc}}</p>
@@ -31,12 +35,6 @@
 		<div class="popup-content-box">
 			<h2>판매 상품</h2>
 			<p>{{ booth.booth_product }}</p>
-		</div>
-		{% endif %}
-		{% if booth.booth_manager is not None %}
-		<div class="popup-content-box">
-			<h2>부스 관리자</h2>
-			<p>{{ booth.booth_manager }}</p>
 		</div>
 		{% endif %}
 		<div class="fest-btn">부스 스탬프 찍기</div>

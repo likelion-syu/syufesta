@@ -35,7 +35,9 @@
 	/* padding: 20px; */
 	text-align: center;
 }
-
+.popup-content-wrapper.mb-10 {
+	margin-bottom: 75px!important;
+}
 /* .popup-content-box {
 	border: 2px solid #aa05ff;
     padding: 30px 10px 20px;
@@ -58,7 +60,10 @@
 }
 .popup-content-box p {
 	color: white;
-	margin: 1rem;
+    margin: 1rem 1.5rem;
+    line-height: 160%;
+    font-weight: 300;
+    font-size: 0.9rem;
 }
 
 /* img */
@@ -70,7 +75,7 @@
     display: block;
     text-align: center;
     width: 90%;
-    /* height: 90%; */
-    margin: 20px auto;
+	margin: 20px auto;
+	-webkit-mask-image: radial-gradient( black 50%,transparent );
 }
 
