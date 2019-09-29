@@ -1,18 +1,18 @@
-/* @font-face { 
+@font-face { 
     font-family: 'HSBombaram'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff'); font-weight: normal; font-style: normal;
     }
 
 body{
     font-family: 'HSBombaram';
-} */
+}
 
-/* .competition{
+.competition{
     background-image: url(../img/compete_background.svg);
     background-size: cover;
     width : 100%;
-    height : 100%;
+    min-height : 100%;
     overflow-y: scroll;
-} */
+}
 .event-container {
 	padding-bottom: 50px;
 }
@@ -25,24 +25,27 @@ body{
 .event-container .main-img .main-image {
     width: 55%;
     margin-left: 22.5%;
+    position: relative;
 }
 
-.memo-img {
-	background-image: url('../img/goodsmemo.svg');
+.event-container .goods-memo-wrap{
+    background-image: url(../img/goodsmemo.svg);
+    width: 350px;
+    height: 160px;
+    background-size: contain;
     background-repeat: no-repeat;
-    width: 90%;
-    margin: 5%;
-    padding-bottom: 41%;
-    background-position: center;
-    background-size: cover;
+    margin: 0 auto;
+    padding: 16px;
+    margin-top: 40px;
 }
 
-/* .event-container .goods-memo-img .goods-memo-image {
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 5%;
-} */
+.event-container .goods-memo-wrap .goods-memo-content{
+    margin: 0 auto;
+}
 
+.event-container .goods-memo-wrap .goods-memo-content p{
+    color:#a9373b;
+}
 .event-container .join {
     width: 33%;
     height: 32px;
@@ -57,6 +60,7 @@ body{
     color: white;
     text-align: center;
     font-size: 1.3em;
+    margin-top: 20px;
 }
 
 .event-container .joinbox1{
@@ -72,11 +76,21 @@ body{
     padding: 7px;
 }
 
-.event-container .notice-memo-img {
-    margin-top: 35px;
+.event-container .notice-memo-wrap{
+    background-image: url(../img/noticememo.svg);
+    width: 350px;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    padding: 8px;
+    margin-top: 40px;
 }
 
-.event-container .notice-memo-img .notice-memo-image{
-    width: 90%;
-    margin-left: 5%;
+.event-container .notice-memo-wrap .notice-memo-content{
+    margin: 0 auto;
+}
+
+.event-container .notice-memo-wrap .notice-memo-content p{
+    color:#a9373b;
 }
