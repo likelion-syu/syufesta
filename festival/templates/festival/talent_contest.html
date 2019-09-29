@@ -33,7 +33,7 @@
 							</div>
 							<div class="col-6">
 								<h2 data-name-idx="0"></h2>
-								<p data-name-idx="0"></p>
+								<p class = "rate" data-name-idx="0">1212%</p>
 							</div>
 						</div>
 					</div>
@@ -50,7 +50,7 @@
 							</div>
 							<div class="col-6">
 								<h2 data-name-idx="1"></h2>
-								<p data-name-idx="1"></p>
+								<p class = "rate" data-name-idx="1"></p>
 							</div>
 						</div>
 					</div>
@@ -221,72 +221,51 @@
 	</div>
 <div class="wrap"></div>
 <script>
-$(function(){
-    $.ajax({
-        url:"http://127.0.0.1:8000/api/fest/contest/result",
-        dataType:"json",
-        success : function(data){
-			var vote = data.data
-
-			var byCount = vote.slice(0);
-			byCount.sort(function(a,b) {
-				return b.count - a.count;
-			});
-			console.log('by Count');
-			console.log(byCount);
-		}
-    });
-});
-
 // $(function(){
-// 	$.ajax({
-// 		url:"http://127.0.0.1:8000/api/fest/contest/result",
-// 		dataType:"json",
-// 		success : function(data){
-// 			if(data.data.length > 0){
-// 				var tb = $("<table/>");
-// 				for(var i in data.data){
-// 					var $cp_id = data.data[i].cp_id;
-// 					var $count = data.data[i].count;
-// 					var $cont_participant_nm = data.data[i].cont_participant_nm;
-// 					var $cont_participant_img_url = data.data[i].cont_participant_img_url;
+//     $.ajax({
+//         url:"http://127.0.0.1:8000/api/fest/contest/result",
+//         dataType:"json",
+//         success : function(data){
+// 			var vote = data.data
 
-// 					var row = $("<tr/>").append(
-// 						$("<td/>").text($cp_id),
-// 						$("<td/>").text($count),
-// 						$("<td/>").text($cont_participant_nm),
-// 						$("<td/>").text($cont_participant_img_url),
-// 					);
-// 					tb.append(row);
-// 				}
-// 				$(".wrap").append(tb);
-// 			}
+// 			var byCount = vote.slice(0);
+// 			byCount.sort(function(a,b) {
+// 				return b.count - a.count;
+// 			});
+// 			console.log('by Count');
+// 			console.log(byCount);
 // 		}
-// 	})
-// })
+//     });
+// });
 
-$(function(){
-	$.ajax({
-		url: "http://127.0.0.1:8000/api/fest/contest/result",
-		dataType:"json",
-		success:function(data) {
-			var vote = data.data
-	
 
-			var byCount = vote.slice(0);
-			byCount.sort(function(a,b) {
-				return b.count - a.count;
-			});
-			for(var i in byCount){
-				// console.log(data.data[i].cont_participant_nm);
-				var vote_num = Number(byCount[i].rate);
-				var vote_num = vote_num.toFixed(2);
-				$('h2[data-name-idx="'+i+'"]').text(byCount[i].cont_participant_nm);
-				$('p[data-name-idx="'+i+'"]').text(vote_num +"%" +" / " + byCount[i].count+" 득표")
-				$('.col-5[data-name-idx="'+i+'"]').css("background-image", "url("+byCount[i].cont_participant_img_url+")");
+setInterval(function(){
+	$(function(){
+		$.ajax({
+			url: "http://127.0.0.1:8000/api/fest/contest/result",
+			dataType:"json",
+			success:function(data) {
+				var vote = data.data
+		
+
+				var byCount = vote.slice(0);
+				byCount.sort(function(a,b) {
+					return b.count - a.count;
+				});
+				for(var i in byCount){
+					// console.log(data.data[i].cont_participant_nm);
+					var vote_num = Number(byCount[i].rate);
+					var vote_num = vote_num.toFixed(2);
+					$('h2[data-name-idx="'+i+'"]').text(byCount[i].cont_participant_nm);
+					$('p[data-name-idx="'+i+'"]').text(vote_num +"%" +" / " + byCount[i].count+" 득표")
+					$('img[data-name-idx="'+i+'"]').attr("src", byCount[i].cont_participant_img_url);
+
+
+				}
 			}
-		}
+		});
 	});
-});
+}, 5000);
+
 </script>
 {% endblock %}
