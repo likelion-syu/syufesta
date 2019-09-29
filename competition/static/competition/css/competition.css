@@ -4,6 +4,9 @@
 h1,h2,h3,h4,h5,h6,p,li,a,div,table {
     font-family: 'HSBombaram';
 }
+body {
+	background-color: #a6bfd2;
+}
 .container.competition {
 	background-image: url('../img/compete_background.svg');
 	background-size: contain;

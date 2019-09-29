@@ -18,14 +18,16 @@ body{
 }
 .event-container .title-img .title-image{
     width: 60%;
-    margin-left: 20%;
+	/* margin-left: 20%; */
+	margin: auto;
     margin-top: 45px;
 }
 
 .event-container .main-img .main-image {
     width: 55%;
-    margin-left: 22.5%;
-    position: relative;
+    /* margin-left: 22.5%; */
+	position: relative;
+	margin: 20px auto;
 }
 
 .event-container .goods-memo-wrap{
@@ -37,7 +39,8 @@ body{
     height: 41vw;
     margin: 0 auto;
     margin-top : 5%;
-    position: relative;
+	position: relative;
+	padding: 0px 10px;
 }
 
 .event-container .goods-memo-wrap .goods-memo-content{
@@ -45,32 +48,53 @@ body{
     text-align : center ;
     margin-top: 4vw;
     font-family: 'HSBombaram';
-    color: #b83244;
+	color: #b83244;
+	font-size: 5vw;
 }
 
-.goods-img1 {
-    border: 0.5vw solid #365E77;
+/* 경품 */
+.goods-img {
+    border: 0.5vw solid #583164;
     border-radius: 50%;
     margin: auto;
     width: 18vw;
     display: block;
     height: 18vw;
-    background-image: url(../img/chicken.svg);
-    background-size: cover;
-    background-position: center;
+    background-size: 146%;
+	background-position: center;
+	margin-bottom: 10%;
+	position: relative;
 }
-
+#goods1 {
+	background-image: url(../img/event/아이패드.svg);
+}
+#goods2 {
+	background-image: url(../img/event/애플와치2.svg);
+}
+#goods3 {
+	background-image: url(../img/event/에어팟2.svg);
+	background-position-y: 27%;
+}
+#goods4 {
+	background-image: url(../img/event/버즈.svg);
+	background-position-y: 27%;
+}
 .goods-num {
-    position: absolute;
-    background-color : #365E77;
-    width : 2vw;
-    height : 2vw;
-    
+	position: absolute;
+    background-color: #583164;
+    /* width: 2vw; */
+    /* height: 2vw; */
+    color: white;
+    font-size: 1.5vw;
+    padding: 2vw;
+	border-radius: 50px;
+	top: -5px;
+    left: 5px;
 }
 
 .goods-name {
     text-align : center;
-    font-size : 2.8vw;
+    font-size : 3vw;
     color : #365E77;
     font-weight : 700;
 }
@@ -110,19 +134,28 @@ body{
 
 .event-container .notice-memo-wrap{
     background-image: url(../img/noticememo.svg);
-    width: 350px;
-    height: 200px;
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
     margin: 0 auto;
-    padding: 8px;
-    margin-top: 40px;
+    padding: 18px 30px;
+    margin-top: 20px;
+    width: 100%;
+    height: 45vw;
 }
 
 .event-container .notice-memo-wrap .notice-memo-content{
-    margin: 0 auto;
+	margin: 0 auto;
+	color: #a9373b;
+	padding: 1vw;
 }
 
 .event-container .notice-memo-wrap .notice-memo-content p{
-    color:#a9373b;
+	color:#a9373b;
+	font-size: 4.5vw;
+    width: 100%;
+}
+
+.goods-memo-wrap .col-3 {
+	padding: 0;
 }

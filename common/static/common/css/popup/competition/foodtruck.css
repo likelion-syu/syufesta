@@ -50,3 +50,23 @@
 	padding:5px;
 }
 
+.pop-seatmap-wrapper {
+    color : rgb(36, 87, 112);
+    border : 18px;
+    border-style : double hidden;
+    position : absolute;
+    border : 4vw rgb(36, 87, 112);
+    border-style : solid hidden;
+	width : 100%;
+	min-height: 100%;
+	display: flex;
+}
+
+.double-border {
+    margin-top : 1%;
+    margin-bottom : 1%;
+    border : 2vw;
+	border-style : solid hidden;
+	min-height: 98%;
+	flex: 1;
+}
