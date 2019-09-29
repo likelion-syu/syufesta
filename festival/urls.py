@@ -8,6 +8,7 @@ urlpatterns = [
 	path('foodtruck', views.foodtruck, name='fest_foodtruck'),
 	path('festmap', views.festmap, name='festmap'),
 	path('stamp', views.stamp, name='stamp'),
+	path('stamp/visit',views.stamp_visit , name="stamp_visit"),
 	path('contest/talent', views.talent, name='talent'),
 	path('contest/cheer', views.cheer, name='cheer'),
 	path('foodtruck1',views.popup1, name='foodtruck1'),

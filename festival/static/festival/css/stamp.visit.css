@@ -1,0 +1,17 @@
+.festival-stamp-visit-container .home{
+    width: 100%;
+    height: fit-content;
+    color: #fff;
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.festival-stamp-visit-container .home a{
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 1.3em;
+}
