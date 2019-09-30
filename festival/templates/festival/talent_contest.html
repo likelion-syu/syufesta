@@ -9,266 +9,148 @@
 {% block festival-content %}
 <!-- head에 link넣으니까 적용이 안됨 -->
 
-	<div class="talent-container">
-		<!-- <div class="talent-nav">nav</div> -->
-		<div class="row title m-0">
-			<div class="col-md-12 title-container mb-20">
-				<h1>너의 청춘을 보여줘</h1>
-				<h2>- 실시간 순위 -</h2>
+<div class="talent-container">
+	<!-- <div class="talent-nav">nav</div> -->
+	<div class="row title m-0">
+		<div class="col-md-12 title-container mb-20">
+			<h1>너의 청춘을 보여줘</h1>
+			<h2>- 실시간 순위 -</h2>
+		</div>
+		<div class="container">	
+			<div class="row updated-time-info" onclick='__talent_contest.refresh()'>
+				<p>
+					<span class='redo'><i class="fas fa-redo"></i></span>
+					마지막 업데이트 : <span class='time'></span>
+				</p>
 			</div>
-		<!-- <div class='row m-0'> -->
-			<!-- <div class="col-md-9"> -->
-			<div class="container">	
-				<div class="row result">
-					
-					<!-- 순위 리스트 -->
-					<div class="col-md-12 result">
-						<div class="row">
-							<div class="col-5" data-name-idx="0">
-								<!-- <img data-name-idx="0" src=""> -->
-							</div>
-							<div class="col-1">
-								<div class="con-num">1</div>
-							</div>
-							<div class="col-6">
-								<h2 data-name-idx="0"></h2>
-								<p  data-name-idx="0"></p>
-							</div>
-						</div>
-					</div>
-				<!-- </div>		 -->
-				<!-- <div class="row result"> -->
-					<!-- 순위 리스트 -->
-					<div class="col-md-12 result">
-						<div class="row">
-							<div class="col-5" data-name-idx="1">
-								<!-- <img data-name-idx="1" src=""> -->
-							</div>
-							<div class="col-1">
-								<div class="con-num">2</div>
-							</div>
-							<div class="col-6">
-								<h2 data-name-idx="1"></h2>
-								<p  data-name-idx="1"></p>
-							</div>
-						</div>
-					</div>
-				<!-- </div>	 -->
-				<!-- <div class="row result"> -->
-					<!-- 순위 리스트 -->
-					<div class="col-md-12 result">
-						<div class="row">
-							<div class="col-5" data-name-idx="2">
-								<!-- <img data-name-idx="2" src="" > -->
-							</div>
-							<div class="col-1">
-								<div class="con-num">3</div>
-							</div>
-							<div class="col-6">
-								<h2 data-name-idx="2"></h2>
-								<p data-name-idx="2"></p>
-							</div>
-						</div>
-					</div>
-				<!-- </div>		 -->
-				<!-- <div class="row result"> -->
-					<!-- 순위 리스트 -->
-					<div class="col-md-12 result">
-						<div class="row">
-							<div class="col-5" data-name-idx="3">
-								<!-- <img data-name-idx="3" src=""> -->
-							</div>
-							<div class="col-1">
-								<div class="con-num">4</div>
-							</div>
-							<div class="col-6">
-								<h2 data-name-idx="3"></h2>
-								<p data-name-idx="3" ></p>
-							</div>
-						</div>
-					</div>
-				<!-- </div>	 -->
-				<!-- <div class="row result"> -->
-					<!-- 순위 리스트 -->
-					<div class="col-md-12 result">
-						<div class="row">
-							<div class="col-5" data-name-idx="4">
-								<!-- <img data-name-idx="4" src=""> -->
-							</div>
-							<div class="col-1">
-								<div class="con-num">5</div>
-							</div>
-							<div class="col-6">
-								<h2 data-name-idx="4"></h2>
-								<p data-name-idx="4"></p>
-							</div>
-						</div>
-					</div>
-				<!-- </div>		 -->
-				<!-- <div class="row result"> -->
-					<!-- 순위 리스트 -->
-					<div class="col-md-12 result">
-						<div class="row">
-							<div class="col-5" data-name-idx="5">
-								<!-- <img data-name-idx="5" src=""> -->
-							</div>
-							<div class="col-1">
-								<div class="con-num">6</div>
-							</div>
-							<div class="col-6">
-								<h2 data-name-idx="5"></h2>
-								<p data-name-idx="5"></p>
-							</div>
-						</div>
-					</div>
-				<!-- </div>	 -->
-				<!-- <div class="row result"> -->
-					<!-- 순위 리스트 -->
-					<div class="col-md-12 result">
-						<div class="row">
-							<div class="col-5" data-name-idx="6">
-								<!-- <img data-name-idx="6" src=""> -->
-							</div>
-							<div class="col-1">
-								<div class="con-num">7</div>
-							</div>
-							<div class="col-6">
-								<h2 data-name-idx="6"></h2>
-								<p data-name-idx="6"></p>
-							</div>
-						</div>
-					</div>
-				<!-- </div>		 -->
-				<!-- <div class="row result"> -->
-					<!-- 순위 리스트 -->
-					<div class="col-md-12 result">
-						<div class="row">
-							<div class="col-5" data-name-idx="7">
-								<!-- <img data-name-idx="7"src=""> -->
-							</div>
-							<div class="col-1">
-								<div class="con-num">8</div>
-							</div>
-							<div class="col-6">
-								<h2 data-name-idx="7"></h2>
-								<p data-name-idx="7"></p>
-							</div>
-						</div>
-					</div>
-					<!-- </div>		 -->
-					<!-- <div class="row result"> -->
-					<!-- 순위 리스트 -->
-					<div class="col-md-12 result">
-						<div class="row">
-							<div class="col-5" data-name-idx="8">
-								<!-- <img data-name-idx="8"src=""> -->
-							</div>
-							<div class="col-1">
-								<div class="con-num">9</div>
-							</div>
-							<div class="col-6">
-								<h2 data-name-idx="8"></h2>
-								<p data-name-idx="8"></p>
-							</div>
-						</div>
-					</div>
-					<!--</div> -->
-					<!-- <div class="row result"> -->
-					<!-- 순위 리스트 -->
-					<div class="col-md-12 result">
-						<div class="row">
-							<div class="col-5" data-name-idx="9">
-								<!-- <img data-name-idx="9"src=""> -->
-							</div>
-							<div class="col-1">
-								<div class="con-num">10</div>
-							</div>
-							<div class="col-6">
-								<h2 data-name-idx="9"></h2>
-								<p data-name-idx="9"></p>
-							</div>
-						</div>
-					</div>
-					<!--</div> -->
-					<!-- <div class="row result"> -->
-					<!-- 순위 리스트 -->
-					<div class="col-md-12 result">
-						<div class="row">
-							<div class="col-5" data-name-idx="10">
-								<!-- <img data-name-idx="10"src=""> -->
-							</div>
-							<div class="col-1">
-								<div class="con-num">11</div>
-							</div>
-							<div class="col-6">
-								<h2 data-name-idx="10"></h2>
-								<p data-name-idx="10"></p>
-							</div>
-						</div>
-					</div>
-					<!--</div> -->
-				</div>
-				<!-- </div> -->
-			<!-- </div> -->
+			<div class="row result result-list">
+				<!-- 순위 리스트 -->
+			</div>
 			<div class="row">
 				<div class="col-12 talent">
-					<a href="{% url 'talent_select' %}"><button class = 'fest-btn' value = 'submit'>재투표하기</button></a>
+					<!-- <a href="{% url 'talent_select' %}"> -->
+					<button button='button' class = 'fest-btn' onclick='__talent_contest.revote()' >재투표하기</button>
+					<!-- </a> -->
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="col-md-12 result mockup">
+		<div class="row">
+			<div class="participant_photo col-5" data-name-idx="0">
+				<!-- <img data-name-idx="0" src=""> -->
+			</div>
+			<div class="col-1">
+				<div class="con-num">1</div>
+			</div>
+			<div class="col-6">
+				<h2 data-name-idx="0"></h2>
+				<p  data-name-idx="0"></p>
+			</div>
 		</div>
 	</div>
+</div>
+
 <div class="wrap"></div>
 <script>
+var __talent_contest = {
+	revote : function(){
+		if(!eval('{{user.is_authenticated}}'.toLowerCase())){
+			alert('로그인이 필요합니다!\n메뉴의 간편 로그인을 해주세요!');
+			return;
+		}
+		else{
+			$.ajax({
+				url : '{% url "contest_revote" %}',
+				method : 'post'
+			})
+			.then(res=>{
+				if(res.status > 0){
+					location.href= "{% url 'talent_select' %}";
+				}
+				else{
+					alert(res.err_display_mesg);
+				}
+			})
+		}
+	},
+	rank : {
+		num : 1,
+		smallest_count : -1
+	},
+	load : function(){
+		console.log('loaded!');
+		return $.ajax({
+			url : '/api/fest/contest/result',
+			datatype : 'json'
+		});
+	},
+	bind : function(res){
+		let mockup = $('.result.mockup');
+		let container = $('.talent-container .result-list');
+		container.children().remove();
+		res.data.map((item , idx) =>{
+			// moment().startOf('hour').fromNow(); 
+
+			// 새로 받아온 시간 저장
+			__talent_contest.__interval.last_updated_time = new Date();
+			
+			let elem = mockup.clone();
+			elem.removeClass('mockup');
+			let cur_rate = Number(item.rate).toFixed(2);
+			elem.find('h2').text(item.cont_participant_nm);
+			elem.find('p').text(cur_rate + '% / 총 ' + item.count + " 득표");
+			elem.find('.participant_photo').css('background-image' , 'url("'+ item.cont_participant_img_url+'")');
+
+			let count = Number(item.count);
+			if(idx === 0){
+				__talent_contest.rank.num = 1;
+				__talent_contest.rank.smallest_count = count;
+			}
+			if(count < __talent_contest.rank.smallest_count){
+				__talent_contest.rank.num++;
+				__talent_contest.rank.smallest_count = count;
+			}
+			elem.find('.con-num').text(__talent_contest.rank.num);
+			container.append(elem);
+		});
+	},
+	init : function(){
+		__talent_contest.load()
+		.then(__talent_contest.bind);
+		__talent_contest.__interval.make();
+	},
+	__interval : {
+		obj : -1,
+		// 1분에 한번 새로고침
+		time : 60 * 1000,
+		last_updated_time : new Date(),
+		make : function(){
+			this.obj = setInterval(()=>{
+				__talent_contest.load()
+				.then(__talent_contest.bind);
+			} , this.time);
+		},
+		clear : function(){
+			clearInterval(this.obj);
+		}
+	},
+	refresh : function(){
+		__talent_contest.__interval.clear();
+		__talent_contest.init();
+	}
+};
+
 $(function(){
-		$.ajax({
-			url: "http://127.0.0.1:8000/api/fest/contest/result",
-			dataType:"json",
-			success:function(data) {
-				var vote = data.data
-				
-				var byCount = vote.slice(0);
-				byCount.sort(function(a,b) {
-					return b.count - a.count;
-				});
-				for(var i in byCount){
-					// console.log(data.data[i].cont_participant_nm);
-					var vote_num = Number(byCount[i].rate);
-					var vote_num = vote_num.toFixed(2);
-					$('h2[data-name-idx="'+i+'"]').text(byCount[i].cont_participant_nm);
-					$('p[data-name-idx="'+i+'"]').text(vote_num +"%" +" / " + byCount[i].count+" 득표")
-					// $('img[data-name-idx="'+i+'"]').attr("src", byCount[i].cont_participant_img_url);
-					$('.col-5[data-name-idx="'+i+'"]').css("background-image", "url("+byCount[i].cont_participant_img_url+")");
+	moment.locale('ko');
+	__talent_contest.init();
 
+	// 시간 새로고침
+	$('.updated-time-info .time').text(moment(__talent_contest.__interval.last_updated_time).fromNow());
+	setInterval(() => {
+		$('.updated-time-info .time').text(moment(__talent_contest.__interval.last_updated_time).fromNow());
+	}, 10 * 1000);
+});
 
-				}
-			}
-		});
-	});
-
-setInterval(function(){
-	$(function(){
-		$.ajax({
-			url: "http://127.0.0.1:8000/api/fest/contest/result",
-			dataType:"json",
-			success:function(data) {
-				var vote = data.data
-
-				var byCount = vote.slice(0);
-				byCount.sort(function(a,b) {
-					return b.count - a.count;
-				});
-				for(var i in byCount){
-					// console.log(data.data[i].cont_participant_nm);
-					var vote_num = Number(byCount[i].rate);
-					var vote_num = vote_num.toFixed(2);
-					$('h2[data-name-idx="'+i+'"]').text(byCount[i].cont_participant_nm);
-					$('p[data-name-idx="'+i+'"]').text(vote_num +"%" +" / " + byCount[i].count+" 득표")
-					$('.col-5[data-name-idx="'+i+'"]').css("background-image", "url("+byCount[i].cont_participant_img_url+")");
-				}
-			}
-		});
-	});
-}, 5000);
 </script>
 {% endblock %}

@@ -15,4 +15,5 @@ urlpatterns = [
 
     # API
     path('fest/contest/vote' , views.contest_vote , name="contest_vote"),
+    path('fest/contest/revote' , views.contest_revote , name="contest_revote"),
 ]

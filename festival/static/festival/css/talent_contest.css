@@ -122,3 +122,15 @@ p { font-family : 'Nanum Square'; }
 .mb-20 {
 	margin-bottom: 20px;
 }
+
+.talent-container .mockup{
+    display : none;
+}
+
+.talent-container .updated-time-info p{
+    margin: 0;
+    width: 100%;
+    font-size: .8em;
+    color: #ff1778;
+    text-align: right;
+}
