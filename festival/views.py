@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render , redirect
 from django.db import connection, transaction
 from common.models import Booth, Boothstamp, Contestparticipant, AuthUser, Contestvote
 from common import utils
@@ -42,25 +42,22 @@ def stamp_data (req):
     return JsonResponse(result_list, json_dumps_params={'ensure_ascii': False})
 
 
-
 def stamp_visit(req):
 	return render(req , 'festival/stamp.visit.html')
 
 
 # 투표
 def talent_select(req):
+	if req.user.is_authenticated :
+		cur_vote = Contestvote.objects.filter(cv_account_id=req.user.id)
+		if cur_vote :
+			return redirect('talent')
+
 	cp_vote = Contestvote.objects.all()
 	contestparticipant=Contestparticipant.objects.all().order_by('cont_participant_order')
 	
 	return render(req, 'festival/talent.html', {'cp':contestparticipant}, {'cp_vote':cp_vote})
-# def vote(req, pk):
-# 	cp = get_object_or_404(Contestvote, pk = pk)
-# 	if cp.cp_id.filter(username=request.user.username).exists():
-# 		cp.cp_id.remove(request.user)
-# 	else:
-# 		cp.cp_id.add(request.user)
-# 	cp.save()
-# 	return redirect('festival/talent_contest.html')
+
 # 투표 결과 나타내는 함수
 def talent (req):
 	with connection.cursor() as cursor:
