@@ -1,9 +1,23 @@
 {% extends '../popup.base.html' %}{% load staticfiles %}
 {% block head %}
+<link rel="stylesheet" href="{% static 'common/css/popup/festival/fest.popup.core.css' %}">
 <link rel="stylesheet" href="{% static 'common/css/popup/festival/festmap_popup2.css' %}">
 {% endblock %}
 {% block content %}
-<div class = "lib-post-wrapper">
-    <div class = "lib-post"></div>
-</div>
+<div class='popup-wrapper'>
+		<div class="title-container no-border mb-4 pl-3 pr-3">
+			<h1>2019 도서관 문화 축제</h1>
+			<h2>중앙도서관</h2>
+			<p>10.07(월) 09:00 ~ 17:00</p>
+		</div>
+	
+		<div class="popup-content-wrapper mb-5">
+			<div class="popup-content-box">
+			<div class = "lib-post-wrapper">
+				<div class = "lib-post"></div>
+			</div>
+			</div>
+		</div>
+	</div>
+
 {% endblock %}

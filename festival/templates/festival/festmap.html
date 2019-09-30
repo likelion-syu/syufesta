@@ -11,9 +11,11 @@
 	<div class="festmap-container">
 		<div class="festmap-wrapper">
 			<div class="map-info-wrapper">
+				<a href="{% url 'fest_home' %}#artist1">
 				<div id="z1" class="zone">
 					<p>Z1</p>
 				</div>
+				</a>
 				<div id="z2" class="zone" onclick="showPopup1();">
 					<p>Z2</p>
 					<p class="click z2" >포토 ZONE</p>
@@ -25,13 +27,13 @@
 				<a href="{% url 'fest_foodtruck' %}">
 				<div id="z4" class="zone">
 					<p>Z4</p>
-					<p class="click z4">푸드트럭 ZONE</p>
+					<p class="click z4">부스 ZONE</p>
 				</div>
 				</a>
 				<a href="{% url 'fest_foodtruck' %}">
 				<div id="z5" class="zone">
 					<p>Z5</p>
-					<p class="click z5">부스 ZONE</p>
+					<p class="click z5">푸드트럭 ZONE</p>
 				</div>
 				</a>
 				<!-- Map info -->

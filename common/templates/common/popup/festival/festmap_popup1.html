@@ -1,4 +1,39 @@
-{% extends '../popup.base.html' %}
+{% extends '../popup.base.html' %}{% load staticfiles %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'common/css/popup/festival/fest.popup.core.css' %}">
+<link rel="stylesheet" href="{% static 'common/css/popup/festival/festmap_popup1.css' %}">
+{% endblock %}
 {% block content %}
-<h1>Hello World!!</h1>
+<div class='popup-wrapper'>
+	<div class="title-container no-border mb-4 pl-3 pr-3">
+		<h1>MY YUOTH 사진전</h1>
+		<h2>도서관 앞 코르크 게시판</h2>
+		<p>10.07(월) 09:00 ~ 17:00</p>
+	</div>
+
+	<div class="popup-content-wrapper mb-5">
+		<div class="photo-img"></div>
+		<div class="popup-content-box">
+			<h2>참여방법</h2>	
+		</div>
+		<div class="title-container no-border pl-3 pr-3">
+			<h2>1. YOUTH(청춘)라는 주제에 걸맞는 사진을 찍고 글 / 제목을 붙여 게시판에 게시 </h2>
+			<h2 class="mb-4">2. 가장 많은 스티커를 받은 사진의 주인공에게 상품이 주어집니다.</h2>
+			<p>의상대여 + 폴라로이드 + 인생네컷 + 메모지</p>
+		</div>
+		<div class="popup-content-box">
+			<h2>의상목록</h2>
+			
+		</div>
+		<div class="title-container no-border pl-3 pr-3">
+			<p>텔레토비, 옛날교복, 해리포터 망토, 아이언맨, 캡틴아메리카 등</p>	
+		</div>
+		<div class="popup-content-box">
+			<h2>상품목록</h2>
+		</div>
+		<div class="title-container no-border pl-3 pr-3">
+			<p>신세계 백화점 상품권 50,000원 (3명) | 올리브영 상품권 10,000원 (3명) | 쥬씨 상품권 2,000원 (10명)</p>	
+		</div>
+	</div>
+</div>
 {% endblock %}
