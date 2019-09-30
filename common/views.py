@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from django.db import connection
 from django.http import JsonResponse
-from .models import Major, Foodtruck, FoodtruckMenu, Booth, Contestparticipant
+from .models import Major, Foodtruck, FoodtruckMenu, Booth, Contestparticipant , Contestvote
 from . import utils
+from django.views.decorators.csrf import csrf_exempt
 
 
 # from models import Booth , FoodTruck
@@ -81,3 +82,9 @@ def  festmap_popup1(req):
 def  festmap_popup2(req):
     return render(req, 'common/popup/festival/festmap_popup2.html')
 
+
+# ============= API
+@csrf_exempt
+def contest_vote(req):    
+    
+    return JsonResponse({} , json_dumps_params={'ensure_ascii': False})

@@ -51,7 +51,7 @@ def stamp_visit(req):
 def talent_select(req):
 	cp_vote = Contestvote.objects.all()
 	contestparticipant=Contestparticipant.objects.all().order_by('cont_participant_order')
-
+	
 	return render(req, 'festival/talent.html', {'cp':contestparticipant}, {'cp_vote':cp_vote})
 # def vote(req, pk):
 # 	cp = get_object_or_404(Contestvote, pk = pk)

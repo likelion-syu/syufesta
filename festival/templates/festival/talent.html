@@ -19,7 +19,7 @@
     <div class ="row talent">
 
 		{% for C_P in cp %}
-			<div class = "col-6 talent-item mb-3" onclick="__talent.select(this)">
+			<div class = "col-6 talent-item mb-3" onclick="__talent.select(this)" data-participant-id ="{{ C_P.cp_id }}">
 				<div class="img-circle" style="background-image: url('{{ C_P.cont_participant_img_url }}');">
 					<div class="talent-cover"></div>
 					<div class= "thumbs">
@@ -32,7 +32,7 @@
 		{% endfor %}
     <div class="row">
         <div class="col-12 talent">
-            <a href="{% url 'vote' %}"><button class = 'fest-btn' value = 'submit'>투표하기</button></a>
+            <button type='button' class='fest-btn' value ='submit' onclick='__talent.submit()'>투표하기</button>
         </div>
     </div>
 </div>
@@ -53,6 +53,36 @@
             
             if(!item.hasClass('active')){
                 item.addClass('active');
+            }
+        },
+        submit : function(){
+            let selected = $('.talent-item.active');
+            if(selected.length <=0){
+                alert('먼저 투표할 참가자를 선택해주세요!');
+                return;
+            }
+            if(!eval('{{user.is_authenticated}}'.toLowerCase())){
+                alert('로그인이 필요합니다!\n메뉴의 간편 로그인을 해주세요!');
+                // return;
+            }
+
+            if(confirm("선택하신 후보에게 투표할까요?")){
+                // console.log(selected.attr('data-participant-id'));
+                let participant_id = selected.attr('data-participant-id');
+                $.ajax({
+                    url : '/api/fest/contest/vote',
+                    method : 'post',
+                    data : {
+                        "cp_id" : participant_id
+                    }
+                })
+                .then(res=>{
+                    console.log(res);
+                })
+                .catch(res=>{
+                    alert("일시적인 오류가 발생했습니다.\n 잠시후 다시 시도해주세요");
+                    console.log(res);
+                });
             }
         }
     }

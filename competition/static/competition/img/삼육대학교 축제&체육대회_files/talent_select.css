@@ -1,0 +1,161 @@
+.title2 {
+	font-size: 17px;
+    /* font-family: 'NanumSquareExtraBold' !important; */
+    text-align: center;
+    color: rgb(186, 255, 240);
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.desc{
+    margin : 0;
+    font-size : .8em;
+    /* font-family : 'NanumSquare' !important; */
+    font-weight: 700;
+}
+
+.date1 {
+    font-size : 15px;
+    /* font-family : 'NanumSquareR' !important; */
+    text-align : center;
+    font-weight: 300;
+	color :rgba(224,210,255,0.7);
+	margin-bottom: 0.5rem;
+}
+
+.row.talent {
+    text-align : center;
+    height : 100%;
+    overflow-y : auto;
+}
+
+.container.talent{
+    flex: 1;
+}
+
+.col-12.talent {
+    position: fixed;
+    width: 50%;
+    bottom: 5px;
+    margin: auto;
+    display: block;
+    margin-left: 3%;
+}
+
+.col-6 {
+	position:relative;
+	padding-top: 10px;
+}
+
+.thumbs {
+    position: absolute;
+    top: 93px;
+    left: 84px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: #00d631;
+    opacity: 0;
+    transition:.2s;
+}
+
+.fa-thumbs-up {
+    margin-top: 8px;
+    font-size: 19px;
+    margin-left:1px;
+}
+
+.empty {
+    padding : 36px;
+}
+
+.talent-item .talent-cover{
+	width: 120px;
+	height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: rgba(0,0,0,.7);
+    opacity: 1;
+    transition: .2s;
+}
+
+/* active */
+.talent-item.active .talent-cover{
+    opacity: 0;
+    transition:.2s;
+}
+.talent-item.active .thumbs{
+    opacity: 1;
+    transition:.2s;
+}
+
+.img-circle{
+    margin:auto;
+    position: relative;
+    text-align:center;
+    width: 130px;
+    border-radius: 50%;
+    height: 130px;
+	/* border: 3px solid #fff; */
+	box-shadow: 0 0 0 5px #5400fe inset;
+    transition:.2s;
+    background-size: cover;
+	background-repeat:no-repeat;
+	background-position: center;
+}
+/* active */
+.talent-item.active .img-circle{
+    transition:.2s;
+	box-shadow: 0 0 0 5px #00d631 inset;
+	filter: drop-shadow(0 0 5px #00d631);
+}
+.talent-item.active .title2{
+	transition:.2s;
+	text-shadow: 0 0 10px rgb(186, 255, 240);
+    -webkit-text-stroke: 2px rgba(178, 190, 188, 0.2);
+}
+
+.talent-desc{
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+}
+
+#participant-img1 {
+    background-image: url('../img/KakaoTalk-8.jpeg');
+}
+
+#participant-img2 {
+    background-image: url('../img/KakaoTalk-7.jpeg');
+    background-position: 0px -64px;
+}
+
+#participant-img3 {
+    background-image: url('../img/KakaoTalk-3.jpeg');
+}
+
+#participant-img4 {
+    background-image: url('../img/KakaoTalk-2.jpeg');
+}
+
+#participant-img5 {
+    background-image: url('../img/KakaoTalk-9.jpeg');
+}
+
+#participant-img6 {
+    background-image: url('../img/KakaoTalk-5.jpeg');
+    background-position: 0px -32px;
+}
+
+#participant-img7 {
+    background-image: url('../img/KakaoTalk-6.jpeg');
+}
+
+#participant-img8 {
+    background-image: url('../img/KakaoTalk-4.jpeg');
+}
+
+#participant-img9 {
+    background-image: url('../img/KakaoTalk-1.jpeg');
+}
