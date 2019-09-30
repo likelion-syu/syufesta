@@ -57,12 +57,11 @@ body{
 }
 
 .foodtruck-container_popup .content_popup  .item_popup .row .col .food_img{
-	margin-top:10px;
-	width:320px;
+	margin:30px auto;
+	width:100%;
 }
 
 .foodtruck-container_popup .header_popup .logo_popup .logo_food_popup{
-	
 	margin:0px auto;
 	border: 4px dotted #245770;
 	border-radius: 7px;
@@ -75,7 +74,7 @@ body{
 	padding:5px;
 }
 .foodtruck-container_popup .pop-seatmap-wrapper {
-    color : rgb(36, 87, 112);
+    color : #21252a;
     border : 18px;
     border-style : double hidden;
     position : absolute;
@@ -85,6 +84,9 @@ body{
 	min-height: 100%;
 	display: flex;
 }
+.price {
+	color: rgb(36, 87, 112)!important;
+}
 
 .foodtruck-container_popup .double-border {
     margin-top : 1%;
@@ -93,6 +95,7 @@ body{
 	border-style : solid hidden;
 	min-height: 98%;
 	flex: 1;
+	border-color: #235770;
 }
 
 .foodtruck-container_popup .header_popup .logo_food_popup{

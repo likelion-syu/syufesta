@@ -23,15 +23,15 @@
 					<!-- 트럭 설명이 있는 부분 -->
 					<div class="row">
 						<div class="col">
-							<div>{{ data.truck_desc }}</div>
+							<h5>{{ data.truck_desc }}</h5>
+							<p><i class="fas fa-credit-card"></i> 카드결제 | <i class="fas fa-coins"></i> 현금결제</p>
 						</div>
 					</div>
 					<!-- 메뉴가 있는 부분 -->
 					<div class="row">
 						<div class="col">
 							{% for menu in menus %}
-							{{ menu.menu_name }} - {{ menu.menu_price }}
-							<br>
+								<p><span class="menu">{{ menu.menu_name }}</span> - <span class="price">{{ menu.menu_price }}</span></p>
 							{% endfor %}
 							<img src="{{ data.truck_img_url }}" class="food_img">
 						</div>
