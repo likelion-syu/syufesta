@@ -106,6 +106,7 @@ def contest_vote(req):
     cur_user_id = req.user.id
     cur_cp_id = req.POST.get('cp_id')
     cur_vote_info = Contestvote.objects.filter(cv_account = cur_user_id)
+    
     # 기존 투표 확인
     if cur_vote_info :
         return JsonResponse({
