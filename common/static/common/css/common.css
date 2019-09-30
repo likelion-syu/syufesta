@@ -61,9 +61,18 @@ footer .container {
 	background-image: url('../img/footer/awoolim_logo.svg');
 	background-size: 65%;
 }
-.fa-facebook-f {
-	left: 12px!important;
+.fa-instagram {
+	position: absolute;
+	top: 8px;
+    left: 9px;
 }
+.fa-facebook-f {
+	position: absolute;
+	left: 12px!important;
+	top: 8px;
+}
+
+
 /* 축제 푸터 */
 #fest-footer {
 	border-top: 2px solid #850ce0;
@@ -87,28 +96,6 @@ footer .container {
 	/* color: black; */
 	background-color: #a6bfd2;
 }
-/* #compet-footer a {
-	color: black;
-}
-#compet-footer a:hover {
-	color: black;
-}
-#compet-footer .homelogo{
-	border: 1px solid black;
-}
-#compet-footer .footer-icon {
-	width: 40px;
-	padding-bottom: 40px;
-	position: relative;
-	display: inline-block;
-    box-shadow: 0 0 0 2px black inset;
-    margin: 5px auto;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-	border-radius: 100%;
-	font-size: 1.5rem;
-} */
 
 /* scroll top btn */
 #topBtn {
@@ -154,4 +141,9 @@ footer .container {
 .embed-container iframe, .embed-container object, .embed-container embed { 
    position: absolute; top: 0; left: 0; 
    width: 100%; height: 100%;
+}
+
+/* overflow-y hidden */
+.oy-hidden {
+	overflow-y: hidden;
 }

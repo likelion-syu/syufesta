@@ -2,10 +2,10 @@
 	padding: 0;
 }
 .poster-wrapper {
-	background-image: url(../img/main/poster.svg);
+	background-image: url(../img/main/poster.png);
     width: 80%;
     margin: auto;
-    height: 17rem;
+	padding: 36%;
     background-position-x: center;
 	background-size: cover;
 	filter: brightness(1.2);

@@ -1,7 +1,7 @@
 @font-face { 
     font-family: 'HSBombaram'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff'); font-weight: normal; font-style: normal;
     }
-h1,h2,h3,h4,h5,h6,p,li,a,div,table {
+h1,h2,h3,h4,h5,h6,p,li,a,div,table,button {
     font-family: 'HSBombaram';
 }
 body {
@@ -17,8 +17,7 @@ body {
 }
 .header {
 	padding: 60px 0 10px 0;
-}
-	
+}	
 /* logo */
 .logo {
 	width: 300px;

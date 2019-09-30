@@ -1,10 +1,9 @@
 {% load staticfiles %}
 {% load socialaccount %}
 <nav class='navbar'>
-    <!-- <button type="button">
+	<button type="button" id="home"  onclick="location.href='../'" >
         <i class="fas fa-home" aria-hidden="true"></i>
-    </button> -->
-	
+	</button>
 
 	<div class='logo-wrapper'>
 		<a href="{% url 'fest_home' %}" class="goHome"></a>
@@ -61,10 +60,12 @@
             sidemenu : $('.sidemenu-container')
         },
         open : function(){
-            this.elems.sidemenu.removeClass('hide');
+			this.elems.sidemenu.removeClass('hide');
+			$('body').addClass('oy-hidden');
         },
         close : function(){
-            this.elems.sidemenu.addClass('hide');
+			this.elems.sidemenu.addClass('hide');
+			$('body').removeClass('oy-hidden');
         }
     }
     $(document).on('scroll' , e =>{

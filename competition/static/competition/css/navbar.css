@@ -1,12 +1,18 @@
 .navbar {
-    position: fixed !important;;
+    position: fixed !important;
 	width : 100%;
 	z-index: 1;
+	height: 70px;
+	font-size: 1.2rem;
 }
 
-.navbar .fa-bars{
+.navbar .fa-bars, .navbar .fa-home {
     color : #29627f;
     font-size : 1.5em;
+}
+
+.navbar a {
+	color : #29627f;
 }
 
 .navbar button{ border : 0; background : none; border-radius: 0; }
@@ -74,4 +80,8 @@
 .nav-collapse-wrapper .content .item-container a{
     text-decoration: none;
     color:#29617e;
+}
+.stroke {
+	/* transition: .3s; */
+	-webkit-text-stroke: 2px white!important;
 }

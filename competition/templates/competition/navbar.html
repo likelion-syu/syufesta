@@ -1,9 +1,9 @@
 {% load staticfiles %}
 <nav class='navbar'>
-    <button type="button">
-        
+	<button type="button" onclick="location.href='../'">
+        <i class="fas fa-home" aria-hidden="true"></i>
 	</button>
-	<a></a>
+
     <div class="nav-logo"></div>
     <button 
         type="button"
@@ -61,10 +61,29 @@
 <script>
     var __navbar = __navbar || {
         open : () => {
-            $('.nav-collapse-container').removeClass('hide');
+			$('.nav-collapse-container').removeClass('hide');
+			$('body').addClass('oy-hidden');
         },
         close : () => {
-            $('.nav-collapse-container').addClass('hide');
+			$('.nav-collapse-container').addClass('hide');
+			$('body').removeClass('oy-hidden');
         }
-    };
+	};
+	
+	$(document).on('scroll' , e =>{
+        // console.log(e);
+        let navbar = $('.navbar');
+        let top = $(e.currentTarget).scrollTop();
+        
+        if(top != 0){ 
+            if(!navbar.hasClass('.stroke')){
+                navbar.addClass('stroke');
+            } 
+        }
+        else{ 
+            if(navbar.hasClass('stroke')){
+                navbar.removeClass('stroke');
+            }     
+        }
+    });
 </script>

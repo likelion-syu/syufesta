@@ -49,8 +49,8 @@
 	transition:.3s;
 	width: 40px;
 	height: 40px;
-	filter: brightness(0) invert(1) drop-shadow(0px 1px 1px rgba(0,0,0,0.4));
-    -webkit-filter: brightness(0) invert(1) drop-shadow(0px 1px 1px rgba(0,0,0,0.4));
+	/* filter: brightness(0) invert(1) drop-shadow(0px 1px 1px rgba(0,0,0,0.4));
+    -webkit-filter: brightness(0) invert(1) drop-shadow(0px 1px 1px rgba(0,0,0,0.4)); */
 }
 
 .likelion-popup-container .no-btn:active{
@@ -65,8 +65,4 @@
 .likelion-popup-wrapper .popup-content-container{
     height : 100%;
 
-}
-
-.oy-hidden {
-	overflow-y: hidden;
 }

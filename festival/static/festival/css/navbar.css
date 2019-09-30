@@ -9,8 +9,8 @@
     border-bottom : 2px solid #aa00ff;
 	transition:.2s;
 	
-	display: flex;
-    justify-content: center;
+	/* display: flex;
+    justify-content: center; */
 }
 
 .navbar.transparent{
@@ -27,7 +27,8 @@
     filter: drop-shadow(0 0 1px #ff6ba4);
     color : #000000;
     font-size : 1.4em;
-    margin-top: 3px;
+	margin-top: 3px;
+	-webkit-text-stroke: 1px #d05c8c!important;
 }
 
 .navbar p{
@@ -47,7 +48,8 @@
     background-position: center;
     font-size: 0.5rem;
     text-align: center;
-    filter: drop-shadow(0 0 1px #ff6ba4);
+	filter: drop-shadow(0 0 1px #ff6ba4);
+	margin: auto;
 }
 
 .sidemenu-container .sidemenu-cover{
@@ -56,7 +58,7 @@
     height : 100%;
     top : 0;
     left : 0;
-    background-color : rgba(0,0,0,.3);
+    background-color : rgba(0,0,0,.6);
     z-index: 10000;
     backdrop-filter : blur(3px);
     opacity: 1;
@@ -139,8 +141,12 @@
 }
 
 #menu {
-	position: absolute;
-	right: 17px;
+	/* position: absolute;
+	right: 17px; */
+	filter: drop-shadow(0 0 1px #ff6ba4);
+}
+
+#home {
 	filter: drop-shadow(0 0 1px #ff6ba4);
 }
 

@@ -4,7 +4,7 @@
 {% block head %}
 	<link rel="stylesheet" href="{% static 'common/css/main.css' %}">
 	<link rel="stylesheet" href="{% static 'festival/css/festival.css' %}">
-	<link rel="stylesheet" href="{% static 'competition/css/competition.css' %}">
+	<!-- <link rel="stylesheet" href="{% static 'competition/css/competition.css' %}"> -->
 {% endblock %}
 
 <!-- Mainpage contents -->
@@ -12,44 +12,51 @@
 
 <div class="container main">
 	
-	<div class="main-movie-wrapper">
-		<div class='embed-container'>
-			<iframe src="https://www.youtube.com/embed/kOHB85vDuow?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		</div>
-	</div>
+	
 	
 	<div class="go-btn-wrapper">
-		<div class="main-title-wrapper">
+		<!-- <div class="main-title-wrapper"> -->
 		<!-- <video autoplay muted loop id="myVideo">
 			<source src="{% static 'common/img/bg-v.mp4' %}" type="video/mp4">
 		</video> -->
-			<div class="main-logo">
-				<h1>2019 삼육대학교 천보축전 X 체육대회</h1>
-			</div>
-		</div>
+			<!-- <div class="main-logo"> -->
+				<!-- <h1>2019 삼육대학교 천보축전 X 체육대회</h1> -->
+			<!-- </div> -->
+		<!-- </div> -->
 		<a href="{% url 'fest_home' %}">
 			<div class="go-festival">
 				<div class="go-fest-bg"></div>
 				<div class="go-text">
-					<h2>천보축전</h2>
+					<h2>삼육대학교 천보축전</h2>
 					<p>10.07 MON</p>
+					<div class="go-btn">
+						페이지 이동하기 >
+					</div>
 				</div>
-				<div class="arrow go-right"></div>
+				<!-- <div class="arrow go-right"></div> -->
 			</div>
 		</a>
+		<div class="main-movie-wrapper">
+			<div class='embed-container'>
+				<iframe src="https://www.youtube.com/embed/kOHB85vDuow?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
 		<a href="{% url 'comp_home' %}">
 			<div class="go-competition">
 				<div class="go-comp-bg"></div>
 				<div class="go-text">
-					<h2>체육대회</h2>
+					<h2>삼육대학교 체육대회</h2>
 					<p>10.08 TUE</p>
+					<div class="go-btn">
+						페이지 이동하기 >
+					</div>
 				</div>
-				<div class="arrow go-left"></div>
+				<!-- <div class="arrow go-left"></div> -->
 			</div>
 		</a>
 	</div>
 
-	<div class="main-info-wrapper">
+	<!-- <div class="main-info-wrapper">
 		<a href="https://new.syu.ac.kr/school-life/school-bus/" target="_blank">
 			<div class="go-bus">
 				<h2>셔틀버스 안내</h2>
@@ -60,7 +67,7 @@
 				<h2>주차 안내</h2>
 			</div>
 		</a>
-	</div>
+	</div> -->
 </div>
 	
 </div>	
