@@ -17,15 +17,17 @@ body{
 	padding-bottom: 50px;
 }
 .event-container .title-img .title-image{
-    width: 60%;
-	/* margin-left: 20%; */
-	margin: auto;
+	width: 60%;
+	height: 100%;
+	margin: 0px auto;
     margin-top: 45px;
 }
-
+.event-container .row {
+	margin: 0px;
+}
 .event-container .main-img .main-image {
-    width: 55%;
-    /* margin-left: 22.5%; */
+	width: 55%;
+	height: 100%;
 	position: relative;
 	margin: 20px auto;
 }
@@ -82,11 +84,9 @@ body{
 .goods-num {
 	position: absolute;
     background-color: #583164;
-    /* width: 2vw; */
-    /* height: 2vw; */
     color: white;
-    font-size: 1.5vw;
-    padding: 2vw;
+    font-size: 2.5vw;
+    padding: 1.5vw;
 	border-radius: 50px;
 	top: -5px;
     left: 5px;

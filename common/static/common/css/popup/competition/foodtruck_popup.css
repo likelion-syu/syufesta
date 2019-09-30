@@ -30,7 +30,8 @@ body{
     background-image: url(/static/competition/img/compete_background.svg);
     background-repeat:no-repeat;
     background-size: cover;
-    overflow-y: hidden;
+	overflow-y: scroll;
+	position: relative;
     overflow-x: hidden;
 }
 

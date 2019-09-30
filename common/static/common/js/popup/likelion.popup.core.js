@@ -50,7 +50,8 @@
                             // setTimeout으로 일단 해결해둠
                             setTimeout(() => {
                                 _templates.dom = _templates.dom.removeClass("hide");
-                                _cover = _cover.removeClass("hide");
+								_cover = _cover.removeClass("hide");
+								$('body').addClass('oy-hidden');
                             }, 0);
                         }
                     });
@@ -60,7 +61,8 @@
                     console.log(_templates.dom , this.dom);
                     if(!_templates.dom.hasClass("hide")){
                         _templates.dom.addClass('hide');
-                        _cover.addClass('hide');
+						_cover.addClass('hide');
+						$('body').removeClass('oy-hidden');	
                     }
                     else{
                         console.warn("[likelion][popup] 열려있는 팝업이 없습니다");

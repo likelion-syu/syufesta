@@ -15,7 +15,20 @@ body {
 	max-width: 100%;
 	/* float: left; */
 }
-
+.header {
+	padding: 60px 0 10px 0;
+}
+	
+/* logo */
+.logo {
+	width: 300px;
+    height: 100px;
+    background-image: url(../img/compete_logo_main.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    background-position: center;
+}
 /* title */
 .comp-title-wrapper {
 	width: 100%;

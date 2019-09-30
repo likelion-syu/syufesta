@@ -81,7 +81,8 @@ html{
 
 .col-10.pop-title {
     background-image: url(/static/common/img/major-inform.svg);
-    background-size: 100%;
+	background-size: 90%;
+    background-position: center;
     padding: 17%;
     background-repeat: no-repeat;
     margin: auto;

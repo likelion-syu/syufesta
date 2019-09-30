@@ -140,9 +140,6 @@ footer .container {
 }
 .comp-topBtn {
 	background-color: rgb(40, 99, 128)!important;
-	background-image: url('../img/up_black.svg')!important;
-	color: black!important;
-	border: 2px solid black!important;
 }
 .fest-topBtn {
 	border: 2px solid #fffcfd;
