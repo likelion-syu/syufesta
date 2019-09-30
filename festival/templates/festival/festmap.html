@@ -16,11 +16,11 @@
 					<p>Z1</p>
 				</div>
 				</a>
-				<div id="z2" class="zone" onclick="showPopup1();">
+				<div id="z2" class="zone" onclick="showPopup(1);">
 					<p>Z2</p>
 					<p class="click z2" >포토 ZONE</p>
 				</div>
-				<div id="z3" class="zone" onclick="showPopup2();">
+				<div id="z3" class="zone" onclick="showPopup(2);">
 					<p>Z3</p>
 					<p class="click z3">도서관 ZONE</p>
 				</div>
@@ -78,6 +78,9 @@
 	});
 </script> -->
 <script>
+function showPopup(type){
+	__likelion.popup.open('/api/popup/fest/festmap_popup' + type);
+}
 function showPopup1(){
 	__likelion.popup.open('/api/popup/fest/festmap_popup1');
 }
