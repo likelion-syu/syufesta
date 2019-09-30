@@ -26,7 +26,7 @@
 	margin-bottom: 3rem;
 }
 .stamp-wrapper p {
-	color: #cabbe7;
+	color: #ffffff;
     font-size: 0.9rem;
 }
 .stamp-wrapper .col-12 {
@@ -42,7 +42,9 @@
 	font-size: 0.9rem;
 }
 .event-info-wrapper h3, h6 {
-	color: #ff6ba4;
+	    color: #ffffff;
+    text-shadow: 0 0 7px rgb(161, 109, 255);
+    -webkit-text-stroke: 2px rgba(235, 117, 255, 0.37);
 }
 
 /* text */
@@ -61,11 +63,12 @@
 	width: 100%;
 	padding-bottom: 100%;
 	box-shadow: 0 0 0 5px #ff6ba4 inset; 
-	margin: 5px auto;
+	margin: 15px auto;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
 	border-radius: 100%;
+	filter: drop-shadow(0 0 5px #ff6ba4);
 }
 #product1 {
 	background-image: url('../img/stamp/product1.png');
@@ -90,6 +93,7 @@
 	margin: 5px auto;
 	position: relative;
 	border-radius: 100%;
+	filter: drop-shadow(0 0 5px #5400fe);
 }
 .event-step {
 	position: absolute;

@@ -9,19 +9,13 @@
 {% block content %}
 
 <div class='popup-wrapper'>
-	<div class="title-container mb-4">
+	<div class="title-container no-border mb-4 pl-3 pr-3">
 		<h1>{{ food.truck_name }}</h1>
 		{% if food.truck_desc is not None %}
 			<h2>{{food.truck_desc}}</h2>
-			<p>카드/현금 결제</p>
+			<p><i class="fas fa-credit-card"></i> 카드결제 | <i class="fas fa-coins"></i> 현금결제</p>
 		{% endif %}
 	</div>
-	<!-- 이미지 -->
-	{% if food.truck_img_url is not None %}
-	<img class="popup-foodtruck-img" src="{{food.truck_img_url}}">
-	{% else %}
-
-	{% endif %}
 
 	<div class="popup-content-wrapper mb-5">
 		<div class="popup-content-box">
@@ -37,6 +31,13 @@
 		</table>	
 		{% endif %}
 		</div>
+
+		<!-- 이미지 -->
+		{% if food.truck_img_url is not None %}
+		<img class="popup-foodtruck-img" src="{{food.truck_img_url}}">
+		{% else %}
+
+		{% endif %}
 	</div>
 </div>
 {% endblock %}

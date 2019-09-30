@@ -62,8 +62,10 @@
 	color: white;
     margin: 1rem 1.5rem;
     line-height: 160%;
-    font-weight: 300;
-    font-size: 0.9rem;
+    font-weight: 500;
+	font-size: 0.9rem;
+	text-shadow: 0 0 7px #d3bbff;
+    -webkit-text-stroke: 2px rgba(103, 58, 183, 0.25);
 }
 
 /* img */

@@ -29,6 +29,7 @@
 	width: 60%;
 	margin-top: 20px;
 	z-index: 1;
+	filter: drop-shadow(0 0 1px #ff6ba4);
 }
 .no-border {
 	z-index: 1;

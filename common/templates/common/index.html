@@ -11,21 +11,22 @@
 {% block contents %}
 
 <div class="container main">
-	<div class="main-title-wrapper">
-		<!-- <video autoplay muted loop id="myVideo">
-			<source src="{% static 'common/img/bg-v.mp4' %}" type="video/mp4">
-		</video> -->
-		<div class="main-logo">
-			<h1>삼육대학교 천보축전 X 체육대회</h1>
-			<p>10.07 - 10.08</p>
-		</div>
-	</div>
+	
 	<div class="main-movie-wrapper">
 		<div class='embed-container'>
 			<iframe src="https://www.youtube.com/embed/kOHB85vDuow?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 	</div>
+	
 	<div class="go-btn-wrapper">
+		<div class="main-title-wrapper">
+		<!-- <video autoplay muted loop id="myVideo">
+			<source src="{% static 'common/img/bg-v.mp4' %}" type="video/mp4">
+		</video> -->
+			<div class="main-logo">
+				<h1>2019 삼육대학교 천보축전 X 체육대회</h1>
+			</div>
+		</div>
 		<a href="{% url 'fest_home' %}">
 			<div class="go-festival">
 				<div class="go-fest-bg"></div>

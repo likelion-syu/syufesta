@@ -78,7 +78,7 @@ p { font-family : 'Nanum Square'; }
     height: 50px;
     width: 40px;
     height: 40px;
-    background-color: #d86696;
+    background-color: #ff1879;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,4 +118,19 @@ p { font-family : 'Nanum Square'; }
 
 .result .row .col-6 > p {
 	margin-bottom: 0;
+}
+.mb-20 {
+	margin-bottom: 20px;
+}
+
+.talent-container .mockup{
+    display : none;
+}
+
+.talent-container .updated-time-info p{
+    margin: 0;
+    width: 100%;
+    font-size: .8em;
+    color: #ff1778;
+    text-align: right;
 }
