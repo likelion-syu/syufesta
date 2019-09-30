@@ -2,7 +2,8 @@
 <nav class='navbar'>
     <button type="button">
         
-    </button>
+	</button>
+	<a></a>
     <div class="nav-logo"></div>
     <button 
         type="button"
@@ -20,8 +21,10 @@
             <div class="title">
                 <div class="close-btn">
                     <i class="fas fa-times" onclick="__navbar.close()"></i>
-                </div>
-                <div class="logo"></div>
+				</div>
+				<a href="{% url 'comp_home' %}">
+				<div class="logo"></div>
+				</a>
             </div>
         </div>
         <div class="content">

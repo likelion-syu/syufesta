@@ -42,3 +42,16 @@ def seatmap(req):
 def major_data(req):
     major_data = Major.objects.all()
     return render (req, 'competition/test.html', {'major':major_data})
+
+def data_test(req):
+    with connection.cursor() as cursor:
+        cursor.execute("SELECT * FROM ContestVote")
+        rows = cursor.fetchall()
+
+    expanded_rows = []
+    expanded_rows = utils.query_expand(rows , cursor)
+
+    return JsonResponse({
+        'server' : 1,
+        'data' : expanded_rows,
+    }, safe=False)

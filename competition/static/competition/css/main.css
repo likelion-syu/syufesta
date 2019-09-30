@@ -2,7 +2,7 @@
 .competition-main-container{
     width : 100%;
     min-height : 100%;
-    background-image : url(../img/mainimage.svg);
+    /* background-image : url(../img/mainimage.svg); */
     background-size: cover;
     background-position: center;
 
@@ -20,11 +20,11 @@
 
 .competition-main-container .poster-container .poster-wrapper {
     background-image: url(../img/competitionimg.png);
-    width: 330px;
+	width: 100%;
+    padding-bottom: 120%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    height: 450px;
     margin: 0 auto;
 }
 
@@ -32,7 +32,6 @@
     color: #024557;
     font-size: 1.3em;
     font-weight: 900;
-    font-family: serif;
 }
 
 .competition-main-container .timetable-container .header {
@@ -51,13 +50,13 @@
 }
 .competition-main-container .timetable-container .content {
     background-image: url(../img/memopage.svg);
-    
     width: 90%;
-    height: 300px;
+    padding-bottom: 61%;
+    position: relative;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin: 0 auto;
+    margin: 30px auto;
     padding-top: 9px;
 }
 
@@ -73,12 +72,27 @@
     padding-top: 9px;
 }
 .competition-main-container .timetable-container .content .timetable_data {
-    margin: 0 auto;
+	margin: 0 auto;
     width: 100%;
-    height: 258px;
-    padding: 23px;
+    height: 100%;
+    padding: 0 23px;
     line-height: 21px;
+    position: absolute;
+    top: 0;
+    font-size: 4.5vw;
 }
+
+.timetable_data table {
+	width: 100%;
+    margin-top: 30px
+}
+.timetable_data th {
+	width: 40%;
+	text-align: center;
+	padding: 4px 0px;
+}
+
+/* 
 .competition-main-container .timetable-container .content .timetable_data ul {
     font-size: 1.0em;
     font-family: Arial, Helvetica, sans-serif;
@@ -93,7 +107,7 @@
     height: 258px;
     padding: 22px;
     line-height: 20px;
-}
+} */
 /*.competition-main-container .timetable-container .content .timetable_data-1 ul {
     font-size: 1.0em;
     font-family: Arial, Helvetica, sans-serif;
@@ -102,11 +116,5 @@
 
 }
  */
-@font-face { 
-    font-family: 'HSBombaram'; 
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff');
-     font-weight: normal; 
-     font-style: normal;
-    }
 
     

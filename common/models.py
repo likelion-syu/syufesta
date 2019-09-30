@@ -98,6 +98,7 @@ class Major(models.Model):
     major_name = models.CharField(max_length=45, blank=True, null=True)
     major_logo_url = models.CharField(max_length=500, blank=True, null=True)
     major_desc = models.CharField(max_length=1000, blank=True, null=True)
+    major_circ_img = models.CharField(max_length=1000, blank=True, null=True)
 
     class Meta:
         managed = False

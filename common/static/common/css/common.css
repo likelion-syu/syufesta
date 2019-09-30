@@ -84,10 +84,10 @@ footer .container {
 
 /* 체육대회 푸터 */
 #compet-footer {
-	color: black;
+	/* color: black; */
 	background-color: #a6bfd2;
 }
-#compet-footer a {
+/* #compet-footer a {
 	color: black;
 }
 #compet-footer a:hover {
@@ -108,7 +108,7 @@ footer .container {
     background-position: center;
 	border-radius: 100%;
 	font-size: 1.5rem;
-}
+} */
 
 /* scroll top btn */
 #topBtn {
@@ -139,6 +139,7 @@ footer .container {
     background-color : rgba(0,0,0,0.8);
 }
 .comp-topBtn {
+	background-color: rgb(40, 99, 128)!important;
 	background-image: url('../img/up_black.svg')!important;
 	color: black!important;
 	border: 2px solid black!important;
