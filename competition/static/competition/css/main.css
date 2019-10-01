@@ -73,12 +73,12 @@
 }
 .competition-main-container .timetable-container .content .timetable_data {
 	margin: 0 auto;
-    width: 90vw;
-    padding: 0 23px;
-    line-height: 5vw;
-    position: absolute;
-    top: 0;
-    font-size: 3.7vw;
+	width: 90vw;
+	padding: 10px 20px;
+	line-height: 5vw;
+	position: absolute;
+	top: 0;
+	font-size: 4vw;
 }
 
 .timetable_data table {

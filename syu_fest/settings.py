@@ -24,7 +24,7 @@ SECRET_KEY = '7l!osp2q*#rrszk6*rtxjts_hib69vc9)h-*w^m$8t^#@vv8-h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*" , "syufesta.7mjys373pq.us-west-2.elasticbeanstalk.com"]
+ALLOWED_HOSTS = ["*" , "syufesta.7mjys373pq.us-west-2.elasticbeanstalk.com" , "syufesta.com" , "www.syufesta.com"]
 
 # Application definition
 
