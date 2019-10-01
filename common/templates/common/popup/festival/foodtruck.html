@@ -2,8 +2,8 @@
 {% load staticfiles %}
 
 {% block head %}
-<link rel="stylesheet" href="{% static 'common/css/popup/festival/fest.popup.core.css' %}">
-<link rel="stylesheet" href="{% static 'common/css/popup/festival/foodtruck.css' %}">
+<link rel="stylesheet" href="{% static 'common/css/popup/festival/fest.popup.core.css' %}?v={{ ASSETS_VERSION }}">
+<link rel="stylesheet" href="{% static 'common/css/popup/festival/foodtruck.css' %}?v={{ ASSETS_VERSION }}">
 {% endblock %}
 
 {% block content %}

@@ -35,7 +35,7 @@ def stamp (req):
 	
 	expanded_rows = []
 	expanded_rows = utils.query_expand(rows , cursor)
-	
+
 	return render(req, 'festival/stamp.html',{
 		'data' : expanded_rows
 	})
