@@ -68,3 +68,6 @@
     margin-top: 0px;
     margin-bottom: 0px;
 }
+.no-fix {
+	position: absolute!important;
+}

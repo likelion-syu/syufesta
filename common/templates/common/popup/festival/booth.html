@@ -37,7 +37,11 @@
 			<p>{{ booth.booth_product }}</p>
 		</div>
 		{% endif %}
-		<div class="fest-btn">부스 스탬프 찍기</div>
+		<a href="{% url 'stamp' %}">
+		<div class="fest-btn no-fix">
+			부스 스탬프 이벤트
+		</div>
+		</a>
 	</div>
 </div>
 
