@@ -74,10 +74,12 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'common.context_processors.global_settings',
             ],
         },
     },
 ]
+
 
 AUTHENTICATION_BACKENDS = (
 
@@ -166,3 +168,4 @@ ACCOUNT_LOGOUT_REDIRECT_URL = '/festival'
 # production : 1
 # dev : 2
 SITE_ID = 1
+

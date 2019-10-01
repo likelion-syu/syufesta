@@ -1,7 +1,7 @@
 {% extends './competition_base.html' %}{% load staticfiles %}
 
 {% block competition-head %}
-<link rel="stylesheet" href="{%  static '/competition/css/notice.css' %}">
+<link rel="stylesheet" href="{%  static '/competition/css/notice.css' %}?v={{ ASSETS_VERSION }}">
 {% endblock %}
 
 {% block competition-content %}

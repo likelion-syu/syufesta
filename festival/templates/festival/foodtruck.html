@@ -1,7 +1,7 @@
 {% extends './festival_base.html' %} {% load staticfiles %}
 
 {% block festival-head %}
-<link rel="stylesheet" href="{% static 'festival/css/foodtruck.css' %}">
+<link rel="stylesheet" href="{% static 'festival/css/foodtruck.css' %}?v={{ ASSETS_VERSION }}">
 {% endblock %}
 
 {% block festival-content %}
