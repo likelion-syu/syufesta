@@ -1,0 +1,40 @@
+/* timetable */
+#timetable {
+	padding: 0 2px;
+	width: 100%;
+}
+#timetable .tabel-title {
+	text-align: center;
+	font-weight: 700;
+	text-shadow: 0 0 7px rgb(255, 255, 255);
+    -webkit-text-stroke: 2px rgba(224, 224, 224, 0.3);
+}
+#timetable th {
+	font-size: 0.8rem;
+	color: #ff6ba4;
+	text-align: center;
+	font-weight: 500;
+	height: 50%;
+	padding: 5px;
+	text-shadow: 0 0 7px rgb(255, 107, 164);
+    -webkit-text-stroke: 2px rgba(255, 107, 164, 0.3);
+}
+#timetable tr {
+	height: 10%;
+	width: 30%;
+	font-size: 0.8rem;
+	font-weight: 500;
+	border-bottom: 2px solid #850ce0;
+	text-shadow: 0 0 7px rgb(255, 255, 255);
+    -webkit-text-stroke: 2px rgba(224, 224, 224, 0.3);
+}
+#timetable td {
+	padding: 7px;
+	color: white;
+}
+#timetable .td1 {
+	width: 40%;
+}
+#timetable .td2 {
+	width: 30%;
+}

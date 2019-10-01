@@ -1,0 +1,60 @@
+{% extends '../popup.base.html' %}{% load staticfiles %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'common/css/popup/festival/fest.popup.core.css' %}?v={{ ASSETS_VERSION }}">
+<link rel="stylesheet" href="{% static 'common/css/popup/festival/festmap_popup3.css' %}?v={{ ASSETS_VERSION }}">
+{% endblock %}
+{% block content %}
+<div class='popup-wrapper'>
+		<div class="title-container no-border mb-4 pl-3 pr-3">
+			<h1>메인 스테이지</h1>
+			<h2>대강당 (선교 70주년 기념관)</h2>
+			<p>10.07(월) 16:00 ~ 21:00</p>
+		</div>
+	
+		<div class="popup-content-wrapper mb-5">
+			<div class="popup-content-box">
+				<table id="timetable">
+					<tr class="tabel-title">
+						<td>TIME</td>
+						<td>MAIN EVNET<br>(대강당)</td>
+					</tr>
+					<tr>
+						<th>16:00 ~ 17:00</th>
+						<td rowspan="2">너의 청춘을 보여줘(장기자랑)</td>
+					</tr>
+					<tr>
+						<th>17:00 ~ 17:30</th>
+					</tr>
+					<tr>
+						<th>17:30 ~ 18:00</th>
+						<td>연예인 공연</td>
+					</tr>
+					<tr>
+						<th>18:00 ~ 18:30</th>
+						<td>너의 청춘을 보여줘(순위발표)</td>
+					</tr>
+					<tr>
+						<th>18:30 ~ 19:00</th>
+						<td>연예인 공연</td>
+					</tr>
+					<tr>
+						<th>19:00 ~ 19:30</th>
+						<td rowspan="2">치어대전</td>
+					</tr>
+					<tr>
+						<th>19:30 ~ 20:00</th>
+					</tr>
+					<tr>
+						<th>20:00 ~ 20:30</th>
+						<td>연예인 공연</td>
+					</tr>
+					<tr>
+						<th>20:30 ~ 21:00</th>
+						<td>치어대전(순위발표)</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
