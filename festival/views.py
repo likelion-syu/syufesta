@@ -24,7 +24,7 @@ def stamp (req):
 	with connection.cursor() as cursor:
 		cursor.execute("SELECT * from BoothStamp")
 		rows = cursor.fetchall()
-
+		
 	expanded_rows = []
 	expanded_rows = utils.query_expand(rows , cursor)
 
