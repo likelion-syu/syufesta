@@ -75,5 +75,6 @@ body {
 .submenu .item a{
     color : #28627f;
     font-size : .9em;
-    font-family : sans-serif !important;
+	/* font-family : sans-serif !important; */
+	font-family: 'HSBombaram';
 }

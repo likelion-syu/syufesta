@@ -45,18 +45,11 @@
 	height: 100%;
 	/* border-top: 2px solid #850ce0; */
 }
-.go-btn-wrapper {
-	/* padding: 40px 0px; */
-	/* border-top: 2px solid #850ce0; */
-    /* border-bottom: 2px solid #850ce0; */
-}
+
 .go-btn-wrapper p {
 	margin: 0px;
 }
-.main-info-wrapper {
-	padding: 40px 0px;
-	/* border-bottom: 2px solid #850ce0; */
-}
+
 .go-festival, .go-competition, .go-bus, .go-parking  {
 	width: 100%;
 	height: 250px;
@@ -95,6 +88,10 @@
 	position: absolute;
 	opacity: 0.5;
 }
+.go-fest-bg:active, .go-fest-bg:hover, .go-comp-bg:active, .go-comp-bg:hover {
+	background-color: #666666;
+	transition: 0.2s;
+}
 .go-text {
 	position: absolute;
 	text-shadow: 0 0.0625rem 0.1875rem rgba(0,0,0,0.4);
@@ -103,12 +100,15 @@
 	font-size: 2rem;
 }
 .go-bus {
-	background-color: #f801ff;
-	height: 100px;
+	background-color: transparent;
+	height: 60px;
+	border-top: 2px solid white;
 }
 .go-parking {
-	background-color: #0064FF;
-	height: 100px;
+	background-color: transparent;
+	height: 60px;
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
 }
 .arrow {
     position: absolute;
