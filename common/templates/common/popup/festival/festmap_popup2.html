@@ -1,7 +1,7 @@
 {% extends '../popup.base.html' %}{% load staticfiles %}
 {% block head %}
-<link rel="stylesheet" href="{% static 'common/css/popup/festival/fest.popup.core.css' %}">
-<link rel="stylesheet" href="{% static 'common/css/popup/festival/festmap_popup2.css' %}">
+<link rel="stylesheet" href="{% static 'common/css/popup/festival/fest.popup.core.css' %}?v={{ ASSETS_VERSION }}">
+<link rel="stylesheet" href="{% static 'common/css/popup/festival/festmap_popup2.css' %}?v={{ ASSETS_VERSION }}">
 {% endblock %}
 {% block content %}
 <div class='popup-wrapper'>

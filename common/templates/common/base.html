@@ -13,11 +13,11 @@
 	<script type="text/javascript" src="{% static 'common/js/jquery.js' %}"></script>
 
 	<!-- 멋사 라이브러리 -->
-	<script type="text/javascript" src="{% static 'common/js/likelion.module.js' %}"></script>
+	<script type="text/javascript" src="{% static 'common/js/likelion.module.js' %}?v={{ ASSETS_VERSION }}"></script>
 	
 	<!-- 멋사 팝업 라이브러리 -->
-	<link rel="stylesheet" href="{% static 'common/css/popup/likelion.popup.core.css' %}">
-	<script type="text/javascript" src="{% static 'common/js/popup/likelion.popup.core.js' %}"></script>
+	<link rel="stylesheet" href="{% static 'common/css/popup/likelion.popup.core.css' %}?v={{ ASSETS_VERSION }}">
+	<script type="text/javascript" src="{% static 'common/js/popup/likelion.popup.core.js' %}?v={{ ASSETS_VERSION }}"></script>
 
 	<!-- ETC -->
 	<script src="{% static 'common/js/moment-with-locales.min.js' %}"></script>
@@ -36,10 +36,10 @@
 	<link rel="stylesheet" href="{% static 'common/css/swiper/swiper.css' %}">
 
 	<!-- Common_css -->
-	<link rel="stylesheet" href="{% static 'common/css/common.css' %}">
+	<link rel="stylesheet" href="{% static 'common/css/common.css' %}?v={{ ASSETS_VERSION }}">
 	
 	<!-- Common_js -->
-	<script src="{% static 'common/js/scroll.top.js' %}"></script>
+	<script src="{% static 'common/js/scroll.top.js' %}?v={{ ASSETS_VERSION }}"></script>
 
 	<!-- Page Custom -->
 	{% block head %}

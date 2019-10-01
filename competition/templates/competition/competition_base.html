@@ -1,8 +1,8 @@
 {% extends 'base.html' %}{% load staticfiles %}
 
 {% block head %}
-<link rel="stylesheet" href="{% static 'competition/css/competition.css' %}">
-<link rel="stylesheet" href="{% static 'competition/css/navbar.css' %}">
+<link rel="stylesheet" href="{% static 'competition/css/competition.css' %}?v={{ ASSETS_VERSION }}">
+<link rel="stylesheet" href="{% static 'competition/css/navbar.css' %}?v={{ ASSETS_VERSION }}">
 <!-- COMPETITION 컨텐츠 페이지 헤더 -->
 {% block competition-head %}
 

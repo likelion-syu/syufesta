@@ -2,7 +2,7 @@
 {% load staticfiles %}
 
 {% block head %}
-<link rel="stylesheet" href="{% static 'common/css/popup/competition/seatmap.css' %}">
+<link rel="stylesheet" href="{% static 'common/css/popup/competition/seatmap.css' %}?v={{ ASSETS_VERSION }}">
 {% endblock %}
 {% block content %}
 <div class = "pop-seatmap-wrapper">

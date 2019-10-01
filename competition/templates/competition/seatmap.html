@@ -2,7 +2,7 @@
 
 {% load staticfiles %}
 {% block competition-head %}
-<link rel="stylesheet" href="{%  static '/competition/css/seatmap.css' %}">
+<link rel="stylesheet" href="{%  static '/competition/css/seatmap.css' %}?v={{ ASSETS_VERSION }}">
 {% endblock %}
 {% block competition-content %}
 <div class="wrap">

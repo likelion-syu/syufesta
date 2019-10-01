@@ -3,7 +3,7 @@
 {% load staticfiles %}
 
 {% block competition-head %}
-<link rel="stylesheet" href="{% static 'competition/css/main.css' %}">
+<link rel="stylesheet" href="{% static 'competition/css/main.css' %}?v={{ ASSETS_VERSION }}">
 {% endblock %}
 
 {% block competition-content %}
