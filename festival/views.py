@@ -21,13 +21,21 @@ def festmap (req):
 	return render(req, 'festival/festmap.html')
 
 def stamp (req):
+	query = ""
+	if req.user.is_authenticated:
+		# 회원일 경우 회원 정보 포함
+		query = "select B.booth_id , B.booth_nm , BS.stmp_count from Booth as B join (select count(1) as stmp_count from BoothStamp where bt_account_id = " + str(req.user.id) + ") as BS;"
+	else :
+		# 회원이 아닌 경우 부스 정보만 출력
+		query = "select booth_id , booth_nm from Booth;"
+
 	with connection.cursor() as cursor:
-		cursor.execute("SELECT * from BoothStamp")
+		cursor.execute(query)
 		rows = cursor.fetchall()
-		
+	
 	expanded_rows = []
 	expanded_rows = utils.query_expand(rows , cursor)
-
+	
 	return render(req, 'festival/stamp.html',{
 		'data' : expanded_rows
 	})
