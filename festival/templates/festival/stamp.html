@@ -13,32 +13,25 @@
 		<div class="container">
 			<div class="row stamp-wrapper mt-4">
 				<div class="col-12">
-					<p class="neonp mb-4" >보유 스탬프 <strong>4개</strong> | 나의 응모번호 <strong>001</strong></p>
+					{% if user.is_authenticated %}
+						<p class="neonp mb-4" >
+							보유 스탬프 <strong class='cur-stamp-count'>4개</strong> | 나의 응모번호 <strong class='cur-stamp-user-id'>000</strong></p>
+					{% else %}
+						<p class="neonp mb-4" >
+							<span style="color: #ff75ab;">로그인 후에 </span>
+							응모할 수 있습니다!	
+						</p>
+					{% endif%}
 				</div>
-				<div class="col-3">
+				{% for item in data %}
+				<div class="col-3 ">
+					{% if forloop.counter0 < item.stmp_count %}
+					<div class="stamp active"></div>	
+					{% else %}
 					<div class="stamp"></div>
+					{% endif %}
 				</div>
-				<div class="col-3">
-					<div class="stamp"></div>
-				</div>
-				<div class="col-3">
-					<div class="stamp"></div>
-				</div>
-				<div class="col-3">
-					<div class="stamp"></div>
-				</div>
-				<div class="col-3">
-					<div class="stamp"></div>
-				</div>
-				<div class="col-3">
-					<div class="stamp"></div>
-				</div>
-				<div class="col-3">
-					<div class="stamp"></div>
-				</div>
-				<div class="col-3">
-					<div class="stamp"></div>
-				</div>
+				{% endfor %}
 				<div class="col-12">
 					<p class="neonp">스탬프 수가 많을 수록 당첨 확률 UP!</p>
 				</div>
@@ -118,4 +111,28 @@
 			<div class="fest-btn">스탬프 찍기</div>
 		</div>
 	</div>
+
+	<script>
+		Number.prototype.pad = function(width , placeholer){
+			placeholer = placeholer || '0';
+			n = this + '';
+			return n.length >= width ? n : new Array(width - n.length + 1).join(placeholer) + n;
+		}
+		let __stamp = {
+			isAuthenticated : eval('{{ user.is_authenticated }}'.toLowerCase()),
+			userId : Number('{{user.id}}'),
+			init : ()=>{
+				if(!isNaN(__stamp.userId))
+				{
+					let stamp_count = $('.stamp-wrapper').find('.active').length;
+					$('.stamp-page-wrapper .cur-stamp-count').text(''+ stamp_count +'개');
+					$('.stamp-page-wrapper .cur-stamp-user-id').text(__stamp.userId.pad(5));
+				}
+			}
+		}
+
+		$(document).ready(()=>{
+			__stamp.init();
+		});
+	</script>
 {% endblock %}
