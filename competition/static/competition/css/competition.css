@@ -20,8 +20,8 @@ body {
 }	
 /* logo */
 .logo {
-	width: 300px;
-    height: 100px;
+	width: 100%;
+    height: 32vw;
     background-image: url(../img/compete_logo_main.svg);
     background-size: contain;
     background-repeat: no-repeat;
