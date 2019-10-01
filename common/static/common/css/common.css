@@ -145,5 +145,5 @@ footer .container {
 
 /* overflow-y hidden */
 .oy-hidden {
-	overflow-y: hidden;
+	overflow: hidden;
 }
