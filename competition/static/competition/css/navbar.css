@@ -93,12 +93,8 @@
     text-decoration: none;
     color:#29617e;
 }
-.stroke {
-	transition: .1s;
-	-webkit-text-stroke: 1px white!important;
-}
 
 .stroke .nav-icon {
     transition: .1s;
-    filter : drop-shadow(2px 2px 1px #fff);
+    filter : drop-shadow(2px 2px 0px #fff);
 }
