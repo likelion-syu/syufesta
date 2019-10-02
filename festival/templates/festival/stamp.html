@@ -108,7 +108,7 @@
 			</div>
 			
 			<!-- 스탬프 찍기 버튼 -->
-			<div class="fest-btn">스탬프 찍기</div>
+			<div class="fest-btn" onclick="__stamp.move()">스탬프 찍기</div>
 		</div>
 	</div>
 
@@ -127,6 +127,19 @@
 					let stamp_count = $('.stamp-wrapper').find('.active').length;
 					$('.stamp-page-wrapper .cur-stamp-count').text(''+ stamp_count +'개');
 					$('.stamp-page-wrapper .cur-stamp-user-id').text(__stamp.userId.pad(5));
+				}
+			},
+			move : function(){
+				// 공식 행사 시작일 전 진입 막음
+				// 유경수 2019-10-02
+				let dueDate = new Date('2019-10-07 16:00:00')
+				let curDate = new Date();
+				if(curDate.getTime() < dueDate.getTime()){
+					alert(moment(dueDate).format("장기자랑 투표는 MM월 DD일 HH:mm에 오픈됩니다!"));
+					return;
+				}
+				else{
+					location.href = "{% url 'stamp_visit' %}"
 				}
 			}
 		}

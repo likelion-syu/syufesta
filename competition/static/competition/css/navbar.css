@@ -6,9 +6,17 @@
 	font-size: 1.2rem;
 }
 
-.navbar .fa-bars, .navbar .fa-home {
-    color : #29627f;
-    font-size : 1.5em;
+.navbar .nav-icon {
+    background-position: center;
+    background-size : cover;
+    width : 30px;
+    height : 30px;
+}
+.navbar .nav-icon.home{
+    background-image: url(../img/nav.home.png);
+}
+.navbar .nav-icon.menu{
+    background-image: url(../img/nav.menu.png);
 }
 
 .navbar a {
@@ -84,4 +92,9 @@
 .stroke {
 	transition: .1s;
 	-webkit-text-stroke: 1px white!important;
+}
+
+.stroke .nav-icon {
+    transition: .1s;
+    filter : drop-shadow(2px 2px 1px #fff);
 }
