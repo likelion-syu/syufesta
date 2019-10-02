@@ -15,13 +15,21 @@
 		<div class="homelogo"></div>
 		<!-- <p>서울특별시 노원구 화랑로 815 삼육대학교</p> -->
 		<p>
-			삼육대학교 59대 Awoolim 총학생회
-		</p>	
-		<p>
 			© 멋쟁이 사자처럼 at 삼육대학교 7기
 		</p>
+		
 		<p>
 			개발 | 유경수 배성현 박기홍 오지수 위보람 김혜원 권택준 김지현 성예지 이수연 정현주 이정은 전유림 김동혜 Saurav
+		</p>
+		<p>
+			삼육대학교 59대 Awoolim 총학생회
+		</p>
+		<p>
+			{% if 'competition' in request.build_absolute_uri %}
+			문의 | <a href="tel:01024370773">체육부장 김효진 010-2437-0773</a><br/>
+			{% elif 'festival' in request.build_absolute_uri %}
+			문의 | <a href="tel:010-4057-2318">문화부장 신승원 010-4057-2318</a>
+			{% endif %}
 		</p>
 		
 		<a href="http://sahmyook.likelion.org/" target="_blank">

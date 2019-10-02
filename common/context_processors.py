@@ -4,3 +4,4 @@ def global_settings(req):
     return {
         'ASSETS_VERSION' : '0.1.6'
      }
+    
