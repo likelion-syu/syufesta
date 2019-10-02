@@ -78,6 +78,9 @@ def  festmap_popup1(req):
 def  festmap_popup2(req):
     return render(req, 'common/popup/festival/festmap_popup2.html')
 
+def  festmap_popup3(req):
+    return render(req, 'common/popup/festival/festmap_popup3.html')
+
 
 # ============= API
 @csrf_exempt

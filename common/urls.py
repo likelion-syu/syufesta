@@ -12,6 +12,7 @@ urlpatterns = [
     path('popup/fest/booth/<int:pk>', views.fest_booth , name = "popup_fest_booth"),
     path('popup/fest/festmap_popup1', views.festmap_popup1, name = "festmap_popup1"),
     path('popup/fest/festmap_popup2', views.festmap_popup2, name = "festmap_popup2"),
+	path('popup/fest/festmap_popup3', views.festmap_popup3, name = "festmap_popup3"),
 
     # API
     path('fest/contest/vote' , views.contest_vote , name="contest_vote"),

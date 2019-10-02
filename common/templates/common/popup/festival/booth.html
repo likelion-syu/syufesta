@@ -23,18 +23,18 @@
 	<div class="popup-content-wrapper mb-10">
 		<div class="popup-content-box">
 			<h2>부스 설명</h2>
-			<p>{{ booth.booth_desc}}</p>
+			<p>{{ booth.booth_desc | safe }}</p>
 		</div>
 		{% if booth.booth_event is not None %}
 		<div class="popup-content-box">
 			<h2>부스 이벤트</h2>
-			<p>{{ booth.booth_event }}</p>
+			<p>{{ booth.booth_event | safe }}</p>
 		</div>
 		{% endif %}
 		{% if booth.booth_product is not None %}
 		<div class="popup-content-box">
 			<h2>판매 상품</h2>
-			<p>{{ booth.booth_product }}</p>
+			<p>{{ booth.booth_product | safe }}</p>
 		</div>
 		{% endif %}
 		<a href="{% url 'stamp' %}">
