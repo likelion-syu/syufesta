@@ -163,11 +163,11 @@
 }
 
 #menu {
-	filter: drop-shadow(0 0 1px #ff6ba4);
+	filter: drop-shadow(0 0 2px #ff6ba4);
 }
 
 #home {
-	filter: drop-shadow(0 0 1px #ff6ba4);
+	filter: drop-shadow(0 0 2px #ff6ba4);
 }
 
 .goHome {

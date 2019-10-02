@@ -39,12 +39,13 @@ span {
 }
 
 .notice-container .notice-header .notice-logo-text2{
-    width: 88%;
+	width: 88%;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../img/총학.svg);
+    background-position: center;
     margin: 15px auto 0;
-    padding-top: 20%;
+    padding-top: 25%;
 }
 
 .notice-container .notice-content .notice-content-wrapper{

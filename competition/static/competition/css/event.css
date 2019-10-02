@@ -54,6 +54,26 @@ body{
 	font-size: 5vw;
 }
 
+.col-12.goods-memo-content.list{
+	color:#365E77!important;
+	font-size: 4vw!important;
+	text-align : left!important;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.count {
+	border-radius: 12px;
+    font-size: 2.5vw;
+    background-color: #573164;
+    color: white;
+    padding: 1% 2%;
+    position: relative;
+    top: -2px;
+    right: -3px;
+}
+
+
 /* 경품 */
 .goods-img {
     border: 0.5vw solid #583164;

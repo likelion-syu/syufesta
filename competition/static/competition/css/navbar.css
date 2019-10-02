@@ -66,12 +66,16 @@
     background-position: center;
 	margin: 15% auto;
 }
-.nav-collapse-wrapper .header .close-btn .fa-times{
-    color: #fff;
-    font-size: 2em;
+.nav-collapse-wrapper .header .close-btn {
+	width: 40px;
     position: absolute;
     top: 15px;
     left: 15px;
+    height: 40px;
+    background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../img/navbar/close-button.svg);
+    background-size: 60%;
 }
 
 .nav-collapse-wrapper .content{
