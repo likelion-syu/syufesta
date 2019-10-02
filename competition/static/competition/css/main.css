@@ -51,13 +51,15 @@
 .competition-main-container .timetable-container .content {
     background-image: url(../img/memopage.svg);
     width: 90%;
-    padding-bottom: 61%;
+    height: 58vw;
     position: relative;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     margin: 30px auto;
     padding-top: 9px;
+    display: flex;
+    justify-content: center;
 }
 
 .competition-main-container .timetable-container .content-2 {
@@ -73,17 +75,19 @@
 }
 .competition-main-container .timetable-container .content .timetable_data {
 	margin: 0 auto;
-	width: 90vw;
-	padding: 10px 20px;
-	line-height: 5vw;
-	position: absolute;
-	top: 0;
-	font-size: 4vw;
+    width: 90vw;
+    padding: 10px 25px;
+    line-height: 5vw;
+    top: 0;
+    font-size: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .timetable_data table {
 	width: 100%;
-    margin-top: 30px
+    /* margin-top: 30px */
 }
 .timetable_data th {
 	width: 40%;
