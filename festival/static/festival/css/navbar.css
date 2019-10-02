@@ -28,6 +28,30 @@
 	-webkit-text-stroke: 1px #d05c8c!important;
 }
 
+.navbar .nav-icon{
+    filter: drop-shadow(0 0 1px #ff6ba4);
+    color : #000000;
+    font-size : 1.4em;
+	margin-top: 3px;
+    -webkit-text-stroke: 1px #d05c8c!important;
+    
+    margin-top: 0px;
+    background-size : cover;
+    background-position : center;
+}
+
+.navbar .nav-icon.home{
+    background-image: url(../img/nav.home.png);
+    width: 23px;
+    height: 23px;
+}
+.navbar .nav-icon.menu{
+    background-image: url(../img/nav.menu.png);
+    width: 20px;
+    height: 20px;
+}
+
+
 .navbar p{
     margin : 0;
     font-size : 1.3em;
