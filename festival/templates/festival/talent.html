@@ -61,11 +61,13 @@
             // 공식 행사 시작일 전 진입 막음
             // 유경수 2019-10-02
             let dueDate = new Date('2019-10-07 16:00:00')
-            let curDate = new Date();
-            if(curDate.getTime() < dueDate.getTime()){
-                alert(moment(dueDate).format("장기자랑 투표는 MM월 DD일 HH:mm에 오픈됩니다!"));
-                return;
-            }
+            // let curDate = new Date();
+            // if(curDate.getTime() < dueDate.getTime()){
+            //     alert(moment(dueDate).format("장기자랑 투표는 MM월 DD일 HH:mm에 오픈됩니다!"));
+            //     return;
+            // }
+            alert(moment(dueDate).format("장기자랑 투표는 MM월 DD일 HH:mm에 오픈됩니다!"));
+            return ;
 
             if(selected.length <=0){
                 alert('먼저 투표할 참가자를 선택해주세요!');
