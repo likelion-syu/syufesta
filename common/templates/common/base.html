@@ -43,6 +43,17 @@
 	<script src="{% static 'common/js/scroll.top.js' %}?v={{ ASSETS_VERSION }}"></script>
 
 	<!-- Page Custom -->
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149309855-1"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-149309855-1');
+	</script>
+
 	{% block head %}
 
 	{% endblock %}
