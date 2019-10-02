@@ -132,10 +132,15 @@
 			move : function(){
 				// 공식 행사 시작일 전 진입 막음
 				// 유경수 2019-10-02
-				let dueDate = new Date('2019-10-07 16:00:00')
+				let dueDate = new Date('2019-10-07 08:30:00');
+				let finishDate = new Date('2019-10-07 16:30:00');
 				let curDate = new Date();
 				if(curDate.getTime() < dueDate.getTime()){
-					alert(moment(dueDate).format("장기자랑 투표는 MM월 DD일 HH:mm에 오픈됩니다!"));
+					alert(moment(dueDate).format("부스 스탬프 행사는 MM월 DD일 HH:mm에 오픈됩니다!"));
+					return;
+				}
+				else if(curDate.getTime() > finishDate.getTime()){
+					alert(moment(finishDate).format("부스 스탬프 행사는 MM월 DD일 HH:mm까지 진행됩니다!"));
 					return;
 				}
 				else{
