@@ -13,8 +13,8 @@
         <div class = "row pop-item-wrapper" style= "display: block;">
             <div class = "row">
                 <div class = "col-12 pop-logo-wrapper">
-					<img class = "pop-image-circle" src = "{{ majors.major_logo_url  }}">
-					<!-- <div class="pop-image-circle" style="background-image: url('{{ majors.major_logo_url  }}')"></div> -->
+					<!-- <img class = "pop-image-circle" src = "{{ majors.major_logo_url  }}"> -->
+					<div class="pop-image-circle" style="background-image: url('{{ majors.major_logo_url }}')"></div>
                 </div>
             </div>
             <div class = "col-12 pop-major-data">
@@ -40,14 +40,16 @@
                     <div class= "row pop-vsimg-wrapper">
                         <div class = "col-5 pop-name">
                             <div class = "pop-logo-circle">
-                                <img class = "pop-logo" src="{{ datas.major_a_logo }}">
+								<div class="pop-logo" style="background-image: url('{{ datas.major_a_logo }}');"></div>
+                                <!-- <img class = "pop-logo" src="{{ datas.major_a_logo }}"> -->
                             </div>
                             <p> {{ datas.major_a_name }}</p>
                         </div>
                         <div class = "col-2 pop-vs-img"></div>
                         <div class = "col-5 pop-name">
                             <div class = "pop-logo-circle">
-                                <img class = "pop-logo" src="{{ datas.major_b_logo }}">
+								<div class="pop-logo" style="background-image: url('{{ datas.major_b_logo }}');"></div>
+                                <!-- <img class = "pop-logo" src="{{ datas.major_b_logo }}"> -->
                             </div>
                             <p> {{ datas.major_b_name }}</p>
                         </div>

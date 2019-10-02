@@ -32,11 +32,11 @@ html{
 
 .pop-image-circle {
 	width: 55%;
-	/* padding-bottom: 51.3%;
+	padding-bottom: 51.3%;
 	background-position: center;
-	background-size: contain;
+	background-size: 110%;
 	background-repeat: no-repeat;
-	background-color: white; */
+	background-color: white;
     margin: auto;
     display: block;
     border-radius: 50%;
@@ -144,10 +144,18 @@ html{
 }
 
 .pop-logo {
-    position: absolute;
+    /* position: absolute;
     height: 100%;
     width : 100%;
+	left: 0%; */
+	position: absolute;
+    height: 100%;
+    width: 100%;
     left: 0%;
+    background-size: 105%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100%;
 }
 
 .col-5 .pop-name > p {
@@ -168,7 +176,7 @@ html{
 .pop-dash-wrapper > p {
     font-family : 'HSBombaram';
     font-weight : 800;
-    font-size : 5vw;
+    font-size : 4.5vw;
 }
 
 .pop-logo-circle {
