@@ -61,15 +61,13 @@ footer .container {
 	background-image: url('../img/footer/awoolim_logo.svg');
 	background-size: 65%;
 }
-.fa-instagram {
-	position: absolute;
-	top: 8px;
-    left: 10px;
+#fb-icon {
+	background-image: url('../img/footer/fb.svg');
+	background-size: 65%;
 }
-.fa-facebook-f {
-	position: absolute;
-	left: 12px!important;
-	top: 8px;
+#insta-icon {
+	background-image: url('../img/footer/insta.svg');
+	background-size: 65%;
 }
 
 

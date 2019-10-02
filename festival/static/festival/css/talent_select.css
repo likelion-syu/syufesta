@@ -54,7 +54,7 @@
     border-radius: 50%;
     width: 35px;
     height: 35px;
-    background-color: #00d631;
+    background-color: #ee679c;
     opacity: 0;
     transition:.2s;
 }
@@ -108,8 +108,8 @@
 /* active */
 .talent-item.active .img-circle{
     transition:.2s;
-	box-shadow: 0 0 0 5px #00d631 inset;
-	filter: drop-shadow(0 0 5px #00d631);
+	box-shadow: 0 0 0 5px #ee679c inset;
+	filter: drop-shadow(0 0 5px #ee679c);
 }
 .talent-item.active .title2{
 	transition:.2s;
