@@ -31,12 +31,12 @@
                     console.log(_templates.dom);
                     if(_templates.dom !== -1){
                         if(!_templates.dom.hasClass('hide')){
-                            console.log('1?');
+                            // console.log('1?');
                             console.warn("[likelion][popup] 이미 팝업이 열려있습니다.");
                             return;
                         }
                         else{
-                            console.log('2?');
+                            // console.log('2?');
                             _templates.dom.remove();
                             _cover.remove();
                         }
@@ -52,13 +52,13 @@
                                 _templates.dom = _templates.dom.removeClass("hide");
 								_cover = _cover.removeClass("hide");
 								$('body').addClass('oy-hidden');
-                            }, 0);
+                            }, 200);
                         }
                     });
                 
                 },
                 close : function(){
-                    console.log(_templates.dom , this.dom);
+                    // console.log(_templates.dom , this.dom);
                     if(!_templates.dom.hasClass("hide")){
                         _templates.dom.addClass('hide');
 						_cover.addClass('hide');

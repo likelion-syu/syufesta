@@ -3,7 +3,7 @@
     height : 85%;
     width : 100%;
     left : 0;
-    background-color: #eee;
+    /* background-color: #eee; */
     position:fixed;
     transition : .5s;
     bottom:0;
@@ -13,7 +13,6 @@
 .likelion-popup-container.hide{
     transition : .5s;
     bottom:-100%;
-    z-index : 10001;
 }
 
 .likelion-popup-cover{
