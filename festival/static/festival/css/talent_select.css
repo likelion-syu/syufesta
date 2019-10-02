@@ -159,3 +159,13 @@
 #participant-img9 {
     background-image: url('../img/KakaoTalk-1.jpeg');
 }
+
+.talent-item .thumbs .thumbs-up-icon{
+    background-image:url(../img/thumbs-up.png);
+    background-size: cover;
+    background-position: center;
+    width: 23px;
+    height: 23px;
+    margin-left: 6px;
+    margin-top: 4px;
+}
