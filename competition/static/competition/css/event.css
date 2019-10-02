@@ -88,17 +88,17 @@ body{
 	position: relative;
 }
 #goods1 {
-	background-image: url(../img/event/아이패드.svg);
+	background-image: url(../img/event/1.svg);
 }
 #goods2 {
-	background-image: url(../img/event/애플와치2.svg);
+	background-image: url(../img/event/2.svg);
 }
 #goods3 {
-	background-image: url(../img/event/에어팟2.svg);
+	background-image: url(../img/event/3.svg);
 	background-position-y: 27%;
 }
 #goods4 {
-	background-image: url(../img/event/버즈.svg);
+	background-image: url(../img/event/4.svg);
 	background-position-y: 27%;
 }
 .goods-num {
