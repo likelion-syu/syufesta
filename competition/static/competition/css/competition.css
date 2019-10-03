@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR:700&display=swap');
 @font-face { 
     font-family: 'HSBombaram'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff'); font-weight: normal; font-style: normal;
     }
 h1,h2,h3,h4,h5,h6,p,li,a,div,table,button {
-    font-family: 'HSBombaram';
+	/* font-family: 'HSBombaram'; */
+	font-family: 'Noto Serif KR', serif; 
 }
 p {
 	/* font-family: 'Noto Serif KR', serif; */
@@ -67,18 +68,18 @@ body {
     background-color :#ffffffc4;
 }
 .submenu .item{
-    width : 80px;
+    width : 88px;
     height : fit-content;
     margin : 10px;
     display:inline-block;
     text-align : center;
 }
 .submenu .submenu-wrapper{
-    width : 520px;
+    width : 560px;
 }
 .submenu .item a{
     color : #28627f;
     font-size : .9em;
 	/* font-family : sans-serif !important; */
-	font-family: 'HSBombaram';
+	/* font-family: 'HSBombaram'; */
 }

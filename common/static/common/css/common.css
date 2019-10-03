@@ -10,6 +10,7 @@ footer {
 	font-size: 0.9rem;
 	font-weight: 300;
 	background: #063171;
+	border-top: solid 1px #ffffff35;
 }
 footer a {
 	color: white;

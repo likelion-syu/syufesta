@@ -1,9 +1,9 @@
-@font-face { 
+/* @font-face { 
     font-family: 'Binggrae-Bold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff'); font-weight: normal; font-style: normal;
     }
 @font-face { 
     font-family: 'HSBombaram'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff'); font-weight: normal; font-style: normal;
-    }
+    } */
 
 html{
     /* font-size : 1vw; */
@@ -118,7 +118,7 @@ html{
     margin : auto;
     padding : 5%;
     font-size : 9vw;
-    font-family : 'HSBombaram';
+    /* font-family : 'HSBombaram'; */
 }
 
 .pop-vs-img {
@@ -134,13 +134,13 @@ html{
 }
 
 .pop-name {
-    font-family : 'HSBombaram';
+    /* font-family : 'HSBombaram'; */
 }
 
 .pop-name > p {
     font-size: 5vw;
     font-weight: 700;
-    font-family : 'HSBombaram';
+    /* font-family : 'HSBombaram'; */
 }
 
 .pop-logo {
@@ -174,7 +174,7 @@ html{
 }
 
 .pop-dash-wrapper > p {
-    font-family : 'HSBombaram';
+    /* font-family : 'HSBombaram'; */
     font-weight : 800;
     font-size : 4.5vw;
 }
@@ -199,7 +199,7 @@ html{
 
 .pop-vs-data > p {
     margin : auto;
-    font-family : 'HSBombaram';
+    /* font-family : 'HSBombaram'; */
     font-weight : 700;
     font-size : 5vw;
 }
@@ -207,7 +207,7 @@ html{
 .pop-dashed-wrapper .row > p {
     margin: auto;
     padding: 4%;
-    font-family: 'HSBombaram';
+    /* font-family: 'HSBombaram'; */
     font-weight: 700;
     font-size: 6vw;
 }
