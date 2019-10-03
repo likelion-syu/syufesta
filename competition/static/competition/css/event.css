@@ -177,6 +177,10 @@ body{
     width: 100%;
 }
 
+.notice-memo-content ol {
+	padding-left: 1.5rem;
+}
+
 .goods-memo-wrap .col-3 {
 	padding: 0;
 }

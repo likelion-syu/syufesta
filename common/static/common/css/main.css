@@ -107,17 +107,9 @@ body {
 .go-text h2 {
 	font-size: 2rem;
 }
-.go-bus {
-	height: 60px;
+.go-bus, .go-parking {
+	height: 50px;
     background-color: #07244f;
-    width: 90%;
-    margin: 1rem auto;
-    border-radius: 38px;
-}
-.go-parking {
-	height: 60px;
-    background-color: #07244f;
-    width: 90%;
     margin: 1rem auto;
     border-radius: 38px;
 }
@@ -145,6 +137,7 @@ body {
 	text-decoration: none;
 }
 .main-info-wrapper h2 {
-	margin-top: 0.3rem;
-	font-size: 1.5rem;
+	margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #738ca7 !important;
 }
