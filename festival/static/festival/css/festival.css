@@ -71,7 +71,6 @@ h3 {
 	color: #ffddea;
 	text-shadow: 0 0 7px rgb(235, 102, 154);
 	-webkit-text-stroke: 2px rgba(235, 101, 153, 0.37);
-	/* font-family: 'Black Han Sans', sans-serif!important; */
 }
 .title-container h2 {
 	font-size: 1rem;
@@ -83,19 +82,14 @@ h3 {
     text-shadow: 0 0 5px rgb(161, 239, 228);
 	-webkit-text-stroke: 2px rgb(158, 237, 227, 0.4);
 	line-height: 25px;
-	/* font-family: 'Black Han Sans', sans-serif!important; */
 }
 .title-container p {
 	font-size : 0.9rem;
     text-align : center;
     font-weight: 500;
-	/* color :rgba(224,210,255);
-	margin-bottom: 0.5rem;
-	text-shadow: 0 0 7px rgb(169, 87, 211);
-	-webkit-text-stroke: 2px rgba(169, 87, 211, 0.4); */
 	color: rgb(255, 255, 255);
     margin-bottom: 0.5rem;
-    text-shadow: 0 0 7px rgb(199, 173, 212);
+    text-shadow: 0 0 3px rgb(199, 173, 212);
     -webkit-text-stroke: 2px rgba(255, 255, 255, 0.4);
 }
 
