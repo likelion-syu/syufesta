@@ -19,10 +19,13 @@
 
 	<!-- 멋사 라이브러리 -->
 	<script type="text/javascript" src="{% static 'common/js/likelion.module.js' %}?v={{ ASSETS_VERSION }}"></script>
-	
+	<script type='text/javascript' src="{% static 'common/js/likelion.string.js' %}?v={{ ASSETS_VERSION }}"></script>
+	<script type='text/javascript' src="{% static 'common/js/likelion.querystring_manager.js' %}?v={{ ASSETS_VERSION }}"></script>
+
 	<!-- 멋사 팝업 라이브러리 -->
 	<link rel="stylesheet" href="{% static 'common/css/popup/likelion.popup.core.css' %}?v={{ ASSETS_VERSION }}">
 	<script type="text/javascript" src="{% static 'common/js/popup/likelion.popup.core.js' %}?v={{ ASSETS_VERSION }}"></script>
+
 
 	<!-- ETC -->
 	<script src="{% static 'common/js/moment-with-locales.min.js' %}"></script>
@@ -42,6 +45,8 @@
 	
 	<!-- Common_js -->
 	<script src="{% static 'common/js/scroll.top.js' %}?v={{ ASSETS_VERSION }}"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 
 	<!-- Page Custom -->
 
