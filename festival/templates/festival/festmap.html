@@ -11,14 +11,14 @@
 	<div class="festmap-container">
 		<div class="festmap-wrapper">
 			<div class="map-info-wrapper">
-				<div id="z1" class="zone" onclick="showPopup(3);">
+				<div id="z3" class="zone" onclick="showPopup(3);">
 					<p>Z1</p>
 				</div>
-				<div id="z2" class="zone" onclick="showPopup(1);">
+				<div id="z1" class="zone" onclick="showPopup(1);">
 					<p>Z2</p>
 					<p class="click z2" >포토 ZONE</p>
 				</div>
-				<div id="z3" class="zone" onclick="showPopup(2);">
+				<div id="z2" class="zone" onclick="showPopup(2);">
 					<p>Z3</p>
 					<p class="click z3">도서관 ZONE</p>
 				</div>
@@ -79,5 +79,13 @@
 function showPopup(type){
 	__likelion.popup.open('/api/popup/fest/festmap_popup' + type);
 }
+$(document).ready(()=>{
+	if(__likelion.qs.len > 0){
+		$('.festmap-container').scrollLeft(
+			$('#z' + __likelion.qs.get('id')).offset().left - 100
+		);
+		showPopup(__likelion.qs.get('id'));
+	}
+})
 </script>
 {% endblock %}

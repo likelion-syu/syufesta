@@ -223,3 +223,17 @@ html{
 .pop-vsimg-wrapper {
     margin-top : 10%;
 }
+
+.share-btn{
+    background-image: url(../../../img/share-black.png);
+    background-color:initial;
+    border: 0;
+    border-radius: 0;
+    width:25px;
+    height: 25px;
+    background-size:cover;
+    background-position:center;
+    position:absolute;
+    right : 15px;
+    top:15px;
+}

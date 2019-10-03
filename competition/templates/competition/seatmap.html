@@ -42,7 +42,11 @@
 {% block competition-endbody%}
 <script>
 	$(document).ready(()=>{
-		$('.wrap').scrollLeft(($('.img').width() / 2.8))
+		$('.wrap').scrollLeft(($('.img').width() / 2.8));
+
+		if(__likelion.qs && __likelion.qs.len > 0){
+			showPopup(Number(__likelion.qs.get('id')));
+		}
 	});
 
 	// function showPopup1() { window.open("api/popup/comp/seatmap/1", "width=200, height=300, left=100, top=50"); }

@@ -7,9 +7,22 @@
 {% block content %}
 <div class = "pop-seatmap-wrapper">
     <div class = "double-border">
+        <button id='share' class="share-btn" data-clipboard-text="{{ request.scheme }}://{{ request.get_host }}/competition/seatmap?id={{majors.major_id}}">
+    
+        </button>
+        <script>
+            $(document).ready(function(){
+                if(window.__clipboard_share){ window.__clipboard_share.destroy(); }
+                window.__clipboard_share = new ClipboardJS('#share');
+                window.__clipboard_share.on('success' , function(){
+                    alert('링크가 복사되었습니다!');
+                });
+            });
+        </script>
         <div class = "row pop-title">
             <div class = "col-10 pop-title"></div>
         </div>
+        
         <div class = "row pop-item-wrapper" style= "display: block;">
             <div class = "row">
                 <div class = "col-12 pop-logo-wrapper">

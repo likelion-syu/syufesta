@@ -13,8 +13,25 @@
 		<h1>{{ food.truck_name }}</h1>
 		{% if food.truck_desc is not None %}
 			<h2>{{food.truck_desc}}</h2>
-			<p><i class="fas fa-credit-card"></i> 카드결제 | <i class="fas fa-coins"></i> 현금결제</p>
+			<p>
+				<span class="popup-icon credit-card"></span>
+				카드결제 | 
+				<span class="popup-icon cash"></span>
+				현금결제
+			</p>
 		{% endif %}
+		<button id='share' class="share-btn" data-clipboard-text="{{ request.scheme }}://{{ request.get_host }}/festival/foodtruck?type=food&id={{food.truck_id}}">
+			
+		</button>
+		<script>
+			$(document).ready(function(){
+				if(window.__clipboard_share && window.__clipboard_share.destroy){ window.__clipboard_share.destroy(); }
+				window.__clipboard_share = new ClipboardJS('#share');
+				window.__clipboard_share.on('success' , function(){
+					alert('링크가 복사되었습니다!');
+				});
+			});
+		</script>
 	</div>
 
 	<div class="popup-content-wrapper mb-5">

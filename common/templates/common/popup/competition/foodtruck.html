@@ -8,6 +8,18 @@
 <div class="foodtruck-container_popup">
 	<div class="pop-seatmap-wrapper">
 		<div class="double-border">
+			<button id='share' class="share-btn" data-clipboard-text="{{ request.scheme }}://{{ request.get_host }}/competition/foodtruck?id={{data.truck_id}}">
+		
+			</button>
+			<script>
+				$(document).ready(function(){
+					if(window.__clipboard_share){ window.__clipboard_share.destroy(); }
+					window.__clipboard_share = new ClipboardJS('#share');
+					window.__clipboard_share.on('success' , function(){
+						alert('링크가 복사되었습니다!');
+					});
+				});
+			</script>
 			<!-- 로고가 있는 부분 -->
 			<div class="header_popup">
 				<div class="logo_popup">
@@ -16,6 +28,7 @@
 					<div>{{ data.truck_name }}</div>
 					<div>{{ data.menu }}</div>
 				</div>
+				
 			</div>
 			<!---->
 			<div class="content_popup mt-3">
@@ -24,7 +37,13 @@
 					<div class="row">
 						<div class="col">
 							<h5>{{ data.truck_desc }}</h5>
-							<p><i class="fas fa-credit-card"></i> 카드결제 | <i class="fas fa-coins"></i> 현금결제</p>
+							<p>
+								<span class="popup-icon credit-card-dark"></span>
+								카드결제 |
+								<span class="popup-icon cash-dark"></span>
+								현금결제
+							</p>
+							
 						</div>
 					</div>
 					<!-- 메뉴가 있는 부분 -->

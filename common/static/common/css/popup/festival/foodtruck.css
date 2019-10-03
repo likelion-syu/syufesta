@@ -88,3 +88,34 @@
 .menu-table tr {
 	border-bottom: 1px solid gray;
 }
+
+.popup-icon {
+	width : 18px;
+	height : 18px;
+	background-size : cover;
+	background-position : center;	
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.popup-icon.credit-card{
+	background-image: url(../../../img/credit-card.png);
+
+}
+.popup-icon.cash{
+	background-image: url(../../../img/cash.png);
+}
+
+.share-btn{
+    background-image: url(../../../img/share-white.png);
+    background-color:initial;
+    border: 0;
+    border-radius: 0;
+    width:25px;
+    height: 25px;
+    background-size:cover;
+    background-position:center;
+    position:absolute;
+    right : 15px;
+    top:15px;
+}

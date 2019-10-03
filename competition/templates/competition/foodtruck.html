@@ -19,7 +19,7 @@
 	<div class="content">
 		{% for food in foodtrucks %}
 		<div class="item-wrapper my-3">
-			<div class="item" onclick="__foodtruck.menu_open({{ food.truck_id }})">
+			<div class="item" onclick="__foodtruck.menu_open({{ food.truck_id }})" data-foodtruck-idx="{{food.truck_id}}">
 				<div class="row">
 					<div class="col-3">
 						<!---트럭 이미지-->
@@ -44,7 +44,16 @@
 	var __foodtruck = __foodtruck || {
 		menu_open : function(pk){
 			__likelion.popup.open('/api/popup/comp/foodtruck/' + pk);
-		}
+		},
+		init : function(){
+			if(__likelion.qs && __likelion.qs.len > 0){
+				$('[data-foodtruck-idx='+ __likelion.qs.get('id') +']').click();
+			}
+		},
 	}
+
+	$(document).ready(function(){
+		__foodtruck.init();
+	});
 </script>
 {% endblock %}

@@ -9,6 +9,18 @@
 			<h1>메인 스테이지</h1>
 			<h2>대강당 (선교 70주년 기념관)</h2>
 			<p>10.07(월) 16:00 ~ 21:00</p>
+			<button id='share' class="share-btn" data-clipboard-text="{{ request.scheme }}://{{ request.get_host }}/festival/festmap?id=3">
+			
+			</button>
+			<script>
+				$(document).ready(function(){
+					if(window.__clipboard_share){ window.__clipboard_share.destroy(); }
+					window.__clipboard_share = new ClipboardJS('#share');
+					window.__clipboard_share.on('success' , function(){
+						alert('링크가 복사되었습니다!');
+					});
+				});
+			</script>
 		</div>
 	
 		<div class="popup-content-wrapper mb-5">
