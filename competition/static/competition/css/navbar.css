@@ -58,7 +58,7 @@
     transition : .3s;
 }
 
-.nav-collapse-wrapper .header .title .logo{
+.nav-collapse-wrapper .nav-header .title .logo{
     background-image : url('../img/sidemenu_logo.svg');
     width: 200px;
     height: 124px;
@@ -66,7 +66,7 @@
     background-position: center;
 	margin: 15% auto;
 }
-.nav-collapse-wrapper .header .close-btn {
+.nav-collapse-wrapper .nav-header .close-btn {
 	width: 40px;
     position: absolute;
     top: 15px;
@@ -78,18 +78,18 @@
     background-size: 60%;
 }
 
-.nav-collapse-wrapper .content{
+.nav-collapse-wrapper .nav-content{
     width : 75%;
     margin : 0 auto;
 }
 
-.nav-collapse-wrapper .content .item-container{
+.nav-collapse-wrapper .nav-content .item-container{
     background-color: #fff;
-    padding: 10px;
+    padding: 7px;
     border-radius: 25px;
 }
 
-.nav-collapse-wrapper .content .item-container a{
+.nav-collapse-wrapper .nav-content .item-container a{
     text-decoration: none;
     color:#29617e;
 }
