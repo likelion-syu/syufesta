@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap');
+
 @font-face { 
     font-family: 'HSBombaram'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff'); font-weight: normal; font-style: normal;
 }
+body {
+	background-color: #063171;
+}
 
 .container.main {
-	background: black;
+	background: #063171;
 	width: 100%;
 	max-width: 100%;
 	color: white;
@@ -49,7 +54,6 @@
 .go-btn-wrapper p {
 	margin: 0px;
 }
-
 .go-festival, .go-competition, .go-bus, .go-parking  {
 	width: 100%;
 	height: 250px;
@@ -62,6 +66,7 @@
 }
 .go-festival {
 	background-image: url('../img/mamamoo.png');
+	background-color: #4a3572;
 	position: relative;
 	background-size: 125%;
 	background-position-x: 40%;
@@ -100,36 +105,16 @@
 	font-size: 2rem;
 }
 .go-bus {
-	background-color: transparent;
 	height: 60px;
 	border-top: 2px solid white;
+	background-color: #125fac;
 }
 .go-parking {
-	background-color: transparent;
 	height: 60px;
 	border-top: 2px solid white;
 	border-bottom: 2px solid white;
+	background-color: #125fac;
 }
-.arrow {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.4));
-    -webkit-filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.4));
-    background-repeat: no-repeat;
-    background-size: contain;
-	background-position: center;
-	opacity: 0.8;
-}
-.go-right {
-	background-image: url('../img/arrow_right.svg');
-	right: 15px;
-}
-.go-left {
-	background-image: url('../img/arrow_left.svg');
-	left: 15px;
-}
-
 .go-btn {
 	border: 1px solid white;
     padding: 10px 40px 7px;
@@ -146,8 +131,11 @@
 .main-info-wrapper a {
 	text-decoration: none;
 }
+.main-info-wrapper h2 {
+	font-size: 1.5rem;
+}
 
 .go-bus:active, .go-bus:hover, .go-parking:active, .go-parking:hover {
-	background-color: #2a2a2a;
+	background-color: #063171;
 	transition: 0.2s;
 }
