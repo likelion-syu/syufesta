@@ -1,0 +1,20 @@
+{% extends './festival_base.html' %} {% load staticfiles %}
+
+{% block festival-head %}
+<link rel="stylesheet" href="{% static 'festival/css/stamp.visit.detail.css' %}?v={{ ASSETS_VERSION }}">
+{% endblock %}
+
+{% block festival-content %}
+<div class="stamp-detail-container container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h5>부스 스탬프</h5>
+            <p>{{booth.booth_nm}}</p>
+            <p>{{mesg | safe}}</p>
+            <p class='mt-5'>
+                <a href="{% url 'stamp' %}">확인하기</a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

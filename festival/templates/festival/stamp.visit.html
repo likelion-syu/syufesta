@@ -1,5 +1,3 @@
-
-
 {% load staticfiles %}
 <html lang="en">
 <head>
@@ -11,31 +9,261 @@
     <script src="https://jeromeetienne.github.io/AR.js/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
   
-    <!-- import events.js script -->
-    <script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/events.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
     
+    
+    <!-- <script>ARjs.Context.baseURL = '../../three.js/'</script> -->
+  <script>
+    var __stamp = {
+      items : {
+        '1' : {
+          name : '아트 앤 디자인 쇼',
+        },
+        '2' : {
+          name : 'MIlCOO',
+          
+        },
+        '3' : {
+          name : '러너스 하이',
+          
+        },
+        '4' : {
+          name : 'FAB5배 3 on 3 대회',
+          
+        },
+        '5' : {
+          name : '나를 꺼내줘',
+          
+        },
+        '6' : {
+          name : '나를 꺼내줘(방탈출)',
+          
+        },
+        '7' : {
+          name : 'PATIA ACC',
+          
+        },
+        '8' : {
+          name : '다전공제도 상담부스',
+          
+        },
+        '9' : {
+          name : '쉠방구',
+          
+        },
+        '10' : {
+          name : '코스트코',
+          
+        },
+        '11' : {
+          name : '(주)어울림 캠핑장',
+          
+        }
+      },
+      __current_id : -1,
+      get : function(id){
+        this.__current_id = id;
+        return __stamp.items[id];
+      },
+      move : function(){
+        console.log('hi' , __stamp.__current_id);
+        location.href= "/festival/stamp/visit/" + __stamp.__current_id;
+      },
+    }
+    
+    AFRAME.registerComponent('registerevents', {
+		init: function () {
+			var marker = this.el;
+			marker.addEventListener('markerFound', function() {
+				var markerId = marker.id;
+				console.log('markerFound', markerId);
+        
+        var item = __stamp.get(markerId);
+        var elem = $('.marker-info-container');
+        if(!elem.hasClass('active')){
+          elem.find('.title').text(item.name);
+          elem.addClass('active');
+        }
+        else{ console.log("has already") }
+        
+				// TODO: Add your own code here to react to the marker being found.
+			});
+			marker.addEventListener('markerLost', function() {
+				console.log('markerLost', markerId);
+        
+        var markerId = marker.id;
+        var elem = $('.marker-info-container');
+        if(elem.hasClass('active')){
+          elem.removeClass('active');
+        }
+				// TODO: Add your own code here to react to the marker being lost.
+			});
+		}
+	});
+    
+
+    </script>
+    <style>
+    #arjsDebugUIContainer{ display:none; }
+    .marker-info-container{
+      width : 100%;
+      height : 120px;
+      z-index : 1000;
+      
+      position : fixed;
+      bottom : -130px;
+      left : 0;
+      transition:.3s;
+    }
+    .marker-info-container.active{
+      bottom : 0;
+      transition : .3s;
+    }
+    
+    .marker-info-container .marker-info-wrapper{
+      width : 100%;
+      height : 100%;
+      background-color : rgba(0,0,0,0.7);
+      color : #f316e2;
+      font-size : 1.5em;
+    }
+    
+    .marker-info-container .marker-info-wrapper .marker-header{
+      padding : 10px 0;
+      text-align : center;
+    }
+    
+    .marker-info-container .marker-info-wrapper .title {
+      margin : 0;
+    }
+    
+    .marker-info-container .marker-info-wrapper .marker-content{
+      width : 90%;
+      margin : auto;
+    }
+    .marker-info-container .marker-info-wrapper .btn{
+      width: 100%;
+      background: none;
+      font-size: 1.1em;
+      border-radius: 10px;
+      border: 1px solid #9f0ae6;
+      color: #9f0ae6;
+    }
+    
+    </style>
     <!-- <script>ARjs.Context.baseURL = '../../three.js/'</script> -->
     <link rel="stylesheet" href="{% static 'festival/css/stamp.visit.css' %}">
 </head>
 <body >
-    <a-scene light="defaultLightsEnabled: false" embedded="" arjs="trackingMethod: best;" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+    <div class="marker-info-container">
+        <div class="marker-info-wrapper">
+            <div class="marker-header">
+            <p class="title">
+                아트 앤 디자인 쇼 
+            </p>
+            </div>
+            <div class="marker-content">
+            <button type="button" class="btn" onclick="__stamp.move(); console.log('hello')">
+                스탬프 찍기
+            </button>
+            </div>
+        </div>
+    </div>
+
+	<!-- Define your 3d scene and enabled ar.js -->
+	<a-scene light="defaultLightsEnabled: false" embedded="" arjs="trackingMethod: best;" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
         <a-assets>
-            <a-asset-item id="stamp" src="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fstamp_carimbo_scene.gltf?v=1569239074447" crossOrigin="anonymous"></a-asset-item>
-            <a-asset-item id="stamp2" src="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2FStampMAT.gltf?v=1569271225214"></a-asset-item>
+            <a-asset-item id="marker-1-model" src="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fsprinkle.gltf?v=1569903911255"></a-asset-item>
+            <a-asset-item id="marker-2-model" src="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fmarker-2.gltf?v=1570213034266"></a-asset-item>
+            <a-asset-item id="marker-3-model" src="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fmarker-3.gltf?v=1570213361594"></a-asset-item>
+            <a-asset-item id="marker-4-model" src="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fmarker-4.gltf?v=1570214003599"></a-asset-item>
+            <a-asset-item id="marker-5-model" src="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fmarker-5.gltf?v=1570214258113"></a-asset-item>
+            
+            <a-asset-item id="marker-6-model" src="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fmarker-6.gltf?v=1570214470348"></a-asset-item>
+            <a-asset-item id="marker-7-model" src="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fmarker-7.gltf?v=1570214676891"></a-asset-item>
+            <a-asset-item id="marker-8-model" src="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fmarker-8.gltf?v=1570214893217"></a-asset-item>
+            <a-asset-item id="marker-9-model" src="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fmarker-9.gltf?v=1570215067086"></a-asset-item>
+            <a-asset-item id="marker-10-model" src="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fmarker-10.gltf?v=1570215281207"></a-asset-item>
+            <a-asset-item id="marker-11-model" src="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fmarker-11.gltf?v=1570215430358"></a-asset-item>
+            
         </a-assets>
-        <a-light id="outer" intensity="2" type="ambient"></a-light>
-        <!-- Create a anchor to attach your augmented reality -->
-        <a-anchor hit-testing-enabled="true" material="" arjs-anchor="" arjs-hit-testing="">
-            <!-- Add your augmented reality here -->
-            <a-entity id="stamp_elm" scale="1 1 1" position=".3 .5 -.5" gltf-model="#stamp2">
-            <a-animation begin="star" property="position" to=".3 .9 -.5" dur="700" easing="linear" ></a-animation>
+        <a-light id="outer" intensity="1.3" type="ambient"></a-light>
+        
+        <!--     marker-1 -->
+        <a-marker id="1" type="pattern" url="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fmarker-1.patt?v=1570208907266" registerevents>
+            <a-entity scale=".03 .03 .03" position=".3 -1 -.5" gltf-model="#marker-1-model">
             </a-entity>
-        </a-anchor>
-        <a-entity position="0 1 0" light="type: ambient; color: #FFF"></a-entity>
-        <a-entity light="type: directional; color: #FFF; intensity: 1.5" position="-1 3 1"></a-entity>
-        <!-- Define a static camera -->
-        <a-camera-static material="" camera="">
-    </a-scene>  
+        </a-marker>
+        
+        <!--     marker-2 -->
+        <a-marker id="2" type="pattern" url="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fmarker-2.patt?v=1570209223608" registerevents>
+            <a-entity scale=".02 .02 .02" position=".5 -1 -.5" gltf-model="#marker-2-model">
+            </a-entity>
+        </a-marker>
+        
+        <!--     marker-3 -->
+        <a-marker id="3" type="pattern" url="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fmarker-3-pattern.patt?v=1570209865490" registerevents>
+            <a-entity scale=".15 .15 .15" position="0 -1 -1" gltf-model="#marker-3-model">
+            </a-entity>
+        </a-marker>
+    
+        <!--     marker-4 -->
+        <a-marker id="4" type="pattern" url="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fmarker-4-pattern.patt?v=1570210051183" registerevents>
+            <a-entity scale="1.5 1.5 1.5" position="0 -1 -.5" gltf-model="#marker-4-model">
+            </a-entity>
+        </a-marker>
+        
+    <!--     marker-5 -->
+        <a-marker id="5" type="pattern" url="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fmarker-5-pattern.patt?v=1570210171131" registerevents>
+            <a-entity scale=".5 .5 .5" position="0 -1 -.5" gltf-model="#marker-5-model">
+            </a-entity>
+        </a-marker>
+        
+    <!--     marker-6 -->
+        <a-marker id="6" type="pattern" url="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fmarker-6-pattern.patt?v=1570210256119" registerevents>
+            <a-entity scale=".02 .02 .02" position="0 -1 -.5" gltf-model="#marker-6-model">
+            </a-entity>
+        </a-marker>
+        
+    <!--     marker-7 -->
+        <a-marker id="7" type="pattern" url="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fmarker-7-pattern.patt?v=1570210355968" registerevents>
+            <a-entity scale=".01 .01 .01" position=".3 -1 0" gltf-model="#marker-7-model">
+            </a-entity>
+        </a-marker>
+        
+    <!--     marker-8 -->
+        <a-marker id="8" type="pattern" url="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fmarker-8-pattern.patt?v=1570210453892" registerevents>
+            <a-entity scale=".015 .015 .015" position="0 -1 -.5" gltf-model="#marker-8-model">
+            </a-entity>
+        </a-marker>
+        
+    <!--     marker-9 -->
+        <a-marker id="9" type="pattern" url="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fmarker-9-pattern.patt?v=1570210598741" registerevents>
+            <a-entity scale=".1 .1 .1" position="0 -1 -.5" gltf-model="#marker-9-model">
+            </a-entity>
+        </a-marker>
+        
+    <!--     marker-10 -->
+        <a-marker id="10" type="pattern" url="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fmarker-10-pattern.patt?v=1570210694482" registerevents>
+            <a-entity scale=".5 .5 .5" position="0 -1 -.5" gltf-model="#marker-10-model">
+            </a-entity>
+        </a-marker>
+        
+    <!--     marker-11 -->
+        <a-marker id="11" type="pattern" url="https://cdn.glitch.com/ab80df3e-a1bf-438b-890a-5ab5c20eae9a%2Fmarker-11-pattern.patt?v=1570210774698" registerevents>
+            <a-entity scale=".002 .002 .002  1" position="0 -1 -.5" gltf-model="#marker-11-model">
+            </a-entity>
+        </a-marker>
+        
+    <!--     <a-entity position="0 1 0" light="type: ambient; color: #FFF"></a-entity> -->
+    <!--     <a-entity light="type: directional; color: #FFF; intensity: 1" position="-1 3 1"></a-entity> -->
+            <!-- Define a static camera -->
+        <a-camera-static material="" camera=""></a-camera-static>
+        </a-scene>
+        
     <div class="festival-stamp-visit-container">
         <div class="home">
             <a href="{% url 'fest_home' %}">돌아가기</a>

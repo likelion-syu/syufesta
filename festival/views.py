@@ -3,6 +3,7 @@ from django.db import connection, transaction
 from common.models import Booth, Boothstamp, Contestparticipant, AuthUser, Contestvote
 from common import utils
 from django.http import JsonResponse
+from datetime import datetime
 
 def main(req):
 	return render(req, 'festival/festival_main.html')
@@ -55,6 +56,25 @@ def stamp_data (req):
 def stamp_visit(req):
 	return render(req , 'festival/stamp.visit.html')
 
+def stamp_visit_detail(req , pk):
+	if not req.user.is_authenticated :
+		return render(req , 'festival/stamp.visit.detail.html' , { 
+			'mesg' : '로그인이 필요합니다!<br/>메뉴에서 간편 로그인을 해주세요'
+		})
+
+	stamp_history = Boothstamp.objects.filter(bt_account_id=req.user.id , booth_id=pk)
+	if(stamp_history):
+		return render(req , 'festival/stamp.visit.detail.html' , { 
+			'mesg' : '이미 방문한 부스입니다<br/>참여해주셔서 감사합니다!'
+		})
+
+	booth = Booth.objects.get(booth_id=pk)
+	new_stamp = Boothstamp(bt_account_id = req.user.id , booth_id=pk, created_dt = datetime.now())
+	new_stamp.save()
+	return render(req , 'festival/stamp.visit.detail.html' , { 
+		'booth' : booth,
+		'mesg' : '참여해주셔서 감사합니다!'
+	})
 
 # 투표
 def talent_select(req):

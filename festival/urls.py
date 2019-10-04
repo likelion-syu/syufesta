@@ -9,6 +9,7 @@ urlpatterns = [
 	path('festmap', views.festmap, name='festmap'),
 	path('stamp', views.stamp, name='stamp'),
 	path('stamp/visit',views.stamp_visit , name="stamp_visit"),
+	path('stamp/visit/<int:pk>',views.stamp_visit_detail, name="stamp_visit_detail"),
 	path('contest/talent', views.talent, name='talent'),
 	path('contest/cheer', views.cheer, name='cheer'),
 	path('foodtruck1',views.popup1, name='foodtruck1'),
