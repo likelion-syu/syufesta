@@ -11,7 +11,7 @@
             <h1>너의 청춘을 보여줘</h1>
             <h2 class = title2>장기자랑 참가자를 투표하세요!</h2>
             <p class = date1>
-            	투표기간 : 10월 7일 PM 04:00 ~ PM 06:30 종료까지
+            	투표기간 : 10월 7일 PM 03:30 ~ PM 05:30 종료까지
             </p>
         </div>
     </div>
@@ -60,8 +60,8 @@
 
             // 공식 행사 시작일 전 진입 막음
             // 유경수 2019-10-02
-            let dueDate = moment('2019-10-07 16:00:00');
-            let finishDate = moment('2019-10-07 18:00');
+            let dueDate = moment('2019-10-07 15:30:00');
+            let finishDate = moment('2019-10-07 17:30:00');
             let curDate = moment();
             if(curDate.diff(dueDate) < 0){
                 alert(dueDate.format('장기자랑 투표는 MM월 DD일 HH:mm에\n 오픈됩니다!'));
