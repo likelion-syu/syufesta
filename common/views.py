@@ -144,3 +144,19 @@ def contest_revote(req):
         'status' : 1,
         'mesg' : '재투표하자!'
     } , json_dumps_params={'ensure_ascii': False})
+
+
+def stamp_info(req , pk):
+    # booth = Booth.objects.filter(booth_id = pk)
+    # print(booth)
+    with connection.cursor() as cursor:
+        cursor.execute("select * from Booth where booth_id = " + str(pk))
+        rows = cursor.fetchall()
+    
+    expanded_rows = []
+    expanded_rows = utils.query_expand(rows , cursor)
+
+    return JsonResponse({
+        'status' : 1,
+        'data' : expanded_rows[0]
+    } , json_dumps_params={'ensure_ascii' : False })
