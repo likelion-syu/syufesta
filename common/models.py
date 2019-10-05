@@ -42,6 +42,8 @@ class Boothstamp(models.Model):
     bt_account = models.ForeignKey('AuthUser', models.DO_NOTHING)
     booth = models.ForeignKey(Booth, models.DO_NOTHING)
     created_dt = models.DateTimeField()
+    bt_referer_url = models.CharField(max_length=500 , null=True)
+    bt_is_qr = models.BooleanField(null=False)
 
     class Meta:
         managed = False

@@ -68,8 +68,15 @@ def stamp_visit_detail(req , pk):
 			'mesg' : '이미 방문한 부스입니다<br/>참여해주셔서 감사합니다!'
 		})
 
+	current_referer = req.META.get('HTTP_REFERER')
+	isQr = req.GET.get('isQr')
+	if not isQr :
+		isQr = 0
+	else :
+		isQr = 1
+	
 	booth = Booth.objects.get(booth_id=pk)
-	new_stamp = Boothstamp(bt_account_id = req.user.id , booth_id=pk, created_dt = datetime.now())
+	new_stamp = Boothstamp(bt_account_id = req.user.id , booth_id=pk, created_dt = datetime.now(), bt_referer_url=current_referer,bt_is_qr=isQr)
 	new_stamp.save()
 	return render(req , 'festival/stamp.visit.detail.html' , { 
 		'booth' : booth,
