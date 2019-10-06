@@ -120,9 +120,10 @@ body {
 	transition: 0.2s;
 }
 .go-text {
-	top: 18%;
-	position: absolute;
-	text-shadow: 0 0.0625rem 0.1875rem rgba(0,0,0,0.4);
+	top: 50%;
+	transform: translateY(-50%);
+    position: absolute;
+    text-shadow: 0 0.0625rem 0.1875rem rgba(0,0,0,0.4);
 }
 .go-text h2 {
 	font-size: 2rem;
