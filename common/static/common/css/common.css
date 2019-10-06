@@ -12,8 +12,12 @@ footer {
 	/* background: #141414; */
 	border-top: solid 1px #ffffff35;
 }
+.footer-info {
+	font-size: 0.8rem;
+}
 footer a {
 	color: white;
+	font-size: 0.8rem;
 }
 footer a:hover {
 	color: white;
@@ -23,6 +27,7 @@ footer .container {
 }
 .member {
 	border-bottom: solid 1px #ffffff35;
+	font-size: 0.8rem
 }
 .homelogo {
 	height: 40px;

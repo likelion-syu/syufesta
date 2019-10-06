@@ -156,3 +156,26 @@ td {
 .main-map-container a {
 	color: white;	
 }
+
+/* .submenu-wrapper {
+	text-align: center;
+	width: 100%;
+	border-top: 2px solid #840fe0;
+	border-bottom: 2px solid #840fe0;
+	margin: auto;
+}
+.submenu-wrapper .col-3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+.submenu-wrapper .col-3 a {
+	color: white;
+	text-shadow: 0 0 3px rgb(255, 255, 255);
+    -webkit-text-stroke: 2px rgba(224, 224, 224, 0.3);
+}
+
+.btn1 {
+	/* background-color: #f2669b; */
+} */
