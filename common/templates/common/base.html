@@ -16,11 +16,15 @@
 	<link rel="icon" href="{% static 'common/img/favicon.ico' %}">
 	<!-- jQuery -->
 	<script type="text/javascript" src="{% static 'common/js/jquery.js' %}"></script>
+	<script  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="  crossorigin="anonymous"></script>
 
 	<!-- 멋사 라이브러리 -->
 	<script type="text/javascript" src="{% static 'common/js/likelion.module.js' %}?v={{ ASSETS_VERSION }}"></script>
 	<script type='text/javascript' src="{% static 'common/js/likelion.string.js' %}?v={{ ASSETS_VERSION }}"></script>
 	<script type='text/javascript' src="{% static 'common/js/likelion.querystring_manager.js' %}?v={{ ASSETS_VERSION }}"></script>
+
+	<script type='text/javascript' src="{% static 'common/js/likelion.toy.js' %}?v={{ ASSETS_VERSION }}"></script>
+	<link rel="stylesheet" href="{% static 'common/css/likelion.toy.css' %}?v={{ ASSETS_VERSION }}">
 
 	<!-- 멋사 팝업 라이브러리 -->
 	<link rel="stylesheet" href="{% static 'common/css/popup/likelion.popup.core.css' %}?v={{ ASSETS_VERSION }}">
@@ -33,7 +37,7 @@
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="{% static 'common/css/bootstrap/bootstrap.css' %}">
 	<script src="{% static 'common/js/bootstrap/bootstrap.js' %}"></script>
-	<script src="{% static 'common/js/bootstrap/bootstrap_jquery.js' %}"></script>
+	<!-- <script src="{% static 'common/js/bootstrap/bootstrap_jquery.js' %}"></script> -->
 
 	<!-- Swiper CDN -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">

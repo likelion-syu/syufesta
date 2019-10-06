@@ -1,0 +1,9 @@
+.driple{
+    top : -30px;
+    position : fixed;
+    z-index : 9999999;
+    color : white;
+    text-shadow: 0 0 3px #bbc9ff;
+    -webkit-text-stroke: 2px rgba(58, 107, 183, 0.25);
+    font-size : .8em;
+}
