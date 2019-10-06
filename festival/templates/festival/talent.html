@@ -9,10 +9,18 @@
     <div class="row mb-4 title-container">
         <div class = "col-12">
             <h1>너의 청춘을 보여줘</h1>
-            <h2 class = title2>장기자랑 참가자를 투표하세요!</h2>
+            <h2 class = title2>
+                {% if is_main == 1 %}
+                장기자랑 참가자를 투표하세요!
+                {% else %}
+                특별상 참가자를 투표해주세요!
+                {% endif %}
+            </h2>
+            {% if is_main == 1 %}
             <p class = date1>
-            	투표기간 : 10월 7일 PM 03:30 ~ PM 05:30 종료까지
+                투표기간 : 10월 7일 PM 03:30 ~ PM 06:00 종료까지
             </p>
+            {% endif %}
         </div>
     </div>
     <div class = "container talent">
@@ -61,7 +69,7 @@
             // 공식 행사 시작일 전 진입 막음
             // 유경수 2019-10-02
             let dueDate = moment('2019-10-07 15:30:00');
-            let finishDate = moment('2019-10-07 17:30:00');
+            let finishDate = moment('2019-10-07 18:00:00');
             let curDate = moment();
             if(curDate.diff(dueDate) < 0){
                 alert(dueDate.format('장기자랑 투표는 MM월 DD일 HH:mm에\n 오픈됩니다!'));
@@ -86,22 +94,33 @@
                     url : '/api/fest/contest/vote',
                     method : 'post',
                     data : {
-                        "cp_id" : participant_id
-                    }
+                        "cp_id" : participant_id,
+                        "is_main" : "{{ is_main }}"
+                    }  
                 })
                 .then(res=>{
+                    var __is_main = "{{ is_main }}";
                     if(res.status < 0){
                         alert(res.err_display_mesg);
                         console.warn(res.err_desc);
                         if(res.status === -4){
-                            location.href="./talent";
+                            if(__is_main === '1'){
+                                location.href= "{% url 'talent_select' %}";
+                            }
+                            else{
+                                location.href= "{% url 'talent_spe_vote' %}";
+                            }	
                         }
                     }
                     else{
                         // 성공한 경우
                         alert(res.mesg);
-                        console.log(res);
-                        location.href="./talent";
+                        if(__is_main === '1'){
+                                location.href= "{% url 'talent_select' %}";
+                            }
+                            else{
+                                location.href= "{% url 'talent_spe_vote' %}";
+                            }
                     }
                 })
                 .catch(res=>{

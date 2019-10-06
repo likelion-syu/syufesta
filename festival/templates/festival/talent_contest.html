@@ -14,7 +14,13 @@
 	<div class="row title m-0">
 		<div class="col-md-12 title-container mb-20">
 			<h1>너의 청춘을 보여줘</h1>
-			<h2>- 실시간 순위 -</h2>
+			<h2>
+				{% if is_main == 1 %}
+				- 본 투표 실시간 순위 -
+				{% else %}
+				- 특별 투표 실시간 순위 - 
+				{% endif %}
+			</h2>
 		</div>
 		<div class="container">	
 			<div class="row updated-time-info" onclick='__talent_contest.refresh()'>
@@ -60,13 +66,22 @@ var __talent_contest = {
 			return;
 		}
 		else{
+			var __is_main = '{{ is_main }}'
 			$.ajax({
 				url : '{% url "contest_revote" %}',
-				method : 'post'
+				method : 'post',
+				data : {
+					'is_main' : __is_main
+				}
 			})
 			.then(res=>{
 				if(res.status > 0){
-					location.href= "{% url 'talent_select' %}";
+					if(__is_main === '1'){
+						location.href= "{% url 'talent_select' %}";
+					}
+					else{
+						location.href= "{% url 'talent_spe_vote' %}";
+					}	
 				}
 				else{
 					alert(res.err_display_mesg);
@@ -80,9 +95,14 @@ var __talent_contest = {
 	},
 	load : function(){
 		console.log('loaded!');
+		var __is_main = '{{ is_main }}'
 		return $.ajax({
 			url : '/api/fest/contest/result',
-			datatype : 'json'
+			datatype : 'json',
+			method : 'GET',
+			data : {
+				'is_main' : __is_main
+			}
 		});
 	},
 	bind : function(res){

@@ -67,6 +67,8 @@ class Contestvote(models.Model):
     cv_account = models.ForeignKey('AuthUser', models.DO_NOTHING, blank=True, null=True)
     cp = models.ForeignKey(Contestparticipant, models.DO_NOTHING, blank=True, null=True)
     create_dt = models.DateTimeField(blank=True, null=True)
+    is_main = models.BooleanField(null=False)
+    # bt_is_qr = models.BooleanField(null=False)
 
     class Meta:
         managed = False

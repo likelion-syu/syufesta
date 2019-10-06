@@ -62,8 +62,15 @@ def fest_booth(req, pk):
     return render(req, 'common/popup/festival/booth.html', {'booth': booth_detail})
 
 def talent_result(request):
+    cur_is_main = request.GET.get('is_main')
+    query = ''
+    if cur_is_main == '1':
+        query = "select * , (result.count / temp.total) * 100 as rate from ( select RCP.cp_id , RCP.cont_participant_nm, CASE WHEN TCP.cnt IS NULL THEN 0 ELSE TCP.cnt END as count , RCP.cont_participant_img_url from ContestParticipant as RCP left join ( select CP.cp_id, cont_participant_nm as name , count(1) as 'cnt' from ContestVote as CV join ContestParticipant As CP on CV.cp_id = CP.cp_id WHERE CV.is_main = 1 group by CP.cp_id order by 'cnt' desc) as TCP on RCP.cp_id = TCP.cp_id ) as result join ( select count(1) total from ContestVote) as temp order by result.count desc , result.cont_participant_nm asc;"
+    else :
+        query = "select * , (result.count / temp.total) * 100 as rate from ( select RCP.cp_id , RCP.cont_participant_nm, CASE WHEN TCP.cnt IS NULL THEN 0 ELSE TCP.cnt END as count , RCP.cont_participant_img_url from ContestParticipant as RCP left join ( select CP.cp_id, cont_participant_nm as name , count(1) as 'cnt' from ContestVote as CV join ContestParticipant As CP on CV.cp_id = CP.cp_id WHERE CV.is_main = 0 group by CP.cp_id order by 'cnt' desc) as TCP on RCP.cp_id = TCP.cp_id ) as result join ( select count(1) total from ContestVote) as temp order by result.count desc , result.cont_participant_nm asc;"
+
     with connection.cursor() as cursor:
-        cursor.execute("select * , (result.count / temp.total) * 100 as rate from ( select RCP.cp_id , RCP.cont_participant_nm, CASE WHEN TCP.cnt IS NULL THEN 0 ELSE TCP.cnt END as count , RCP.cont_participant_img_url from ContestParticipant as RCP left join ( select CP.cp_id, cont_participant_nm as name , count(1) as 'cnt' from ContestVote as CV join ContestParticipant As CP on CV.cp_id = CP.cp_id group by CP.cp_id order by 'cnt' desc ) as TCP on RCP.cp_id = TCP.cp_id ) as result join ( select count(1) total from ContestVote) as temp order by result.count desc , result.cont_participant_nm asc;")
+        cursor.execute(query)
         rows = cursor.fetchall()
     
     expanded_rows = []
@@ -108,7 +115,13 @@ def contest_vote(req):
     
     cur_user_id = req.user.id
     cur_cp_id = req.POST.get('cp_id')
-    cur_vote_info = Contestvote.objects.filter(cv_account = cur_user_id)
+    cur_is_main = req.POST.get('is_main')
+    if cur_is_main == '1':
+        cur_is_main = 1
+    else :
+        cur_is_main = 0
+
+    cur_vote_info = Contestvote.objects.filter(cv_account = cur_user_id , is_main=cur_is_main)
     
     # 기존 투표 확인
     if cur_vote_info :
@@ -118,7 +131,7 @@ def contest_vote(req):
             'err_display_mesg' : '이미 투표하셨습니다! 참여해주셔서 감사합니다!'
         } , json_dumps_params={ 'ensure_ascii' : False })
     
-    new_vote = Contestvote(cv_account_id=cur_user_id , cp_id=cur_cp_id , create_dt=datetime.now())
+    new_vote = Contestvote(cv_account_id=cur_user_id , cp_id=cur_cp_id , create_dt=datetime.now() , is_main=cur_is_main)
     new_vote.save()
     
     return JsonResponse({
@@ -136,7 +149,13 @@ def contest_revote(req):
         } , json_dumps_params={ 'ensure_ascii' : False })
 
     cur_user_id = req.user.id
-    cur_vote_info = Contestvote.objects.filter(cv_account = cur_user_id)
+    cur_is_main = req.POST.get('is_main')
+    if cur_is_main == '1':
+        cur_is_main = 1
+    else :
+        cur_is_main = 0
+    print(cur_is_main)
+    cur_vote_info = Contestvote.objects.filter(cv_account = cur_user_id , is_main=cur_is_main)
     if cur_vote_info :
         cur_vote_info.delete()
     

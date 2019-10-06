@@ -86,27 +86,50 @@ def stamp_visit_detail(req , pk):
 # 투표
 def talent_select(req):
 	if req.user.is_authenticated :
-		cur_vote = Contestvote.objects.filter(cv_account_id=req.user.id)
+		cur_vote = Contestvote.objects.filter(cv_account_id=req.user.id , is_main=1)
 		if cur_vote :
 			return redirect('talent')
 
 	cp_vote = Contestvote.objects.all()
 	contestparticipant=Contestparticipant.objects.all().order_by('cont_participant_order')
 	
-	return render(req, 'festival/talent.html', {'cp':contestparticipant}, {'cp_vote':cp_vote})
+	return render(req, 'festival/talent.html', 
+	{
+		'cp' : contestparticipant,
+		'is_main' : 1
+	})
 
 # 투표 결과 나타내는 함수
 def talent (req):
-	with connection.cursor() as cursor:
-		cursor.execute("select count(1) as 'cnt' , cont_participant_nm as name , total from (select * , ROW_COUNT() as total from ContestVote) as CV join ContestParticipant As CP on CV.cp_id = CV.cp_id group by CV.cp_id order by 'cnt' desc;")
-		rows = cursor.fetchall()
-
-	expanded_rows = []
-	expanded_rows = utils.query_expand(rows , cursor)
-
-	return render(req, 'festival/talent_contest.html',{
-		'data' : expanded_rows
+	return render(req, 'festival/talent_contest.html',
+	{
+		'is_main' : 1
 	})
+
+## 특별상 투표 관련
+
+## 투표 
+def talent_spe_vote(req):
+	if req.user.is_authenticated :
+		cur_vote = Contestvote.objects.filter(cv_account_id=req.user.id , is_main=0)
+		if cur_vote :
+			return redirect('talent_spe_result')
+
+	cp_vote = Contestvote.objects.all()
+	contestparticipant=Contestparticipant.objects.all().order_by('cont_participant_order')
+	
+	return render(req, 'festival/talent.html', 
+	{
+		'cp' : contestparticipant,
+		'is_main' : 0
+	})
+
+## 결과
+def talent_spe_result(req):
+	return render(req, 'festival/talent_contest.html',{
+		'is_main' : 0
+	})
+
 
 def cheer(req):
 	return render(req, 'festival/cheer_contest.html')
