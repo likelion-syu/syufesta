@@ -4,15 +4,27 @@
     font-family: 'HSBombaram'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff'); font-weight: normal; font-style: normal;
 }
 body {
-	background-color: #063171;
+	background-color: #000000;
 }
 
+.main-nav {
+	width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    background-image: url(../img/SYYFESTA_LOGO.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 10%;
+	background-size: 30%;
+}
 .container.main {
-	background: #063171;
+	background: #000000;
 	width: 100%;
 	max-width: 100%;
 	color: white;
 	padding: 0;
+	margin-top: 50px;
 }
 .main-title-wrapper {
 	width: 100%;
@@ -48,16 +60,22 @@ body {
 .main-movie-wrapper {
 	width: 100%;
 	height: 100%;
-	border-top: 2px solid black;
-	border-bottom: 2px solid black;
 }
 
 .go-btn-wrapper p {
 	margin: 0px;
 }
-.go-festival, .go-competition, .go-bus, .go-parking  {
+.go-festival, .go-competition {
 	width: 100%;
-	height: 250px;
+	padding-bottom: 56%;
+	color: white;
+	text-align: center;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.go-bus, .go-parking  {
 	color: white;
 	text-align: center;
 	display: flex;
@@ -95,12 +113,14 @@ body {
     height: 100%;
 	position: absolute;
 	opacity: 0.5;
+	top: 0px;
 }
 .go-fest-bg:active, .go-fest-bg:hover, .go-comp-bg:active, .go-comp-bg:hover {
 	background-color: #666666;
 	transition: 0.2s;
 }
 .go-text {
+	top: 18%;
 	position: absolute;
 	text-shadow: 0 0.0625rem 0.1875rem rgba(0,0,0,0.4);
 }
@@ -109,13 +129,12 @@ body {
 }
 .go-bus, .go-parking {
 	height: 50px;
-    background-color: #07244f;
+    background-color: #242424;
     margin: 1rem auto;
-    border-radius: 38px;
 }
 
 .go-bus:active, .go-bus:hover, .go-parking:active, .go-parking:hover {
-	background-color: #063171;
+	background-color: transparent;
 	transition: 0.2s;
 	border: 2px solid white;
 }
@@ -123,7 +142,6 @@ body {
 .go-btn {
 	border: 1px solid white;
     padding: 10px 40px 7px;
-    border-radius: 50px;
 	margin: 30px auto 0px;
 	filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.4));
     -webkit-filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.4));
@@ -139,5 +157,5 @@ body {
 .main-info-wrapper h2 {
 	margin-top: 0.5rem;
     font-size: 1rem;
-    color: #738ca7 !important;
+    color: #bebebe !important;
 }

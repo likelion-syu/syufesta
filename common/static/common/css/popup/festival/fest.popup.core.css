@@ -71,7 +71,6 @@
     display: block;
     text-align: center;
 	width: 90%;
-	height: 100%;
 	margin: 20px auto;
 	-webkit-mask-image: radial-gradient( black 50%,transparent );
 }

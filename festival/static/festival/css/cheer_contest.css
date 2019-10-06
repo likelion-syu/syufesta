@@ -1,6 +1,6 @@
 .title-wrapper {
 	width: 100%;
-	height: 350px;
+	height: 300px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -19,7 +19,7 @@
 	background-position: center;
 	z-index: 1;
 	-webkit-mask-image: radial-gradient( black 50%,transparent );
-	opacity: 0.5;
+	opacity: 0.2;
 }
 /* 로고 */
 .title-logo {
@@ -45,10 +45,12 @@
 	margin: 0;
 } 
 .timetable-wrapper li {
-	/* max-width: 155px; */
-    margin: 0 auto;
+    /* margin: 0 auto; */
     border: 1px solid white;
-    padding: 5px;
+	padding: 10px;
+	width: fit-content;
+    height: fit-content;
+	
 }
 .cheer-video {
 	text-align: center;

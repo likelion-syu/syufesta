@@ -146,6 +146,27 @@
     height: 100px;
     width: 100px;
 }
+.booth13 {
+	top: -399px;
+    left: 604px;
+    width: 48px;
+    height: 30px;
+    border: none;
+	background-color: transparent;
+	border: 1px solid transparent;
+}
+.booth13 .ft-info-wrapper .boothtitle {
+	text-align: center;
+	color: #181818!important;
+	font-size: 0.5rem;
+}
+.booth13:active , .booth13:hover{
+	border: 1px solid;
+	background-color: #ff9d1c;
+	transition: 0.3s;
+	filter: drop-shadow(0 0 4px #ffddea);
+}
+
 /* Foodtruck */
 .truck1{
     top: 242px;

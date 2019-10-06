@@ -38,7 +38,11 @@
 		{% endfor %}
     <div class="row">
         <div class="col-12 talent">
-            <button type='button' class='fest-btn' value ='submit' onclick='__talent.submit()'>투표하기</button>
+			{% if is_main == 1 %}
+			<button type='button' class='fest-btn' value ='submit' onclick='__talent.submit()'>투표하기</button>
+			{% else %}
+			<button type='button' class='fest-btn' value ='submit' onclick='__talent.submit()'>특별상 투표하기</button>
+			{% endif %}
         </div>
     </div>
 </div>
