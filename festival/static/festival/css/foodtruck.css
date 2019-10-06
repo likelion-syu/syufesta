@@ -165,6 +165,10 @@
 	transition: 0.3s;
 	filter: drop-shadow(0 0 1px #ffddea);
 }
+.booth13 .ft-info-wrapper .boothtitle:active , .booth13 .ft-info-wrapper .boothtitle:hover{
+	color: white!important;
+}
+
 
 /* Foodtruck */
 .truck1{
