@@ -16,9 +16,9 @@
 			<h1>너의 청춘을 보여줘</h1>
 			<h2>
 				{% if is_main == 1 %}
-				- 본 투표 실시간 순위 -
+				- 투표 실시간 순위 -
 				{% else %}
-				- 특별 투표 실시간 순위 - 
+				- 특별상 투표 실시간 순위 - 
 				{% endif %}
 			</h2>
 		</div>
@@ -35,7 +35,12 @@
 			<div class="row">
 				<div class="col-12 talent">
 					<!-- <a href="{% url 'talent_select' %}"> -->
+					{% if is_main == 1 %}
 					<button button='button' class = 'fest-btn' onclick='__talent_contest.revote()' >재투표하기</button>
+					{% else %}
+					<button button='button' class = 'fest-btn' onclick='__talent_contest.revote()' >특별상 재투표하기</button>
+					{% endif %}
+					
 					<!-- </a> -->
 				</div>
 			</div>
