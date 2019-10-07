@@ -146,6 +146,7 @@
 				}
 				else if(curDate.diff(finishDate) > 0){
 					alert(finishDate.format("부스 스탬프 행사는 MM월 DD일 HH:mm까지 진행됩니다!"));
+					$('.fest-btn').css('filter', 'grayscale(1)');
 					return;
 				}
 				else{

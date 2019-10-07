@@ -78,7 +78,9 @@
                 return;
             }
             else if(curDate.diff(finishDate) > 0){
-                alert('투표가 마감되었습니다!');
+				alert('투표가 마감되었습니다!');
+				$('.fest-btn').text("투표가 마감되었습니다.");
+				$('.fest-btn').css('filter', 'grayscale(1)');
                 return;
             }
             
