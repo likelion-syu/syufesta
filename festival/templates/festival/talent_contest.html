@@ -33,10 +33,10 @@
 				<!-- 순위 리스트 -->
 			</div>
 			<div class="row">
-				<div class="col-12 talent">
+				<div class="col-12 talent" style='display:none'>
 					<!-- <a href="{% url 'talent_select' %}"> -->
 					{% if is_main == 1 %}
-					<button button='button' class = 'fest-btn' onclick='__talent_contest.revote()' >재투표하기</button>
+					<button button='button' class = 'fest-btn' onclick='__talent_contest.revote()' >투표가 마갑되었습니ㄷ</button>
 					{% else %}
 					<button button='button' class = 'fest-btn' onclick='__talent_contest.revote()' >특별상 재투표하기</button>
 					{% endif %}
