@@ -138,10 +138,26 @@ var __talent_contest = {
 			if(idx === 0){
 				__talent_contest.rank.num = 1;
 				__talent_contest.rank.smallest_count = count;
+				elem.find('.col-6').prepend('<i class="winner first"></i>');
+				elem.find('.con-num').addClass('first');
 			}
 			if(count < __talent_contest.rank.smallest_count){
 				__talent_contest.rank.num++;
 				__talent_contest.rank.smallest_count = count;
+
+				{% if is_main == 1 %}
+
+				if(__talent_contest.rank.num === 2){
+					elem.find('.col-6').prepend('<i class="winner second"></i>');
+					elem.find('.con-num').addClass('second');
+				}
+				else if(__talent_contest.rank.num === 3 || __talent_contest.rank.num === 4){
+					elem.find('.col-6').prepend('<i class="winner third"></i>');
+					elem.find('.con-num').addClass('third');
+
+				}
+				
+				{% endif %}
 			}
 			elem.find('.con-num').text(__talent_contest.rank.num);
 			container.append(elem);

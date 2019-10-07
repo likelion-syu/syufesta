@@ -134,3 +134,32 @@ p { font-family : 'Nanum Square'; }
     color: #ff1778;
     text-align: right;
 }
+
+/* 최종 */
+.winner {
+    width: 23px;
+    height: 23px;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+}
+
+.winner.first{
+    background-image: url(/static/common/img/first_medal.png);
+}
+.winner.second{
+    background-image: url(/static/common/img/second_medal.png);
+}
+.winner.third{
+    background-image: url(/static/common/img/third_medal.png);
+}
+
+.con-num.first{
+    background-color : #dfb843;
+}
+.con-num.second{
+    background-color : #bdbfc1;
+}
+.con-num.third{
+    background-color: #7e522a;
+}
