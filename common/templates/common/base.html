@@ -87,5 +87,15 @@
 	{% else %}
 	<button onclick="topFunction()" id="topBtn" title="top">TOP</button>
 	{% endif %}
+	<script>
+	var filter = "win16|win32|win64|macintel|mac|"; // PC일 경우 가능한 값
+
+	if(navigator.platform){
+		if(filter.indexOf(navigator.platform.toLowerCase())>0 ){
+			alert("PC에서 접속하셨습니다");
+		}	
+	}
+	</script>
+
 	</body>
 </html>
