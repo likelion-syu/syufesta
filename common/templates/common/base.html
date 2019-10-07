@@ -71,6 +71,12 @@
 	</head>
 
 	<body>
+	<div class="pc-block-wrapper">
+		<div class="text-box p-3">
+			<h1>Oops!!</h1>
+			<h3>PC환경을 지원하지 않습니다. 모바일 이용해주세요!</h3>
+		</div>
+	</div>
 	{% block contents %}
 
 	{% endblock %} 
@@ -92,7 +98,11 @@
 
 	if(navigator.platform){
 		if(filter.indexOf(navigator.platform.toLowerCase())>0 ){
-			alert("PC에서 접속하셨습니다");
+			$('.pc-block-wrapper').removeClass('hide');
+			$('body').addClass('oy-hidden');
+		}else{
+			$('.pc-block-wrapper').addClass('hide');
+			$('body').removeClass('oy-hidden');
 		}	
 	}
 	</script>

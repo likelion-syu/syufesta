@@ -157,3 +157,35 @@ footer .container {
 .oy-hidden {
 	overflow: hidden;
 }
+
+/* pc_block */
+.pc-block-wrapper {
+	position: fixed;
+    top: 0;
+    background: #000000de;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    backdrop-filter: blur(10px);
+}
+.text-box{
+	text-align: center;
+	color: white;
+	position: absolute;
+}
+.text-box h1 {
+	font-size: 6vh;
+}
+.text-box h3 {
+	font-size: 2vh;
+    font-weight: 300;
+}
+.pc-block-wrapper.hide {
+	transition : .3s;
+    z-index: -100;
+    opacity: 0;
+}
